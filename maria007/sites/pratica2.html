@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+
+        function CalcularIMC(peso,altura){
+            var IMC  = peso/ (altura * altura);
+            return IMC;
+        }
+
+        function lf(msg) {
+            return parseFloat(window.prompt(msg));
+        }
+
+        var peso = lf('Qual o seu peso?');
+        var altura = lf('Qual a sua altura?');
+
+
+        console.log('O seu IMC é de ' + CalcularIMC(peso,altura));
+
+         </script>
+    </body>
+</html>
+

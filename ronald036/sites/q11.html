@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+      
+        window.alert("maquina pra identificar produtos e preços");
+
+        var r = window.prompt("digite o nome do primeiro produto:");
+        var o = parseInt(window.prompt("digite o preço do primeiro produto:"));
+        var n = window.prompt("digite o nome do segundo produto:");
+        var a = parseInt(window.prompt("digite o preço do segundo produto:"));
+    
+        if (o > a || o == a) {
+            if (o > a) {
+                window.alert("o primeiro produto é o mais caro");
+            } else if (o == a){
+                window.alert("os dois produtos tem o mesmo preço");
+            }
+        } else {
+            window.alert("o segundo produto é mais caro");
+        }
+        
+        </script>
+    </body>
+</html>
+

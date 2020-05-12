@@ -1,0 +1,30 @@
+print (" *************************** ")
+print (" **Calculadora de tabuadas** ")
+print (" *************************** ")
+
+n = int ( input (" Digite o numero que vc quer saber a tabuada: ") )
+
+n1 = int ( n * 1)
+n2 = int ( n * 2)
+n3 = int ( n * 3)
+n4 = int ( n * 4)
+n5 = int ( n * 5)
+n6 = int ( n * 6)
+n7 = int ( n * 7)
+n8 = int ( n * 8)
+n9 = int ( n * 9)
+n10 = int ( n * 10)
+
+nx = str (n)
+
+print ( nx + "x1 = " + str (n1))
+print ( nx + "x2 = " + str (n2))
+print ( nx + "x3 = " + str (n3))
+print ( nx + "x4 = " + str (n4))
+print ( nx + "x5 = " + str (n5))
+print ( nx + "x6 = " + str (n6))
+print ( nx + "x7 = " + str (n7))
+print ( nx + "x8 = " + str (n8))
+print ( nx + "x9 = " + str (n9))
+print ( nx + "x10 = " + str (n10))
+

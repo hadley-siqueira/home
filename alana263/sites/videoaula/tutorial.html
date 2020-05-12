@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial -s cale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: "Montserrat";
+            }
+
+            .titulo {
+                font-size: 50px;
+                margin-bottom: 0px;
+            }
+
+            .descricao {
+                font-size: 20px;
+                margin-bottom: 40px;
+                margin-top: 0px;
+            }
+
+            .botao1 {
+                background-color: #1583cc;
+                font-size: 20px;
+                color: #fefefe;
+                padding: 17px;
+                border: none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+            .botao1:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+            }
+
+            .botao2 {
+                background-color: #1583cc;
+                font-size: 15px;
+                color: #fefefe;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right:15px;
+                border:none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+            .botao2:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+            }
+            .botao3 {
+                background-color: #1583cc;
+                font-size: 15px;
+                color: #fefefe;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right:15px;
+                border:none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;   
+            }
+            .botao3:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+ 
+            }
+            .subinfo {
+                margin: 10px;
+                padding: 0;
+                font-size:15px;
+            } 
+
+           .secao-inicio {
+                padding-top: 180px;
+                background-size: cover;
+                padding-left: 300px;
+                background-image: url("imagens/bg.svg");
+                color: #fefefe;
+                height: 700px;               
+            }
+
+            .box3 {
+                float: left;
+                width:50%;
+                padding: 20px;
+                padding-top: 70px;
+            }
+            .box3 a {
+                color: #349dd4;
+                text-decoration: none;
+            }       
+            .box3 p {
+                color: #313131;
+                line-height: 1.5;
+            }
+            .box3 h2 {
+                color: #7f7f7f;
+                margin-bottom: 0;
+            }
+            .box3 h1 {
+                color: #333333;
+                margin-top: 10px;
+                font-size: 40px;
+            }
+            .box3:hover {
+                background-color: #f8f8f8;
+                border-radius: 5px;
+                transition: all 0.5s;
+            }
+            
+            .box4 {
+                padding: 19px;
+                float: left;
+                margin-bottom:69px;
+                width: 24%;
+            }
+            .box3 img {
+                width: 300px;
+            }
+            .box3 p {
+                line-height: 1.7;
+                font-size:15px;
+            }
+            .alinhamento {
+                text-align: left;
+            }
+
+            .link-bonito {
+                color: #349dd4;
+                text-decoration: none;
+            }
+            
+            .secao-generica {
+                border-bottom: 1px dashed #9c9c9c;
+            }
+            .secao-2 {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+                margin-top: 70px;
+                padding-left: 150px;
+                padding-right: 150px;
+                padding-bottom: 50px;
+            }
+          
+            .secao-3 {
+                text-align: center;               
+                width: 60%;
+                margin: auto;
+                margin-top: 10px;
+                padding-bottom: 50px;
+            }
+            .secao-2 h1 {
+                font-size: 35px;
+            }
+            .secao-2 p {
+                color: #9c9c9c;
+                font-size: 20px;
+            }
+
+            .secao-servico-4 {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                padding-bottom:50px;
+                padding-top: 30px;
+            }
+            .secao-servico-4 h1 {
+                font-size: 45px;
+                margin-bottom: 15px;
+            }
+            .secao-servico-4 h2 {
+                font-size:25px;
+                margin-bottom: 20px;
+                margin-top: 0;
+                color: #a1a1a1;
+            }
+            .box4 h1 {
+                font-size: 35px;
+            }
+            
+            .secao-5 {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+            }
+            .box5 {
+                float: left;
+                width: 33.33%;
+                padding: 20px;
+                padding-top: 50px;
+                padding-bottom:50px;
+                margin-bottom: 70px;
+            }
+            .box5:hover {
+                background-color: #f8f8f8;
+                transition: all 0.5s;
+                border-radius: 5px;
+            }
+            .box5 p {
+                line-height: 1.5;
+                font-size:14px;
+                width: 90%
+            }
+            .secao-5 > h1 {
+                font-size: 40px;
+                width: 85%;
+                line-height: 1.5;
+                text-align: center;
+                margin: auto;
+                margin-top: 40px;;
+            }
+            .secao-5 > p {
+                font-size: 25px;
+                width: 85%;
+                text-align: center;
+                margin:auto;
+                margin-bottom:70px;
+                padding-top: 15px;
+                color: #b9b9b9;
+            }
+            .secao-6 {
+                text-align: center;
+                font-size: 15px;
+                margin: auto;
+                width: 90%;
+                padding-bottom: 80px;
+                padding-top: 10px;
+            }
+            .secao-6 > h1 {
+                font-size: 35px;
+                margin-bottom: 60px;
+            }
+            .box6 {
+                float: left;
+                width: 16.66%;
+            }
+            .box6 img {
+                width: 160px;
+            }
+            .secao-final {
+                text-align: left;
+                padding-left:170px;
+                background-color: #085a78;
+            }
+      
+            .box7 h1 {
+                font-size: 20px;
+                margin: auto;
+                padding-top: 20px;
+                color: #fefefe;
+            }
+            .box7 p {
+                font-size: 13px;
+                color: #fefefe;
+                margin-bottom: 20px;
+            }  
+            .final-2 {
+                background-color:074e68;
+            }
+            .box8 {
+                
+                text-align: center;
+            }
+            .box8 h2 {
+                font-size: 30px;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class = "secao-inicio">
+            <h1 class = "titulo">Foundation</h1>
+            <p class = "descricao">The most advanced responsive front-end<br> framework in the world.</p>
+            <button class = "botao1">Download Foundation 6</button>
+            <p class = "subinfo"> &#9733; 21.4k GitHub stars</p>
+            <p class = "subinfo">&#10084; @ZURBfoundation</p>        
+        </section>
+
+        <section class = "secao-2 secao-generica">
+                <h1>Responsive design gets a whole lot faster</h1>
+            <div class = "alinhamento">
+                <p>A Framework for any device, medium, and accessibility. Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and code snippets, including these handy HTML templates to help get you started!</p>
+            </div>
+        </section>
+
+        <section class = "secao-3 secao-generica">
+            <div class = "box3">
+                <img src = "imagens/responsive-through-and-through.svg" width = "350">
+                <h2>FOUNDATION FOR</h2>
+                <h1>Site</h1>
+                <div class = "alinhamento">
+                <p>Foundation for Sites is jam-packed with features to help people rapidly build content-focused websites. Foundation for Sites provides you with HTML, CSS, &amp; JavaScript to help you quickly prototype. It's easy to customize &amp; extend to get your project polished &amp; shipped.</p>
+                </div>
+                <a href= "#">Learn more about Foundation for Sites</a>
+            </div>
+            <div class = "box3">
+                <img src = "imagens/inky-template.svg" width = "350">
+                <h2>FOUNDATION FOR</h2>
+                <h1>Emails</h1>
+                <div class = "alinhamento">
+                <p>Our email framework helps you craft responsive HTML emails that can be read anywhere on any device. Foundation for Emails helps navigate the how different email clients handle HTML and provide tested patterns that work with Outlook as well as all the other major email clients.</p>
+                </div>
+                <a href="#">Learn more about Foundation for Email</a>
+            </div>
+            <div style = "clear: both"></div>
+        </section>
+        
+        <section class = "secao-servico-4 secao-generica">
+                <h1>Build products, apps and services</h1>
+                <h2>Foundation is the professional choice for designers, developers and teams.</h2>
+            <div class = "box4">
+                <img src = "imagens/semantic-01.svg" width = 200>
+                <h1>Semantic</h1>
+                <p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+            </div>
+
+            <div class = "box4">
+                <img src = "imagens/responsive-01.svg" width = 200>
+                <h1>Mobile Frist</h1>
+                <p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p>
+            </div>
+
+            <div class = "box4">
+                <img src = "imagens/customizable.svg" width = 200>
+                <h1>Customizable</h1>
+                <p>You can customize your build to include or remove certain elements, as well as define the size of columns, colors, font size and more.</p>
+            </div>
+
+            <div class = "box4">
+                <img src = "imagens/training-01.svg" width = 200>
+                <h1>Professional</h1>
+                <p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
+            </div>
+                <div style="clear: both"></div>
+                <a class = "link-bonito" href="#">Learn more about why Foundation fits in your company →</a>
+        </section>
+         
+        <section class = "secao-5 secao-generica">
+            <h1>Transform your career with comprehensive Foundation Training and Certification</h1>
+
+            <p>ZURB has been practicing product design since 1998 and our online webinar training will teach you and your team the same valuable skills our designers use on a daily basis.</p>
+            
+            <div class = "box5">
+                <img src = "imagens/intro-foundation.png" width = 250>
+                <h1>Intro to Foundation</h1>
+                <p>There's no faster way to learn to build responsive sites and apps with Foundation. You'll learn how to get started, Foundation's XY grid, time saving UI components and best practices, as well as using and customizing Foundation's JavaScript helpers.</p>
+                <button class = "botao2">Learn More</button>
+            </div>
+
+            <div class = "box5">
+                <img src = "imagens/advanced-foundation.png" width = 250>
+                <h1>Advanced Foundation</h1>
+                <p>Take your skills to the next level and impress your co-workers with. Advanced Foundation. You'll come away with advanced XY Grid skills, how to amplify your skills using Sass, ZURB's build system to automate tasks, and advanced JavaScript customizations.</p>
+                <button class = "botao2">Learn More</button>
+            </div>
+
+            <div class = "box5">
+                <img src = "imagens/customizable-sass-grid.svg" width = 250>
+                <h1>Foundation Certification</h1>
+                <p>Foundation certification shows that you understand responsive design and validates your coding skills with this public accreditation. Foundation Certification will help you become more marketable, get hired faster, and promote yourself.</p>
+                <button class = "botao2">Learn More</button>
+            </div>
+            <div style="clear: both"></div>
+        </section>
+            
+        <section class = "secao-6">
+            <h1>Brands using Foundation:</h1>
+
+            <div class = "box6">
+                <img src = "imagens/logo-adobe.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-ebay.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-hp.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-cisco.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-macys.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-disney.png"> 
+            </div>
+            
+            <div style = "clear: both"></div>
+            <div class = "box6">
+                <img src = "imagens/logo-samsung.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-amazon.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-ea.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-pixar.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-northface.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-university.png">
+            </div>
+            <div style = "clear: both"></div>
+            <div class = "box6">
+                <img src = "imagens/logo-ford.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-pbs.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-natgeo.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-webfwd.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-wp.png">
+            </div>
+
+            <div class = "box6">
+                <img src = "imagens/logo-losalamos.png">
+            </div>
+
+            <a class = "link-bonito" href= "#">See who else is using Foundation →</a>
+        </section>
+
+        <section class = "secao-final">
+            <div class = "box7">
+                <h1>Download ZURB’s 17 Responsive Trends That Will Shape 2017</h1>
+                <p>Stay informed with amazing responsive trends each month from ZURB.</p>
+                <div class = "botao">
+                    <button class = "botao3">Download the PDF</button>
+                </div>
+            </div>
+        </section>
+
+        <section class = "final-2">
+            <div class = "box8">
+                <h2>REGISTER TODAY</h2>
+                <h2>----------</h1>
+            </div>
+        </section> 
+    </body>
+</html>

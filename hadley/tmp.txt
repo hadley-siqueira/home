@@ -1,0 +1,47 @@
+>>> o = open('tmp.txt', 'r')
+>>> v = o.read().split()
+>>> v
+['aderbal014', 'alex035', 'allisson024', 'amelia021', 'ana034', 'andressa022', 'anna007', 'eric009', 'evelyn027', 'felipe017', 'francisco032', 'francisco013', 'isaque018', 'joao029', 'joao016', 'joao036', 'jonatham025', 'jose031', 'jose001', 'kamilly004', 'karlla020', 'kaue023', 'keila028', 'leandro019', 'ligia026', 'lucas002', 'lucas030', 'luhan033', 'luis011', 'luiz005', 'maria015', 'maria012', 'maxwel006', 'riquelme003', 'thaynan010', 'wisley008']
+>>> import os
+>>> for user in v:
+...     os.system('sudo useradd -m ' + user)
+...     os.system('sudo passwd ' + user)
+... 
+
+
+aderbal014
+alex035
+allisson024
+amelia021
+ana034
+andressa022
+anna007
+eric009
+evelyn027
+felipe017
+francisco032
+francisco013
+isaque018
+joao029
+joao016
+joao036
+jonatham025
+jose031
+jose001
+kamilly004
+karlla020
+kaue023
+keila028
+leandro019
+ligia026
+lucas002
+lucas030
+luhan033
+luis011
+luiz005
+maria015
+maria012
+maxwel006
+riquelme003
+thaynan010
+wisley008

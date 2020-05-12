@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+            var x = parseInt(window.prompt('Informe a coordenada de x:'));
+            var y = parseInt(window.prompt('Informe a coordenada de y:'));
+            var c = parseInt(window.prompt('Digite o comando:'));
+
+            if (c == 'b') {
+                var b = x - 10
+                console.log('A nova coordenada é ' + b + ', ' + x);
+            }
+            else if (c == 'c') {
+                c = x + 10
+                console.log('A nova coordenada é ' + c + ', ' + x);
+            }
+            else if (c == 'e') {
+                var e = y - 10
+                console.log('A nova coordenada é ' + e + ', ' + x);
+            }
+            else if (c == 'd') {
+                var d = y + 10
+                console.log('A nova coordenada é ' + d + ', ' + y);
+            }
+            else {
+                console.log('Comando incorreto');
+            }
+        </script>
+    </body>
+</html>

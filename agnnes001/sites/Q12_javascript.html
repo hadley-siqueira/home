@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+        var x1;
+        var p1;
+        var x2;
+        var p2;
+        
+        x1 = window.prompt("Informe o primeiro produto:");
+        p1 = parseFloat(window.prompt("Informe o preço do primeiro produto:"));
+        x2 = window.prompt("Informe o segundo produto:");
+        p2 = parseFloat(window.prompt("Informe o preço do segundo produto:"));
+        
+        if (p1 > p2) {
+            console.log("O produto mais caro eh " + x1);
+        } else if (p2 > p1) {
+            console.log("O produto mais caro eh " + x2);
+        } else {
+            console.log("Os dois produtos tem o mesmo preço");
+        }
+    
+        </script>
+    </body>
+</html>

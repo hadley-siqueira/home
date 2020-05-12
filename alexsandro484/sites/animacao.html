@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<h1 id="cab1">Um cabeçalho</h1>
+
+		<h1 id="cab2">Um cabeçalho 2</h1>
+
+		<script>
+			var tamanho = 10;
+			var pos_esquerda = 10;
+			var tamanho2 = 10;
+			var pos_esquerda2 = 500;
+
+
+			function mudarTamanho() {
+				var e = document.getElementById('cab1');
+				e.style.fontSize = tamanho + 'px';
+				e.style.position = 'relative';
+				e.style.left = pos_esquerda + 'px';
+
+				var e = document.getElementById('cab2');
+                                e.style.fontSize = tamanho2 + 'px';
+                                e.style.position = 'relative';
+                                e.style.left = pos_esquerda2 + 'px';
+			}
+
+			function animar() {
+				if (tamanho < 50 && tamanho2 > 50){
+					mudarTamanho();
+					tamanho = tamanho + 1;
+					tamanho2 = tamanho2 + 1;
+					pos_esquerda = pos_esquerda + 5;
+					pos_esquerda2 = pos_esquerda - 1;
+					setTimeout(animar, 10);
+				}
+			}
+
+			animar();
+		</script>
+	</body>
+</html>

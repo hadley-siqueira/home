@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <script src="opentype/dist/opentype.min.js"></script>
+        <script src="vivus/dist/vivus.js"></script>
+        <script src="snap/dist/snap.svg.js"></script>
+    </head>
+
+    <body>
+        Texto: <input type="text" id="inp" />
+        <button onclick="animar()">Animar</button>
+        <br>
+        
+
+        <svg id="board" width="800" height="600" viewBox="0 0 800 600" preserveAspectRatio="none" style="border: 2px solid #000">
+            <path id="p"/>
+        </svg>
+        <script>
+            var mypath;
+            var f;
+
+            function drawFinishedPath(snap, path) {
+                snap.rect(0, 0, 800, 600).attr({fill: '#fff'});
+                snap.path(path).attr({fill: 'none', stroke: '#000', strokeWidth: '2px'});
+                snap.path(path).attr({fill: 'none', stroke: '#000', strokeWidth: '2px'});
+            }
+
+            function drawPath(snap, path, length, step) {
+                if (step % 2 == 0) {
+                snap.clear();
+                snap.rect(0, 0, 800, 600).attr({fill: '#fff'});
+                snap.path(path.getSubpath(0, length)).attr({fill: 'none', stroke: '#000', strokeWidth: '2px'});
+                var c = path.getPointAtLength(length);
+                //snap.circle(c.x, c.y, 10).attr({fill: '#00f'});
+                snap.image('hand.png', c.x - 30, c.y - 30, 300, 300);
+                length += 10;
+                }
+
+                if (length < path.getTotalLength()) {
+                    requestAnimationFrame(function() {
+                        drawPath(snap, path, length, step + 1);
+                    });
+                } else {
+                    drawFinishedPath(snap, path);
+                }
+            }
+
+            function animar() {
+                var inp = document.getElementById('inp').value;
+
+            opentype.load('fonts/Roboto-Regular.ttf?raw=true', function(err, font) {
+                if (err) {
+                     alert('Font could not be loaded: ' + err);
+                } else {
+                    var path = font.getPath(inp, 50, 70, 42);
+                    var s = Snap('#board');
+                    var txt = s.path(path.toPathData());
+                    mypath = txt;
+                    drawPath(s, txt, 0, 0);
+/*
+//                    var ctx = document.getElementById('canvas').getContext('2d');
+                    // Construct a Path object containing the letter shapes of the given text.
+                    // The other parameters are x, y and fontSize.
+                    // Note that y is the position of the baseline.
+                    f = font;
+                   
+                    var path = font.getPath('Hello, World!', 50, 70, 42);
+                    var paths = font.getPaths('abc   def 012', 50, 70, 42);
+                    // If you just want to draw the text you can also use font.draw(ctx, text, x, y, fontSize).
+  //                  path.draw(ctx);
+                    mypath = path;
+                    var v = document.getElementById('board');
+//                    v.innerHTML = path.toSVG();
+
+                    for (var i = 0; i < paths.length; ++i) {
+                        paths[i].fill = "rgba(0,0,0,0)";
+                        paths[i].stroke = "#0f0";
+                        v.innerHTML += paths[i].toSVG();
+                    }
+
+                    new Vivus('board', {duration: 200, type: 'oneByOne'}, function() {});//myCallback);
+                    v.style.transition = "all 5s";
+                    v.style['transform'] = 'translate(10px, 20px)';
+                    var s = Snap('#board');
+
+                    mypath = path;
+                    var p = Snap.path(path.toPathData());
+                    Snap.path(p.getSubpath(0, 7));
+                    s = s.circle(400, 100, 100);
+                    s.animate({r: 10}, 3000, null, function() { s.animate({cx: 10}, 3000) });*/
+                }
+            });}
+        </script>
+    </body>
+</html>

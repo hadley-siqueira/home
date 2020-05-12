@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+            Math
+
+            var cx = parseInt(window.prompt(" informe o primeira cooerdenada de X do centromdo circulo: "));
+            var cy = parseInt(window.prompt(" informe a segunda cordenada de X: "));
+            var px = parseInt(window.prompt(" informe o primeiro valor de Y: "));
+            var py = parseInt(window.prompt(" informe o segundo valor de Y: "));
+            var c = px;
+            var r = parseInt(window.prompt(" informe o raio do circulo: "));
+            var d = Math.sqrt(Math.pow((cx - px), 2) + (cy-py), 2);
+
+            if (d < r) {
+                console.log("esta dentro ");
+            } else {
+                console.log(" esta fora");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    body{text-align: center;
+         background:url("https://c1.staticflickr.com/9/8640/16265058695_24272c3231_b.jpg")no-repeat;
+           background-size: 100vw 100vh;
+    }
+
+   form{
+    margin:auto;
+    width: 80%;
+  }
+  table{}
+  tr{color: white; background-color:#40ff00 ;}
+  th{background:#111;}
+   
+</style>
+
+
+<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","mercadorias.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+<body>   
+<form>
+<input type="text" name="users" onchange="showUser(this.value)">
+
+
+<br>
+<div id="txtHint"><b>Person info will be listed here...</b></div>
+</form>
+</body>
+</html>

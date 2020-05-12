@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #josa {
+                color: #006;
+                font-size: 20px;
+            }
+
+            #caixa1 {
+                float: left;
+                width: 40%;
+                padding-top: 50px;
+            }
+
+
+            #caixa2 {
+                padding-top: 30px;
+                float: left;
+                width: 40%;
+                margin-left: 100px;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #EEE;
+            }
+
+            #caixa-maior {
+                width: 80%;
+                margin: auto;
+            }
+
+            #mapa {
+                width: 100%;
+            }
+
+            .os-inputs {
+                 margin-bottom: 0px;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: 1px solid #999;
+                padding: 6px;
+            }
+
+            #i1 {
+                float: left;
+                width: 49%;
+            }
+
+            #i2 {
+                float: right;
+                width: 49%;
+            }
+
+            #i3, #i4 {
+                width: 100%;
+                margin-bottom: 0px;
+                margin-top: 10px;
+                border-radius: 5px;
+                border: 1px solid #999;
+                padding: 6px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            #box-input {
+                width: 100%;
+                margin: 0;
+            }
+
+            .date {
+                float: left;
+                width: 50px;
+            }
+
+            .info {
+                font-size: 9px;
+                text-decoration: none;
+            }
+
+            #criar {
+                background-color: #2d862d;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+                padding: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+       <div id="caixa-maior">
+       <div id="caixa1">
+       <p id="josa">
+O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.
+        </p>
+
+        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/GwFs3_KxNjS.png" id="mapa">
+        </div>
+
+        <div id="caixa2">
+            <h1>Abra uma conta</h1>
+            <h3>É gratuito e sempre será.</h3>
+            <div id="box-input">
+                <input class="os-inputs" id="i1" type="text" placeholder="Nome">
+                <input class="os-inputs" id="i2" type="text" placeholder="Sobrenome">
+                <div style="clear: both"></div>
+            </div>
+            <input class="os-inputs" id="i3" type="text" placeholder="Celular ou Email">
+            <input class="os-inputs" id="i4" type="text" placeholder="Nova Senha">
+
+            <h3>Data de Nascimento</h3>
+            <input class="date" type="number" value="30">
+            <input class="date" type="number">
+            <input class="date" type="number">
+            <a class="info" href="#">Por que preciso informar minha data de nascimento</a>
+            <input type="radio"><label>Feminino</label>
+            <input type="radio"><label>Masculino</label>
+
+            <p class="info">
+Ao clicar em Abrir uma conta, você concorda com nossos Termos e que leu nossa Política de Dados, incluindo nosso Uso de Cookies. Você pode receber notificações por SMS do Facebook e pode cancelar o recebimento a qualquer momento.</p>
+
+            <button id="criar">Abrir uma conta</button>
+        </div>
+        </div>
+    </body>
+</html>

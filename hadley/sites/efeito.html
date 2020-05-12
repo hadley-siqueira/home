@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 1px solid #000">
+        </canvas>
+
+        <script>
+            var points = [];
+            var limite = 100;
+            var ctx = document.getElementById('area').getContext('2d');
+
+            function Point(x, y) {
+                this.x = x;
+                this.y = y;
+                this.vx = Math.random();
+                this.vy = Math.random();
+                this.update = function() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < 0 || this.x > 800) {
+                        this.vx = -this.vx;
+                    }
+
+                    if (this.y < 0 || this.y > 600) {
+                        this.vy = -this.vy;
+                    }
+                }
+            }
+
+
+            function dist(p1, p2) {
+                return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
+            }
+
+            function init() {
+                ctx.fillStyle = "rgba(200, 200, 200, 1)";
+                ctx.strokeStyle = "rgba(200, 200, 200, 1)";
+                
+                for (var i = 0; i < 100; ++i) {
+                    points.push(new Point(Math.random() * 500 + 200, Math.random() * 400 + 100));
+                } 
+            }
+
+            function update() {
+                for (var i = 0; i < points.length; ++i) {
+                    points[i].update();
+                }
+            }
+
+            function opacidade(p1, p2) {
+                var d = dist(p1, p2);
+
+                
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, 800, 600);
+                ctx.beginPath();
+                ctx.rect(0, 0, 800, 600);
+                ctx.fillStyle = "#000";
+                ctx.fill();
+                ctx.fillStyle = "#777";
+
+                for (var i = 0; i < points.length; ++i) {
+                    ctx.beginPath();
+                    ctx.arc(points[i].x, points[i].y, 2, 0,3.1415 * 2);
+                    ctx.fill();
+                    points[i].update();
+                }
+
+                for (var i = 0; i < points.length; ++i) {
+                    for (var j = i + 1; j < points.length; ++j) {
+                        if (dist(points[i], points[j]) < limite) {
+                            ctx.beginPath();
+                            ctx.moveTo(points[i].x, points[i].y);
+                            ctx.lineTo(points[j].x, points[j].y);
+                            op = 1.0 - dist(points[i], points[j]) / limite;
+
+                            if (op < 0) op = 0;
+                            if (op > 1) op = 1;
+
+                            ctx.strokeStyle = "rgba(200, 200, 200, " + op + ")";
+                            ctx.stroke();
+                        }
+                    }
+                } 
+
+                window.requestAnimationFrame(draw);
+            }
+
+
+            init();
+            window.requestAnimationFrame(draw);
+        </script>
+    </body>
+</html>

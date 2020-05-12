@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h1>Autoria Web</h1>
+                    <p>Introdução ao CSS</p>
+                </section>
+
+                <section>
+                    <p>CSS (Cascading Style Sheet) é a linguagem usada para customizar uma página HTML</p>                    
+                </section>
+
+                <section>
+                    <p>Tem uma sintaxe simples: escolhe-se o elemento que se quer customizar
+                       e aplica-se as customizações</p>
+                </section>
+
+                <section>
+                    <p>CSS deve ser incluído na cabeça do arquivo HTML, seja embutido ou como
+                       um arquivo externo</p>
+                </section>
+
+                <section>
+                    <h1>Cores</h1>
+                </section>
+
+                <section>
+                    <p>Primeiro exemplo de uso de CSS: customizar as cores   
+                </section>
+
+                <section>
+                    <p>Mas antes do exemplo: entender como as cores funcionam</p>
+                </section>
+
+                <section>
+                    <p>Qualquer cor pode ser gerada a partir da combinação das cores (ou canais)
+                       vermelho (red), verde (green) e azul (blue).</p>
+                </section> 
+
+                <section>
+                    <p>No computador, os canais geralmente variam de 0 à 255 (em decimal)
+                       ou de 0 à FF (em hexadecimal)</p>   
+                </section> 
+
+                <section>
+                    <h1>Primeiro exemplo</h1>
+                </section>
+
+                <section>
+                    <h1>Inclusão do CSS</h1>
+                </section>
+                <section>
+                    <p>Embutido no próprio HTML</p>
+                </section>
+                <section>
+                    <p>Inclusão de arquivo externo</p>
+                </section>
+                <section>
+                    <p>Embutido na própria tag</p>
+                </section>
+                <section>
+                    <h1>Fim da aula</h1>   
+                </section> 
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

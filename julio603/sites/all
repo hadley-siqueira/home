@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+
+                <title>SimuLibras</title>
+        </head>
+
+    <style>
+        body {
+    background-color: hsla(9, 1%, 1%, 100);
+    }
+
+        h2 {    
+             color: white;
+             text-align: center;
+             font-size: 50px;
+        }       
+
+        p {
+             color: white;
+             font-family: verdana;
+             font-size: 20px;
+             text-align: center;
+        }
+        
+        button{
+             color: white;
+             font-family: verdana;
+             font-size: 45px;
+             text-align: center;
+             padding: 2px;
+             margin: 2px;
+
+        }
+    </style>
+      <body>
+          <h2>Simula Libras</h2>
+
+            <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = "Sloga ";
+    </script>
+     
+    <button onclick="funcaoParaExecutar()">Clique Para Iniciar</button>
+
+    <script type="text/javascript">
+
+        function funcaoParaExecutar() {
+            alert('Redirecionando Para Outra Aba, Por Favor Aguarde')
+        }
+
+    </script>
+            <!--- conteudo --->
+            
+       </body>
+    </html>

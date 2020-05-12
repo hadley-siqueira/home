@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Um cabeçalho</h1>
+        <p>Um parágrafo</p>
+        <p id= "nomeUsuario"></p>
+        <p id= "nomeNovamente"></p>
+
+        <Script>
+             var msg= 'Qual o seu nome?';
+             var nome = window.prompt(msg);
+
+             var i = "nomeUsuario";
+             var f = document.getElementById(i);
+
+             f.innerHTML = 'Ola, ' + nome;
+
+            i= 'nomeNovamente';
+            f =document.getElementById(i);
+
+            f.innerHTML = 'Ola outra vez,' +nome;
+
+            msg ='Qual a sua idade?';
+            var idade = parseInt(window.prompt(msg));
+
+            if(idade > 18){
+              f.innerHTML += '.Voce eh velho';
+            }else {
+              f.innerHTML += '. Voce ta quase velho';
+            } 
+                window.alert('Olá, ' + nome);
+             
+        </Script>
+    </body>
+</html>

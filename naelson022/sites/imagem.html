@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <canvas id="area" width="800" height="600">
+    </canvas>
+
+    <img src="neto.jpg" id="neto" style="display: none">
+    <script>
+        var red = 0;
+        var x = 0;
+        var y = 0;
+        var freq = 10;
+
+        function draw() {
+            if (freq % 2 == 0) {
+
+                var c = document.getElementById('area').getContext('2d');
+                var img = document.getElementById('neto');
+                c.drawImage(img, 0, 0);
+
+                var pixels = c.getImageData(0, 0, img.width, img.height);
+
+                /*
+                for (var i = 0; i < pixels.data.length; ++i) {
+                    if (i % (red % 10) == 0) {
+                        pixels.data[i+ 1] = 255 - Math.ceil(Math.random() * 255);
+                    }
+                }*/
+
+                c.clearRect(0, 0, 800, 600);
+                red += 1;
+                xx = x;
+                x = Math.random() * 800;
+                yy = y;
+                y = Math.random() * 600;
+        
+                c.lineTo(xx, yy, x, y);        
+                c.stroke();
+
+                c.putImageData(pixels, x, y);
+            }
+
+            freq = freq + 1;
+            window.requestAnimationFrame(draw);
+        }
+
+        window.requestAnimationFrame(draw);
+    </script>
+</html>
+

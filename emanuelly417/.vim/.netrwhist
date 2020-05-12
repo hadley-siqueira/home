@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/emanuelly417'
+let g:netrw_dirhist_2='/home/emanuelly417/sites'
+let g:netrw_dirhist_3='/home/emanuelly417/avaliacao'
+let g:netrw_dirhist_4='/home/emanuelly417'

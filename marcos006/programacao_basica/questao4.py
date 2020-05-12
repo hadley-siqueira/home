@@ -1,0 +1,6 @@
+print("***********************************")
+print("** Programa Gerador de Parágrafo **")
+print("***********************************")
+p = input("Informe a palavra: ")
+n =(int(input("Informe a quantidade de repeticoes: "))) 
+print("Resultado: " + str((p + ' ') * n))

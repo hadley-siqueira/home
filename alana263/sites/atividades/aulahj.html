@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Um cabeçalho</h1>
+        <p>Um parágrafo</p>
+        <p id="nomeUser"></p>
+        <p id="nomeDnv"></p>
+        <script>
+            var msg = 'Qual o seu nome?';
+            var nome = window.prompt(msg);
+/*            for (var i = 0; i < 10; i++) {
+                window.alert('Olá, ' + nome);
+            }
+*/
+            var i = 'nomeUser';
+            var f = document.getElementById(i);
+
+            f.innerHTML = 'Olá, ' + nome;
+
+            i = 'nomeDnv';
+            f = document.getElementById(i);
+
+            f.innerHTML = 'Olá outra vez, ' + nome;
+
+            msg = 'Qual sua idade?';
+            var idade = parseInt(window.prompt(msg));
+            if(idade >= 18) {
+                f.innerHTML += '. Você é velho';
+            } else {
+                f.innerHTML += '. Você tá quase velho';
+            }
+        </script>
+    </body>
+</html>

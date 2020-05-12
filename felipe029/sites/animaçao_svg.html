@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <svg width="800" height="600" viewBox="0 0 800 600" preserveAspectRatio="none" style="border: 2px solid #000">
+      <circle id="circ1" cx="100" cy="200" r="10" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+    <button onclick="iniciarAnimacao()">Clique para iniciar a animação</button>
+
+    <script>
+      var x = 100;
+      var y = 200;
+
+      function atualizarCoordenadas() {
+        if (x < 800 && y < 600) {
+          x = x + 2;
+          y = y + 5;
+          
+          var v = document.getElementById('circ1');
+          v.setAttribute('cx', x);
+          v.setAttribute('cy', y);
+          window.requestAnimationFrame(atualizarCoordenadas);
+        }
+      }
+
+      function iniciarAnimacao() {
+        window.requestAnimationFrame(atualizarCoordenadas);
+      }
+    </script>
+  </body>
+</html>

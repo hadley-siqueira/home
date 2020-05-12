@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style> 
+            body {
+                margin:0px;
+                padding:0px;
+            }
+        
+            #Menu {
+              position:fixed;
+              float:left;
+              width:100%;
+              background-color:rgba(139,0,0,1.3);
+            }
+            #Menu ul{
+              float:left;
+              width:100%;
+              height:100%;
+              padding:0px;
+              margin:0px;
+              list-style:none;
+            } 
+            #Menu ul li{
+              float:left;
+              width:19.9%;
+              margin-top:0px;
+              padding-top:10px;
+              padding-bottom:10px;
+              text-align:center;
+              font-family:arial;
+              font-size:20px;
+              border-left:1px solid #c5c9cc;
+              transition:all 0.5s;
+            } 
+            #Menu ul li:hover {
+              transition:all 0.5s;
+              background:rgba(20,20,20,0.6);
+            }  
+            #Menu ul li a{
+              color:#000000;
+              text-decoration:none;
+            } 
+            #Menu ul li a:hover{
+              color:#FFFFFF;
+            }
+            .background-pagina{
+              z-index:-1;
+              float:left;
+              position:fixed;
+              width:100%;
+              height:800px;
+              background:url("https://i.imgur.com/BGiH2Yb.png") no-repeat;
+              background-size:100% 100%;
+            }
+            article{
+              float:left;
+              width:60%;
+              height:;
+              margin-top:80px;
+              margin-left:20%;
+              background-color:#FFF;
+              border-radius:10px;
+              padding:20px;
+            }
+             .rodape1{
+              float: left;
+              background-color:#2E2E2E; 
+              width:100%;
+              height:50px;
+            }
+            .rodape1 img{
+              margin-left:40%;
+              display:block;
+              width:20%;
+              height:80%;
+              margin-top:5px;
+            }
+
+            .rodape2{
+              float:left;
+              background-color:#585858; 
+              width:100%;
+              height:250px;
+            }
+            .rodape2 .p1 {
+              float:left;
+              width:70%;
+              margin-left:15%;
+              font-family:century gothic;
+              font-weight:bold;
+              font-size:20px;
+              color:#000;
+              text-align:center;
+            }
+            .rodape2 hr {
+              float:left;
+              border:none;
+              width:60%;
+              margin-left:20%;
+              height:2px;
+              background-color:#8B0000;
+            }
+            .rodape2 .area_redes_sociais {
+              float:left;
+              width:26.8%;
+              height:60px;
+              background-color:;
+              margin-left:35%;
+            }
+            .rodape2 .area_redes_sociais img {
+              float:left;
+              width:60px;
+              height:60px;
+              background-color:;
+              margin-right:30px;
+              margin-left:30px;
+            }
+         </style>
+    </head>
+
+    
+    <body> 
+
+      <div id="Menu">
+          <ul>
+            <li><a href="#">Sobre<a></li>
+            <li><a href="#">Temporadas<a></li>
+            <li><a href="#">Home<a></li>
+            <li><a href="#">Personagens<a></li>
+            <li><a href="#">Curiosidades<a></li>
+          </ul>
+      </div>
+      <div class="background-pagina">
+        <!--bagkground-->
+      </div>
+      <article>
+        <h1>Curiosidades sobre a série</h1>
+        <p>Vampiros não só existem, como todo mundo sabe da existência deles. Essa é a realidade de True Blood, a série criada por Alan Ball, de Six Feet Under, baseada nos romances de Charlaine Harris, que estreará sua quarta temporada no dia 26 de junho nos Estados Unidos e em 10 de julho no Brasil.
+Desde que os cientistas japoneses inventaram o sangue sintético, os vampiros saíram das sombras para se tornarem cidadãos como quaisquer outros. E assim como todas as minorias, eles sofrem preconceito e tem que lutar para ter seus direitos reconhecidos. E claro, nem todos são bonzinhos…</p>
+       <p>Em uma cidade do sul dos Estados Unidos, um garçonete local chamada Sookie Stackhouse (Anna Paquin) entende exatamente como é ser uma pária da sociedade. Amaldiçoada com a habilidade de ler a mentes das pessoas, ela é aberta a integração entre vampiros e humanos e fica muito mais interessada nisso quando conhece Bill Compton (Stephen Moyer), um bonito e misterioso vampiro que aparece por aquelas bandas. Mas, conforme a série evolui, a gente percebe que não temos apenas vampiros entre nós, mas também metaformos, lobisomens, bruxas…</p>
+
+            <p>E o que não faltam também são curiosidades sobre essa sexy história de horror e você confere algumas agora:</p>
+      <p># O nome da cidade onde a história se passa, Bon Temps, significa Bons Tempos em francês e faz referência a expressão “Laissez les bon temps rouler”, que quer dizer algo como “Deixe os bons tempos rolarem”.</p>
+      <p># Todos os episódios da série levam um título que também é o nome de uma música popular ou cristã.</p>
+      <p># O papel de Tara foi originalmente dado a Brook Kerr. Rutina Wesley a substituiu depois de dois episódios já terem sido gravados, o que acarretou que ela refizesse todas as cenas de Brook.</p>
+      <p># Ian Somerhalder fez testes para True Blood, mas acabou não sendo escalado. Assim, ele foi ser vampiro em outras bandas, vivendo o Damon em The Vampire Diaries.</p>
+      <p># Como os vampiros são marcados pela prata, eles não podem usar talheres tradicionais. Os usados por Russell Edgington, por exemplo, são de ouro.</p>
+      <p># Apesar de praticamente todo mundo falar um inglês “caipira” em True Blood, quatro atores do elenco principal nem americanos são: Anna Paquin nasceu no Canadá e cresceu na Nova Zelândia, Stephen Moyer é inglês, Ryan Kwanten (Jason Stackhouse) é australiano e Alexander Skarsgard (Eric Northman) é sueco!</p>
+      <p># Na primeira temporada da série, ficamos sabendo que Bill Compton tem 173 anos e Sookie tem 25. Isso é o que eu chamo de “diferença de idade”.</p>
+      <p># Há uma placa no Fangtasia, o bar-vampiro de Eric, que diz “No biting on premises”, algo como “Sem mordidas no estabelecimento”.</p>
+      <p># O nome do meio de Tara é Mae e o de Bill é Thomas.</p>
+      <p># A música de abertura da série é Bad Things do primeiro álbum de Jace Everett, um cantor americano de country music.</p>
+      <p># Alexander Skarsgard, inicialmente, fez testes para o papel de Bill.</p>
+      <p># Alan Ball revelou em entrevista que não conhecia muito da mitologia dos vampiros, que nunca leu nada da famosa escritora Anne Rice ou viu as séries Buffy the Vampire Slayer e seu spin-off Angel e, por isso, acabou criando sua própria mitologia.</p>
+      
+      </article>
+
+       <div class="rodape1">
+           <img src="https://orig00.deviantart.net/eaf7/f/2011/285/a/7/png_true_blood_by_kikiketchup-d4cmua2.png" />
+        </div>
+
+        <div class="rodape2">
+
+          <p class="p1">
+            Follow US
+          </p>
+          <hr/>
+          <div class="area_redes_sociais">
+            <a href=""><img src="https://cdn4.iconfinder.com/data/icons/black-ink-grunge-social-media/512/097668-facebook-logo-square.png" title="facebook" alt="" /></a>
+            <a href="https://twitter.com/truebloodhbo"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/732/icons/grunge-stamp-new-twitter-bird-square.png" title="twitter" alt="" /></a>
+            <a href="https://www.instagram.com/truebloodhbo/"><img src="http://www.underwaterdepot.net/SocialIcons/distress-instagram.png" title="instagram" alt="" /></a>
+          </div>
+        </div>
+    </body>
+</html>
+
+

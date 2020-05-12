@@ -1,0 +1,254 @@
+{
+  "stdout": [
+    [
+      0.043471,
+      "bash: /home/hadley/.rvm/scripts/rvm: No such file or directory"
+    ],
+    [
+      0.000104,
+      "\r\n"
+    ],
+    [
+      0.002588,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      2.741781,
+      "p"
+    ],
+    [
+      0.131948,
+      "y"
+    ],
+    [
+      0.079438,
+      "t"
+    ],
+    [
+      0.241679,
+      "h"
+    ],
+    [
+      0.046611,
+      "o"
+    ],
+    [
+      0.116745,
+      "n"
+    ],
+    [
+      0.318577,
+      "3"
+    ],
+    [
+      0.357523,
+      " "
+    ],
+    [
+      0.158161,
+      "r"
+    ],
+    [
+      0.081593,
+      "e"
+    ],
+    [
+      0.172449,
+      "tangulo.py "
+    ],
+    [
+      2.728505,
+      "\r\n"
+    ],
+    [
+      0.024727,
+      "Digite o x do primeiro vertice: "
+    ],
+    [
+      5.803266,
+      "3"
+    ],
+    [
+      0.835541,
+      "\r\nDigite o y do primeiro vertice: "
+    ],
+    [
+      0.473999,
+      "6"
+    ],
+    [
+      0.360695,
+      "\r\n"
+    ],
+    [
+      0.000263,
+      "Digite o x do segundo vertice: "
+    ],
+    [
+      3.698555,
+      "1"
+    ],
+    [
+      0.11854,
+      "0"
+    ],
+    [
+      0.442192,
+      "\r\nDigite o y do segundo vertice: "
+    ],
+    [
+      0.474604,
+      "1"
+    ],
+    [
+      1.390959,
+      "\r\nDigite a coordenada x do ponto: "
+    ],
+    [
+      1.38654,
+      "1"
+    ],
+    [
+      0.244825,
+      "\r\nDigite a coordenada y do ponto: "
+    ],
+    [
+      0.591362,
+      "1"
+    ],
+    [
+      0.36112,
+      "\r\nO ponto esta fora"
+    ],
+    [
+      0.000127,
+      "\r\n"
+    ],
+    [
+      0.006976,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      1.696536,
+      "\r\n"
+    ],
+    [
+      0.000201,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      0.357631,
+      "\r\nhadley@linuxmc: $ "
+    ],
+    [
+      0.485178,
+      "python3 retangulo.py "
+    ],
+    [
+      0.593091,
+      "\r\n"
+    ],
+    [
+      0.025161,
+      "Digite o x do primeiro vertice: "
+    ],
+    [
+      1.877747,
+      "3"
+    ],
+    [
+      0.242145,
+      "\r\n"
+    ],
+    [
+      0.000362,
+      "Digite o y do primeiro vertice: "
+    ],
+    [
+      0.356114,
+      "6"
+    ],
+    [
+      0.321465,
+      "\r\nDigite o x do segundo vertice: "
+    ],
+    [
+      1.02972,
+      "1"
+    ],
+    [
+      0.239357,
+      "0"
+    ],
+    [
+      0.28228,
+      "\r\nDigite o y do segundo vertice: "
+    ],
+    [
+      0.356421,
+      "1"
+    ],
+    [
+      0.468983,
+      "\r\nDigite a coordenada x do ponto: "
+    ],
+    [
+      1.821786,
+      "8"
+    ],
+    [
+      0.67715,
+      "\r\nDigite a coordenada y do ponto: "
+    ],
+    [
+      0.463442,
+      "3"
+    ],
+    [
+      0.519111,
+      "\r\nO ponto esta dentro"
+    ],
+    [
+      0.003797,
+      "\r\n"
+    ],
+    [
+      0.004468,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      4.311608,
+      "e"
+    ],
+    [
+      0.200149,
+      "x"
+    ],
+    [
+      0.085831,
+      "i"
+    ],
+    [
+      0.156132,
+      "t"
+    ],
+    [
+      0.200341,
+      "\r\nexit"
+    ],
+    [
+      9.3e-05,
+      "\r\n"
+    ]
+  ],
+  "version": 1,
+  "title": null,
+  "env": {
+    "TERM": "xterm",
+    "SHELL": "/bin/bash"
+  },
+  "width": 197,
+  "height": 51,
+  "duration": 40.213879,
+  "command": null
+}

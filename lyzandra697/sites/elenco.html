@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+        <style> 
+            body {
+                margin:0px;
+                padding:0px;
+                background-color:#000000;
+            }
+        
+            #Menu {
+              position:fixed;
+              float:left;
+              width:100%;
+              background-color:rgba(139,0,0,1.3);
+            }
+            #Menu ul{
+              float:left;
+              width:100%;
+              height:100%;
+              padding:0px;
+              margin:0px;
+              list-style:none;
+            } 
+            #Menu ul li{
+              float:left;
+              width:19.9%;
+              margin-top:0px;
+              padding-top:10px;
+              padding-bottom:10px;
+              text-align:center;
+              font-family:arial;
+              font-size:20px;
+              border-left:1px solid #c5c9cc;
+              transition:all 0.5s;
+            } 
+            #Menu ul li:hover {
+              transition:all 0.5s;
+              background:rgba(20,20,20,0.6);
+            }  
+            #Menu ul li a{
+              color:#000000;
+              text-decoration:none;
+            } 
+            #Menu ul li a:hover{
+              color:#FFFFFF;
+            } 
+      
+            .box1 img {
+              width:100%;
+              padding-top:0px;
+              
+            } 
+
+            .intro { 
+                text-align: justify;
+                font-size:20px;
+                font-family:'Patua One', cursive;
+                padding-top:80px;
+                color:  #FFFFFF;
+                line-height: 25px;
+                margin-left: 20%;
+                width: 60%;
+            } 
+
+            .img_trueblood {
+                display: block;
+                margin-left: auto;
+                margin-right: auto 
+            }
+
+            .imagens { 
+               margin:auto;
+               width:70%;
+               padding-top:90px;
+              
+            }
+            .imagens .lb_temporadas {
+              float:left;
+              width:100%;
+              height:50px;
+              line-height:50px;
+              text-align:center;
+              font-family:arial;
+              font-size:30px;
+              font-weight:bold;
+              color:#FFFFFF;
+            }
+
+            .box2 {
+              float:left;
+              width:20%;
+              height:180px;
+              padding-top:20px;
+              margin-bottom:70px;
+              border-radius:100%;
+              transition: all 0.5s;
+            }
+
+            .box2 img {
+              float:left;
+              width:60%;
+              margin-left:20%;
+              border-radius:100%;
+              margin-bottom:10px;
+            } 
+
+            .box2 h1 {
+                float:left;
+                width:100%;
+                font-size:18px;
+                text-align:center;
+                margin-top: 0px;
+                font-family: 'Archivo Narrow', sans-serif;
+                color: #FFFFFF;
+            } 
+
+            .box2 p {
+              float:left;
+              width:100%;
+              padding-top:0px;
+              margin-top:-10px;
+              text-align:center;
+              font-family: 'Quicksand', sans-serif;
+              color: #FFFFFF;
+            } 
+
+            
+
+            .box2:hover { 
+                background-color: rgba(139,0,0,1.3);
+                transition: all 0.5s;
+            }
+
+            .rodape1{
+              float: left;
+              background-color:#2E2E2E; 
+              width:100%;
+              height:50px;
+            }
+            .rodape1 img{
+              margin-left:40%;
+              display:block;
+              width:20%;
+              height:80%;
+              margin-top:5px;
+            }
+
+            .rodape2{
+              float:left;
+              background-color:#585858; 
+              width:100%;
+              height:250px;
+            }
+            .rodape2 .p1 {
+              float:left;
+              width:70%;
+              margin-left:15%;
+              font-family:century gothic;
+              font-weight:bold;
+              font-size:20px;
+              color:#000;
+              text-align:center;
+            }
+            .rodape2 hr {
+              float:left;
+              border:none;
+              width:60%;
+              margin-left:20%;
+              height:2px;
+              background-color:#8B0000;
+            }
+            .rodape2 .area_redes_sociais {
+              float:left;
+              width:26.8%;
+              height:60px;
+              background-color:;
+              margin-left:35%;
+            }
+            .rodape2 .area_redes_sociais img {
+              float:left;
+              width:60px;
+              height:60px;
+              background-color:;
+              margin-right:30px;
+              margin-left:30px;
+            }
+
+
+        </style>
+    </head>
+
+    <body> 
+
+      <div id="Menu">
+          <ul>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/sobreAserie.html">Sobre<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/temporadas.html">Temporadas<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/home.html">Home<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/elenco.html">Personagens<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/curiosidades.html">Curiosidades<a></li>
+          </ul>
+      </div>
+
+        <section class="S-inicio"> 
+            <div class="box1">
+                <img src="https://i.pinimg.com/originals/c1/86/bb/c186bbf19d400392854e0938d2cf869e.jpg">
+            </div> 
+        </section> 
+       
+        <section class="intro">
+           <img class="img_trueblood" src="https://orig00.deviantart.net/eaf7/f/2011/285/a/7/png_true_blood_by_kikiketchup-d4cmua2.png">
+
+            <h1>True Blood engloba um conjunto amplo de um elenco composto por personagens regulares e centrais, e um grupo rotativo de personagens coadjuvantes. Embora a série seja rodada na cidade estadunidense ficcional Bon Temps, Louisiana, um número notável de atores que compõem o elenco são de várias nacionalidades, não sendo portanto apenas atores americanos.</h1> 
+            <p>Vamos conheçer um pouco sobre as pessoas que compõem cada personagem do elenco da série.</p> 
+        </section>
+
+        <section class="imagens">
+
+          <label class="lb_temporadas">Fundida</label>
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Anna_Paquin"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/sookie-stackhouse-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Sookie Stachouse</h1>
+                <p>Anna Paquin</p>
+            </div>
+
+            <div class="box2">
+                 <a href="https://en.wikipedia.org/wiki/Stephen_Moyer"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/bill-compton-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                 <h1>Bill Compton</h1>
+                 <p>Stephen Moyer</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Sam_Trammell"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/sam-merlotte-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Sam Merlotte</h1>
+                <p>Sam Trammell</p>
+            </div> 
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Ryan_Kwanten"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/jason-stackhouse-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Jason Stackhouse</h1>
+                <p>Ryan Kwanten</p>
+            </div>
+
+           <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Rutina_Wesley"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/tara-thorton-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Tara Thornton</h1>
+                <p>Rutina Wesley</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Kristin_Bauer_van_Straten"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/pam-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Pam Swynford</h1>
+                <p>Kristin Bauer</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Nelsan_Ellis"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/lafayette-reynolds-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Lafayette Reynolds</h1>
+                <p>Nelsan Ellis</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Alexander_Skarsg%C3%A5rd"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/eric-northman-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Erick Northman</h1>
+                <p>Alexander Skarsgard</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Deborah_Ann_Woll"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/jessica-hamby-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Jessica Hamby</h1>
+                <p>Deborah Ann Woll</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Carrie_Preston"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/arlene-fowler-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Arlene Fowler</h1>
+                <p>Carrie Preston</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Chris_Bauer"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/andy-bellefleur-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Andy Bellefleur</h1>
+                <p>Chris Bauer</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Lauren_Bowles"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/4/holly-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Holly Clreary</h1>
+                <p>Lauren Bowles</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Joe_Manganiello"><img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/alcide-herveaux-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Alcide Herveaux</h1>
+                <p>Joe Manganiello</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Anna_Camp"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/7/sarah-newlin-v2-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Sarah Newlin</h1>
+                <p>Anna Camp</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Jim_Parrack"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/4/hoyt-fortenberry-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Hoyt Fortenberry</h1>
+                    <p>Jim Parrack</p>
+            </div> 
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Amelia_Rose_Blaire"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/willa-burrell-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a> 
+                    <h1>Willa Burrell</h1>
+                    <p>Amelia Rose Blaire</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Jurnee_Smollett-Bell"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/nicole-wright-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Nicole Wright</h1>
+                <p>Jurnee Smollett-bell</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Nathan_Parsons"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/7/james-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>James Kent</h1>
+                <p>Nathan Parson</p>
+            </div>
+
+            <div class="box2">
+               <a href="https://pt.wikipedia.org/wiki/Karolina_Wydra"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/7/violet-mazurski-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Violet Mazurski</h1>
+                <p>Karolina Wydra</p>
+            </div> 
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Bailey_Noble"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/7/adilyn-bellefluer-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Adilyn Bellefleur</h1>
+                <p>Bailey Noble</p>
+            </div>
+
+            <div class="box2">
+               <a href="http://www.imdb.com/name/nm0199637/"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/7/reverend-daniels-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Reverend daniels</h1>
+                <p>Gregg Daniel</p>
+            </div> 
+
+            <div class="box2">
+               <a href="https://en.wikipedia.org/wiki/Adina_Porter"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/lettie-mae-thornton-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Lettie Mae Daniels</h1>
+                <p>Adina Porter</p>
+            </div>
+
+            <div class="box2">
+                <a href="https://pt.wikipedia.org/wiki/Mariana_Klaveno"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/lorena-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                <h1>Lorena</h1>
+                <p>Mariana Klaveno</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Michelle_Forbes"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/maryann-forrester-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Maryann Forrester</h1>
+                    <p>Michelle Forbes</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/William_Sanderson"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/sheriff-bud-dearborne-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Sheriff Bud Dearborne</h1>
+                    <p>William Sanderson</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Mehcad_Brooks"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/eggs-benedict-talley-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Eggs(Benedict Talley)</h1>
+                    <p>Mehcad Brooks</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Lois_Smith"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/adele-hale-stackhouse-gran-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Adele Stackhouse</h1>
+                    <p>Lois Smiths</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Michael_Raymond-James"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/rene-lenier-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Rene Lenier</h1>
+                    <p>Michael Raymond James</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Todd_Lowe"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/terry-bellefleur-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Terry Bellefleur</h1>
+                    <p>Todd Lowe</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Dale_Raoul"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/maxine-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Maxine Fortenberry</h1>
+                    <p>Dale Raoul</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/%C5%BDeljko_Ivanek"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/the-magister-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>The Magister</h1>
+                    <p>Zeljko Ivanek</p>
+            </div>
+
+              <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Jessica_Tuck"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/nan-flanagan-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Nan Flanagan</h1>
+                    <p>Jessica Tunk</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Lizzy_Caplan"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/amy-burley-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Amy Burley</h1>
+                    <p>Lizzy Caplan</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Andrew_Rothenberg"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/malcolm-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Malcom</h1>
+                    <p>Andrew Rothenberg</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Aunjanue_Ellis"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/diane-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Diane</h1>
+                    <p>Aunjaneu Ellis</p>
+            </div>
+
+            <div class="box2">
+                   <a href="http://www.imdb.com/name/nm1466049/"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/liam-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Liam</h1>
+                    <p>Graham Shiels</p>
+            </div>
+
+            <label class="lb_temporadas">Introduziu a Temporada 2</label>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Evan_Rachel_Wood"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/sophie-anne-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Sophie-Anne</h1>
+                    <p>Evan Rachel Wood</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Allan_Hyde"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/godric-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Godric</h1>
+                    <p>Allan Hyde</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Ashley_Jones"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/daphne-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Daphne</h1>
+                    <p>Ashley Jones</p>
+            </div>
+
+            <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Michael_McMillian"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/steve-newlin-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Steve Newlin</h1>
+                    <p>Michael Mcmillian</p>
+            </div>
+
+            <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Wes_Brown"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/luke-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Luke McDonald</h1>
+                    <p>Wes Brown</p>
+            </div>
+
+            <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Adam_Leadbeater"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/karl-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Karl</h1>
+                    <p>Adam Leadbeater</p>
+            </div>
+
+            <label class="lb_temporadas">Introduziu a Temporada 3</label>
+
+            <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Tommy_Mickens"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/jesus-velasquez-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Jesus Velaquez</h1>
+                    <p>Tommy Mickens</p>
+            </div>
+
+             <div class="box2">
+                    <a href="https://pt.wikipedia.org/wiki/Marshall_Allman"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/4/tommy-mickens-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Tommy Mickens</h1>
+                    <p>Marshall Allman</p>
+            </div>
+
+
+             <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Denis_O%27Hare"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/russell-edgington-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Russell Edgington</h1>
+                    <p>Denis O'Hare</p>
+            </div>
+
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Lindsay_Pulsipher"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/crystal-norris-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Crystal Norris</h1>
+                    <p>Lindsay Pulsipher</p>
+            </div>
+
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Grant_Bowler"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/cooter-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Cooter</h1>
+                    <p>Grant Bowler</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Rita_Bennett"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/debbie-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Debbie Pelt</h1>
+                    <p>Rita Morgan</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Theo_Alexander"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/talbot-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Talbot</h1>
+                    <p>Theo Alexander</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/James_Frain"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/franklin-mott-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Franklin Mott</h1>
+                    <p>James frain</p>
+            </div>
+
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/J._Smith-Cameron"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/melinda-mickens-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Melinda Mickens</h1>
+                    <p>J.Smith-Cameron</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Cooper_Huckabee"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/joe-lee-mickens-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Joe Lee Mickens</h1>
+                    <p>Cooper Huckabee</p>
+            </div>
+            
+            <label class="lb_temporadas">Introduziu a Temporada 4</label>
+
+             <div class="box2">
+                   <a href="https://pt.wikipedia.org/wiki/Fiona_Shaw"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/marnie-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Marnie Stonebrook</h1>
+                    <p>Fiona Shaw</p>
+            </div>
+
+             <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Vedette_Lim"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/naomi-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Naomi</h1>
+                    <p>Vedette Lim Rhambo</p>
+            </div>
+
+             <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Katerina_Pellham"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/katerina-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Katerina Pelham</h1>
+                    <p>Alexandra Breckenridge</p>
+            </div>
+
+             <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Janina_Gavankar"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/luna-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Luna Garza</h1>
+                    <p>Janina Gavankar</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Courtney_Ford"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/portia-bellefleur-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Portia Bellefleur</h1>
+                    <p>Courtney Ford</p>
+            </div>
+
+            <label class="lb_temporadas">Introduziu a Temporada 5</label>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Giles_Matthey"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/claude-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Claude</h1>
+                    <p>Giles Matthey</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Valentina_Cervi"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/salome-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Salome Agrippa</h1>
+                    <p>Valentina Cervi</p>
+            </div>
+
+
+             <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Scott_Foley"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/patrick-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Patrick Devins</h1>
+                    <p>Scott Foley</p>
+            </div>
+
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Lucy_Griffiths_(actress,_born_1986)"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/nora-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Nora GainesBorough</h1>
+                    <p>Lucy Griffiths</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Dale_Dickey"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/martha-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Martha Bozemam</h1>
+                    <p>Dale Dickey</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Christopher_Meloni"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/5/roman-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Romam Zimojic</h1>
+                    <p>Chris Meloni</p>
+            </div>
+
+            <!--6tmp-->
+             <label class="lb_temporadas">Introduziu a Temporada 6</label>
+
+             <div class="box2">
+                   <a href="http://trueblood.wikia.com/wiki/Arliss_Howard"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/governor-truman-burrell-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Governor Truman Burrell</h1>
+                    <p>Arliss Howard</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Rutger_Hauer"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/niall-brigant-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Niall Brigant</h1>
+                    <p>Rutger Hauer</p>
+            </div>
+
+             <div class="box2">
+                   <a href="https://en.wikipedia.org/wiki/Robert_Kazinsky"> <img src="https://www.hbo.com/content/dam/hbodata/series/true-blood/character/6/ben-flynn-512x512.jpg/_jcr_content/renditions/cq5dam.web.260.260.jpeg"></a>
+                    <h1>Ben Flynn</h1>
+                    <p>Rob Kazinzky</p>
+            </div>
+        </section>
+
+        <div class="rodape1">
+           <img src="https://orig00.deviantart.net/eaf7/f/2011/285/a/7/png_true_blood_by_kikiketchup-d4cmua2.png" />
+        </div>
+
+        <div class="rodape2">
+
+          <p class="p1">
+            Follow US
+          </p>
+          <hr/>
+          <div class="area_redes_sociais">
+            <a href=""><img src="https://cdn4.iconfinder.com/data/icons/black-ink-grunge-social-media/512/097668-facebook-logo-square.png" title="facebook" alt="" /></a>
+            <a href="https://twitter.com/truebloodhbo"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/732/icons/grunge-stamp-new-twitter-bird-square.png" title="twitter" alt="" /></a>
+            <a href="https://www.instagram.com/truebloodhbo/"><img src="http://www.underwaterdepot.net/SocialIcons/distress-instagram.png" title="instagram" alt="" /></a>
+          </div>
+        </div>
+    </body>
+</html>
+

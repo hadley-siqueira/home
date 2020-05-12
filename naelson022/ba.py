@@ -1,0 +1,12 @@
+a = int(input(" informe o valor de A :"))
+b = int(input("informe o valor de B: "))
+c = int(input("informe o valor de C :"))
+d = b ** 2 - 4 * a * c
+x  =  (d ** 0.5)
+w = 2 * a
+xa = -b + x 
+m = xa / w
+o = (b - 2 * b) - x
+xb = o / w 
+print("x1 = " + str (m))
+print(" x2 = " + str(xb))

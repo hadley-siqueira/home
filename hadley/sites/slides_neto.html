@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link 
+        rel="stylesheet"
+        href="estilo.css"
+        type="text/css"    
+    />
+    <style>
+        #wrapper {
+            background-color: rgba(255, 0, 0, 0.5);
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+        <p>blabla</p>
+    </div>
+    <h1>Meus Slides</h1>
+
+    <div id="slides">
+      <div id="slide0" class="slide">
+        <p id="meup">Primeiro slide</p>
+      </div>
+
+      <div id="slide1" class="slide">
+        <p>Segundo slide</p>
+      </div>
+
+      <div id="slide2" class="slide">
+        <p>Terceiro slide</p>
+      </div>
+      <button onclick="prev()">Anterior</button>
+      <button onclick="prox()">Proximo</button>
+      <button onmouseover="aumentar()">Aumentar</button>
+      <button onclick="mudarPara(0)">1</button>
+    </div>
+    <p id="tam">as</p>
+    <h1 id="cab"
+        onmouseenter="rodar()" 
+        onmouseleave="parar()">Deixe em cima</h1>
+<input type="range" min="1" max="100" value="50" id="myRange"
+    oninput="mudarOpacidade()">
+
+    <script src="slides.js"></script>
+    <script>
+        mostrarSlide();
+    </script>
+  </body>
+</html>

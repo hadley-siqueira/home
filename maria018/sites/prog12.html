@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.alert('VOU TE DIZER QUAL PRODUTO EH O MAIS CARO');
+            var prod1 = window.prompt('Digite o nome do primeiro produto:');
+            var p1 = parseFloat(window.prompt('Digite o valor do primeiro produto'));
+            var prod2 = window.prompt('Digite o nome do segundo produto:');
+            var p2 = parseFloat(window.prompt('Digite o valor do segundo produto:'));
+            if (p1==p2) {
+                window.alert('Os dois prdotos tem o mesmo valor');
+            }
+            else {
+                if (p1>p2) {
+                    window.alert('O primeiro produto eh o mais caro' + '(' + prod1 + ')' );
+                }
+                else { 
+                    window.alert('O segundo produto eh o mais caro' + '(' + prod2 + ')');
+                }
+            }
+            
+        </script>
+    </body>
+</html>

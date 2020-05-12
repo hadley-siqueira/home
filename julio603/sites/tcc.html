@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport"content= "width=device-width, initial -s cale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                 font-family: "cursive";
+            }
+            .titulo{
+                text-align: start;
+                font-size: 2.875rem;
+                margin-bottom: 7px;
+            }
+            .descricao{
+                text-align: justify;
+                margin-top: 14px;
+                margin-bottom: 40px;
+                font-size: 1.3125rem;
+                margin: left;
+                width: 73%;
+                border: 8px solid #000000;
+                padding: 17px;
+            }
+            .botao1 {
+                background-color: #1583CC;
+                font-size: 20px;
+                color: #fefefe;
+                padding: 12px;
+                border: none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+
+            .botao1:hover {
+                background-color: #126FAD;
+                transition: all 0.5s;
+            }
+             .botao2 {
+                background-color: #1583cc;
+                font-size: 15px;
+                color: #fefefe;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right:15px;
+                border:none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+            .botao2:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+            }
+            .botao3 {
+                background-color: #1583cc;
+                font-size: 15px;
+                color: #fefefe;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right:15px;
+                border:none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+             .botao3:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+
+            }
+            
+            .subinfo {
+                margin: 10px;
+                padding: 0;
+                font-size:15px;
+            }
+        
+            
+            .box3 {
+                float: left;
+                width: 50%;
+                padding: 20px;
+                padding-top: 70px;
+               
+            }    
+
+            .box3 p {
+                color: 313131;
+                line-height: 1.5;
+            }
+            
+            .box3 h1 {
+                color: #333333;
+                margin-top: 10px;
+                font-size: 40px;
+            }
+            .box3 a {
+                color: #349DD4;
+                text-decoration: none;
+            }
+
+            .box3 h2{
+                color: #7f7f7f;
+                font-size: 15px;
+               
+            }
+            
+            .box3:hover {
+                background-color: #f8f8f8;
+                border-radius: 5px;
+                transition: all 0.5s;
+            }
+             .box4 {
+                padding: 19px;
+                float: left;
+                margin-bottom:69px;
+                width: 24%;
+            }
+              .box3 img {
+                width: 300px;
+            }
+
+             .box3 p {
+                line-height: 1.7;
+                font-size:15px;
+            }
+            
+
+            .alinhamento {
+                text-align: left;
+            }   
+             .link-bonito {
+                color: #349dd4;
+                text-decoration: none;
+            }
+              .info-generica {
+                border-bottom: 1px dashed #9c9c9c;
+            }
+                          
+            .secao-inicio{
+                min-height: 250px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 180px;
+    text-align: -webkit-center;
+    background-size: cover;
+    color: #000000;
+    height: 700px;
+    font-weight: bold;               
+                background-image: url("http://www.blog.saude.gov.br/images/lgbt.jpg");
+                               
+            }
+            .info2 {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+                margin-top: 70px;
+                padding-left: 150px;
+                padding-right: 150px;
+                padding-bottom: 50px;
+            }
+
+            .info3 {
+                text-align: center;
+                width: 60%;
+                margin: auto;
+                margin-top: 10px;
+                padding-bottom: 50px;
+            }
+            .info2 h1 {
+                font-size: 35px;
+            }
+            .info2 p {
+                color: #9c9c9c;
+                font-size: 20px;
+            }
+
+            .info4-servico {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                padding-bottom:50px;
+                padding-top: 30px;
+            }
+            .info4-servico h1 {
+                font-size: 45px;
+                margin-bottom: 15px;
+            }
+            .info4-servico h2 {
+                font-size:25px;
+                margin-bottom: 20px;
+                margin-top: 0;
+                color: #a1a1a1;
+            }
+            .box4 h1 {
+                font-size: 35px;
+            }
+
+            .info5 {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+            }
+            .box5 {
+                float: left;
+                width: 33.33%;
+                padding: 20px;
+                padding-top: 50px;
+                padding-bottom:50px;
+                margin-bottom: 70px;
+            }
+            .box5:hover {
+                background-color: #f8f8f8;
+                transition: all 0.5s;
+                border-radius: 5px;
+            }
+            .box5 p {
+                line-height: 1.5;
+                font-size:14px;
+                width: 90%
+            }
+            .info5 >  h1 {
+                font-size: 40px;
+                width: 85%;
+                line-height: 1.5;
+                text-align: center;
+                margin: auto;
+                margin-top: 40px;;
+            }
+             .info5 > p {
+                font-size: 25px;
+                width: 85%;
+                text-align: center;
+                margin:auto;
+                margin-bottom:70px;
+                padding-top: 15px;
+                color: #b9b9b9;
+            }
+            .info6 {
+                text-align: center;
+                font-size: 15px;
+                margin: auto;
+                width: 90%;
+                padding-bottom: 80px;
+                padding-top: 10px;
+            }
+            .info6 > h1 {
+                font-size: 35px;
+                margin-bottom: 60px;
+            }
+            .box6 {
+                float: left;
+                width: 16.66%;
+            }
+            .box6 img {
+                width: 160px;
+            }
+            .secao-final {
+                text-align: left;
+                padding-left:170px;
+                background-color: #085a78;
+            }
+
+            .box7 h1 {
+                font-size: 20px;
+                margin: auto;
+                padding-top: 20px;
+                color: #fefefe;
+            }
+            .box7 p {
+                font-size: 13px;
+                color: #fefefe;
+                margin-bottom: 20px;
+            }
+            .final-2 {
+                background-color:074e68;
+            }
+             .box8 {
+
+                text-align: center;
+            }
+            .box8 h2 {
+                font-size: 30px;
+                color: #fff;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+
+            <p class="descricao" >Bem-vindo ao Apenas um site sem título, aqui neste site você verá abordagem de temas tais como LGBTQ+, Feminismo, Racismo, Tolerância e Deficientes. A cada tópico saberemos um pouco o que é, como também experiências de algumas pessoas convidadas que se identificaram com alguns desses tópicos.<br>Este trabalho tem como objetivo desmistificar esses tabus e tentar combater mais o preconceito uma vez que ele ainda existe.<br>Não há um público especifico, todos podem acessar, porém cuidado, afinal ‘‘você PODE se torna tolerante e propagar isso ao mundo a ponto dele aceitar’’<br>A IMPORTANCIA DE UM TRABALHO ASSIM AINDA É, EMBORA CRICHÊ A ANIQUILAÇÃO DE BOA PARTE DO PRECONCEITO. </p>                  
+
+
+        </section>
+        <section class="info2 info-generica">
+            <h1>Por que falar de Feminismo?  </h1>
+            <h2>Titulo: Julio Cesar </h2>
+            <h2>Autoras:  </h2> 
+            <div class="alinhamento">
+            <p>Tera algum Texto Aqui  </p>
+            </div>
+            
+        </section>
+
+        <section class="info3 info-generica">
+            <div class="box3">
+                  <img src="https://i1.wp.com/humorpolitico.com.br/wp-content/uploads/2011/12/racismo-sao-paulo-cabelo-crespo-ester-091211-humor-politico.jpg" width="350">
+                  <h2>Mal entendido?</h2>
+                  <h1>Racismo </h1>
+                  <div class="alinhamento">
+                  <p>Terá um texto aqui.  </p>
+                  </div>
+                  <a href="#">Volte para o Inicio</a>
+            </div>           
+             
+            <div class="box3">
+                 <img src="http://promotoraslegaispopulares.org.br/wp-content/uploads/2016/01/racismo-1-844x475.jpg" width="350">
+                 <h2>Todos Somos Iguais </h2>
+                 <h1>Tolerância </h1>
+                 <div class="alinhamento">
+                 <p> Terá um texto aqui. </p>
+                 </div>
+                 <a href="#">Volte para o Inicio</a>    
+            </div>
+            <div style= "clear: both"></div>
+        </section>
+
+        <section class = "info4-servico info-generica">
+                 <h1>Um pouco sobre orientções sexuais</h1>
+                <h2>Escrever algo sobre orientação sexual. </h2>
+            <div class = "box4">
+                 <img src = "https://ih0.redbubble.net/image.272348813.2095/flat,550x550,075,f.u1.jpg" width = 150>
+                 <h1>L</h1>
+                 <p>Escrever algo aqui.</p>
+            </div>
+            
+              <div class = "box4">
+                <img src = "https://psicodelizando.com.br/wp-content/uploads/2017/09/lgbt-grungy-heart.jpg" width = 200>
+                <h1>G</h1>
+                <p>Escrever algo aqui.</p>
+            </div>
+
+            <div class = "box4">
+                <img src = "http://www.ladobi.com.br/wp-content/uploads/2014/10/320px-Bi_flag.svg_-300x199.png" width = 200>
+                <h1>B</h1>
+                <p>Escrever algo aqui.</p>
+            </div>
+
+            <div class = "box4">
+                <img src = "https://3m84r11gpx1j11puas2g5wfl-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/TransFlag.jpg" width = 200>
+                <h1>T</h1>
+                <p>Escrever algo aqui.</p>
+            </div>
+                <div style="clear: both"></div>
+                <a class = "link-bonito" href="#">Voltar Para o Inicio</a>
+        </section>
+  
+        <section class = "info5 info-generica">
+            <h1>As 3 Principais Deficiencia </h1>
+            <p>Falar sobre deficiencia.</p>
+
+            <div class = "box5">
+                  <img src = "https://www.sul21.com.br/wp-content/uploads/2016/08/20160824-simbolo-surdez.jpg " width = 250>
+                <h1>Deficiência auditiva</h1>
+                <p>Escrever algo aqui.</p>
+                
+            </div>
+
+            <div class = "box5">
+                <img src = "http://educamundo.com.br/uploads/courses/deficiencia-fisica.jpg" width = 250>
+                <h1>Dficiência física</h1>
+                <p>Escrever algo aqui.
+                
+            </div>
+
+            <div class = "box5">
+                <img src = "http://www.apaecruzilia.org.br/site/media/k2/items/cache/42121f00ffc451d0c288e11c1f28cbd4_XL.jpg" width = 150>
+                <h1>Deficiência Visual</h1>
+                <p>Escrever algo aqui.
+                
+            </div>
+            <div style="clear: both"></div>
+        </section>
+
+        <section class = "info6">
+
+            <h1>Obrigado pela Atenção<h1>
+
+
+
+            <a class = "link-bonito" href= "#">INICIO</a>
+        </section>
+
+        <section class = "secao-final">
+            <div class = "box7">
+                <h1>Agradecimentos</h1>
+                <p>Cita Aqui</p>
+                <div class = "botao">
+                    
+               </div>
+            </div>
+        </section>
+
+        <section class = "final-2">
+            <div class = "box8">
+                <h2>REGISTER TODAY</h2>
+                <h2>----------</h1>
+            </div>
+        </section>
+
+
+    </body>
+</html>
+

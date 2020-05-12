@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .centro {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="cab1" class="centro">Um cabeçalho</h1>
+
+        <script>
+            var tamanho = 10;
+            var pos_direita = 10;
+
+            function mudarTamanho() {
+                var e = document.getElementById('cab1');
+                e.style.fontSize = tamanho + 'px';
+                e.style.position = 'relative';
+                e.style.right = pos_direita + 'px';
+            }
+            function animar() {
+                if(tamanho < 50) {
+                    mudarTamanho();
+                    tamanho = tamanho + 1;
+                    pos_direita = pos_direita + 4;
+                    setTimeout(animar, 10);
+                }
+            }
+            animar();
+        </script>
+    </body>
+</html>

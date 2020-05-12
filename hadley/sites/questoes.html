@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="estilo4.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .question {
+           background-color: #333;
+            padding: 20px;
+            border-left: 5px solid #3397d7;
+        }
+
+        code {
+            color: #fff;
+        }
+
+        input {
+            padding: 0;
+            margin: 0.2rem 0 0.4rem 0;
+            color: #eee;
+            font-weight: bolder;
+            border: 0;
+            height: 1.2rem;
+            background-color: transparent;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            font-family: monospace;
+            width: 5ch;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="questoes">
+    </div>
+
+    <script>
+      var questions = [];
+      var id_counter = 0;
+
+      function checarResposta(id, valor) {
+        var d = document.getElementById(id);
+        if (d.value == valor) {
+          d.classList.add('certo');
+          d.classList.remove('errado');
+        } else {
+          d.classList.remove('certo');
+          d.classList.add('errado');
+        }
+
+        if (d.value.length != 0) {
+          d.style.width = d.value.length + 'ch';
+        } else {
+          d.style.width = '5ch';
+        }
+      }
+
+      function newQuestion(c, r) {
+        var tmp = "";
+        var ids = [];
+
+        for (var i = 0; i < c.length; ++i) {
+          tmp += c[i];
+
+          if (c[i] == '_') {
+            ids.push(id_counter++);
+          }
+        }
+
+        questions.push({content: tmp, ids: ids, r: r});
+      }
+
+      function generateQuestion(q) {
+        var res;
+        var ct = q.content;
+        var idc = 0;
+        res += "<div class=\"question\"><pre><code>";
+        
+
+        for (var i = 0; i < ct.length; ++i) {
+          if (ct[i] == '_') {
+            res += "<input type=\"text\" id=\"q";
+            res += q.ids[idc];
+            res += "\" onkeyup=\"checarResposta('q";
+            res += q.ids[idc] + "', '" + q.r[idc++];
+            res += "')\">"; 
+          } else if (ct[i] == " ") {
+            res += "&nbsp;"
+          } else {
+            res += ct[i];
+          }
+        }
+
+        res += "</pre></code></div>";
+
+        return res;
+      }
+
+      function generateQuestions(id) {
+        var dc = document.getElementById(id);
+        var res = "";
+
+        for (var i = 0; i < questions.length; ++i) {
+          res += generateQuestion(questions[i]);
+        }
+
+        dc.innerHTML = res;
+      }
+
+      newQuestion(
+        'var\ninteiro: x\ninicio\ninteiro x <- 15\n_ (x _ 12) _\n\t_("O x eh maior que 12")\n_\nfimAlgoritmo',
+        ['ab', 'cd', 'ef']
+      );
+
+      newQuestion(
+        'var\ninteiro: x\ninicio\ninteiro x <- 15\n_ (x _ 12) _\n\t_("O x eh maior que 12")\n_\nfimAlgoritmo',
+        ['ab', 'cd', 'ef']
+      );
+
+
+      generateQuestions('questoes');
+    </script>
+  </body>
+</html>

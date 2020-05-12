@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 5px solid black">
+        </canvas>
+        <br>
+        <input type="checkbox" onchange="vec = !vec">Mostrar Vetor velocidade<br>
+        <input type="checkbox" onchange="grav = !grav">Ativar gravidade<br>
+        <input type="checkbox" onchange="atri = !atri">Ativar atrito<br>
+        <button type="button" onclick="vento()">Vento</button>
+
+        <script>
+            var vec = false;
+            var grav = false;
+            var atri = false;
+            var ctx = document.getElementById('area').getContext('2d');
+
+            function vento() {
+                for (var i = 0; i < bolas.length; ++i) {
+                    bolas[i].vx += Math.random() * 5;
+                }
+            }
+
+            function criarBola(x, y) {
+                this.x = x;
+                this.y = y;
+                this.vx = Math.random();
+                this.vy = Math.random();
+                this.raio = 10;
+            }
+
+            function dist(b1, b2) {
+                var a = b1.x - b2.x;
+                var b = b1.y - b2.y;
+                return Math.sqrt(a * a + b * b);
+            }
+
+            function colideBola(b1, b2) {
+                return (dist(b1, b2) < b1.raio + b2.raio);
+            }
+
+            function tratarColisaoBola(b1, b2) {
+                if (colideBola(b1, b2)) {
+                    var tmp = b1.vx;
+                    b1.vx = b2.vx;
+                    b2.vx = tmp;
+
+                    tmp = b1.vy;
+                    b1.vy = b2.vy;
+                    b2.vy = tmp;
+
+                    b1.x = b1.x + b1.vx;
+                    b1.y = b1.y + b1.vy;
+                    b2.x = b2.x + b2.vx;
+                    b2.y = b2.y + b2.vy;
+                }
+            }
+
+            var bolas = [];
+            var q = parseInt(window.prompt('Quantas bolas?'));
+
+            for (var i = 0; i < q ; ++i) {
+                var b = new criarBola(Math.random() * 600 + 100, Math.random() * 400 + 100); 
+                var f = true;
+
+                for (var j = 0; j < bolas.length; ++j) {
+                    if (colideBola(b, bolas[j])) {
+                        f = false;
+                        break;
+                    }
+                }
+
+                if (f) {
+                    bolas.push(b);
+                } else {
+                    i = i - 1;
+                }
+            }
+
+            function desenharBola(bola) {
+                ctx.beginPath();
+                ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+                ctx.fill();
+
+                if (vec) {
+                    desenharVetor(bola);
+                }
+            }
+
+            function desenharVetor(b) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(b.x, b.y);
+                ctx.lineTo(b.x + b.vx * 50, b.y + b.vy * 50);
+                ctx.strokeStyle = "#ff0000";
+                ctx.stroke();
+                ctx.restore();
+            }
+
+            function desenhar() {
+                ctx.clearRect(0, 0, 800, 600);
+
+                for (var i = 0; i < bolas.length; ++i) {
+                    desenharBola(bolas[i]);
+                }
+            }
+           
+            function tratarColisoes() {
+                for (var i = 0; i < bolas.length; ++i) {
+                    for (var j = i + 1; j < bolas.length; ++j) {
+                        tratarColisaoBola(bolas[i], bolas[j]);
+                    }
+                }
+            }
+ 
+            function atualizarPosicaoBola(bola) {
+                if (grav) {
+                   bola.vy = bola.vy + 0.1;
+                }
+
+                if (atri) {
+                    if (bola.vx > 0) {
+                        bola.vx -= 0.01;
+                    } else if (bola.vx < 0) {
+                        bola.vx += 0.01;
+                    }
+
+                    if (bola.vy > 0) {
+                        bola.vy -= 0.01;
+                    } else if (bola.vy < 0) {
+                        bola.vy += 0.01;
+                    }
+
+                }
+
+               bola.x = bola.x + bola.vx;
+               bola.y = bola.y + bola.vy;
+
+               if (bola.x < 0) {
+                  bola.x = 0;
+                  bola.vx = -bola.vx;
+               }
+               if (bola.x >= 800) {
+                  bola.x = 799;
+                  bola.vx = -bola.vx;
+               }
+               if (bola.y < 0) {
+                  bola.y = 0;
+                  bola.vy = -bola.vy;
+               }
+               if (bola.y >= 600) {
+                  bola.y = 599;
+                  bola.vy = -bola.vy; 
+               }
+             }
+            
+            function atualizar() {
+                for (var i = 0; i < bolas.length; ++i) {
+                    atualizarPosicaoBola(bolas[i]);
+                }
+            }           
+                
+            function animar() {
+                desenhar();
+                atualizar ();
+                tratarColisoes();
+                window.requestAnimationFrame(animar);
+            }
+
+            animar(); 
+        </script>
+    </body>
+</html>
+

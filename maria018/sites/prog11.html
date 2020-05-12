@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.alert(' >> LEI DE OHM <<');
+            var op = window.prompt('Digite o que voce deseja calcular: RESISTENCIA, CORRENTE OU TENSAO?');
+            if (op == 'resistencia') {
+                var t = parseFloat(window.prompt('Digite a tensao:'));
+                var i = parseFloat(window.prompt('Digite a corrente:'));
+                var r = t / i 
+                window.alert('A resistencia eh de ' + (r) + ' ohms');
+            }
+            else if (op == 'tensao') {
+                var i = parseFloat(window.prompt('Digite a corrente:'));
+                var r = parseFloat(window.prompt('Digite a resistencia:'));
+                var t = r * i;
+                window.alert('A tensao eh de ' + (t) + ' volts');
+            }
+            else if (op == 'corrente') {
+          
+                var t = parseFloat(window.prompt('Digite a tensao:'));
+                var r = parseFloat(window.prompt('Digite a resistencia:'));
+                var i = t / r;
+                window.alert('A corrente eh de ' + (i) + ' amperes');
+            }
+
+        </script>
+    </body>
+</html>

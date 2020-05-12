@@ -1,0 +1,6 @@
+print("bla bla bla")
+print("geovane")
+print(" do curso de informatica")
+print("bla bla bla")
+print("bla bla bla")
+print("bla bla bla")

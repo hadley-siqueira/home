@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+        var r1 = parseInt(window.prompt("informe o primeiro numero:"));
+        var r2 = parseInt(window.prompt("informe o segundo numero:"));
+        var r3 = parseInt(window.prompt("informe o terceiro numero:"));
+
+        if (r1 < r2 && r2 < r3) {
+            if (r1 < r2) {
+                window.alert("o numero digitado está em ordem crescente");
+            } else {
+                window.alert("o numero digitado NÃO está em ordem crescente");
+                if (r2 < r3) {
+                    window.alert("o numero digitado está em ordem crescente");
+                } else { 
+                    window.alert("o numero digitado NÃO está em ordem crescente");
+                        } 
+                    }
+        } else {
+            window.alert("o numero digitado NÃO está em ordem crescente");
+        }
+       
+       </script>
+    </body>
+</html>
+
+

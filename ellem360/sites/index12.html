@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <p id="w">Texto aqui</p>
+        <button onclick="mudarTexto()">
+        Clica aqui
+        </button>
+    </body>
+
+    <script>
+        function mudarTexto() {
+            var v = document.getElementById('w');
+            v.innerHTML = 'texto mudou';
+            v.style.fontSize = '30px';
+        }
+    </script>
+</html>
+

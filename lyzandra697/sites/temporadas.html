@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <style> 
+            body {
+                margin:0px;
+                padding:0px;
+            }
+        
+            #Menu {
+              position:fixed;
+              float:left;
+              width:100%;
+              background-color:rgba(139,0,0,1.3);
+            }
+            #Menu ul{
+              float:left;
+              width:100%;
+              height:100%;
+              padding:0px;
+              margin:0px;
+              list-style:none;
+            } 
+            #Menu ul li{
+              float:left;
+              width:19.9%;
+              margin-top:0px;
+              padding-top:10px;
+              padding-bottom:10px;
+              text-align:center;
+              font-family:arial;
+              font-size:20px;
+              border-left:1px solid #c5c9cc;
+              transition:all 0.5s;
+            } 
+            #Menu ul li:hover {
+              transition:all 0.5s;
+              background:rgba(20,20,20,0.6);
+            }  
+            #Menu ul li a{
+              color:#000000;
+              text-decoration:none;
+            } 
+            #Menu ul li a:hover{
+              color:#FFFFFF;
+            }
+
+            .demo-3 {
+              position:relative;
+              width:300px;
+              height:200px;
+              overflow:hidden;
+              float:left;
+              margin-right:20px
+            }
+            .demo-3 figure {
+              margin:0;
+              padding:0;
+              position:relative;
+              cursor:pointer;
+              margin-left:-50px
+            }
+         .demo-3 figure img {
+          display:block;
+         position:relative;
+         height: 200px;
+         z-index:10;
+         margin:-60px 0
+         height:20px;
+        }
+       .demo-3 figure figcaption {
+         display:block;
+        position:absolute;
+        z-index:5;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box
+       }
+      .demo-3 figure h2 {
+        font-family:'Lato';
+       color:#fff;
+       font-size:20px;
+       text-align:left
+      }
+     .demo-3 figure p {
+      display:block;
+      font-family:'Lato';
+      font-size:12px;
+      line-height:18px;
+      margin:0;
+      color:#fff;
+      text-align:left
+     }
+     .demo-3 figure figcaption {
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      padding:29px 44px;
+      background-color:rgba(139,0,0,1.3);
+      text-align:center;
+      backface-visibility:hidden;
+      -webkit-transform:rotateY(-180deg);
+      -moz-transform:rotateY(-180deg);
+      transform:rotateY(-180deg);
+      -webkit-transition:all .5s;
+      -moz-transition:all .5s;
+      transition:all .5s
+    }
+    .demo-3 figure img {
+      backface-visibility:hidden;
+      -webkit-transition:all .5s;
+      -moz-transition:all .5s;
+      transition:all .5s
+    }
+    .demo-3 figure:hover img,figure.hover img {
+      -webkit-transform:rotateY(180deg);
+      -moz-transform:rotateY(180deg);
+      transform:rotateY(180deg)
+    }
+    .demo-3 figure:hover figcaption,figure.hover figcaption {
+      -webkit-transform:rotateY(0);
+     -moz-transform:rotateY(0);
+      transform:rotateY(0)
+    }
+
+    .ok{
+      font-size:40px;
+      text-align: center;
+      color:#8B0000;
+      font-family: 'Lobster', cursive;
+    }
+
+    .rodape1{
+              float: left;
+              background-color:#2E2E2E; 
+              width:100%;
+              height:50px;
+            }
+            .rodape1 img{
+              margin-left:40%;
+              display:block;
+              width:20%;
+              height:80%;
+              margin-top:5px;
+            }
+
+            .rodape2{
+              float:left;
+              background-color:#585858; 
+              width:100%;
+              height:250px;
+            }
+            .rodape2 .p1 {
+              float:left;
+              width:70%;
+              margin-left:15%;
+              font-family:century gothic;
+              font-weight:bold;
+              font-size:20px;
+              color:#000;
+              text-align:center;
+            }
+            .rodape2 hr {
+              float:left;
+              border:none;
+              width:60%;
+              margin-left:20%;
+              height:2px;
+              background-color:#8B0000;
+            }
+            .rodape2 .area_redes_sociais {
+              float:left;
+              width:26.8%;
+              height:60px;
+              background-color:;
+              margin-left:35%;
+            }
+            .rodape2 .area_redes_sociais img {
+              float:left;
+              width:60px;
+              height:60px;
+              background-color:;
+              margin-right:30px;
+              margin-left:30px;
+            }
+         </style>
+    </head>
+
+    
+    <body> 
+       <body bgcolor=#000000>
+
+      <div id="Menu">
+          <ul>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/sobreAserie.html">Sobre<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/temporadas.html">Temporadas<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/home.html">Home<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/elenco.html">Personagens<a></li>
+            <li><a href="http://207.154.230.103:7249/lyzandra697/curiosidades.html">Curiosidades<a></li>
+          </ul>
+      </div>
+    
+      <section class="s1"> 
+        <div class="capa-slide">
+           <img class="myslides" src="http://www.cinecompipoca.com.br/wp-content/uploads/2017/04/maxresdefault.jpg" style="width:100%">
+           <img class="myslides" src="http://images.static-bluray.com/reviews/2771_2_large.jpg" style="width:100%">
+           <img class="myslides" src="http://seriemaniacos.tv/wp-content/uploads/2010/08/True-Blood-3x10.jpg" style="width:100%">
+           <img class="myslides" src="http://assets.papelpop.com/wp-content/uploads/2011/09/true-blood-4x10-burning-down-the-house.jpg" style="width:100%">
+           <img class="myslides" src="http://www.apaixonadosporseries.com.br/wp-content/arquivos/2012/06/True-Blood-5a-temporada-2.jpg" style="width:100%">
+           <img class="myslides" src="http://www.teleseries.com.br/wp-content/uploads/2013/04/true-blood-season-6-spoiler-pics-13.jpg" style="width:100%">
+           <img class="myslides" src="http://www.freakpop.com.br/wp-content/uploads/2014/08/true-blood-setima-temporada-episodio-7-may-be-the-last-time-01.jpg" style="width:100%">
+    
+       </div>
+    </section> 
+    <section class ="ok">
+            <h2>Leia um pouco sobre cada temporada</h2>
+         </section>
+          
+    <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/1/true-blood-1-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Primeira Temporada</h2>
+                <p>Em todo o país, os vampiros vieram "fora do caixão" após a invenção do sangue sintético produzido em massa.</p>
+            </figcaption>
+        </figure>
+     </li>
+   </ul>
+   <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/2/true-blood-2-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Segunda Temporada</h2>
+                <p>Bem-vindo de volta a Bon Temps, lar do mistério, da sensualidade sulista e segredos sombrios. Para Sookie Stackhouse, a vida está mais perigosa do que antes de ela e Bill se envolverem mais profundamente.</p>
+            </figcaption>
+        </figure>
+     </li>
+   </ul>
+  <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/3/true-blood-3-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Terceira Temporada</h2>
+                <p>Com o desaparecimento de Bill, Sookie está disposta a qualquer coisa para desvendar o paradeiro de seu namorado. Para isso ela terá a ajuda de Eric e também do lobisomem Alcide Harveaux.</p>
+            </figcaption>
+        </figure>
+     </li>
+   </ul>
+  <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/4/true-blood-4-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Quarta Temporada</h2>
+                <p>Sookie (Anna Paquin) está solteira, mas continua rodeada por pretendentes de quase todo o espectro sobrenatural: os vampiros Bill (Stephen Moyer) e Eric (Alexander Skarsgard) e o lobisomem Alcide (Joe Manganiello).</p>
+            </figcaption>
+        </figure>
+     </li>
+   </ul>
+  <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/5/true-blood-5-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Quinta Temporada</h2>
+                <p>A trama tem três principais focos: Bill e Eric; Sokie e Jason; Sam, Luna e Emma. Entre as histórias paralelas, há o caso dos traumas psicológicos de Terry em relação ao seu tempo.</p>
+            </figcaption>
+        </figure>
+     </li>
+ </ul>
+  <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/6/true-blood-6-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Sexta Temporada</h2>
+                <p>Em sua sexta temporada, o pouco de normalidade que restava em Bon Temps está ameaçada. Enquanto "Billith" se acostuma com seus novos poderes após emergir de uma piscina de sangue.</p>
+            </figcaption>
+        </figure>
+     </li>
+  </ul> 
+    
+  <ul class="demo-3">
+      <li>
+        <figure>
+            <img src  ="https://www.hbo.com/content/dam/hbodata/series/true-blood/episodes/7/true-blood-7-3000x1688.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg" alt=""/>
+            <figcaption>
+                <h2>Sétima Temporada</h2>
+                <p>Nesta as coisas voltaram a ser simples ao focar nos dramas dos moradores de Bon Temps. Embora o clima apocalíptico causado pela hepatite vampiresca tenha chegado à cidade, as tramas se mantiveram no psicológico de seus personagens.</p>
+            </figcaption>
+        </figure>
+     </li>
+  </ul> 
+
+  <div class="rodape1">
+           <img src="https://orig00.deviantart.net/eaf7/f/2011/285/a/7/png_true_blood_by_kikiketchup-d4cmua2.png" />
+        </div>
+
+        <div class="rodape2">
+
+          <p class="p1">
+            Follow US
+          </p>
+          <hr/>
+          <div class="area_redes_sociais">
+            <a href="https://pt-br.facebook.com/TrueBlood/"><img src="https://cdn4.iconfinder.com/data/icons/black-ink-grunge-social-media/512/097668-facebook-logo-square.png" title="facebook" alt="" /></a>
+            <a href="https://twitter.com/truebloodhbo"><img src="http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/732/icons/grunge-stamp-new-twitter-bird-square.png" title="twitter" alt="" /></a>
+            <a href="https://www.instagram.com/truebloodhbo/"><img src="http://www.underwaterdepot.net/SocialIcons/distress-instagram.png" title="instagram" alt="" /></a>
+          </div>
+        </div>
+
+  <script>
+       var myIndex = 0;
+       carousel();
+       function carousel() {
+              var i;
+              var x = document.getElementsByClassName("myslides");
+              for (i=0;i<x.length;i++) {
+              x[i].style.display = "none";
+              }  
+              myIndex++;
+              if(myIndex > x.length) {myIndex = 1} 
+              x[myIndex-1].style.display = "block";
+              setTimeout(carousel,4000);
+       } 
+    </script>
+        
+
+    </body>
+</html>
+

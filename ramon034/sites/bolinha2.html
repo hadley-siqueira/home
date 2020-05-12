@@ -1,0 +1,82 @@
+<html>
+    <body>
+     <canvas id="area" width="800" height="600" style="border : 6px solid gray">
+     </canvas>
+        <script>
+          var ctx = document.getElementById("area").getContext("2d");
+
+          function ctball(x, y){
+            this.x = x
+            this.y = y
+            this.vx = 5
+            this.vy = 7
+            this.raio = 20; 
+          }
+
+          var bola1 = new ctball(140, 590);
+          var bola2 = new ctball(799, 56);
+          var bola3 = new ctball(10, 579);
+          var bola4 = new ctball(592, 322);
+          var bola5 = new ctball(243, 1);
+
+          function formball(ball) {
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.raio, 0, 2 * 3.1415);
+            ctx.fill();
+          }
+
+          function movimento(ball) {
+            ball.x = ball.x + ball.vx;
+            ball.y = ball.y + ball.vy;
+
+            if (ball.x >= 800) {
+              ball.x = 799;
+              ball.vx = -ball.vx;
+            }
+
+            if (ball.x < 0) {
+              ball.x = 0;
+              ball.vx = -ball.vx
+            }
+            
+            if (ball.y >= 600) {
+              ball.y = 599;
+              ball.vy = -ball.vy;
+            }
+            if (ball.y < 0) {
+              ball.y = 0;
+              ball.vy = -ball.vy;
+            }
+           }
+
+          function atualizar() {
+            movimento(bola1);
+            movimento(bola2);
+            movimento(bola3);
+            movimento(bola4);
+            movimento(bola5);
+          }
+
+          function desenhar() {
+            ctx.clearRect(0, 0, 800, 600);
+            formball(bola1);
+            formball(bola2);
+            formball(bola3);
+            formball(bola4);
+            formball(bola5);
+
+          }
+
+          function animar() {
+            atualizar();
+            desenhar();
+            window.requestAnimationFrame(animar);
+          }
+
+            animar();
+            
+
+
+        </script>
+    </body>
+</html>

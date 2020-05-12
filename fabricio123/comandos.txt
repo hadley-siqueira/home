@@ -1,0 +1,2 @@
+rm -rf  excluir pastas e arquivos
+mv      renomear e mover pastas/arquivos

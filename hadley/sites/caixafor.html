@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      canvas {
+        border: 1px solid #000; 
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="area" width="900" height="400">
+    </canvas>
+
+    <script>
+      var c = document.getElementById('area');
+      var ctx = c.getContext('2d');
+
+      ctx.rect(450, 200, 10, 10);
+      ctx.fill();
+
+      var t = 15;
+      var incremento = 2 * t;
+
+      for (var i = 0; i < 20; ++i) {
+        ctx.rect(incremento, 100, t, t);
+        ctx.fill();
+        incremento = incremento + 2 * t;
+      }
+    </script>
+  </body>
+</html>

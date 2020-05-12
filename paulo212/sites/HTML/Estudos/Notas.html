@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    body{
+        background-color: white;
+    }
+
+    h1{
+        text-align: center;
+        color: blue;
+    }
+    
+    h2{
+            color: black;
+        text-decoration: underline blue;
+    }
+    
+    p{
+        color: blue;
+        border-bottom: 2px solid;
+        padding: 0px 0px 10px 0px;
+        text-align: justify;
+        width: 80%;
+    }
+    
+    li{
+    color: black;
+    }
+    
+    footer#rodape{
+        clean: both;
+        border-top: 5px double  black;
+    }
+
+    footer#rodape p{
+        text-align: center;
+        border: none;
+    }
+
+    p.dotted {border-style: dotted;}
+    p.dashed {border-style: dashed;}
+    p.solid {border-style: solid;}
+    p.double {border-style: double;}
+    p.groove {border-style: groove;}
+    p.ridge {border-style: ridge;}
+    p.inset {border-style: inset;}
+    p.outset {border-style: outset;}
+    p.none {border-style: none;}
+    p.mix {border-style: dotted dashed solid double;}
+    </style>
+</head>
+<body>
+<div class="jumbotron text-center">
+    <h1>Terminal</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2><b>cd</b></h2>
+            <p>Serve para mudar de diretorio.</p>
+        </div>
+        <div class="col-sm-4">
+            <h2><b>pwd</b></h2>
+            <p>Mostra o diretorio atual que estamos.</p>
+        </div>
+        <div class="col-sm-4">
+            <h2><b>ls</b></h2>
+            <p>Exibe os conteudos do diretorio atual, mas se você passar um diretorio como argumento, ele ira mostrar os arquvos e pastas de tal diretorio. pode ser usado de forma diferente com a flag <b>-l</b> e <b>-lh</b>, onde o -l faz o ls exibir linha por linha e com mais detalhes e o -lh faz com que os tamanhos dos arquivos e pastas sejam exibidos.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+      <div class="row">
+            <div class="col-sm-4">
+                <h2><b>mkdir</b></h2>
+                <p>O mkdir serve para criar novas pastas.</p>
+            </div>
+            <div class="col-sm-4">
+                <h2><b>cat</b></h2>
+                <p>O <b>cat</b> serve para verificar rapidamente o conteudo de um arquivo sem precisar abrir o mesmo no <b>vim</b>, As vezes, o arquivo й grande demais e nгo cabe na tela. Para isso, usamos o comando cat associado com o comando <b>less</b>.</p>
+            </div>
+            <div class="col-sm-4">
+                <h2><b>mv</b></h2>
+                <p>O <b>mv</b> recebe como argumento o arquivo/pasta a ser movido e o diretorio destino.</p>
+            </div> 
+      </div>
+</div>
+<div class="container">
+      <div class="row">
+              <div class="col-sm-6">
+                <h2><b>rm -rf</b></h2>
+                <p>deletar arquivos e pastas. Usamos o comando <b>rm -rf</b> para excluir o que queremos.</p>
+              </div>
+              <div class="col-sm-6">              
+                <h2><b>cp</b></h2>
+                <p>copiar arquivos e pastas usando o comando <b>cp</b> Voce deve especificar o arquivo/pasta a ser copiado e o diretorio de destino, Quando vamos copiar uma pasta com arquivos dentro, usamos a flag <b>-R</b>.</p>
+              </div>
+      </div>
+</div>
+    <h1>html</h1>
+    <h2><b>Listas ol/tabela</b></h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Tipos</th>
+                <th>Exmeplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>type="1"</td>
+                <td>1, 2, 3 ...</td>
+            </tr>
+            <tr>
+                <td>Type="A"</td>
+                <td>A, B, C ...</td>
+            </tr>
+            <tr>
+                <td>type="a"</td>
+                <td>a, b, c ...</td>
+            </tr>
+            <tr>
+                <td>type="I"</td>
+                <td>I, II, III ...</td>
+            </tr>
+            <tr>
+                <td>type="i"</td>
+                <td>i, ii, iii ...</td>
+            </tr>
+        </tbody>
+    </table>
+    <ol type="1">
+        <li>lista ol</li>
+        <li>lista ol</li>
+        <li>lista ol</li>
+            <ul style="list-style-type:square">
+                <li>lista ul</li>
+                <li>lista ul</li>
+            </ul>
+        <li>lista ol</li>
+        <li>lista ol</li>
+            <ul>
+                <li>lista ul</li>
+            </ul>
+        <li>lista ol</li>
+    </ol>
+    <p>  </p>
+    <h2><b>Listas ul</b></h2>
+    <ul>
+        <li>lista ul</li>
+        <li>lista ul</li>
+        <li>lista ul</li>
+        <li>lista ul</li>
+            <ol start="5">
+                <li>lista ol</li>
+                <li>lista ol</li>
+            </ol>
+        <li>lista ul</li>
+        <li>lista ul</li>
+    </ul>
+    <p> style+"list-style-type:(tipo da lista)" <b>disc</b> tipo padrão, <b>circle</b>, <b>square</b> e <b>none</b>.</p>
+    <h2><b>img</b></h2>
+    <div class="container">
+    <img src="http://www.clickgratis.com.br/fotos-imagens/imagens/aHR0cDovL3d3dy5jbGlja2dyYXRpcy5jb20uYnIvZm90b3MtaW1hZ2Vucy9pbWFnZW5zL2FIUjBjSE02THk5amIyNXhkV2x6ZEdGa2FXZHBkR0ZzTG1OdmJTNWljaTkzY0MxamIyNTBaVzUwTDNWd2JHOWhaSE12TWpBeE5DOHdOeTlUYVhSbGN5MWtaUzFKYldGblpXNXpMVkJoY21FdFR5MVRaWFV0UW14dlp5NXFjR2M9LmpwZw==.jpg" alt="balão" class="img-circle"  width="100">    
+    </div>
+    <p>   </p>
+    <h2><b>link tag a</b></h2>
+    <p>Aqui abre o youtube <a href="https://www.youtube.com" target="blank">clique aqui!!</a> <b>target="blank" usado para abrir em nova guia </p>
+    <h2><b>border</b></h2>
+    <div id="border">
+        <p class="dotted">dotted</p>
+        <p class="dashed">dashed</p>
+        <p class="solid">solid</p>
+        <p class="double">double</p>
+        <p class="groove">groove</p>
+        <p class="ridge">ridge</p>
+        <p class="inset">inset</p>
+        <p class="outset">outset</p>
+        <p class="none">none</p>
+        <p class="mix">mix</p>
+    </div>
+    <footer id="rodape">
+        <p>by Paulo Ramos <br/>
+        <a href="http://facebook.com/paulo.ramos.58910049" target="_blank">Facebook</a> | <a href="https://www.facebook.com/paulo.ramos.58910049" target="_blank">Twitter</a></p>
+    </footer>
+</body>
+</html>

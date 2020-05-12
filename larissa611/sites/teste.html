@@ -1,0 +1,163 @@
+<!DOCTYPE>
+<html lang="pt" id="orkut" class"tinyViewport tinyWidth">
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .button-link {
+                text-decoration: none;
+            }
+
+           .link{
+                text-decoration:none;
+            }
+            body{
+                margin: 0;
+                margin-top: 1;
+                padding-bottom:50px;
+                padding: 0;
+                }
+            .topo h1{
+                position: relative;
+                animation: mymove 2.5s ;
+                left: 0;
+                opacity: 1;
+
+                margin-top:-1px;
+                color: white;
+                text-align: vertical;
+                font-size: 60px;
+                padding-left:60px;
+                font-family: Segoe Print;
+                text-shadow: 2px 2px #000;
+            }
+
+            @keyframes mymove {
+                0%   {left: -40px; opacity: 0;}
+                100% {left: 0px;opacity: 1;}
+            }
+
+            input[type=text] {
+                width:-10%;
+                padding:-10%;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            .button {
+                background-color: fuchsia; 
+                border: none;
+                color: white;
+                padding: 3px;
+                text-align: vertical;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 2px 2px;
+                cursor: pointer;
+            }
+
+            .button1 {
+                border-radius: 2px;
+            }
+
+            .topo {
+                display: flex;
+                justify-content: space-between;
+                background: radial-gradient(rgb(243,191,255), rgb(178,192,255));
+                margin: 0;
+                height: 110px;
+                -webkit-blend-mode: lighten; 
+                blend-mode: lighten;
+            }
+            .fim {
+                height: 20px;
+                background: linear-gradient(rgb(178,192,255) 0%, #fff 100%);
+            }
+            .login-input {
+                display: inline-block;
+            }
+
+            .login-form {
+                margin-right: 100px;
+                margin-top: 25px;
+           }
+           
+             .container {
+                position: relative;    
+                width: 100%;
+            }
+
+        .image {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
+        }
+
+        .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%)
+        }
+
+        .container:hover .image {
+          opacity: 0.3;
+        }
+
+        .container:hover .middle {
+          opacity: 1;
+        }
+
+        .text {
+          background-color:fuchsia;
+          color: white;
+          font-size: 20px;
+          padding: 20px 32px;
+        }
+        </style>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <div class="topo">
+            <h1> Orkutty</h1>
+            <div class="login-form">
+                <div class="login-input">
+                    <label for="pass"> Email ou telefone </label><br>
+                    <input type="text" id="pass" name="pass">
+                </div>
+                
+                <div class="login-input">
+                    <label for="pass">Senha </label><br>
+                    <input type="text" id"pass" name="pass">
+                </div>
+                <a href="#" class="link">
+                    <button class="button">Entrar</button>
+                </a><br>
+               
+             <a href="#" class="link"> Esqueceu sua senha?</a><br>
+            </div>
+        </div>
+
+        <div class="fim">
+        </div>
+           
+
+          <div class="container">
+         <img src="https://www.livetech.pt/images/m/blog/2016-02-09-Redes-sociais-Vantagens-e-desvantagens-da-sua-utilizacao-.png" alt="Avatar" class="image" style="width:100%">
+        <div class="middle">
+    <a class="button-link" href="www.google.com.br">
+        <div class="text">Inscreva-se agora!</div>
+    </a>
+  </div>
+</div>
+    </body>
+</html>

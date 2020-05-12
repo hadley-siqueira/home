@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Gossip Girl</title>
+        <link rel="icon" href="https://pbs.twimg.com/profile_images/626860748539588608/eaBxM1R7.png" type="image/gif" sizes="16x16">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .secao-inicio {
+                text-align: center;
+            }
+
+            .secao-inicio img {
+                margin: auto;
+                margin-bottom:35px; 
+                background-position:  center;
+                height:820px;
+                background-size:cover;
+                margin-top: -70px;
+            }
+            body {
+                background-color:black;
+                padding: 0;
+                margin: 0;
+            }
+            * {color:white;}
+            nav {
+                position:fixed;
+                float:left;
+                width: 100%;
+                height: 40px;
+                background-color:#fff396;
+            }
+
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                float: left;
+
+            }
+         
+            nav ul li {
+                margin-left: 7.5%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+                font-family: century gothic;
+                font-size: 20px;
+                transition: all 0.1s;
+                cursor: pointer;
+                color:black;
+            }
+            nav ul li:hover {
+                color: #cc9304;
+            }
+            header {
+                float:left;
+                width:100%;
+                height:700px;
+                background:url("https://wallpaperstock.net/gossip-girl-wallpapers_28814_1366x768.jpg") no-repeat;
+                background-size:100% 100%;
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+            header .titulo {
+                margin:0 auto;
+                display:block;
+                margin-top: 0px;
+                width: 700px;
+                height: 400px;
+                background-color:;
+                
+            }
+            article {
+                width: 50%;
+                margin: auto;
+                background-color: white;
+                border-radius: 40px;
+                margin-top: 10px;
+                margin-bottom:30px;
+                padding: 50px;
+            }
+            article img {
+                margin: auto;
+                display: block;
+                width: 30%;
+                margin-bottom: 30px;
+            }
+            article p {
+                color: black;
+                font-family: century gothic;
+                text-align: justify;
+                width:90%;
+                margin-left:5%;
+                line-height:25px;
+                margin-bottom: 5%;
+            }
+            article h1 {
+                color: black;
+                font-family: century gothic;
+                text-align: center;
+                font-size: 40px;
+                margin-top: 5px;
+            }
+            article h2 {
+                color: black;
+                font-family: century gothic;
+                text-align: center;
+                margin-bottom: 30px;
+                margin-top: 50px;
+            }
+            
+            aside {
+                border-radius:5px;
+                width:50%;
+                margin: auto;
+                height:100px;
+            }
+
+            aside ul {
+                float:left;
+                margin:0px;
+                padding:0px;
+                width:100%;
+                height:100%;
+                list-style:none;
+
+            }
+            aside ul li {
+                float:left;
+                width:60px;
+                height:60px;
+                margin-left:32px;
+                background-color:;
+                border-radius:100%;
+                display:block;
+               
+                margin-bottom:20px;
+                cursor:pointer;
+                border:;
+                transition:all 0.5s;
+            }
+            aside ul li:hover {
+                
+            }
+            aside ul li[class="0"] {
+                background: url("http://www.freeiconspng.com/uploads/home-icon-png-home-house-icon-24.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+            aside ul li[class="0"]:hover {
+                transition:all 0.5s;
+                background-size:80% 80%;
+            }
+            aside ul li[class="1"] {
+                background:url("http://syn.org.au/app/uploads/clapper.png") no-repeat;
+                background-size: 50% 50%;
+                background-position:center center;
+                background-color:#e8e46f;
+
+             
+            }
+             aside ul li[class="1"]:hover {
+                transition:all 0.5s;
+                background-size:65% 65%;
+            }
+            aside ul li[class="2"] {
+                background:url("https://d30y9cdsu7xlg0.cloudfront.net/png/13653-200.png") no-repeat;
+                background-size:70% 70%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="2"]:hover {
+                transition:all 0.5s;
+                background-size:85% 85%;
+            }
+             aside ul li[class="3"] {
+                background:url("https://icon-icons.com/icons2/38/PNG/512/trophy_5045.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+
+            }
+             aside ul li[class="3"]:hover {
+                transition:all 0.5s;
+                background-size:75% 75%;
+            }
+            aside ul li[class="4"] {
+                background:url("https://www.socialtalent.com/wp-content/uploads/2015/08/question-mark-512.gif") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="4"]:hover {
+                transition:all 0.5s;
+                background-size:70% 70%;
+            }
+             aside ul li[class="5"] {
+                background:url("https://icon-icons.com/icons2/614/PNG/512/mail-open-symbol-of-an-envelope-with-a-letter-inside_icon-icons.com_56495.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="5"]:hover {
+                transition:all 0.5s;
+                background-size:70% 70%;
+            }
+
+            .navigation-menu {
+                width: 90%;
+                margin: auto;
+            }
+            .area_left {
+                float:left;
+                width:18%;
+                margin-top:10px;
+                margin-left:3%;
+                height:300px;
+            }
+            .area_left button {
+                float:left;
+                margin-left:20%;
+                width:60%;
+                height:35px;
+                border:none;
+                color:cyan;
+                font-family:century gothic;
+                font-size:16px;
+                border-radius:7px;
+                background: rgba(71,71,71,1);
+                background: -moz-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,71,71,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(100%, rgba(17,17,17,1)));
+                background: -webkit-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -o-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -ms-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: linear-gradient(to bottom, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#111111', GradientType=0 );
+            }
+            .area_left p {
+                float:left;
+                font-family:century gothic;
+                font-size:15px;
+                width:60%;
+                margin-left:20%;
+            }
+            .area-right {
+                position:absolute;
+                width:15%;
+                height:550px;
+                border-radius:20px;
+                right:70px;
+                top:900px;
+                background: #fcee74;
+                background: #fcee74;
+                background: -moz-linear-gradient(45deg, #fcee74 10%, #f9f9f9 23%, #fefcea 78%, #efdc62 96%);
+                background: -webkit-linear-gradient(45deg, #fcee74 10%,#f9f9f9 23%,#fefcea 78%,#efdc62 96%);
+                background: linear-gradient(45deg, #fcee74 10%,#f9f9f9 23%,#fefcea 78%,#efdc62 96%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcee74', endColorstr='#efdc62',GradientType=1 );
+                text-align: center;
+                padding-top: 30px;
+            }
+            .area-right .lb-gossip-girl{
+                width:100%;
+                color:#202020;
+                font-family:century gothic;
+                font-size:25px;
+                margin-bottom:10px;
+            }
+            .area-right .icon-tv{
+                display:block;
+                margin:auto;
+            }
+            .area-right .mapa {
+                width: 85%;
+                height: 200px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            .area-right .area-busca {
+                text-align:center;
+                padding-top: 15px;
+            }
+            .area-right .area-busca label {
+                font-family: century gothic;     
+                color:black;
+                font-size: 20px;
+            }
+            .area-right .area-busca input {
+                margin-top: 20px;
+            }
+            .area-right .area-busca button {
+                border-radius: 9px;
+                border:none;
+                background-color: #bf71ce;
+                font-family: century gothic;
+                font-size: 20px;
+                width: 50%;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+            <img src="http://seriesemcena.com.br/wp-content/uploads/2017/09/gossip-girl-logo.jpg">
+       </section>
+
+        <section class="navigation-menu">
+            <aside class="menu">
+                 <ul>
+                    <a href="http://207.154.230.103:7249/ellen409/index.gg.html"> <li class="0"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/elenco.html"> <li class="1"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/livros.html"> <li class="2"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/premios.html"> <li class="3"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/curiosidades.html"> <li class="4"><!--menu aki--></li>
+                    <a href="https://form.jotformz.com/23083737236657"> <li class="5"><!--menu aki--></li></a>
+                </ul>
+            </aside>
+        </section>
+        
+        <aside class="area_left">
+           <button style="color:cyan;">bem-vindo</button> 
+           <p style="color: #ff6a6a">Ao site feito SOBRE o  Upper East Side e PARA o Upper East Side.</p>
+           <button style="color:#f79c60;"> Gossip</button>
+           <p style="color:#f7ee74"> As ultimas "411"sobre quem é "IN".</p>
+           <button style="color:#fff396;"> Fotos</button>
+           <p style="color:#94dd94;"> Veja o que os fashionistas estão vestindo e avalie!</p>
+           <p> <a style="color:#7bcae0;" href="http://screencapped.net/tv/gossipgirl/displayimage.phte?album=lastup&cat=11&pid=2794#top_display_media"> VEJA A GALERIA DE FOTOS </a></p>
+           <button style="color:#ffc4d2;"> Festas</button>
+           <p style="color:cyan;"> Provavelmente seu convite ficou perdido em seu e-mail. <a href="">CLICK AQUI</a> e veja o que perdeu.</p>
+           <button style="color:orange;">Criadoras do site</button>
+           <p style="color: #9E0A39;"=>- Ellen Mendonça <br> - Ellem Lima</p>
+
+        </aside>
+        <article>
+        <h1> Livros </h1>
+       
+        <h2>1. As delicias de fofoca</h2>
+        <img src="https://statics.livrariacultura.net.br/products/capas_lg/994/797994.jpg">
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neste primeiro volume, a estonteante loira Serena van der Woodsen volta de uma longa viagem que fez a Europa, depois de ter sido expulsa de seu colégio europeu. Mas parece que sua melhor amiga Blair Waldorf não está tão contente com sua volta. Só de pensar que a sua amiga iria tomar seu posto de mais popular do colégio já sentia calafrios. É então que uma série de fofocas e boatos sobre Serena começam a rolar pelo mundinho destes adolescentes, deixando-a afastada de todos. Era tudo o que Blair queria: ser o centro das atenções e manter seu namorado Nate longe da rival. Será que Serena irá aguentar tanta solidão?"</p>
+
+        <h2>2. Você sabe que me ama</h2>
+        <img src="https://i.imgur.com/R2zmGRP.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O deslumbre e a crueldade do mundinho cool dos adolescentes privilegiados na Nova York contemporânea ganham cor com o texto ágil e divertido de Cecily von Ziegesar. Formada em uma das escolas mais chiques da big apple e íntima desse universo de festas, dinheiro, alcoólatras, bulímicos, drogados, anoréxicos e mentirosos, a escritora usa muito dessa experiência na série "GOSSIP GIRL", da Record, espécie de "Sex and the City" teen. Segundo volume da série, Gossip Girl - você sabe que me ama mostra os personagens às voltas com entrevistas para universidades, mas sem deixar de lado as fofocas e intrigas.</p>
+        
+        <h2>3. Eu quero tudo</h2>
+        <img src="https://i.imgur.com/E7Xqok0.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neste livro namoros começam, outros terminam, alguns terminam e recomeçam. Quais? Nossa adorável fofoqueira irá contar tudo neste livro, menos, é claro, quem ela é. Se você estava louco para saber, sim, Serena e Blair voltaram a ser melhores amigas e vão curtir o Natal em um resort no Caribe, para fugir do frio nova-iorquino e, mais ainda, de suas confusões amorosas. Só que as férias não dão muito certo quando a mãe de Blair resolve contar uma novidade bombástica.</p>
+
+        <h2>4. Porque eu mereço</h2>
+        <img src="https://i.imgur.com/L1QyRSI.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Serena está totalmente apaixonada por Aarom, Vanessa e Dan parecem dois pombinhos melosos, Jenny encontra uma nova paixão e Blair está de volta à ativa, flertando com um homem mais velho, que pode ser o seu passaporte para Yale. Até mesmo Nate se depara com um novo romance na clínica de reabilitação para onde é enviado depois de ser flagrado em ação no Central Park. Muito açucarado? Pode esquecer.</p>
+
+        <h2>5. Do jeito que eu gosto</h2>
+        <img src="https://i.imgur.com/iJqaenf.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Neste volume há muita expectativa no ar, pois as férias de primavera estão chegando. Serena e Blair estão de malas prontas para muita diversão e esqui em Sun Valley, para onde vão em companhia de Eric, o gatíssimo irmão de Serena por quem Blair se descobre loucamente interessada. Nate também parte para a estação de esqui, e só pensa nos momentos incríveis que vai passar com sua bela e doida namorada.</p>
+
+        <h2>6. É você que eu quero</h2>
+        <img src="https://i.imgur.com/DyFylm3.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finalmente as cartas de aceitação das universidades chegaram e muitos já estão fazendo suas malas para Yela. Oh-oh, mas as notícias não foram boas para todo mundo... Será que o destino de certa formanda é parar em uma universidade de segunda linha? Mas quem se importa? Agora é hora de comemorar e nada melhor que uma festa para aliviar o estresse do último ano.</p>
+    
+        <h2>7. Ninguém faz melhor</h2>
+        <img src="https://lelivros.pro/wp-content/uploads/2013/01/Download-Ninguem-Faz-Melhor-Gossip-Girl-Vol.-7-ePUB-mobi-pdf.jpg">   
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enquanto alguns ainda esperam pelas respostas das universidades, outros não conseguem decidir para qual ir... Mas nada disso importa para os jovens privilegiados de Manhattan. Todos só querem aproveitar os últimos dias da escola para fazer o que sabem: se divertir e, principalmente, namorar o quanto puderem!</p>
+
+        <h2>8. Nada pode nos manter juntos</h2>
+        <img src="https://i.imgur.com/dGzYr5E.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O oitavo livro na série Gossip Girl leva as mulheres de Constance Billard à formatura! Agora que os planos da faculdade estão no lugar, é hora de eles se divertirem. Blair não está falando com Serena ou Nate --- novamente --- como agora são uma espécie de namoro. Ela decide que teve o suficiente do estilo de vida boêmio com Vanessa e volta para a cidade, para o Yale Club, onde conhece o fabuloso Lord Marcus. Nate, quem?</p>
+
+        <h2>9. Vai sonhando</h2>
+        <img src="https://i.imgur.com/nSmAtJR.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quando "Breakfast at Fred's", a refilmagem ultramoderna de "Bonequinha de luxo", começa a ser gravada em Manhattan, as garotas mais fabulosas da cidade querem se juntar à equipe. Para completar o clima, o calor do último verão antes da partida para a faculdade é a desculpa ideal para festas incríveis à beira da piscina.</p>
+
+        <h2>10. Eu não mentiria para você</h2>
+        <img src="https://i.imgur.com/swXXTtv.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Os jovens mais glamourosos de Nova York fogem do calor do verão na cidade para se refrescar à beira da praia. Ricos, belos e famosos se reúnem nos Hamptons, enquanto o estilista Bailey Winter recebe suas musas inspiradoras — Blair e Serena, é claro! Só mesmo o mundo da moda para unir essas beldades! E, coincidência das coincidências, Nate é o garoto da casa ao lado…</p>
+
+        <h2>11. Não me esqueça</h2> 
+        <img src="https://i.imgur.com/T3L2C05.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;A série Gossip Girl chega a seu tão aguardado quanto temido final. O verão está terminando e os jovens mais glamourosos de Nova York vão começar uma nova fase de suas vidas. Eles têm um pouco mais de uma semana antes de irem para a faculdade, e esses últimos dias serão bem aproveitados com muita festa. Todos estão fazendo planos para a vida independente e Blair está certa de que vai morar com Nate em Yale. Mas, tem algo que ele não contou que pode mudar tudo</p>
+
+        <h2>12. O ínicio - Só podia ser você</h2>
+        <img src="https://i.imgur.com/ZqEF33u.jpg">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; Você ouviu os rumores… Finalmente, Gossip Girl revela o que realmente aconteceu antes do começo da série best seller do New York Times. Amigos de infância, Nate, Serena e Blair são inseparáveis… O único porem é que as duas estão perdidamente apaixonadas por ele – e uma não sabe o que a outra sente! Será o fim de uma amizade? Ou o início de um triângulo amoroso? Façam as suas apostas…</p>
+
+        <h2>13. Eu sempre vou te amar</h2>
+        <img src="https://i.imgur.com/uPYJo6m.jpg">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp; Blair, Serena, Nate, Dan e Vanessa foram para a universidade. Mas estão de volta para as férias de inverno. Em alguns meses, muita coisa pode mudar, já outras… não mudarão nunca. Em meia muitas brigas, amores, separações e drama, o centro das atenções continua em um certo triângulo amoroso. Mas será que ele vai continuar sendo um triângulo? Ou alguém vai ficar de fora e finalmente um casal com um final feliz irá se formar? Façam suas apostas...</p>
+
+    </article>
+        <aside class="area-right">
+            <label class="lb-gossip-girl">gossip girl</label>
+            <div>
+                <img class="icon-tv" src="http://i.imgur.com/IGHKSNr.png">
+                <img class="mapa" src="https://i.imgur.com/lC0Qorh.png">
+            </div>
+            <div class="area-busca">
+                <label>gossip busca</label>
+                <input type="text" />
+                <button style="color: #f7d631;" style="font-family: century gothic;">buscar</button>
+            </div>
+        </aside>
+        <footer> 
+        </footer>
+    </body>
+</html>
+

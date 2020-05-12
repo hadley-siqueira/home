@@ -1,0 +1,50 @@
+<?php
+    $user="julio603";
+    $pass="1234";
+    $banco="julio603_Agenda";
+    $host="localhost";
+    $url="mysql:host=$host;dbname=$banco";
+
+    try{
+     $conexao = new PDO($url, $user, $pass);
+
+     $sql = "SELECT nome, telefone, email FROM Contatos";
+     $comando = $conexao->prepare($sql);
+     $comando->execute();
+     $resultado = $comando->fetchAll();
+    } catch (PDOException $e) {
+        echo "Erro: " . $e->getMessage();
+    }
+?>
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+    </head>    
+
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+        </table>
+        
+        <tbody>
+            <?php foreach ($resultado as $k) { ?>
+            <tr>
+                <td><?php echo $k['nome']?> </td>
+                <td><?php echo $k['telefone']?> </td>
+                <td><?php echo $k['email']?> </td>
+
+            </tr>
+            <?php } ?>
+        </tbody>
+    </body>
+
+</html>

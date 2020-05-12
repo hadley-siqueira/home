@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+            var cx = parseInt(window.prompt("informe a coordenada x do circulo:"));
+            var cy = parseInt(window.prompt("informe a coordenada y do circulo:"));
+            var px = parseInt(window.prompt("informe a coordenada x do ponto:"));
+            var py = parseInt(window.prompt("informe a coordenada y do ponto:"));
+            var c = px;
+            var r = parseInt(window.prompt("informe o raio do circulo"));
+            var d = Math.sqrt(Math.pow(cx - px, 2) + Math.pow(cy-py, 2));
+            if (d < r) {
+                console.log("esta dentro");
+            } else {
+                console.log("esta fora");
+            }
+        </script>
+    </body>
+</html>

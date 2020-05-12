@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Gossip Girl</title>
+        <link rel="icon" href="https://pbs.twimg.com/profile_images/626860748539588608/eaBxM1R7.png" type="image/gif" sizes="16x16">
+        <style>
+            .elenco{
+            font-family: century gothic;
+            width: 700px;
+            margin: 0 auto;
+            position: relative;
+            }
+            .w3-display-left{
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            }
+            .w3-display-right{
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            }
+            * {
+                box-sizing: border-box;
+            }
+
+            .secao-inicio {
+                text-align: center;
+            }
+
+            .secao-inicio img {
+                margin: auto;
+                margin-bottom:35px;
+                background-position:  center;
+                height:820px;
+                background-size:cover;
+                margin-top: -70px;
+            }
+            body {
+                background-color:black;
+                padding: 0;
+                margin: 0;
+            }
+            * {color:white;}
+            nav {
+                position:fixed;
+                float:left;
+                width: 100%;
+                height: 40px;
+                background-color:#fff396;
+            }
+
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                float: left;
+
+             }
+         
+            nav ul li {
+                margin-left: 7.5%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+                font-family: century gothic;
+                font-size: 20px;
+                transition: all 0.1s;
+                cursor: pointer;
+                color:black;
+            }
+            nav ul li:hover {
+                color: #cc9304;
+            }
+            header {
+                float:left;
+                width:100%;
+                height:700px;
+                background:url("https://wallpaperstock.net/gossip-girl-wallpapers_28814_1366x768.jpg") no-repeat;
+                background-size:100% 100%;
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+            header .titulo {
+                margin:0 auto;
+                display:block;
+                margin-top: 0px;
+                width: 700px;
+                height: 400px;
+                background-color:;
+                
+            }
+            article {
+                width: 50%;
+                margin: auto;
+                background-color: white;
+                border-radius: 40px;
+                margin-top: 10px;
+                margin-bottom:30px;
+                padding: 50px;
+            }
+            article p {
+                color: black;
+                font-family: century gothic;
+                text-align: justify;
+                width:90%;
+                margin-left:5%;
+                line-height:25px;
+                margin-bottom: 5%;
+            }
+            article h1 {
+                color: black;
+                font-family: century gothic;
+                text-align: center;
+                font-size: 32px;
+            }
+            
+            aside {
+                border-radius:5px;
+                width:50%;
+                margin: auto;
+                height:100px;
+            }
+
+            aside ul {
+                float:left;
+                margin:0px;
+                padding:0px;
+                width:100%;
+                height:100%;
+                list-style:none;
+
+            }
+            aside ul li {
+                float:left;
+                width:60px;
+                height:60px;
+                margin-left:32px;
+                background-color:;
+                border-radius:100%;
+                display:block;
+               
+                margin-bottom:20px;
+                cursor:pointer;
+                border:;
+                transition:all 0.5s;
+            }
+            aside ul li:hover {
+                
+            }
+            aside ul li[class="0"] {
+                background: url("http://www.freeiconspng.com/uploads/home-icon-png-home-house-icon-24.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+            aside ul li[class="0"]:hover {
+                transition:all 0.5s;
+                background-size:80% 80%;
+            }
+            aside ul li[class="1"] {
+                background:url("http://syn.org.au/app/uploads/clapper.png") no-repeat;
+                background-size: 50% 50%;
+                background-position:center center;
+                background-color:#e8e46f;
+
+             
+            }
+             aside ul li[class="1"]:hover {
+                transition:all 0.5s;
+                background-size:65% 65%;
+            }
+            aside ul li[class="2"] {
+                background:url("https://d30y9cdsu7xlg0.cloudfront.net/png/13653-200.png") no-repeat;
+                background-size:70% 70%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="2"]:hover {
+                transition:all 0.5s;
+                background-size:85% 85%;
+            }
+             aside ul li[class="3"] {
+                background:url("https://icon-icons.com/icons2/38/PNG/512/trophy_5045.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+
+            }
+             aside ul li[class="3"]:hover {
+                transition:all 0.5s;
+                background-size:75% 75%;
+            }
+            aside ul li[class="4"] {
+                background:url("https://www.socialtalent.com/wp-content/uploads/2015/08/question-mark-512.gif") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="4"]:hover {
+                transition:all 0.5s;
+                background-size:70% 70%;
+            }
+             aside ul li[class="5"] {
+                background:url("https://icon-icons.com/icons2/614/PNG/512/mail-open-symbol-of-an-envelope-with-a-letter-inside_icon-icons.com_56495.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="5"]:hover {
+                transition:all 0.5s;
+                background-size:70% 70%;
+            }
+
+            .navigation-menu {
+                width: 90%;
+                margin: auto;
+            }
+            .area_left {
+                float:left;
+                width:18%;
+                margin-top:10px;
+                margin-left:3%;
+                height:300px;
+            }
+            .area_left button {
+                float:left;
+                margin-left:20%;
+                width:60%;
+                height:35px;
+                border:none;
+                color:cyan;
+                font-family:century gothic;
+                font-size:16px;
+                border-radius:7px;
+                background: rgba(71,71,71,1);
+                background: -moz-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,71,71,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(100%, rgba(17,17,17,1)));
+                background: -webkit-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -o-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -ms-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: linear-gradient(to bottom, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#111111', GradientType=0 );
+            }
+            .area_left p {
+                float:left;
+                font-family:century gothic;
+                font-size:15px;
+                width:60%;
+                margin-left:20%;
+            }
+            .area-right {
+                position:absolute;
+                width:15%;
+                height:550px;
+                border-radius:20px;
+                right:70px;
+                top:900px;
+                background: #fcee74;
+                background: #fcee74;
+                background: -moz-linear-gradient(45deg, #fcee74 10%, #f9f9f9 23%, #fefcea 78%, #efdc62 96%);
+                background: -webkit-linear-gradient(45deg, #fcee74 10%,#f9f9f9 23%,#fefcea 78%,#efdc62 96%);
+                background: linear-gradient(45deg, #fcee74 10%,#f9f9f9 23%,#fefcea 78%,#efdc62 96%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcee74', endColorstr='#efdc62',GradientType=1 );
+                text-align: center;
+                padding-top: 30px;
+            }
+            .area-right .lb-gossip-girl{
+                width:100%;
+                color:#202020;
+                font-family:century gothic;
+                font-size:25px;
+                margin-bottom:10px;
+            }
+            .area-right .icon-tv{
+                display:block;
+                margin:auto;
+            }
+            .area-right .mapa {
+                width: 85%;
+                height: 200px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            .area-right .area-busca {
+                text-align:center;
+                padding-top: 15px;
+            }
+            .area-right .area-busca label {
+                font-family: century gothic;     
+                color:black;
+                font-size: 20px;
+            }
+            .area-right .area-busca input {
+                margin-top: 20px;
+                float:left;
+                width: 80%;
+                margin-left:10%;
+                height: 20px;
+                
+            }
+            .area-right .area-busca button {
+                border-radius: 9px;
+                border:none;
+                background-color: #bf71ce;
+                font-family: century gothic;
+                font-size: 20px;
+                width: 50%;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+            <img src="http://seriesemcena.com.br/wp-content/uploads/2017/09/gossip-girl-logo.jpg">
+       </section>
+
+        <section class="navigation-menu">
+            <aside class="menu">
+                 <ul>
+                    <a href="http://207.154.230.103:7249/ellen409/index.gg.html"> <li class="0"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/elenco.html"> <li class="1"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/livros.html"> <li class="2"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/premios.html"> <li class="3"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/curiosidades.html"> <li class="4"><!--menu aki--></li></a>
+                    <a href="https://form.jotformz.com/23083737236657"> <li class="5"><!--menu aki--></li></a>
+                </ul>
+            </aside>
+        </section>
+        
+        <aside class="area_left">
+           <button style="color:cyan;">bem-vindo</button>
+           <p style="color: #ff6a6a">Ao site feito SOBRE o  Upper East Side e PARA o Upper East Side.</p>
+           <button style="color:#f79c60;"> Gossip</button>
+           <p style="color:#f7ee74"> As ultimas "411"sobre quem é "IN".</p>
+           <button style="color:#fff396;"> Fotos</button>
+           <p style="color:#94dd94;"> Veja o que os fashionistas estão vestindo e avalie!</p>
+           <p> <a style="color:#7bcae0;" href="http://screencapped.net/tv/gossipgirl/displayimage.php?album=lastup&cat=11&pid=2794#top_display_media"> VEJA A GALERIA DE FOTOS </a></p>
+           <button style="color:#ffc4d2;"> Festas</button>
+           <p style="color:cyan;"> Provavelmente seu convite ficou perdido em seu e-mail. <a href="">CLICK AQUI</a> e veja o que perdeu.</p>
+           <button style="color:orange;">Criadoras do site</button>
+           <p style="color: #9E0A39;"=>- Ellen Mendonça <br> - Ellem Lima</p>
+        </aside>
+        <div class="elenco">
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/DhfgHnG.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Leighton Meester
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/gu0iYhb.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Blake Lively
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/AHSSAFt.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Ed Westwick
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/72iwukh.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Penn Badgley
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/1qVE2sJ.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Chace Crawford
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/eyDaHJu.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Taylor Momsen
+
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/geZYpaa.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Jessica Szohr
+      </div>
+    </div>
+
+
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+</div>
+        <article id="bloco" style="color: #000">
+            asdas
+        </article>
+        <aside class="area-right">
+            <label class="lb-gossip-girl">gossip girl</label>
+            <div>
+                <img class="icon-tv" src="http://i.imgur.com/IGHKSNr.png">
+                <img class="mapa" src="https://i.imgur.com/lC0Qorh.png">
+            </div>
+            <div class="area-busca">
+                <label>gossip busca</label>
+                <input type="text" />
+                <button style="color: #f7d631;" style="font-family: century gothic;">buscar</button>
+            </div>
+        </aside>
+        <footer> 
+        </footer>
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+
+                if (n < 1) {
+                    slideIndex = x.length
+                }
+
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+
+                x[slideIndex-1].style.display = "block";  
+
+                var b = document.getElementById('bloco');
+
+                if (slideIndex - 1 == 0) {
+                        b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Leighton Marissa Meester é uma atriz, cantora, compositora e modelo norte-americana nascida em 9 de abril de 1986 (31 anos), Fort Worth, Texas, EUA, interpretou o papel de Blair Woldorf. Chamada também de Queen B., Blair tem uma altura mediana, longos cabelos castanhos e sua beleza não se compara à de nenhuma outra dama, assim como seu veneno. Apesar de sabermos que Blair Waldorf não é a garota por trás do blog de fofocas mais comentado do Upper East Side, a frase “você sabe que me ama” tem tudo a ver com sua personalidade. Ela veste as melhores roupas, é arrogante, incrivelmente inteligente e determinada, é perfeccionista em tudo que faz, não mede esforços para conseguir o que quer e não importa-se em pisar em qualquer um que cruzar seu caminho e mostrar-lhe o quanto é superior.</p>';
+                }else if (slideIndex - 1 == 1){
+                        b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Blake Ellender Lively é uma atriz americana. Nasceu em 25 de agosto de 1987 (30 anos), Tarzana, Los Angeles, Califórnia, EUA, interpretou o papel de Serena Van der Woodsen na séria uma garota  festeira e problemática, e depois responsável e consciente, é assim que volta de sua estadia de um ano no colegio interno. Mas uma coisa ela sempre foi e sempre será: a itGirl do Upper East Side. É descrita como uma garota linda, alta e loira. Sempre simpática e sorridente, Serena consegue tudo o que quer muito facilmente. Com sua personalidade leve e doce as pessoas sempre a amam.</p>';
+                }else if (slideIndex - 1 == 2) {
+                    b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Edward "Ed" Westwick é um ator, modelo e músico inglês. Nascido em 27 de junho de 1987 (30 anos), Hammersmith, Londres, Reino Unido, fez o papel de Chuck Bass um garoto orfão de mãe porém com um pai não lhe dá a mínima atenção e por isso Chuck não consegue demonstrar sentimentos, o que atrapalha sua relação com Blair Waldorf, por quem se descobre apaixonado. Boêmio e mulherengo, sua frase favorita é "Eu sou Chuck Bass"</p>';
+                }else if (slideIndex - 1 == 3) {
+                    b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Penn Dayton Badgley é um ator americano, nasceu em 1 de novembro de 1986 (31 anos), Baltimore, Maryland, EUA. Interpretou o papel de de Dan Humphrey, conhecido como o "garoto solitário", Dan não é popular, é bolsista, um escritor talentoso e não faz questão de se enturmar. É irmão de Jenny e mora com o pai no Brooklyn. Sonha em ir para a Universidade de Darthmount e se tornar um escritor. É o melhor aluno de sua turma, é amável com todos e sempre tenta fazer o certo e o bem.</p>';
+                }else if (slideIndex - 1 == 4) {
+                    b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Christopher Chace Crawford é um ator norte-americano, nascido em 18 de julho de 1985 (32 anos), Lubbock, Texas, EUA. Interpretou na série Nate Achirbald um garoto rico, bonito, popular e jogador de lacrosse. Sua mãe é uma socialite e seu pai é um ex-capitão da Marinha. Desde sempre, foi namorado de Blair. Seu hobbie favorito é correr no central park com o seu pai. É confuso, não sabendo o que realmente quer para si. Ele e Chuck Bass são melhores amigos e, por serem filhos unicos, cuidam um do outro e se tratam como irmãos.</p>';
+                }else if (slideIndex - 1 == 5) {
+                    b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Taylor Michel Momsen é cantora, compositora, guitarrista, modelo e atriz americana. É fundadora e vocalista da banda de metal alternativo The Pretty Reckless. Nasceu em 26 de julho de 1993 (24 anos), St. Louis, Missouri, EUA. Na série fez Jenny Humphrey a irmã mais nova de Dan, com o qual tem uma relação de profunda amizade sem segredos. Por ser de família humilde e morar no Brooklryn, ela enfrenta alguns problemas em se enturmar. Mas com seu lindo cabelo longo e louro, e berrantes olhos azuis, Jenny é determinada e não desiste fácil do que quer. E o que ela quer é ser popular como Blair Waldorf.</p>';
+                }else if (slideIndex - 1 == 6) {
+                    b.innerHTML = '<p>&nbsp;&nbsp;&nbsp;&nbsp;Jessica Karen Szohr é uma atriz estadunidense, nasceu em 31 de março de 1985 (32 anos), Menomonee Falls, Wisconsin, EUA. Interpretou na série Vanessa Abrams a melhor amiga de infância de Dan Humphrey. Antes do relacionamento de Dan e Serena, ela e Dan eram inseparáveis, e os dois desenvolveram uma atração mútua que foi destruída quando ela se mudou para Vermont . Um ano depois, ela voltou a morar com a irmã mais velha, assim como Dan estava tentando fazer as coisas funcionarem com Serena. Apesar de sua atração continuou Dan, ela se afastou quando viu que Dan realmente amava Serena.</p>';
+                }
+
+
+                
+                    
+            }
+        </script>
+    </body>
+</html>

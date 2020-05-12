@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    </head>
+    <body>
+      <h1 id="cabl">Meu Cabeçalho</h1>
+ 
+      <script>
+        function grausPraRadianos(g) {
+          var y;
+
+          y = (g * 3.1415) / 180.0;
+          return y;
+        }
+
+        function b(raio, angulo) {
+        var t = 200; // valor arbitrario
+        var ang = grausPraRadianos(angulo);
+        var pos = raio * Math.cos(ang) + t;
+        return Math.floor(pos);
+        }
+
+        function c(raio, angulo) {
+        var t = 200; // valor arbitrario
+        var ang = grausPraRadianos(angulo);
+        var pos = raio * Math.sin(ang) + t;
+        return Math.floor(pos);
+        }
+
+        var meu_angulo = 0;
+        var meu_raio = 150;
+
+        function animar() {
+          if (meu_angulo < 360) {
+            var e = document.getElementById('cab');
+
+          e.style.position = 'relative';
+          e.style.top = c(meu_raio, meu_angulo)
+        

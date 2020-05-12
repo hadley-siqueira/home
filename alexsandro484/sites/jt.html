@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<p id="w">Texto</p>
+		<button onclick="mudarTexto()">
+			Clique aqui
+		</button>
+
+		<p id="a">Alexsandro Magno</p>
+                <button onclick="mudeNome()">
+                        Mude já
+                </button>
+
+		<p id="j">Autoria</p>
+		<button onclick="Trocar()">
+			Troque Agora
+		</button>
+
+		<p id="t">BD</p>
+		<button onclick="Altere()">
+			Altere o nome
+		</button>
+
+	</body>
+
+	<script>
+		function mudarTexto() {
+			var v = document.getElementById('w');
+			v.innerHTML = 'Texto mudou';
+			v.style.fontSize = '30px';
+		}
+
+		function mudeNome() {
+			var alfa = document.getElementById('a');
+			alfa.innerHTML = 'Alexsandro Magno Martins da Silva';
+			alfa.style.fontSize = '15px';
+		}
+
+		function Trocar() {
+                        var beta = document.getElementById('j');
+                        beta.innerHTML = 'Autoria Web';
+                        beta.style.fontSize = '20px';
+                }
+
+		function Altere() {
+			var jon = document.getElementById('t');
+			jon.innerHTML = 'Banco de dados';
+			jon.style.fontSize = '20px';
+		}
+	</script>
+</html>

@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/paulo212/sites/Atividade/src/database'
+let g:netrw_dirhist_2='/home/paulo212/sites/Estudos/projeto-glass-html5/_css'
+let g:netrw_dirhist_3='/home/paulo212/sites/Estudos/projeto-glass-html5'
+let g:netrw_dirhist_4='/home/paulo212/sites/Estudos'
+let g:netrw_dirhist_5='/home/paulo212/hadley/projeto-glass-html5/_css'
+let g:netrw_dirhist_6='/home/paulo212/sites/HTML/pagina.html'

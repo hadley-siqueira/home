@@ -1,0 +1,89 @@
+<!DOCTYPE htmal>
+<html>
+    <body>
+      <canvas id="area" width="800" height="600" style="borde: 5px solid black">
+      </canvas>
+
+        <script>
+            var ctx = document.getElementById("area").getContext("2d");
+
+            function criarBola(x,y) {  
+                this.x = x;
+                this.y = y;
+                this.vy = Math.random() * 290;
+                this.vx = Math.random() * 56;
+                this.raio = 289;
+               }
+
+            var bola1 = new criarBola(4,9);
+            var bola2 = new criarBola(2,7);
+            var bola3 = new criarBola(1,9);
+            var bola4 = new criarBola(1,1);
+            var bola5 = new criarBola(7,8);
+                                                                   
+            function desenharBola(bola){
+                ctx.beginPath();
+                ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+            
+            function desenhar(){
+                ctx.clearRect(0, 0, 800, 600);
+                desenharBola(bola1);
+                desenharBola(bola2);
+                desenharBola(bola3);
+                desenharBola(bola4);
+                desenharBola(bola5);
+            }
+
+
+            function atualizarPosicao(bola){
+                bola.x = bola.x + bola.vx;
+                bola.y = bola.y + bola.vy;
+                
+                if(bola.x < 0){
+                    bola.x = 0;
+                    bola.vx = -bola.vx;
+                }
+    
+                if(bola.x >= 800){
+                    bola.x = 799;
+                    bola.vx = -bola.vx;
+                }
+    
+            
+                if(bola.y < 0){
+                    bola.y = 0;
+                    bola.vy = -bola.vy;
+                }
+
+                if(bola.y >= 600){
+                    bola.y = 599;
+                    bola.vy = -bola.vy
+                }
+                
+            }
+         
+            function atualizar(){
+                atualizarPosicao(bola1);
+                atualizarPosicao(bola2);
+                atualizarPosicao(bola3);
+                atualizarPosicao(bola4);
+                atualizarPosicao(bola5);
+            }
+      
+            function animar(){
+                atualizar();
+                desenhar();
+                window.requestAnimationFrame(animar);
+            }
+
+            animar();
+
+
+
+        </script>
+
+    </body>
+</html>
+sh sausuario@207.154.230.103 -p 7777

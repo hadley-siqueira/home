@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <script>
+        window.alert ("Lei de ohm");
+        var s = window.prompt("o que você quer calcular?");
+
+        if (s == "resistencia") {
+
+        var v = parseInt(window.prompt("digite o valor da voltagem:"));
+        var i = parseInt(window.prompt("digite o valor da corrente:"));
+        var r = v/i;
+            window.alert("a resistencia ´´e" + r + " ohm(s)");
+        
+        } else if( s == "voltagem") {
+
+        var i = parseInt(window.prompt("digite o valor corrente:"));
+        var r = parseInt(window.prompt("digite o valor resistencia:"));
+        var v = r * i;
+            window.alert("a voltagem é" + v + "volts(s)");
+        
+        } else if (s == "corrente") {
+        
+        var r = parseInt(window.prompt("digite o valor da resistencia:"));
+        var v = parseInt(window.prompt("digite o valor da voltagem:"));
+        var i = v/r;
+            window.alert("a corrente é" + i + " amperes(s)");
+
+        } else {
+            window.alert("essa opção não existe"); 
+            window.alert("o que você pode calcular é:"); 
+            window.alert("resistencia"); 
+            window.alert("voltagem"); 
+            window.alert("corrente");
+        }  
+         </script>
+     </body>    
+</html>
+

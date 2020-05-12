@@ -1,0 +1,75 @@
+<html>
+    <body>
+        <h1>Minha primeira página</h1>
+
+        <canvas id="areaDesenho" width="800" height="600" style="border: 1px solid #000">
+        </canvas>
+
+        <script>
+            var a = document.getElementById('areaDesenho');
+            var ctx = a.getContext('2d');
+
+            var nave = {
+                x: 100,
+                y: 100,
+                angulo: 0,
+                vida: 100
+            };
+
+            function desenharNave(nave) {
+                ctx.save();
+                ctx.translate(nave.x, nave.y);
+                ctx.rotate(nave.angulo * Math.PI / 180.0);
+                ctx.beginPath();
+                ctx.moveTo(-5, -10);
+                ctx.lineTo(5, -10);
+                ctx.lineTo(0, 10);
+                ctx.lineTo(-5, -10);
+                ctx.stroke();
+                ctx.closePath();
+                ctx.restore();
+            }
+
+            function desenharEixos() {
+                ctx.moveTo(10, 10);
+                ctx.lineTo(800, 0);
+                ctx.moveTo(10, 10);
+                ctx.lineTo(0, 600);
+                ctx.stroke();
+            }
+
+            desenharNave(nave);
+
+            function moverNave(nave, paraFrente) {
+                nave.x
+            }
+
+            document.onkeydown = function(evt) {
+                evt = evt || window.event;
+
+                if (evt.keyCode == 87) {
+                    nave.y = nave.y - 5;
+                } else if (evt.keyCode == 83) {
+                    nave.y = nave.y + 5;
+                } else if (evt.keyCode == 65) {
+                    nave.angulo = nave.angulo - 10;
+                } else if (evt.keyCode == 68) {
+                    nave.angulo = nave.angulo + 10;
+                }
+
+                if (nave.angulo > 360) {
+                    nave.angulo = 0;
+                } else if (nave.angulo < 0) {
+                    nave.angulo = 360;
+                }
+                        
+                desenhar();
+            }
+
+            function desenhar() {
+                ctx.clearRect(0, 0, 800, 600);
+                desenharNave(nave);
+            }
+        </script>
+    </body>
+</html>

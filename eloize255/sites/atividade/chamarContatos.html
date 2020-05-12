@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="p1">Esse texto vai mudar</p>
+        <button onclick="pastel()">Mudar texto</button>
+
+    <script>
+        function pastel() {
+        var x = new XMLHttpRequest();
+
+        x.onreadystatechange = function(){
+            var f1 = this.readyState == 4;
+            var f2 = this.status == 200;
+
+            if (f1 && f2) {
+                u.innerHTML = this.responseText;
+            }
+        } 
+
+            var url = 'lerContatos.php';
+
+
+            x.open('GET', url, true);
+            x.send();
+        }
+    </script>
+    </body>
+</html>
+

@@ -1,0 +1,8 @@
+print("numeros em ordem decrescente")
+r1 = int(input("digite um numero qualquer:"))
+r2 = int(input("digite um numero qualquer:"))
+r3 = int(input("digite um numero qualquer:"))
+if r1 > r2:
+    if r1 > r3:
+        print("os numeros em ordem descrescente
+

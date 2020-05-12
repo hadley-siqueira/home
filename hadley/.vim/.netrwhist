@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/hadley/sites'
+let g:netrw_dirhist_2='/home/hadley/slides/reveal.js-master'
+let g:netrw_dirhist_3='/home/ismael032'
+let g:netrw_dirhist_4='/home/jose027/forca'
+let g:netrw_dirhist_5='/home/jose027'
+let g:netrw_dirhist_6='/home/jose027/forca'
+let g:netrw_dirhist_7='/home/jose027/Treinamento/Python'

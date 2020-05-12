@@ -1,0 +1,507 @@
+<html>
+    <head>
+             <meta charset = "utf-8">
+             <meta name = "viewport"content= "width=device-width, initial -scale=1.0">
+             <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+             <div class="nv-menu nv-fixed-hide">
+   
+
+
+
+             <style>
+                 *{
+                    box-sizing: border-box;
+                  }
+                  body {
+                      margin: 0;
+                      padding: 0;
+                      font-family: "Montserrat";
+                      background-color:#ccffe6;
+                 }
+                 .titulo{
+                      font-size: 2.875rem;
+                      margin-bottom: 0;
+                      color: white; 
+                      padding:62px;
+                      text-shadow: 2px 2px black;  
+                 }
+                 .descricao{
+                      margin-top: 0;
+                      margin-bottom: 40px;
+                      font-size: 1.3125rem;
+                      color:white;
+                      border-color: #fff;
+                      text-shadow: 1px 1px black;
+                 }
+                
+                .flex-container {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    background-color: #ccffe6;
+                    text-shadow: 1px 1px BurlyWood;
+                }
+
+               .flex-container div {
+                    background-color: Azure;
+                    width: 188px;
+                    margin: 10px;
+                    text-align: center;
+                    line-height:73px;
+                    font-size: 30px;
+                    color:MediumSeaGreen;
+              
+                 }
+     
+                 .box3 {
+                      float: left;
+                      width: 50%;
+                      padding: 20px;
+                      padding-top: 70px;
+
+                 } 
+
+                 .box3 p {
+                      color: 313131;
+                      line-height: 1.5;
+                 }
+
+                 .box3 h1 {
+                      color: #333333;
+                      margin-top: 10px;
+                      font-size: 40px;
+                 }
+                 .box3 a {
+                      color: #349DD4;
+                      text-decoration: none;
+                 }
+
+                 .box3 h2{
+                      color: #7f7f7f;
+                      font-size: 15px;
+
+                 }
+
+                 .box3:hover {
+                      background-color: #f8f8f8;
+                      border-radius: 5px;
+                      transition: all 0.5s;
+                 }
+                 .box4 {
+                      padding: 19px;
+                      float: left;
+                      margin-bottom:69px;
+                      width: 24%;
+                 }
+                 .box4 h2{
+                      color:#7f7f7f;
+                      font-size:15px
+
+                  }    
+                 .box3 img {
+                      width: 320px;
+                      height: 180px;
+                 }
+
+                 .box3 p {
+                      line-height: 1.7;
+                      font-size:15px;
+                 }
+
+
+                 .alinhamento {
+                      text-align: left;
+                 } 
+                 .link-bonito {
+                      color: #349dd4;
+                      text-decoration: none;
+                 }
+                 .info-generica {
+                      border-bottom: 1px dashed #9c9c9c;
+                 }
+
+                 .secao-inicio{
+                      padding-top: 180px;
+                      padding-left: 350px;
+                      background-image: url(" http://www.imagenslivres.com/wp-content/uploads/2016/01/Cozinha-Saud%C3%A1vel-Vegetais-e-Utens%C3%ADlios-sobre-Mesa.jpg");
+                      background-size: cover;
+                      color: #FEFEFE;
+                      height: 700px;
+                 }
+                 .info2 {
+                      text-align: center;
+                      width: 80%;
+                      margin: auto;
+                      margin-top: 70px;
+                      padding-left: 150px;
+                      padding-right: 150px;
+                      padding-bottom: 50px;
+                 }
+
+                 .info3 {
+                      text-align: center;
+                      width: 60%;
+                      margin: auto;
+                      margin-top: 10px;
+                      padding-bottom: 50px;
+                 }
+                 .info2 h1 {
+                      font-size: 35px;
+                 }
+                 .info2 p {
+                      color: #9c9c9c;
+                      font-size: 20px;
+                 }
+
+                 .info4-servico {
+                      width: 90%;
+                      margin: auto;
+                      text-align: center;
+                      padding-bottom:50px;
+                      padding-top: 30px;
+                 }
+                 .info4-servico h1 {
+                      font-size: 45px;
+                      margin-bottom: 15px;
+                 }
+                 
+                 .box4 h1 {
+                      font-size: 35px;
+                 }
+
+                 .info5 {
+                      width: 90%;
+                      margin: auto;
+                      text-align: center;
+                 }
+                 .box5 {
+                      float: left;
+                      width: 33.33%;
+                      padding: 20px;
+                      padding-top: 50px;
+                      padding-bottom:50px;
+                      margin-bottom: 70px;
+                 }
+                 .box5:hover {
+                      background-color: #f8f8f8;
+                      transition: all 0.5s;
+                      border-radius: 5px;
+                 }
+                 .box5 p {
+                      line-height: 1.5;
+                      font-size:14px;
+                      width: 90%
+                 }
+                 .info5 > h1 {
+                      font-size: 40px;
+                      width: 85%;
+                      line-height: 1.5;
+                      text-align: center;
+                      margin: auto;
+                      margin-top: 40px;
+                 }
+                 .info5 > p {
+                      font-size: 25px;
+                      width: 85%;
+                      text-align: center;
+                      margin:auto;
+                      margin-bottom:70px;
+                      padding-top: 15px;
+                      color: #b9b9b9;
+                 }
+                 .info6 {
+                      text-align: center;
+                      font-size: 15px;
+                      margin: auto;
+                      width: 90%;
+                      padding-bottom: 80px;
+                      padding-top: 10px;
+                 }
+                 .info6 > h1 {
+                      font-size: 35px;
+                      margin-bottom: 60px;
+                 }
+                 .box6 {
+                      float: left;
+                      width: 16.66%;
+                 }
+                 .box6 img {
+                      width: 160px;
+                 }
+                 .secao-final {
+                      text-align: left;
+                      padding-left:170px;
+                      background-color: #085a78;
+                 }
+
+                 .box7 h1 {
+                      font-size: 20px;
+                      margin: auto;
+                      padding-top: 20px;
+                      color: #fefefe;
+                 }
+                 .box7 p {
+                      font-size: 13px;
+                      color: #fefefe;
+                      margin-bottom: 20px;
+                 }
+                 .final-2 {
+                      background-color:074e68;
+                 }
+                 .box8 {
+
+                      text-align: center;
+                 }
+                 .box8 h2 {
+                      font-size: 30px;
+                      color: #fff;
+                 }
+
+                .receita {
+                    display: none;
+                }
+              </style>
+
+    </head>
+    <body>
+        <script>
+            function mostrar(id) {
+                var r = document.getElementById('r' + id);
+
+                if (r.style.display == 'none') {
+                    r.style.display = 'block';
+                } else {
+                    r.style.display = 'none';
+                }
+            } 
+        </script>
+
+            <div class="flex-container">
+                <div>Salgados</div>
+                <div>Doces</div>
+                <div>Sobremesas</div>
+                <div>Sopas</div>
+                <div>Bebidas</div>
+                <div>Lanches</div>
+            </div> 
+    
+             <section class="secao-inicio">
+                 <h1 class="titulo" >Sua Receita </h1>
+             <p class="descricao" >No nosso site você encontrará as mais diversas receitas<br> e mais gostosas também, de doces à salgados, do mais simples<br> ao mais exótico, poderá também comentar o que achou da receita,<br> e dar sugestões de possíveis receitas que tenha interesse em aprender. </p>
+                 
+                 
+                 
+             </section>
+            
+     
+             <section class="info2">
+                 <h1>Mais Procurados </h1>
+                 <div class="alinhamento">
+                     <p>Aqui você encontra os produtos mais procurados da semana, seja ele doce ou salgado. </p>
+                 </div>
+             </section>
+             <section class="info3 info-generica">
+                 <div class="box3">
+                    <img src="http://pilotandofogao.com.br/wp-content/uploads/2016/03/Receita-de-doce-de-leite-ninho-001.jpg" width="350">
+                    <h2>Doce da Semana </h2>
+                   
+                    <h1>Docinho de leite em pó </h1>
+                    <h2 onclick="mostrar(1)">Mostrar mais</h2>
+                    <div class="alinhamento">
+                        <div class="receita" id="r1">
+                        <p>INGREDIENTES</p>
+<p>•   2 copos de leite em pó<br>
+•   1 lata de leite condensado<br>
+•   1 xícara de açúcar refinado<br>
+•   Corante vegetal alimentício</p>
+
+
+<p>MODO DE PREPARO</p>
+<p>Coloque o leite em pó e o açúcar refinado numa tigela, acrescente corante vegetal alimentício no leite condensado até chegar a cor desejada, acrescente o leite condensado, aos poucos, ao leite em pó e ao açúcar até soltar das mãos, depois, faça bolinhas ou modele em formato de frutinhas ou bonequinhos.
+Obs: não vai para o fogo, é tudo feito a mão e não é necessário utilizar toda a lata de leite condensado, junte aos poucos até soltar das mãos.
+                     </p>
+                    </div>
+                    </div>
+                    
+                  </div> 
+
+                    <div class="box3">
+                        <img src="https://t1.rg.ltmcdn.com/pt/images/1/2/0/img_coxinha_de_mandioca_com_camarao_e_catupiry_2021_600.jpg" width="350">
+                        <h2>Salgado da semna </h2>
+                        <h1> Coxinha de camarão </h1>
+                        <h2 onclick="mostrar(2)">Mostrar mais</h2>
+                        <div class="alinhamento">
+                        
+                         <div class="receita" id="r2">   
+                         <p>INGREDIENTES</p>
+<p>•   1 litros de água<br>
+
+•   500 gramas de farinha de trigo<br>
+
+•   2 caldos de peixe<br>
+
+•   1 colher (sopa) de margarina<br>
+
+•   1 colher (café) de sal<br>
+
+•   1 quilo de camarão<br>
+
+•   2 tomates picados sem semente e sem pele<br>
+
+•   2 colheres (sopa) de suco de limão<br>
+
+•   2 colheres (sopa) de cheiro-verde<br>
+
+•   Sal e pimenta-do-reino a gosto<br>
+
+•   1 colher (café) de pimenta dedo de moça<br>
+
+•   4 colheres (sopa) de farinha de trigo<br>
+
+•   2 xícaras (chá) de chá de farinha de rosca<br>
+
+•   2 ovos</p>
+ 
+
+
+<p>MODO DE PREPARO</p>
+<p>Para a massa; em uma panela junte a água, caldo de peixe, a margarina, e o sal. Deixe a mistura no fogo até ferver. Após levantar fervura, junte a farinha, vá mexendo sem parar até que a massa desgrude da panela. Retire a do fogo e coloque sobre uma superfície lisa e besuntada de óleo. Deixe esfriar, mas vá sovando constantemente para que a massa não crie casca. Reserve.
+ Para o recheio: em uma panela com azeite junte a cebola e o camarão temperado com pimenta do reino, sal e suco de limão e refogue por alguns minutos, coloque o tomate, a pimenta, cheiro-verde e a farinha de trigo. Refogue.
+Para a montagem; pegue uma porção da massa, faça uma bolinha e com o auxílio do dedo indicador faça uma cavidade na massa de modo que a paredes internas não fiquem muito finas. Coloque uma porção do recheio e feche boca da cavidade. Para empanar: passe as coxinhas no ovo batido passe pela farinha de trigo, após o terminar de empanar as coxinhas repita a operação, isso fará com que elas fiquem mais sequinhas e crocantes. Frite em óleo bem quente em imersão 
+ </p>
+                        </div>
+                        </div>
+                     
+
+                    </div>
+                    <div style= "clear: both"></div>
+              </section>
+              <section class = "info4-servico info-generica">
+                    <h1>Novas receitas</h1>
+                   
+                    <div class = "box4">
+                        <img src = "http://www.pier29.com.br/wp-content/uploads/2014/12/parmegiana.jpg" width = 200>
+                        <h1> Filé a parmegiana</h1>
+                        <h2 onclick="mostrar(3)">Mostrar mais</h2> 
+                        <div class="receita" id="r3">
+                        <p>INGREDIENTES</p>
+<p>•   500 g de alcatra ou contrafilé em bifes<br>
+•   2 dentes de alho amassados<br>
+•   Orégano, sal e vinagre a gosto<br>
+•   2 ovos batidos com 1 pitada de sal<br>
+•   Farinha de rosca, o suficiente<br>
+•   1/2 litro de molho de tomate pronto<br>
+•   250 g de mussarela em fatias<br>
+•   Queijo parmesão ralado para polvilhar</p>
+
+                        <p>MODO DE PREPARO</p>
+Tempere os filés com o alho, orégano, sal e vinagre, passe pela farinha de rosca, nos ovos batidos e novamente pela farinha de rosca, frite em óleo quente, escorra sobre papel absorvente, acomode os filés em um refratário regado com um pouco de molho, coloque fatias de mussarela sobre os filés, regue com o molho, polvilhe o queijo parmesão ralado, leve ao forno pré-aquecido para derreter a mussarela, sirva com arroz ou purê e uma salada.
+</p>
+                    </div>
+                    </div>
+                    <div class = "box4">
+                        <img src = " https://i.ytimg.com/vi/vzhya_WyO1o/maxresdefault.jpg" width = 200>
+                        <h1>Bolo de abacaxi</h1>
+                        <h2 onclick="mostrar(4)">Mostrar mais</h2>
+                        <div class="receita" id="r4">
+                      
+                        <p> INGREDIENTES</p>
+<p>MASSA:</p>
+<p>•   2 xícaras de açúcar<br>
+•   3 ovos inteiros<br>
+•   2 colheres de (sopa) de margarina<br>
+•   1 e 1/2 xícaras de farinha de trigo<br>
+•   200 ml de leite ou 1 copo pequeno<br>
+•   1 colher (sopa) de fermento para bolo</p>
+<p>CALDA:</p>
+<p>•   1 e 1/2 xícaras de açúcar<br>
+•   1 abacaxi cortadinho ou em rodelas grossas ou picado, como preferir</p>
+
+<p>MODO DE PREPARO</p>
+<p/>Bata no liquidificador os ovos, açúcar, margarina e depois adicione a farinha aos poucos
+Por último o fermento, bata bem até ficar uma massa lisa sem bolinhas
+Na fôrma de bolo coloque o açúcar direto na fôrma e derreta até virar um caramelo
+Espere esfriar, coloque o abacaxi que cortou e acrescente toda a massa e coloque para assar
+No forno a 200°C asse por 50 minutos
+</p>
+                    </div>
+                    </div>
+                    <div class = "box4">
+                        <img src = "http://imirante.com/imagens/2015/11/25/1448468623-699192474.jpg " width = 200>
+                        <h1>Pudim de açai</h1>
+                        <h2 onclick="mostrar(5)">Mostrar mais</h2>
+                        <div class="receita" id="r5">
+                        <p>INGREDIENTES:</p>
+<p>•   2 colheres (sopa) de amido de milho<br>
+•   2 latas de leite condensado<br>
+•   2 latas de creme de leite<br>
+•   6 ovos<br>
+•   2 latas de açai bem grosso (medida da lata de leite condensado)<br>
+•   1 colher (sopa) de margarina ou manteiga<br>
+•   1 xícara (chá) de açúcar para fazer a calda</p>
+
+
+<p>MODO DE PREPARO</p>
+<p>Bata todos os ingredientes no liquidificador por 2 minutos, em seguida despeje na forma untada com a calda. Cubra com papel alumínio e asse no forno em banho maria, por aproximadamente 1 hora. Deixe esfriar e desenforme
+ </p>
+                    </div>
+                    </div>
+                    <div class = "box4">
+                        <img src = "http://imagens4.ne10.uol.com.br/blogsne10/horadacozinha/uploads/2016/05/lasanha-mista-frango-641.jpg" width = 200>
+                        <h1>Lasanha</h1>
+                        <h2 onclick="mostrar(6)">Mostrar mais</h2>
+                        <div class="receita" id="r6">
+                        <p>INGREDIENTES</p>
+<p>•   1 kg de peito de frango<br>
+•   1 pacote de macarrão para lasanha<br>
+•   3 gemas<br>
+•   300 g de presunto fatiado<br>
+•   300 g de mussarela fatiada<br>
+•   2 xícaras de chá de leite<br>
+•   1 caixinha de creme de leite<br>
+•   4 colheres de sopa de farinha de trigo<br>
+•   Queijo ralado (opcional)</p>
+
+                         <p>MODO DE PREPARO</p>
+<p>Cozinhe o peito de frango com os temperos de costume (cheiro verde, alho, cebola, extrato de tomate, pimenta do reino), coloque bastante água para que fique muito caldo. Quando o frango estiver cozido, retire-o da panela e coloque em outro recipiente para que esfrie, pegue o caldo que ficou do frango, coloque no liquidificador com: as gemas, o leite, a farinha de trigo e 1 colher (sopa) de queijo ralado, bata tudo muito bem, depois de bem batido, coloque em uma panela e leve ao fogo baixo até engrossar e levantar fervura, quando ferver, desligue o fogo e coloque o creme de leite, misture tudo muito bem e reserve. Corte o presunto em cubinhos (coloque uma fatia em cima da outra e faça cortes horizontais e verticais), despeje em uma tigela, corte a mussarela do mesmo modo que o presunto e coloque junto com o presunto. Desfie o peito de frango e junte ao presunto e a mussarela, misture-os bem. Agora é só montar a lasanha, em uma travessa de vidro grande coloque uma camada do molho, uma camada de macarrão e o recheio (de frango, presunto e mussarela) outra camada de macarrão, molho e recheio, alterne camadas até preencher toda a travessa ou acabar a massa, a penúltima camada deve ser de macarrão e a última de molho. Se optou pelo queijo ralado, espalhe-o por cima da lasanha depois de pronta. Leve ao forno até que a camada de molho fique um pouco mais escura, até que ferver (a camada de molho começar a formar bolhinhas de ar, como se estivesse mesmo fervendo), ou que o queijo ralado derreta.
+</p>
+                    </div>
+                    </div>
+                    <div style="clear: both"></div>
+                        
+              </section>
+             
+                
+                <section class = "final-2">
+                    <div class = "box8">
+              
+                    </div>
+                </section>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://sua-receita.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+        <script id="dsq-count-scr" src="//sua-receita.disqus.com/count.js" async></script>
+    </body>
+</html>

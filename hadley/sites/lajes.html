@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #222;
+            }
+
+            .wrapper {
+                background-color: #fafafa;
+                width: 1000px;
+                margin: auto;
+                height: 100vh;
+                padding: 50px;
+            }
+
+            input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+
+            input[type=button], input[type=submit], input[type=reset] {
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            #customers {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #customers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+            #customers tr:hover {background-color: #ddd;}
+
+            #customers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+        Lx<input type="text" id="lx"><br>
+        Ly<input type="text" id="ly"><br>
+        Tipo<input type="text" id="tipo"><br>
+        <input type="button" value="Criar Laje" onclick="criarLaje()">
+        <h1>Vãos Efetivos das Lajes</h1>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Laje</th>
+                    <th>lx (cm)</th>
+                    <th>lx (cm)</th>
+                    <th>lambda</th>
+                    <th>tipo</th>
+                    <th>observação</th>
+            </thead>
+
+            <tbody id="tabelaDados">
+            </tbody>
+        </table>
+
+        </div>
+
+        <script>
+            var lajes = [];
+            var lajeID = 1;
+
+            function Laje(lx, ly, tipo) {
+                this.lx = lx;
+                this.ly = ly;
+                this.tipo = tipo;
+                this.id = lajeID;
+                lajeID++;
+            }
+
+            function genTd(value) {
+                return "<td>" + value + "</td>";
+            }
+
+            function renderizarTabela() {
+                var t = document.getElementById('tabelaDados');
+                var r = "";
+
+                for (var i = 0; i < lajes.length; ++i) {
+                    var laje = lajes[i];
+                    r += "<tr>";
+                    r += genTd("L" + laje.id);
+                    r += genTd(laje.lx);
+                    r += genTd(laje.ly);
+                    r += genTd((laje.ly / laje.lx).toFixed(3));
+                    r += genTd(laje.tipo);
+                    r += genTd(laje.ly / laje.lx < 2 ? "bidirecional" : "unidericional");
+                    r += "</tr>";
+                }
+
+                t.innerHTML = r;
+            }
+
+            function criarLaje() {
+                var lx = document.getElementById('lx').value;
+                var ly = document.getElementById('ly').value;
+                var tipo = document.getElementById('tipo').value;
+
+                laje = new Laje(lx, ly, tipo);
+                lajes.push(laje);
+
+                renderizarTabela();
+            }
+        </script>
+    </body>
+</html>

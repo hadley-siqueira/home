@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <meta charset="utf-8">
+        </head>
+    <body>
+        <script>
+
+        function Converte(celcius) {
+            var F =  (celcius * 9) / 5 + 32;
+            return F;        
+        }
+        function lf(msg) {
+            return parseFloat(window.prompt(msg));
+        }
+
+        var n1 = lf('Digite a temperatura em Celcius:');
+        
+        console.log('A temperatura é ' + Converte(n1) + ' F');
+
+         </script>
+    </body>
+</html>
+
+
+

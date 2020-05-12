@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/mateus107/sites'
+let g:netrw_dirhist_2='/home/mateus107/sites/bd'
+let g:netrw_dirhist_3='/home/mateus107/sites'
+let g:netrw_dirhist_4='/home/mateus107/sites/bd'
+let g:netrw_dirhist_5='/home/mateus107/sites'
+let g:netrw_dirhist_6='/home/mateus107/sites/bd'
+let g:netrw_dirhist_7='/home/mateus107/sites'

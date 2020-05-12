@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+                <meta charset="UTF-8">
+                <title>SimuLibras</title>
+        </head>
+
+    <style>
+        body {
+    background-color: hsla(9, 1%, 1%, 100);
+    }
+
+        h2 {   
+             margin-top: 200px; 
+             color: blue;
+             text-align: center;
+             font-size: 50px;
+             font-family: arial;
+        }       
+
+        p {
+             margin-top: px;
+             color: blue;
+             font-size: 20px;
+             text-align: center;
+             font-family: arial;
+        }
+        
+        button{
+             color: blue;
+             font-family: arial;
+             font-size: 45px;
+             text-align: center;
+             padding: 10px;
+             margin: auto;
+
+        }
+
+        .area {
+            display: flex;
+            justify-content: center;            
+            align-itens: center;
+        }
+    </style>
+      <body>
+          <h2>Simula Libras</h2>
+
+            <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = "O silencio também fala, basta você aprender!!! ";
+    </script>
+     
+    <div class="area">
+        <button onclick="funcaoParaExecutar()">Clique Para Iniciar</button>
+    </div>
+
+    <script type="text/javascript">
+
+        function funcaoParaExecutar() {
+            alert('Redirecionando Para Outra Aba, Por Favor Aguarde')
+        }
+
+    </script>
+            <!--- conteudo --->
+            
+       </body>
+    </html>

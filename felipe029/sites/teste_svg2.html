@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <svg width="800" height="600" viewBox="0 0 800 600" preserveAspectRatio="none" style="border: 2px solid #000">
+      <circle id="circ1" cx="100" cy="200" r="10" stroke="green" stroke-width="4" fill="yellow" />
+      <circle id="circ2" cx="500" cy="200" r="10" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+
+    <br/>
+    <button onclick="goLeft(circulo1);">Mover c1 para a esquerda</button>
+    <button onclick="goRight(circulo1);">Mover c1 para a direita</button>
+    <button onclick="goLeft(circulo2);">Mover c2 para a esquerda</button>
+    <button onclick="goRight(circulo2);">Mover c2 para a direita</button>
+
+    <h1>Atividade</h1>
+    <p>Estude o código e modifique-o adicionando as funcionalidades de mover os circulos
+       para cima e para baixo. Além disso, adicione um terceiro circulo.</p>
+    <script>
+      var circulo1 = {
+        x: 100,
+        y: 200,
+        r: 10,
+        id: 'circ1'
+      };
+
+      var circulo2 = {
+        x: 500,
+        y: 200,
+        r: 10,
+        id: 'circ2'
+      };
+
+      function goLeft(obj) {
+        obj.x = obj.x - 10;
+
+        var v = document.getElementById(obj.id);
+        v.setAttribute('cx', obj.x);
+      }
+
+      function goRight(obj) {
+        obj.x = obj.x + 10;
+
+        var v = document.getElementById(obj.id);
+        v.setAttribute('cx', obj.x);
+      }
+    </script>
+  </body>
+</html>

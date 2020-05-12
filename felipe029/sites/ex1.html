@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script src="codigo.is"></script>
+        <script>
+                function CalcularMedias (n1,n2,n3,n4) {
+                    var media= (n1 + n2 + n3 + n4) / 4.0;
+                    return media;
+                }
+
+                function lerNota(msg) {
+                    return lf('Por favor, digite a ' + msg + ' nota:');
+                }
+
+                function calcularAluno() {
+                    var n1 = lerNota('primeira');
+                    var n2 = lerNota('segunda');
+                    var n3 = lerNota('terceira');
+                    var n4 = lerNota('quarta');
+
+                    var media = CalcularMedias(n1, n2, n3, n4);
+
+                    console.log('A media é de ' + media);
+                }
+
+                CalcularAluno();
+            </script>
+       </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div {
+                background-color: #ffffcc;
+                text-align: center;
+                border: 2px solid red;
+            }
+            div h1{
+                text-align: center;
+            }
+            #intro {
+                color: red;
+                background-color: #ffffff;
+                margin-left: 900px;
+                animation-name: minhaAnimacao;
+                animation-duration: 3s;
+            }
+            #ducao {
+                color: red;
+                background-color: #ffffff;
+                margin-right: 900px;
+                animation-name: outraAnimacao;
+                animation-duration: 3s;
+            }
+            @keyframes minhaAnimacao {
+                from {
+                    color: blue;
+                    margin-left: 10px;
+                    background-color: #222222;    
+                }
+                to { 
+                    color: red; 
+                    margin-left: 900px;
+                    background-color: #ffffff; 
+                }         
+            }
+            @keyframes outraAnimacao {
+                
+                from {
+                    color: blue;
+                    margin-right: 10px;
+                    background-color: #222222;    
+                }
+                to {
+                    color: red;
+                    margin-left: 900px;
+                    background-color: #ffffff; 
+                }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1 id="intro">O cabeçalho</h1>   
+            <p>O parágrafo </p>
+            <h1 id="ducao">Outro cabeçalho</h1>
+        </div>
+            <h1>O cabeçalho</h1>   
+            <p>O parágrafo </p>
+    </body>
+</html>

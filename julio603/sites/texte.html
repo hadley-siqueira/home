@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport"content= "width=device-width, initial -s cale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+
+        <style>
+            *{
+                box-sizing: border-box;
+              
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                 font-family: "Montserrat";
+            }
+            .titulo{
+                font-size: 2.875rem;
+                margin-bottom: 0;
+                margin-top: 20px;
+            }
+            .descricao{
+                margin-top: 0;
+                margin-bottom: 40px;
+                font-size: 1.3125rem;
+            }
+
+            .borrado {
+                background-color: rgba(0, 0, 0, 0.7);
+                box-shadow: inset 0px 0px 40px 40px #000000;
+                padding: 40px;
+            }
+
+            .botao1 {
+                background-color: #1583CC;
+                font-size: 20px;
+                color: #fefefe;
+                padding: 12px;
+                border: none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+
+            .botao1:hover {
+                background-color: #126FAD;
+                transition: all 0.5s;
+            }
+             .botao2 {
+                background-color: #1583cc;
+                font-size: 15px;
+                color: #fefefe;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right:15px;
+                border:none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+            .botao2:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+            }
+            .botao3 {
+                background-color: #1583cc;
+                font-size: 15px;
+                color: #fefefe;
+                padding: 10px;
+                padding-left: 15px;
+                padding-right:15px;
+                border:none;
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                border-bottom: 2px solid #126fad;
+            }
+             .botao3:hover {
+                background-color: #126fad;
+                transition: all 0.5s;
+
+            }
+            
+            .subinfo {
+                margin: 5px;
+                padding: 0;
+                font-size:15px;
+            }
+        
+            
+            .box3 {
+                float: left;
+                width: 50%;
+                padding: 20px;
+                padding-top: 70px;
+               
+            }    
+
+            .box3 p {
+                color: 313131;
+                line-height: 1.5;
+            }
+            
+            .box3 h1 {
+                color: #333333;
+                margin-top: 10px;
+                font-size: 40px;
+            }
+            .box3 a {
+                color: #349DD4;
+                text-decoration: none;
+            }
+
+            .box3 h2{
+                color: #7f7f7f;
+                font-size: 15px;
+               
+            }
+            
+            .box3:hover {
+                background-color: #f8f8f8;
+                border-radius: 5px;
+                transition: all 0.5s;
+            }
+             .box4 {
+                padding: 19px;
+                float: left;
+                margin-bottom:69px;
+                width: 24%;
+            }
+              .box3 img {
+                width: 300px;
+            }
+
+             .box3 p {
+                line-height: 1.7;
+                font-size:15px;
+            }
+            
+
+            .alinhamento {
+                text-align: justify;
+            }   
+
+             .link-bonito {
+                color: #349dd4;
+                text-decoration: none;
+            }
+              .info-generica {
+                border-bottom: 1px dashed #9c9c9c;
+            }
+                          
+            .secao-inicio{
+                 min-height: 250px; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+                padding-top: 180px;
+                text-align: center;
+                background-image: url("https://completewellbeing.com/wp-content/uploads/2014/04/reject-knowledge-embrace-learning.jpg");
+                background-size: cover;
+                color: #ffffff;
+                height: 700px;
+                font-weight: bold;
+            }
+
+            .info2 {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+                margin-top: 70px;
+                padding-left: 150px;
+                padding-right: 150px;
+                padding-bottom: 50px;
+            }
+
+            .info3 {
+                text-align: center;
+                width: 60%;
+                margin: auto;
+                margin-top: 10px;
+                padding-bottom: 50px;
+            }
+            .info2 h1 {
+                font-size: 35px;
+            }
+            .info2 p {
+                color: #ff8300;
+                font-size: 20px;
+            }
+
+            .info4-servico {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                padding-bottom:50px;
+                padding-top: 30px;
+            }
+            .info4-servico h1 {
+                font-size: 45px;
+                margin-bottom: 15px;
+            }
+            .info4-servico h2 {
+                font-size:25px;
+                margin-bottom: 20px;
+                margin-top: 0;
+                color: #a1a1a1;
+            }
+            .box4 h1 {
+                font-size: 35px;
+            }
+
+            .info5 {
+                width: 90%;
+                margin: auto;
+                text-align: center;
+            }
+            .box5 {
+                float: left;
+                width: 33.33%;
+                padding: 20px;
+                padding-top: 50px;
+                padding-bottom:50px;
+                margin-bottom: 70px;
+            }
+            .box5:hover {
+                background-color: #f8f8f8;
+                transition: all 0.5s;
+                border-radius: 5px;
+            }
+            .box5 p {
+                line-height: 1.5;
+                font-size:14px;
+                width: 90%
+            }
+            .info5 >  h1 {
+                font-size: 40px;
+                width: 85%;
+                line-height: 1.5;
+                text-align: center;
+                margin: auto;
+                margin-top: 40px;;
+            }
+             .info5 > p {
+                font-size: 25px;
+                width: 85%;
+                text-align: center;
+                margin:auto;
+                margin-bottom:70px;
+                padding-top: 15px;
+                color: #b9b9b9;
+            }
+            .info6 {
+                text-align: center;
+                font-size: 15px;
+                margin: auto;
+                width: 90%;
+                padding-bottom: 80px;
+                padding-top: 10px;
+            }
+            .info6 > h1 {
+                font-size: 35px;
+                margin-bottom: 60px;
+            }
+            .box6 {
+                float: left;
+                width: 16.66%;
+            }
+            .box6 img {
+                width: 160px;
+            }
+            .secao-final {
+                text-align: left;
+                padding-left:170px;
+                background-color: #085a78;
+            }
+
+            .box7 h1 {
+                font-size: 20px;
+                margin: auto;
+                padding-top: 20px;
+                color: #fefefe;
+            }
+            .box7 p {
+                font-size: 13px;
+                color: #fefefe;
+                margin-bottom: 20px;
+            }
+            .final-2 {
+                background-color:074e68;
+            }
+             .box8 {
+
+                text-align: center;
+            }
+            .box8 h2 {
+                font-size: 30px;
+                color: #fff;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+            <div class="borrado">
+            <h1 class="titulo"
+ 
+             
+ > CSEMPD - Casa Sustentavel Educacional Por Meio de Plataforma Digital </h1>
+            <p class="descricao" >Plataforma Digital Educacional </p>
+            </div>
+        
+            <p class="subinfo" > <img src="https://image.freepik.com/icones-gratis/simbolo-instagram_318-41941.jpg" width="20" style="position: relative; top:5px"> @CSEMP
+ </p>
+            <p class="subinfo" > <img src="https://image.freepik.com/icones-gratis/facebook-simbolo-rede-social_318-31350.jpg" width="20"> CSEMPD/facebook.com
+  
+</p>
+            <p class="subinfo" > <img src="https://image.freepik.com/icones-gratis/simbolo-instagram_318-41941.jpg" width="20" style="position: relative; top:5px"> @juliocesra38
+</p>
+            <p class="subinfo" > <img src="https://image.freepik.com/icones-gratis/facebook-simbolo-rede-social_318-31350.jpg" width="20">julioCesar3268
+        </section>
+        <section class="info2 info-generica">
+            <h1>Para quê servira essa Plataforma? </h1>
+            <div class="alinhamento">
+            <p>A implementação da casa sustentável educacional por meio de plataformas digital, dará ao educando o livre acesso a matérias curriculares acessadas pelo administrador primário e secundário, o administrador primário será um professor capacitado a mexer nessa plataforma e o secundário só será usado para o alunos que buscam um rendimento individualizado, sendo assim não haverá a opção editar níveis, neste caso ele terá o ensino médio completo com conteúdo curriculares, dificuldades e assuntos especificados para cada ano do nível médio. Á atual plataforma digital on-line terá múltiplos perfis, onde o professor poderá aborda o método de avaliação continua individual ou por grupos de no máximo 3 alunos por cadastro, facilitando assim o acesso a todos os alunos caso a turma seja consideravelmente maior que a usada em laboratórios de informática, sendo possível o usuário que neste caso será o aluno retomar sua construção em qualquer computador sem perda nenhuma de dados. Cada material usado será meramente ilustrado, ecológico e reciclável, para se trabalha a capacidade do educando em manter o meio ambiente limpo. Os materiais terão um sistema de informações para que o educando faça a sua casa de forma correta, ele terá que ler cara quadrinho da informação, nesses quadrinhos haverá assuntos lecionados em sala de aula de modo adaptado para o aluno conseguir interligar da matéria de exata a matérias de linguagem, sendo assim a casa sustentável educacional de plataforma digital dará aos alunos que tanto sofrem em sala de aula uma forma mais descomplicada de aprender, não só jovens como adultos afinal não há idade mínima para se registrar na plataforma, o foco é construir e aprender. </p>
+            </div>
+            
+  </section>
+
+        <section class="info3 info-generica">
+            <div class="box3">
+                  <img src="https://img3.stockfresh.com/files/c/cienpies/m/34/1437134_stock-photo-house-symbol-with-environmental-icons.jpg" width="350">
+                
+                  <h1>Casa Sustentavel </h1>
+                  <div class="alinhamento">
+                  <p>Casa Sustentável
+“Uma edificação eficiente do
+ponto de vista energético,
+saudável, confortável, de uso
+flexível e projetada para ter
+uma longa vida útil”.
+(Foster + Partners, 1999) </p>
+                  </div>
+                  <a href="#"></a>
+            </div>           
+             
+            <div class="box3">
+                 <img src="https://www.ufrgs.br/icd/wp-content/uploads/2014/08/beyin-1024x1012.jpg" width="350">
+              
+                 <h1>Educação Vs Sustentabilidade </h1>
+                 <div class="alinhamento">
+                 <p> As iniciativas educacionais para o consumo sustentável podem se realizar no âmbito de
+todas as disciplinas dos currículos do Ensino Fundamental e Médio, bem como no nível superior,
+e de iniciativas informais. Como tema transversal do ensino, o meio ambiente engloba a
+questão do consumo sustentável, que deve ser abordada de forma holística, por se tratar de
+uma postura de cidadania.
+</p>
+                </div>
+                 <a href="#"></a>    
+            </div>
+            <div style= "clear: both"></div>
+        </section>
+
+       
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+          
+             
+                
+
+
+            
+    
+          </body>
+</html>
+

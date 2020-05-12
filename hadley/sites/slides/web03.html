@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+                    <h1>Autoria Web</h1>
+                    <p>Introdução à linguagem HTML</p>
+                </section>
+
+                <section>
+                    <p>HTML (Hypertext Markup Language) é a linguagem base para o desenvolvimento de um site. Sua versão mais
+                    atual é conhecida por HTML5</p>
+                </section>
+
+                <section>
+                    <p>Foi desenvolvida por Tim Berners Lee em 1980 e ganhou força em 1990. Seu objetivo
+                       era o compartilhamento de informações técnicas pela internet através de hipertextos</p>
+                </section>
+
+                <section>
+                    <p>HTML é uma linguagem de <em>marcação</em> e não de programação. Usa
+                       o conceito de <em>tags</em> para marcar o texto.</p>
+                </section>
+
+                <section>
+                    <p>As tags no HTML servem para marcar um texto. Um texto pode ser marcado como
+                       sendo: </p>
+                    <ul>
+                        <li>Um cabeçalho</li>
+                        <li>Um parágrafo</li>
+                        <li>Uma lista</li>
+                        <li>Uma tabela</li>
+                        <li>Etc</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Criando a Primeira página HTML</h1>
+                </section>
+
+                <section>
+                    <p>Arquivos HTML são simples arquivos de texto com extensão <em>.html</em>                   
+                </section>
+
+                <section>
+                    <p>Um arquivo HTML é divido em cabeça e corpo. A cabeça é responsável
+                       por inclusões de outros arquivos e configurações da página. O corpo contém
+                       o conteúdo que será exibido para o usuário.</p>
+                </section>
+
+                <section>
+                    <h1>Fim da aula</h1>   
+                </section> 
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

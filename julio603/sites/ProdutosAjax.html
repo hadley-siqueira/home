@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link href="http://www.tokkoro.com/picsup/1101152-fatestay-night.jpg" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style> 
+            body{
+                 background-image: url("http://www.tokkoro.com/picsup/1101152-fatestay-night.jpg");
+            }
+            table {
+                
+                width:100%;
+                border-collapse: collapse;
+               
+                margin-top: 10px;
+                margin-bottom: 0px;
+
+
+            }
+            
+
+            div {
+                
+               
+                margin: auto;
+                border: 0px solid #fffffd;
+                padding: 0px;
+
+            }
+            table, td, th {
+
+                border: 2px solid black;
+                padding: 3px;
+            }
+            th {text-align: left;}
+
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>Buscar Produtos</h1>
+            <div id="txtHint"><b>Digite o nome do produto.</b></div>
+            <input name="users" onchange="showUser(this.value)">
+            <br>
+            
+        </div>
+        
+
+        <div id="Produtos">
+        </div>
+        <script>
+            function showUser (str) {
+                if (str == "") {
+                    document.getElementById("Produtos").innerHTML = "";
+                    return;
+                } else { 
+                    if (window.XMLHttpRequest) {
+                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp = new XMLHttpRequest();
+                    } else {
+                        // code for IE6, IE5
+                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("Produtos").innerHTML = this.responseText;
+                        }
+                    };
+                    xmlhttp.open("GET","inserirProdutos.php?q="+str,true);
+                    xmlhttp.send();
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html!>
+<html>
+    <body>
+       <canvas id= "area" width="1000" height="600" style="border: 11px solid Red">
+       </canvas> 
+       <script>
+         var ctx = document.getElementById('area').getContext('2d');
+
+         function criarBola(x , y, cor) {
+            this.cor = cor;
+            this.x = x;
+            this.y = y;
+            this.vx = 12*Math.random();
+            this.vy = 12*Math.random();
+            this.raio = 20;
+            
+        }
+
+            var  bola1 = new criarBola(20,90,'#0174DF');
+            var  bola2 = new criarBola(40,60,'#DF013A');
+            var  bola3 = new criarBola(60,80,'#40FF00');
+            var  bola4 = new criarBola(80,70,'#0B3B2E');
+            var  bola5 = new criarBola(120,130,'#FF0000');
+            var  bola5 = new criarBola(110,115,'#FF0000');
+            var  bola6 = new criarBola(30,40,'#FF0000');
+            var  bola7 = new criarBola(30,40,'#FF0000');
+            var  bola8 = new criarBola(30,40,'#FF0000');
+            var  bola9 = new criarBola(30,40,'#FF0000');
+            var  bola10 = new criarBola(30,40,'#FF0000');
+            var  bola11 = new criarBola(30,40,'#FF0000');
+            var  bola12 = new criarBola(30,40,'#FF0000');
+            var  bola13 = new criarBola(30,40,'#FF0000');
+            var  bola14 = new criarBola(30,40,'#FF0000');
+            var  bola15 = new criarBola(30,40,'#FF0000');
+            var  bola16 = new criarBola(100,140,'#FF0000');
+            var  bola17 = new criarBola(220,110,'#FF0400');
+            var  bola18 = new criarBola(30,40,'#FF0006');
+            var  bola19 = new criarBola(30,40,'#FF0000');
+            var  bola20 = new criarBola(30,40,'#FF0000');
+            var  bola21 = new criarBola(30,40,'#FF0000');
+            var  bola22 = new criarBola(30,40,'#FF0000');
+         function desenharBola(bola) {
+            ctx.beginPath();
+            ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.fillStyle = bola.cor;
+        }
+
+         function atualizarPosicaoBola(bola) {
+            bola.x = bola.x + bola.vx;
+            bola.y = bola.y + bola.vy;       
+             
+        if (bola.x < 0) {
+           bola.x = 0;
+           bola.vx = -bola.vx;
+        }     
+      
+        if (bola.x >= 1000) {
+           bola.x = 999;
+           bola.vx = -bola.vx;
+        }
+
+        if (bola.y < 0) {
+           bola.y = 0; 
+           bola.vy = -bola.vy; 
+        }
+       
+        if (bola.y >= 600) {
+           bola.y = 599;
+           bola.vy = -bola.vy
+        }
+ 
+        }
+         function atualizar() {
+            atualizarPosicaoBola(bola1);
+            atualizarPosicaoBola(bola2);
+            atualizarPosicaoBola(bola3);
+            atualizarPosicaoBola(bola4);
+            atualizarPosicaoBola(bola5);
+            atualizarPosicaoBola(bola6);
+            atualizarPosicaoBola(bola7);
+            atualizarPosicaoBola(bola8);
+            atualizarPosicaoBola(bola9);
+            atualizarPosicaoBola(bola10);
+            atualizarPosicaoBola(bola11);
+            atualizarPosicaoBola(bola12);
+            atualizarPosicaoBola(bola13);
+            atualizarPosicaoBola(bola14);
+            atualizarPosicaoBola(bola15);
+            atualizarPosicaoBola(bola16);
+            atualizarPosicaoBola(bola17);
+            atualizarPosicaoBola(bola18);
+            atualizarPosicaoBola(bola19);
+            atualizarPosicaoBola(bola20);
+            atualizarPosicaoBola(bola21);
+            atualizarPosicaoBola(bola22);
+        }
+
+         function desenhar() {
+            ctx.clearRect(0, 0, 1000, 600);
+            desenharBola(bola1);
+            desenharBola(bola2);
+            desenharBola(bola3);
+            desenharBola(bola4);
+            desenharBola(bola5);
+            desenharBola(bola6);
+            desenharBola(bola7);
+            desenharBola(bola8);
+            desenharBola(bola9);
+            desenharBola(bola10);
+            desenharBola(bola11);
+            desenharBola(bola12);
+            desenharBola(bola13);
+            desenharBola(bola14);
+            desenharBola(bola15);
+            desenharBola(bola16);
+            desenharBola(bola17);
+            desenharBola(bola18);
+            desenharBola(bola19);
+            desenharBola(bola20);
+            desenharBola(bola21);
+            desenharBola(bola22);
+            
+        }
+
+         function animar() {
+            desenhar();
+            atualizar();
+            window.requestAnimationFrame(animar);
+        }  
+
+         animar();
+       </script>
+    </body>
+</html>

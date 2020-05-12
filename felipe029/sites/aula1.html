@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            h1 {
+                color:red;
+                font-size: 50px;
+            }
+            canvas {
+                background-color:#111;
+            }
+        </style>
+    </head>
+
+    <body>
+        <input type ="range" min="0" max="100" id ="v" onchange ="mudarCor2()">
+        <canvas id="area" width="800" height="600">
+        </canvas>
+            <h1>Um titulo</h1>
+            <p>Um paragrafo</p>
+            <ul>
+                     <li>Um</li>
+                     <li>Dois</li>
+                     <li>Tres</li>
+            </ul>
+            <script>
+                var canvas = document.getElementById("area");
+                var ctx = canvas.getContext("2d");
+
+                var x0 = 0;
+                var y0 = 0;
+                var x1 = 0;
+                var y1 = 0;
+                var vx = 1;
+                var vy = 1;
+                var counter = 0;
+
+                function desenhar(){
+                     ctx.clearRect(0, 0, 800, 600);
+                     ctx.beginPath();
+                     ctx.moveTo(x0, y0);
+                     ctx.lineTo(x1, y1);
+                     ctx.stroke();
+                     x1 = Math.random() * 800;
+                     y1 = Math.random() * 600;
+                     x0 = x0 + vx;
+                     y0 = y0 + vy;
+
+                     if (x0 > 800 || x0 < 0) {
+                        vx = -vx;
+                     }
+
+                     if (y0 > 600 || y0 < 0) {
+                        vy = -vy;
+                     }
+
+                    counter = counter + 1;
+
+                    if (counter > 20) {
+                        counter = 0;
+                        mudarCor2();
+                    }
+                     window.requestAnimationFrame(desenhar);
+                }
+                desenhar();
+
+                function mudarCor(){
+                    var cores = ['#e2f442', '#32633b', '#13ad2f', '#6513ad', '#5370c6'];
+                    var c = document.getElementById('v').value;
+                    ctx.strokeStyle = cores[c];
+                }
+
+                function mudarCor2() {
+                    var c= document.getElementById('v').value;
+                    var idx = Math.floor(c * 16 / 100);
+
+                    var c = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+                    var idx2 = Math.floor(Math.floor(Math.random() * 100) * 16 / 100);
+                    var idx3 = Math.floor(Math.floor(Math.random() * 100) * 16 / 100);
+
+                    ctx.strokeStyle = '#' + c[idx] + c[idx2] + c[idx3];
+                }
+           </script>
+    </body>
+</html>

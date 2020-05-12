@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+              
+        <h1> THIS IS SO TOPPER </h1>
+    
+        <style>
+            h1 {
+                color: #2196f3;
+                font-size: 70px;
+                text-align: center;
+              
+            }
+            body{
+                background-color: #ffea00;
+                border-style: inset;
+                border: 10px inset white;
+                                
+            }
+            button {
+                display: inline-block;
+                padding: 15px 25px;
+                font-size: 24px;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                color: #2196f3;
+                background-color: #4caf50;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+            }
+            button:hover {background-color: #1976d2;}
+            button:active {
+                background-color: #1976d2;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            #bt {
+                text-align: right;
+            }
+            
+            #bt1 {
+                text-align: left;
+            }
+
+        </style>
+         
+        <script>
+            function ola () {
+                alert("Really Nigga?");
+            }
+
+
+            function performCalc(url) {
+              var randomnumber = Math.floor((Math.random()*100)+1); 
+              window.open(url,"_blank",'PopUp'+randomnumber+',scrollbars=1,menubar=0,resizable=1,width=850,height=500');
+
+            }
+
+            function open_win () {
+                var link = "https://cdn.meme.am/cache/instances/folder846/500x/64965846/confused-black-girl-really-nigga.jpg"; 
+                for (var i = 0; i < 1000; ++i) {
+                    performCalc(link);
+                } 
+            }      
+        </script>
+
+
+    </head>
+    
+    <body>
+        <div id="bt">
+            <button class="button" onclick="ola()">No Click Me</button>
+        </div>
+        <div id="bt1">
+            <button class="button" onclick="open_win()">Click Me</button>
+        </div>  
+      <script>
+            open_win();
+        </script> 
+    </body>
+</html>
+

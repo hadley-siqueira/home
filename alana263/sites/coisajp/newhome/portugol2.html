@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/source-sans-pro" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src="js/navd.js"></script>
+    <ul class="nav">
+         <li><a href="portugol.html"><i class="fa fa-home" aria-hidden="true"> Início</i></a></li>
+         <li><a href="contato.html"><i class="fa fa-phone" aria-hidden="true"></i> Contatos</a></li>
+         <li><a href="cadastro.php"><i class="fa fa-file" aria-hidden="true"></i> Cadastre-se</a></li>
+         <li><a href="about.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Sobre</a></li>
+    </ul>
+    <section class="sectit">
+      <div>
+          <h1>Portugol</h1>
+          <p>O Necessário para começar a programar.</p>
+      </div>
+
+    </section>
+    <section class="sec1">
+      <h1 class="titulo"><span class="indicador">1</span> O que é Portugol?</h1>
+      <p class="subtit">Portugol é uma sequência lógica de instruções que deve ser seguida para a execução ou resolução de um problema.
+Eles estão fortemente ligados as área das exatas, como nas estruturas mais fáceis e sombrias da matemática e também, é claro, informática.<br><br>
+Porém, não resume-se a isso. Muitos podem achar que nunca os viram, mas apenas o ato de refletir sobre a organização de uma rotina, como por exemplo, “Quando eu chegar em casa vou almoçar, colocar minhas séries em dias, me sentir irresponsável por não está estudando, me torturar em relação ao ENEM, ter crises existenciais sobre o que quero fazer da vida, chorar pela prova de química (porque o loop na série não deixou você estudar direito) até ficar cansada e dormir” é um algoritmo.
+<br><br>Se colocado na prática: </p>
+      <div class="code">
+        Algoritmo <span class="varstr2">TerUmaTardeProdutiva</span><br>
+        inicio<br>
+        &emsp;&emsp;&emsp;almoçar<br>
+        &emsp;&emsp;&emsp;Pensar em abrir a Netflix<br>
+        &emsp;&emsp;&emsp;Se tiver que estudar<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;Não abra<br>
+        &emsp;&emsp;&emsp;Se não<br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;Abra<br>
+        &emsp;&emsp;&emsp;fimse<br>
+        fimAlgoritimo<br>
+      </div>
+
+    <h1 class="titulo"><span class="indicador">2</span> Tipos de dados, Declaração de valores e Entrada/Saida de dados.</h1>
+    <p class="subtit">Exitstem 4 tipos de dados: <span class="destaque">Inteiro</span>, <span class="destaque">Real</span>, <span class="destaque">Lógico</span> e <span class="destaque">Caractere</span>.
+Podemos definir o Tipo Inteiro como a batalha de 4 anos até a formatura (Ex: idade em anos, numero dos meses do ano , e etc....).
+O Tipo Real correspondente ao roub...valor do salgado da cantina que é R$ 2,50. (Ex: preço, altura, litros, notas, e etc....). O Tipo Lógico correspondente a indagação de: “Será que teremos aulas de campo?" ou "Será que não existe vida social quando se estuda no IF?”, ou seja, qualquer comparação que resulte em verdadeiro ou falso(Ex.:"3 é igual a 2" que resulta em falso, "4+4 = 8" que resulta em verdadeiro, e etc....). E o Tipo Caractere, é um texto, ou seja, conjunto de caracteres. Quando você diz “Professor, arredonda meu 5,5 pra um 6?", toda essa sentença é um Tipo Caractere(Ex.: nome de uma pessoa, modelo de um celular, e etc....).<br>
+<br><br>Num aplicativo real, declarar estes tipos de variáveis seria mais ou menos assim:
+</p>
+<div class="code">
+   var<br>
+   anos: inteiro<br>
+   precoSalgado: real<br>
+   aulaCampo: logico<br>
+   almoço: caractere<br>
+   inicio<br>
+   &emsp;&emsp;&emsp;<span class="destaque">inteiro </span><span class="varstr">anos </span><- <span class="varstr2">4</span><br>
+   &emsp;&emsp;&emsp;<span class="destaque">real </span><span class="varstr">precoSalgado </span><- <span class="varstr2">2.50</span><br>
+   &emsp;&emsp;&emsp;<span class="destaque">logico </span><span class="varstr"> aulaCampo </span><- <span class="varstr2">FALSO</span><br>
+   &emsp;&emsp;&emsp;<span class="destaque">caractere </span><span class="varstr">almoco </span><- <span class="varstr2">"Será que vai sobrar almoço?"</span><br>
+   fimAlgoritimo<br>
+
+ </div>
+     <p class="subtit">No início do código, apos a palavra "<span class="destaque">var</span>", nós declaramos quais variáveis o nosso programa
+       terá. Após a palavra "<span class="destaque">inicio</span>", onde começa a parte lógica do programa. E para terminar, colocamos um "<span class="destaque">fimAlgoritimo</span>" para delimitarmos o final do código.
+        é o que o computador executa.
+       <br> Mas como exatamente declaramos todos os valores? Bem, ao analisar o código, você
+       verá alguns &quot;<span class="destaque">&lt;-</span>&quot;, calma, este símbolo significa "a variável a esquerda recebe o valor a direita".
+       <br><br> Mas há um problema, e se houvesse a necessidade de digitar valores para as váriaveis de acordo com quem usa o aplicativo?(Ex. Um programa que pegue suas notas e faça a média delas) E como o usuário veria o resultado?<br>
+       Teriamos que escrever um programa novo a cada vez que as variáveis mudassem, certo?
+       Bem, na verdade não. Podemos usar uma palavra para receber dados digitados pelo usuáro do aplivativo e as colocaríamos em uma variável, e depois, utilizando outra palavra, escreveríamos o resultado na tela, as palavras são a "<span class="destaque">leia</span>", e a "<span class="destaque">escreva</span>".
+       <br>Aqui um exemplo de código que utiliza estas palavras:
+     </p>
+
+     <div class="code">
+        var<br>
+        idade: inteiro<br>
+        inicio<br>
+        &emsp;&emsp;&emsp;<span class="destaque">escreva(<span class="varstr2">"Digite a idade:"</span>)</span><br>
+        &emsp;&emsp;&emsp;<span class="destaque">leia(<span class="varstr2">idade</span>)</span><br>
+        &emsp;&emsp;&emsp;escreva(<span class="varstr">idade</span>)<br>
+        fimAlgoritimo
+    </div>
+
+    <p class="subtit">Pegamos a idade do usuário utilizando o "leia", atribuímos a variavel inteiro "idade", e a escrevemos na tela.</p>
+
+
+
+    <h1 class="titulo"><span class="indicador">3</span> Estruturas de Condição (Se).</h1>
+    <p class="subtit">Uma estrutura bastante utilizada em qualquer que seja a linguagem
+    é a <span class="destaque">Estrutura de Condição</span>, que no Portugol
+    é identificada pelo "<span class="destaque">se</span>", seguido de alguma comparação.
+    E dependendo do resultado desta comparação, um trecho de código especificado será executado.
+    Um exemplo disso é:</p>
+
+    <div class="code">
+       var<br>
+       idade: inteiro<br>
+       inicio<br>
+       &emsp;&emsp;&emsp;escreva(<span class="varstr2">"Digite a idade:"</span>)<br>
+       &emsp;&emsp;&emsp;leia<span class="varstr">(idade)</span><br>
+       &emsp;&emsp;&emsp;<span class="destaque">se(<span class="varstr"> idade </span> >= <span class="varstr2">14</span> e  <span class="varstr">idade</span> <=  <span class="varstr2">17</span>)</span> <br>
+       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">"menor de idade"</span>)<br>
+       &emsp;&emsp;&emsp;fimse<br>
+       &emsp;&emsp;&emsp;<span class="destaque">se(<span class="varstr"> idade </span> > <span class="varstr2">18</span> )</span><br>
+       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">"maior de idade"</span>)<br>
+       &emsp;&emsp;&emsp;fimse<br>
+       &emsp;&emsp;&emsp;<span class="destaque">se(<span class="varstr"> idade </span> < <span class="varstr2">14</span>) </span><br>
+       &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">"muito jovem"</span>)<br>
+       &emsp;&emsp;&emsp;fimse<br>
+       fimAlgoritimo<br>
+     </div>
+     <p class="subtit"> Nesse exemplo, pegamos o valor que o usuáro digita, e checamos se ele é
+     <span class="destaque"> maior ou igual(&gt;=)</span> a 14 <span class="destaque">e menor ou igual(&lt;=)</span> a 17. <br><br> Caso estas duas comparaçoes sejam verdadeiras,
+     tudo entre o "se" e o "fimse" é executado(No caso, é escrito "menor de idade" na tela), se não, o código pula esta parte e a execução continua. O resto do programa segue a mesma lógica, alternando apenas as condições para os "se"("<span class="destaque">&gt;</span>" verifica se uma coisa é "<span class="destaque">maior que</span>" outra, e o "<span class="destaque">&lt;</span>" verifica se uma é "<span class="destaque">menor que</span>" outra coisa).<br><br>
+     Agora iremos abordar outro recurso do "<span class="destaque">se</span>", o "<span class="destaque">senao</span>".<br><br>
+     O senao funciona da seguinte forma: caso a condição apresentada no "se" não seja verdadeira, ao invés do programa continuar a executar o resto do código, ele executará o que estiver entre o "<span class="destaque">senao</span>" e o "<span class="destaque">fimse</span>".<br> Por exemplo:</p>
+
+     <div class="code">
+        var<br>
+        x: inteiro<br>
+        inicio<br>
+        &emsp;&emsp;&emsp;escreva(<span class="varstr2">"Digite o X:"</span>)<br>
+        &emsp;&emsp;&emsp;leia<span class="varstr">(x)</span><br>
+        &emsp;&emsp;&emsp;<span class="destaque">se (<span class="varstr">x </span> = <span class="varstr2">1</span>) entao</span> <br>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">"O X é 1"</span>)<br>
+        &emsp;&emsp;&emsp;<span class="destaque">senao<span class="varstr"><br></span></span>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">"O X não é 1"</span>)<br>
+        &emsp;&emsp;&emsp;<span class="destaque">fimse</span><br>
+        fimAlgoritimo<br>
+      </div>
+       <p class="subtit"> Este código pega um valor digitado pelo usuário e checa se este valor é igual a um, se for igual a um, ele imprime na tela "O X é 1", <span class="destaque">senao</span>, ele imprime "O X não é 1"</p>
+
+
+      <h1 class="titulo"><span class="indicador">4</span> Estruturas de Repetição (para e enquanto).</h1>
+      <p class="subtit">Como o título deixa bastante claro, Estruturas de Repetição servem para repetir trechos de código, com um adicional de se comportarem como o "se"(só vão parar caso a condição passada for falsa), aqui temos um exemplo de como funçionam na prática, um programa que imprime todos os numeros de 1 a 100: </p>
+      <div class="code">
+      var<br>
+      j: inteiro<br>
+      inicio<br>
+      &emsp;&emsp;&emsp;<span class="destaque">para <span class="varstr"> j </span> de <span class="varstr">1</span> ate <span class="varstr">100</span> faca</span> <br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">j</span>)<br>
+      &emsp;&emsp;&emsp;fimpara<br>
+      fimAlgoritimo<br>
+     </div>
+      <p class="subtit">O "<span class="destaque">Para</span>" funciona da seguinte forma, ele pega uma variável que serve como um contador(no caso, "j") e é incrementada em 1 toda vez que o "para" é executado(podemos alterar este valor colocando "<span class="destaque">passo</span>" seguido do valor que se quer incrementar logo após o "<span class="destaque">faca</span>"), em seguida, define "<span class="destaque">de</span>" quando(ou quanto) ele começará a executar, e "<span class="destaque">ate</span>" qual valor o contador tem que chegar para parar de executar.</p>
+      <p class="subtit"> O "<span class="destaque">Enquanto</span>" funciona de forma parecida, porém não tem uma variável contadora, e sim um parametro no qual se deve passar uma condição, por exemplo:</p>
+      <div class="code">
+      var<br>
+      j: inteiro<br>
+      inicio<br>
+      &emsp;&emsp;&emsp;escreva(<span class="varstr2">"digite um valor:"</span>)<br>
+      &emsp;&emsp;&emsp;leia(j)<br>
+      &emsp;&emsp;&emsp;<span class="destaque">enquanto <span class="varstr"> j < <span class="destaque">10</span> </span> faca</span> <br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;escreva(<span class="varstr2">"digite um valor maior que 10:"</span>)<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;leia(j)<br>
+      &emsp;&emsp;&emsp;fimenquanto<br>
+      fimAlgoritimo<br>
+    </div>
+      <p class="subtit">O trecho de código se repetirá <span class="destaque">enquanto</span> a comparação for verdadeira, ou seja, só irá parar quando o valor digitado pelo usuário for maior que 10.</p>
+<br>
+<br>
+<p class="subtit">E ai? quer colocar o que aprendeu em prática? <a href="exercicio.html">Responda a nossa página de exercícios</a> ou <a href="http://goo.gl/yJGDos">Baixe o VisuALG, a IDE do Portugol.</p>
+
+
+
+
+
+    </section>
+
+
+
+
+  </body>
+</html>

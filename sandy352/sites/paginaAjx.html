@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+   <style>
+       
+      body {
+        background-image: url(http://themeparkadventure.com/wp-content/uploads/2014/06/resources-digitalassets-Diagon-Alley_1.jpg);
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        text-align:center;
+        margin-top: 7rem;
+        <font face="Harry P">Harry P</font> <br />
+      }
+      div{
+        margin: auto;
+        width:80%
+      }
+   </style>
+    <div class="table">
+    <input id="c" type="text" onkeypress="processar()">
+    <p id="p1">Resultado:</p>
+    </div>
+    <script>
+      function processar() {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+          var f1 = this.readyState == 4;
+          var f2 = this.status == 200;
+
+          if (f1 && f2) {
+            var p = document.getElementById('p1');
+            p1.innerHTML = this.responseText;
+          }
+        };
+
+        var k = document.getElementById('c');
+        var digitado = k.value;
+
+        var url = "beco.php?q=" + digitado;
+        xhttp.open("GET", url, true);
+        xhttp.send();
+      }
+    </script>
+  </body>
+</html>
+

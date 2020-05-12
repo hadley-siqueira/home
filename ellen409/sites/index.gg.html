@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Gossip Girl</title>
+        <link rel="icon" href="https://pbs.twimg.com/profile_images/626860748539588608/eaBxM1R7.png" type="image/gif" sizes="16x16">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .secao-inicio {
+                text-align: center;
+            }
+
+            .secao-inicio img {
+                margin: auto;
+                margin-bottom:35px; 
+                background-position:  center;
+                height:820px;
+                background-size:cover;
+                margin-top: -70px;
+            }
+            body {
+                background-color:black;
+                padding: 0;
+                margin: 0;
+            }
+            * {color:white;}
+            nav {
+                position:fixed;
+                float:left;
+                width: 100%;
+                height: 40px;
+                background-color:#fff396;
+            }
+
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                float: left;
+
+            }
+         
+            nav ul li {
+                margin-left: 7.5%;
+                float: left;
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-align: center;
+                font-family: century gothic;
+                font-size: 20px;
+                transition: all 0.1s;
+                cursor: pointer;
+                color:black;
+            }
+            nav ul li:hover {
+                color: #cc9304;
+            }
+            header {
+                float:left;
+                width:100%;
+                height:700px;
+                background:url("https://wallpaperstock.net/gossip-girl-wallpapers_28814_1366x768.jpg") no-repeat;
+                background-size:100% 100%;
+                margin-top: -10px;
+                margin-bottom: 20px;
+            }
+            header .titulo {
+                margin:0 auto;
+                display:block;
+                margin-top: 0px;
+                width: 700px;
+                height: 400px;
+                background-color:;
+                
+            }
+            article {
+                width: 50%;
+                margin: auto;
+                background-color: white;
+                border-radius: 40px;
+                margin-top: 10px;
+                margin-bottom:30px;
+                padding: 50px;
+            }
+            article p {
+                color: black;
+                font-family: century gothic;
+                text-align: justify;
+                width:90%;
+                margin-left:5%;
+                line-height:25px;
+                margin-bottom: 5%;
+            }
+            article h1 {
+                color: black;
+                font-family: century gothic;
+                text-align: center;
+                font-size: 32px;
+            }
+            
+            aside {
+                border-radius:5px;
+                width:50%;
+                margin: auto;
+                height:100px;
+            }
+
+            aside ul {
+                float:left;
+                margin:0px;
+                padding:0px;
+                width:100%;
+                height:100%;
+                list-style:none;
+
+            }
+            aside ul li {
+                float:left;
+                width:60px;
+                height:60px;
+                margin-left:32px;
+                background-color:;
+                border-radius:100%;
+                display:block;
+               
+                margin-bottom:20px;
+                cursor:pointer;
+                border:;
+                transition:all 0.5s;
+            }
+            aside ul li:hover {
+                
+            }
+            aside ul li[class="0"] {
+                background: url("http://www.freeiconspng.com/uploads/home-icon-png-home-house-icon-24.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+            aside ul li[class="0"]:hover {
+                transition:all 0.5s;
+                background-size:80% 80%;
+            }
+            aside ul li[class="1"] {
+                background:url("http://syn.org.au/app/uploads/clapper.png") no-repeat;
+                background-size: 50% 50%;
+                background-position:center center;
+                background-color:#e8e46f;
+
+             
+            }
+             aside ul li[class="1"]:hover {
+                transition:all 0.5s;
+                background-size:65% 65%;
+            }
+            aside ul li[class="2"] {
+                background:url("https://d30y9cdsu7xlg0.cloudfront.net/png/13653-200.png") no-repeat;
+                background-size:70% 70%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="2"]:hover {
+                transition:all 0.5s;
+                background-size:85% 85%;
+            }
+             aside ul li[class="3"] {
+                background:url("https://icon-icons.com/icons2/38/PNG/512/trophy_5045.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+
+            }
+             aside ul li[class="3"]:hover {
+                transition:all 0.5s;
+                background-size:75% 75%;
+            }
+            aside ul li[class="4"] {
+                background:url("https://www.socialtalent.com/wp-content/uploads/2015/08/question-mark-512.gif") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="4"]:hover {
+                transition:all 0.5s;
+                background-size:70% 70%;
+            }
+             aside ul li[class="5"] {
+                background:url("https://icon-icons.com/icons2/614/PNG/512/mail-open-symbol-of-an-envelope-with-a-letter-inside_icon-icons.com_56495.png") no-repeat;
+                background-size:60% 60%;
+                background-position:center center;
+                background-color:#e8e46f;
+            }
+             aside ul li[class="5"]:hover {
+                transition:all 0.5s;
+                background-size:70% 70%;
+            }
+
+            .navigation-menu {
+                width: 90%;
+                margin: auto;
+            }
+            .area_left {
+                float:left;
+                width:18%;
+                margin-top:10px;
+                margin-left:3%;
+                height:300px;
+            }
+            .area_left button {
+                float:left;
+                margin-left:20%;
+                width:60%;
+                height:35px;
+                border:none;
+                color:cyan;
+                font-family:century gothic;
+                font-size:16px;
+                border-radius:7px;
+                background: rgba(71,71,71,1);
+                background: -moz-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(71,71,71,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(100%, rgba(17,17,17,1)));
+                background: -webkit-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -o-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: -ms-linear-gradient(top, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                background: linear-gradient(to bottom, rgba(71,71,71,1) 0%, rgba(71,71,71,1) 39%, rgba(17,17,17,1) 60%, rgba(17,17,17,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#111111', GradientType=0 );
+            }
+            .area_left p {
+                float:left;
+                font-family:century gothic;
+                font-size:15px;
+                width:60%;
+                margin-left:20%;
+            }
+            .area-right {
+                position:absolute;
+                width:15%;
+                height:550px;
+                border-radius:20px;
+                right:70px;
+                top:900px;
+                background: #fcee74;
+                background: #fcee74;
+                background: -moz-linear-gradient(45deg, #fcee74 10%, #f9f9f9 23%, #fefcea 78%, #efdc62 96%);
+                background: -webkit-linear-gradient(45deg, #fcee74 10%,#f9f9f9 23%,#fefcea 78%,#efdc62 96%);
+                background: linear-gradient(45deg, #fcee74 10%,#f9f9f9 23%,#fefcea 78%,#efdc62 96%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcee74', endColorstr='#efdc62',GradientType=1 );
+                text-align: center;
+                padding-top: 30px;
+            }
+            .area-right .lb-gossip-girl{
+                width:100%;
+                color:#202020;
+                font-family:century gothic;
+                font-size:25px;
+                margin-bottom:10px;
+            }
+            .area-right .icon-tv{
+                display:block;
+                margin:auto;
+            }
+            .area-right .mapa {
+                width: 85%;
+                height: 200px;
+                margin: auto;
+                margin-top: 20px;
+            }
+            .area-right .area-busca {
+                text-align:center;
+                padding-top: 15px;
+            }
+            .area-right .area-busca label {
+                font-family: century gothic;     
+                color:black;
+                font-size: 20px;
+            }
+            .area-right .area-busca input {
+                margin-top: 20px;
+            }
+            .area-right .area-busca button {
+                border-radius: 9px;
+                border:none;
+                background-color: #bf71ce;
+                font-family: century gothic;
+                font-size: 20px;
+                width: 50%;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+            <img src="http://seriesemcena.com.br/wp-content/uploads/2017/09/gossip-girl-logo.jpg">
+       </section>
+
+        <section class="navigation-menu">
+            <aside class="menu">
+                 <ul>
+                    <li class="0"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/elenco.html"> <li class="1"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/livros.html"> <li class="2"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/premios.html"> <li class="3"><!--menu aki--></li></a>
+                    <a href="http://207.154.230.103:7249/ellen409/curiosidades.html"> <li class="4"><!--menu aki--></li></a>
+                    <a href="https://form.jotformz.com/23083737236657"> <li class="5"><!--menu aki--></li></a>
+                </ul>
+            </aside>
+        </section>
+        
+        <aside class="area_left">
+           <button style="color:cyan;">bem-vindo</button> 
+           <p style="color: #ff6a6a">Ao site feito SOBRE o  Upper East Side e PARA o Upper East Side.</p>
+           <button style="color:#f79c60;"> Gossip</button>
+           <p style="color:#f7ee74"> As ultimas "411"sobre quem é "IN".</p>
+           <button style="color:#fff396;"> Fotos</button>
+           <p style="color:#94dd94;"> Veja o que os fashionistas estão vestindo e avalie!</p>
+           <p> <a style="color:#7bcae0;" href="http://screencapped.net/tv/gossipgirl/displayimage.php?album=lastup&cat=11&pid=2794#top_display_media"> VEJA A GALERIA DE FOTOS </a></p>
+           <button style="color:#ffc4d2;"> Festas</button>
+           <p style="color:cyan;"> Provavelmente seu convite ficou perdido em seu e-mail. <a href="">CLICK AQUI</a> e veja o que perdeu.</p>
+           <button style="color:orange;">Criadoras do site</button>
+           <p style="color: #9E0A39;"=>- Ellen Mendonça <br> - Ellem Lima</p>
+
+        </aside>
+        <article>
+       
+     <h1> Sobre a série </h1>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gossip Girl (Gossip Girl: A Garota do Blog (título no Brasil)) é uma série televisiva produzida pelo canal norte-americano The CW, baseada na série literária homônima da escritora Cecily von Ziegesar, criada por Josh Schwartz e Stephanie Savage, estreando na The CW em 19 de setembro de 2007 e terminando no dia 17 de dezembro de 2012, totalizando 121 episódios. No Brasil foi exibida pelo canal de TV por assinatura Glitz às terças-feiras e na TV Aberta pelo SBT, todas as segundas no Tele Seriados e em Portugal pelo extinto Canal Sony. </p>
+
+                <h1> Enredo </h1>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A série, sobre jovens estudantes das escolas de elite no Upper East Side de Manhattan em Nova York, segue quando Serena van der Woodsen (Blake Lively) retorna à cidade após ter ficado seis meses fora em um internato e se mantido fora do alcance de amigos e conhecidos. Os acontecimentos e histórias de cada personagem são narrados em um site por uma blogueira anônima (voz por Kristen Bell), que atende pelo pseudônimo "Gossip Girl" (Garota Fofoqueira, em português). Gossip Girl narra os escândalos de Serena e seus amigos desde a oitava série de Serena, quando a garota ficou com seu vestido branco todo molhado dentro de um avião na viagem de excursão da escola. Desde então, Serena virou a vitima preferida de Gossip Girl. Magoada pelo fato de Serena não ter dado nenhuma noticia e ainda por ter passado por gravíssimos problemas familiares sozinha, Blair Waldorf (Leighton Meester) começa excluindo socialmente a melhor amiga e mantendo distância de Serena, como punição pela total perda de contato durante sua ausência. Envolvidos na trama temos também Nate Archibald (Chace Crawford) e seu amigo de infância, Chuck Bass (Ed Westwick), e os irmãos até então "apagados" Dan Humphrey (Penn Badgley) e Jenny Humphrey (Taylor Momsen), além da amiga de infância de Dan, Vanessa Abrams (Jessica Szohr). Fazendo parte da trama há também o irmão de Serena, Erik (Connor Paolo), sua mãe Lily van der Woodsen (Kelly Rutherford) e Rufus Humphrey (Matthew Settle), separado de sua esposa Alison (Susan Misner), pais de Dan e Jenny e uma impostora, Ivy Dickens (Kaylee DeFer) que se passa pela prima de Serena (Esta ingressa na série na quarta temporada e se torna personagem principal na quinta temporada). A partir da quinta temporada Jenny Humphrey (Taylor Momsen) e Vanessa Abrams (Jessica Szohr) saem do elenco do seriado, porém fazem algumas participações especiais. </p>
+        </article>
+        <aside class="area-right">
+            <label class="lb-gossip-girl">gossip girl</label>
+            <div>
+                <img class="icon-tv" src="http://i.imgur.com/IGHKSNr.png">
+                <img class="mapa" src="https://i.imgur.com/lC0Qorh.png">
+            </div>
+            <div class="area-busca">
+                <label>gossip busca</label>
+                <input type="text" />
+                <button style="color: #f7d631;" style="font-family: century gothic;">buscar</button>
+            </div>
+        </aside>
+        <footer> 
+        </footer>
+    </body>
+</html>

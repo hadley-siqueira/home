@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 5px solid black">
+        </canvas>
+
+        <script>
+            var ctx = document.getElementById('area').getContext('2d')
+            var meio_x = 0;
+            var meio_y = 0;
+            var raio = 20;
+
+            function desenharCirculo() {
+                ctx.clearRect(0, 0, 800, 600);
+
+                ctx.beginPath();
+                ctx.arc(meio_x, meio_y, raio, 0, 2 * 3.1415);
+                ctx.fill();
+
+                meio_x = meio_x + 1;
+                meio_y = meio_y + 1;
+                    
+                meio 
+                window.requestAnimationFrame(desenharCirculo);
+            }
+
+            desenharCirculo();
+        </script>
+    </body>
+</html>

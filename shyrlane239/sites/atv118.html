@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Média das notas</h1>
+        <p id="notas"></p>
+        
+        <script> 
+            var vetor = [];
+
+            var i = "notas";
+            var f = document.getElementById(i);
+
+            for (i = 0; i <=3; ++i) {
+                var msg = "Digite a nota: ";
+                var nota = parseInt (window.prompt(msg));
+                vetor.push(nota);
+            }
+
+            var media = (vetor0 + vetor1 + vetor2 + vetor3)/4;
+
+            f.innerHTML = "Essa é a média das notas: " + media;
+        </script>
+    </body>
+</html>
+

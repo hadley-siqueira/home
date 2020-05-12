@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+            #slide {
+                margin-top: 200px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .obj {
+              position: relative;
+              width: 80px;
+              height: 80px;
+              background-color: skyblue;
+              transition: all 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="slide">
+        </div>
+
+        <script>
+
+        var elems = [
+            {
+                content: 'titulo',
+                x: 100,
+                y: 100
+            },
+            {
+                content: 'foobar',
+                x: 200,
+                y: 100
+            },
+            {
+                content: 'hello',
+                x: 300,
+                y: 100
+            }
+        ];
+
+        function renderElm(elem, idx) {
+            var r = '<div onmouseover="foo(' + idx + ')" onmouseout="bar()" class="obj" id="s' + idx + '">' + elem.content + '</div>';
+            return r;
+        }
+
+        function render(elems) {
+            var v = document.getElementById('slide');
+            var i;
+           
+            for (i = 0; i < elems.length; ++i) {
+                v.innerHTML += renderElm(elems[i], i);
+            }
+        }
+
+        function foo(idx) {
+            var i;
+
+            for (i = 0; i < elems.length; ++i) {
+                var v = document.getElementById('s' + i);
+
+                if (idx == i) {
+                    //v.style['transform'] = 'scale(1.5) translate(20px, 20px)';
+                    v.style['transform'] = 'scale(1.5)';
+                    v.style['z-index'] = 1;
+                } else {
+                    v.style['transform'] = 'scale(0.9)';
+                    v.style['z-index'] = -1;
+                }
+            }
+
+        }
+
+        function bar() {
+            var i;
+
+            for (i = 0; i < elems.length; ++i) {
+                var v = document.getElementById('s' + i);
+
+                v.style['transform'] = 'scale(1.0)';
+                v.style['z-index'] = 0;
+            }
+        }
+
+        render(elems);
+        </script>
+    </body>
+</html>

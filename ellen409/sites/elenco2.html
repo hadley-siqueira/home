@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+    <style>
+        .elenco{
+            font-family: century gothic;
+            width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .w3-display-left{
+            left: 0px;
+            top: 50%;
+        }
+        .w3-display-right{
+            right: 0px;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="elenco">
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/DhfgHnG.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Leighton Meester
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/gu0iYhb.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Blake Lively
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/AHSSAFt.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Ed Westwick
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/72iwukh.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Penn Badgley
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/1qVE2sJ.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Chace Crawford
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/eyDaHJu.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Taylor Momsen
+
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+      <img src="https://i.imgur.com/geZYpaa.png" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Jessica Szohr
+      </div>
+    </div>
+
+
+    <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
+
+

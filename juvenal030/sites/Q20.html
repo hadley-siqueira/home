@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var x = parseInt(window.prompt(' informe a cordenada de X: '))
+            var y = parseInt(window.prompt(' informe a cordenada de Y: '))
+            var p =window.prompt(' digite o comando');
+            var b;
+            var d;
+            var e;
+            var c;
+            if (p == "b") {
+                 b = x - 10 ;
+                console.log(' a nova cordenada eh ' + b );
+             } else if (p == "c") {
+                c = x + 10;
+            console.log(' a nova cordenada eh ' + '('+ c + ',' + y + ')');
+            } else if ( p == "d") {
+                d = y - 10;
+                console.log('a nova cordenada eh ' + '(' + x + ',' + d + ')');
+            } else if ( p == "e") {
+            e = y + 10;
+                console.log(' a nova coordnada eh ' + '(' + x + ',' + d + ')');
+            }
+        </script>
+    </body>
+</html>

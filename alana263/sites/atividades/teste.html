@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<html lang="pt-br" >
+<head>
+<title>Início - SUAP: Sistema Unificado de Administração Pública</title>
+<meta charset="utf-8">
+<meta name="keywords" content="suap, administração, pública, mec, ifrn">
+<meta content="SUAP: Sistema Unificado de Administração Pública" name="description">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="NONE,NOARCHIVE">
+
+
+<link rel="shortcut icon" href="/static/comum/img/favicon.png" />
+
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.all.css" />
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.core.css" />
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.datepicker.css" />
+<link rel="stylesheet" href="/static/djtools/jquery-1.6.2/css/jquery.ui.theme.css" />
+
+
+<link rel="stylesheet" href="/static/djtools/jquery/jquery.autocomplete.css" />
+<link rel="stylesheet" href="/static/djtools/jstree/tree_component.css" />
+
+
+<link rel="stylesheet" href="/static/djtools/tinybox/tinybox.css" />
+
+
+<link rel="stylesheet" href="/static/djtools/css/main.css" />
+<link rel="stylesheet" href="/static/djtools/css/icons.css" />
+
+
+<link rel="stylesheet" href="/static/comum/css/hint.min.css" />
+<link rel="stylesheet" href="/static/comum/css/font-awesome.min.css" />
+<link rel="stylesheet" href="/static/comum/css/estilo.css" />
+<link rel="stylesheet" href="/static/comum/css/forms.css" />
+<link rel="stylesheet" href="/static/comum/css/nouislider.min.css" />
+
+<link rel="stylesheet" href="/static/comum/css/index.css" />
+
+
+
+<script src="/static/comum/js/jquery.min.js"></script>
+
+
+<script src="/static/djtools/tinybox/tinybox.js"></script>
+
+
+<script src="/static/comum/js/jquery.ui.custom.min.js"></script>
+<script src="/static/comum/js/jquery.ui.datepicker-pt-BR.js"></script>
+
+
+<script src="/static/comum/deprecated/js/jquery.autocomplete.js"></script>
+
+
+<script src="/static/comum/deprecated/js/jquery.form.js"></script>
+<script src="/static/comum/js/main.js"></script>
+<script src="/static/comum/deprecated/js/mascaras.js"></script>
+<script src="/static/comum/deprecated/js/auxiliar.js"></script>
+<script src="/static/comum/deprecated/js/suap.basico.js"></script>
+
+<script src="/static/comum/js/nouislider.min.js"></script>
+<script>
+jQuery(document).ready(function() {
+    initAll();
+    initMenu();
+
+    /* Menu principal: Para dispositivos moveis */
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        jQuery("body").addClass("hideSidebar");
+    }
+});
+</script>
+
+
+
+
+
+
+<script src="/static/djtools/graficos/highcharts.js"></script>
+<script src="/static/djtools/graficos/exporting.js"></script>
+<script>
+$(function() {
+    $(".coluna").sortable({
+        connectWith: ".coluna",
+        handle: ".portlet-header",
+        cancel: ".portlet-toggle",
+        placeholder: "portlet-placeholder ui-corner-all",
+        beforeStop: function( event, ui ) {
+            item = ui.item[0];
+            coluna = '3';
+            cont_item = $(item).prevAll().length;
+
+            if ($(item.parentElement).hasClass('coluna-esquerda')) {
+                coluna = '1';
+            } else {
+                if ($(item.parentElement).hasClass('coluna-centro')) {
+                    coluna = '2';
+                }
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/comum/index/layout/",
+                data: {titulo: $(item).find('.portlet-header').find('span')[0].innerText, coluna: coluna, ordem: cont_item}
+            });
+        }
+    });
+});
+</script>
+
+
+</head>
+
+<body class=" index">
+
+<div class="holder">
+    
+    <aside>
+        <header>   
+            <h1><a href="/" title="SUAP: Sistema Unificado de Administração Pública">SUAP</a></h1>
+            <a href="#" id="acoes" class="toggleSidebar">Mostrar/Esconder barra lateral</a>
+               
+                
+                    <div id="user-tools">
+                        
+                            <a href="/edu/aluno/20151074010263/">
+                                <div class="foto-circle small">
+                                    <img src="/media/alunos/162448.jpg" alt="Alana Sato" />
+                                </div>
+                                <span>Alana Sato</span>
+                            </a>
+                        
+                    </div>
+                
+            
+        </header>
+        
+            
+
+                <form id="__buscar_menu__" action="" onsubmit="return false;">
+                    <input type="text" placeholder="Buscar Item de Menu" id="__filterinput__"  autofocus />
+                </form>
+
+                
+                    <nav>
+                        <ul>
+                            <li><a href="/"><i class="fa fa-home"></i> <span>Início</span></a></li>
+                            <li class="has-child menu-ensino" ><a href="#" title="Ensino"><i class="fa fa-ensino"></i> <span>Ensino</span></a><ul><li class="" id="menu-item-ensino_agendadedefesasdetcc"><a href="/djtools/breadcrumbs_reset/ensino_agendadedefesasdetcc/edu/visualizar_agenda_defesas/" title="Agenda de Defesas de TCC"> <span>Agenda de Defesas de TCC</span></a></li><li class="" id="menu-item-ensino_boletins"><a href="/djtools/breadcrumbs_reset/ensino_boletins/edu/boletim_aluno/" title="Boletins"> <span>Boletins</span></a></li><li class="" id="menu-item-ensino_caixademensagens"><a href="/djtools/breadcrumbs_reset/ensino_caixademensagens/admin/edu/mensagementrada/" title="Caixa de Mensagens"> <span>Caixa de Mensagens</span></a></li><li class="" id="menu-item-ensino_dadosdoaluno"><a href="/djtools/breadcrumbs_reset/ensino_dadosdoaluno/edu/meus_dados_academicos/" title="Dados do Aluno"> <span>Dados do Aluno</span></a></li><li class="" id="menu-item-ensino_locaisehorariosdeaula"><a href="/djtools/breadcrumbs_reset/ensino_locaisehorariosdeaula/edu/locais_aula_aluno/" title="Locais e Horários de Aula"> <span>Locais e Horários de Aula</span></a></li><li class="" id="menu-item-ensino_minhasavaliacoes"><a href="/djtools/breadcrumbs_reset/ensino_minhasavaliacoes/edu/minhas_avaliacoes/" title="Minhas Avaliações"> <span>Minhas Avaliações</span></a></li><li class="" id="menu-item-ensino_turmasvirtuais"><a href="/djtools/breadcrumbs_reset/ensino_turmasvirtuais/edu/salas_virtuais/" title="Turmas Virtuais"> <span>Turmas Virtuais</span></a></li></ul></li><li class="has-child menu-tec-da-informacao" ><a href="#" title="Tec. da Informação"><i class="fa fa-tec-da-informacao"></i> <span>Tec. da Informação</span></a><ul><li class="" id="menu-item-tecdainformacao_catalogodeservicos"><a href="/djtools/breadcrumbs_reset/tecdainformacao_catalogodeservicos/centralservicos/catalogo/" title="Catálogo de Serviços"> <span>Catálogo de Serviços</span></a></li></ul></li><li class="has-child menu-central-de-servicos" ><a href="#" title="Central de Serviços"><i class="fa fa-central-de-servicos"></i> <span>Central de Serviços</span></a><ul><li class="" id="menu-item-centraldeservicos_perguntasfrequentes"><a href="/djtools/breadcrumbs_reset/centraldeservicos_perguntasfrequentes/centralservicos/perguntasfrequentes/" title="Perguntas Frequentes"> <span>Perguntas Frequentes</span></a></li><li class="" id="menu-item-centraldeservicos_abrirchamado"><a href="/djtools/breadcrumbs_reset/centraldeservicos_abrirchamado/centralservicos/listar_area_servico/" title="Abrir Chamado"> <span>Abrir Chamado</span></a></li><li class="" id="menu-item-centraldeservicos_meuschamados"><a href="/djtools/breadcrumbs_reset/centraldeservicos_meuschamados/centralservicos/listar_chamados_usuario/" title="Meus Chamados"> <span>Meus Chamados</span></a></li></ul></li><li class="has-child menu-administracao" ><a href="#" title="Administração"><i class="fa fa-administracao"></i> <span>Administração</span></a><ul><li class="has-child" ><a href="#" title="Protocolo"> <span>Protocolo</span></a><ul><li class="" id="menu-item-administracao_protocolo_processos"><a href="/djtools/breadcrumbs_reset/administracao_protocolo_processos/admin/protocolo/processo/" title="Processos"> <span>Processos</span></a></li></ul></li></ul></li><li class="has-child menu-atividades-estudantis" ><a href="#" title="Atividades Estudantis"><i class="fa fa-atividades-estudantis"></i> <span>Atividades Estudantis</span></a><ul><li class="has-child" ><a href="#" title="Serviço Social"> <span>Serviço Social</span></a><ul><li class="" id="menu-item-atividadesestudantis_servicosocial_caracterizacaosocioeconomica"><a href="/djtools/breadcrumbs_reset/atividadesestudantis_servicosocial_caracterizacaosocioeconomica/ae/caracterizacao/" title="Caracterização Socioeconômica"> <span>Caracterização Socioeconômica</span></a></li></ul></li><li class="has-child" ><a href="#" title="Saúde"> <span>Saúde</span></a><ul><li class="" id="menu-item-atividadesestudantis_saude_agendadeatendimentos"><a href="/djtools/breadcrumbs_reset/atividadesestudantis_saude_agendadeatendimentos/saude/agenda_atendimentos/" title="Agenda de Atendimentos"> <span>Agenda de Atendimentos</span></a></li></ul></li></ul></li>
+                            <li class="menu-logout"><a href="/accounts/logout/"><i class="fa fa-sign-out"></i> <span>Sair</span></a></li>
+                        </ul>
+                    </nav>
+                
+            
+        
+    </aside>
+
+    <main class="colM" id="content">
+
+        <div id="breadcrumbs">
+            
+              <a href="/">Início</a> 
+            
+        </div>
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+
+
+
+<div class="container">
+
+    <div class="secao secao20">
+
+        
+
+        
+            <div class="modulo modulo-alertas">
+                <h3>Fique <span>atento!</span></h3>
+                <ul class="alert">
+                    
+                        <li>
+                            <span>Até 31/12/2017 20:00</span>
+                            <a href="/enquete/responder_enquete/84">Responda à Enquete: <strong>Revisão da Resolução CONSUP 13/2015 - Prática Profissional discente</strong>.</a>
+                        </li>
+                    
+                </ul>
+            </div>
+        
+
+        
+            <div class="modulo modulo-alertas">
+                <h3>Informações <span>e Avisos</span></h3>
+                <ul class="info">
+                    
+                        <li class="new">
+                            <span>20/12/2017 - Ensino</span>
+                            <a href="/demandas/atualizacao/829/">Correção de problema de inconsistência de dados na aba boletim do aluno.</a>
+                        </li>
+                    
+                </ul>
+            </div>
+        
+
+        
+            <div class="modulo modulo-alertas">
+                <h3>Notícias <span>Portal do IFRN</span></h3>
+                <div id="modulo-rss"></div>
+                <a href="http://portal.ifrn.edu.br/campus/reitoria/noticias" class="btn default">Mais Notícias</a>
+                <script>
+                    jQuery.ajax({
+                        url: "/comum/feed_noticias/",
+                        success: function(data) {
+                            jQuery('#modulo-rss').append(data);
+                        },
+                        dataType: "html"
+                    });
+                </script>
+            </div>
+        
+
+    </div>
+
+    <div class="secao secao80">
+
+        
+            <div class="flex-container">
+                
+                    <div class="flex-container coluna coluna-esquerda">
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-windows"></i> Serviços Microsoft</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/microsoft/redirecionar_aluno/office365/" class="default"><i class="fa fa-envelope"></i> E-mail Institucional</a></li>
+                                            
+                                                <li><a href="/microsoft/redirecionar_aluno/dreamspark/" class="default"><i class="fa fa-windows"></i> Microsoft Imagine</a></li>
+                                            
+                                                <li><a href="https://portal.office.com" class="default"><i class="fa fa-windows"></i> Portal Office 365</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-pencil"></i> Ensino</span></h3>
+                                <div class="wrapper">
+                                    
+                                        <div class="flex-container">
+                                            
+                                                <div class="modulo modulo-indicador">
+                                                    <a href="/admin/edu/mensagementrada/?tab=tab_nao_lidas">
+                                                        <h5>14</h5>
+                                                        <h6>Mensagens</h6>
+                                                        <p>Não lidas</p>
+                                                    </a>
+                                                </div>
+                                            
+                                        </div>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/edu/aluno/20151074010263/" class="default"><i class="fa fa-link"></i> Meus Dados</a></li>
+                                            
+                                                <li><a href="/edu/minhas_avaliacoes" class="default"><i class="fa fa-link"></i> Minhas Avaliações</a></li>
+                                            
+                                                <li><a href="/edu/aluno/20151074010263/?tab=locais_aula_aluno" class="default"><i class="fa fa-link"></i> Locais e Horários de Aula</a></li>
+                                            
+                                                <li><a href="/edu/salas_virtuais/" class="default"><i class="fa fa-link"></i> Turmas Virtuais</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-check"></i> Comum</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/comum/telefones/" class="default"><i class="fa fa-phone"></i> Telefones</a></li>
+                                            
+                                                <li><a href="https://play.google.com/store/apps/details?id=br.edu.ifrn.suap.mobile" class="default"><i class="fa fa-mobile"></i> SUAP Mobile (Android)</a></li>
+                                            
+                                                <li><a href="/ldap_backend/redirecionar_google_classroom/" class="default"><i class="fa fa-google"></i> Google Sala de Aula</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-newspaper-o"></i> Clipping</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="modulo-alertas">
+                                            <ul>
+                                                
+                                                    <li>
+                                                        <span>18/12/2017 - Folha do Bico (Blog)</span>
+                                                        <a href="http://www.folhadobico.com.br/12/2017/araguatins-academicos-do-ifto-sao-premiados-em-evento-internacional.php">ARAGUATINS: Acadêmicos do IFTO são premiados em evento internacional</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>13/12/2017 - João Andreneto - Ceará Mirim (Blog)</span>
+                                                        <a href="http://www.cearamirimlivre.com/2017/12/ceara-mirim-alunos-comemoram-aprovacao.html">CEARÁ-MIRIM: ALUNOS COMEMORAM APROVAÇÃO NO IFRN</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>07/12/2017 - Substantivo Plural (Cultura)</span>
+                                                        <a href="http://www.substantivoplural.com.br/luzes-de-natal-inspiram-trabalho-final-de-oficina-de-fotografia-para-surdos/">Luzes de Natal inspiram trabalho final de oficina de fotografia para surdos</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>05/12/2017 - TCM Mossoró (RN)</span>
+                                                        <a href="https://tcm10hd.com.br/jornalismo/projeto-geracao-solidaria-promove-oficinas-com-agricultores/">Projeto Geração Solidária promove oficinas com agricultores</a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <span>03/12/2017 - G1 - Portal (RN)</span>
+                                                        <a href="https://g1.globo.com/rn/rio-grande-do-norte/noticia/oficina-de-fotografia-em-libras-comeca-nesta-segunda-feira-4-em-natal.ghtml">Oficina de fotografia em Libras começa nesta segunda-feira (4) em Natal</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-users"></i> Dezembro Vermelho</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                        
+                                            <img src="/static/comum/img/index-banner.png" alt="Dezembro Vermelho" />
+                                        
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="flex-container coluna coluna-centro">
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-file-o"></i> Protocolo</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/admin/protocolo/processo/" class="default"><i class="fa fa-bars"></i> Todos os Processos</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-graduation-cap"></i> Serviço Social</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/ae/solicitar_refeicao/3/" class="success"><i class="fa fa-plus"></i> Solicitar Refeição</a></li>
+                                            
+                                                <li><a href="/edu/aluno/20151074010263/?tab=atividades" class="default"><i class="fa fa-bars"></i> Registro de Atividades</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="flex-container coluna coluna-direita">
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-calendar"></i> Calendário Acadêmico</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                        
+                                            <div class = "calendario">
+<table class="calendario-dias">
+<caption>Dezembro</caption>
+<thead>
+<tr>
+<th id="calendario-domingo">Dom</th>
+<th id="calendario-segunda">Seg</th>
+<th id="calendario-terca">Ter</th>
+<th id="calendario-quarta">Qua</th>
+<th id="calendario-quinta">Qui</th>
+<th id="calendario-sexta">Sex</th>
+<th id="calendario-sabado">Sab</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="" title="" headers="calendario-domingo"><span>&nbsp;</span></td><td class="" title="" headers="calendario-segunda"><span>&nbsp;</span></td><td class="" title="" headers="calendario-terca"><span>&nbsp;</span></td><td class="" title="" headers="calendario-quarta"><span>&nbsp;</span></td><td class="" title="" headers="calendario-quinta"><span>&nbsp;</span></td><td class="alert" title="Alert" headers="calendario-sexta"><span>1</span></td><td class="fds alert" title="Alert" headers="calendario-sabado"><span>2</span></td>
+</tr><tr>
+<td class="fds alert" title="Alert" headers="calendario-domingo"><span>3</span></td><td class="avaliacao alert" title="Avaliacao Alert" headers="calendario-segunda"><span>4</span></td><td class="alert" title="Alert" headers="calendario-terca"><span>5</span></td><td class="alert" title="Alert" headers="calendario-quarta"><span>6</span></td><td class="alert" title="Alert" headers="calendario-quinta"><span>7</span></td><td class="avaliacao alert" title="Avaliacao Alert" headers="calendario-sexta"><span>8</span></td><td class="fds alert" title="Alert" headers="calendario-sabado"><span>9</span></td>
+</tr><tr>
+<td class="fds alert" title="Alert" headers="calendario-domingo"><span>10</span></td><td class="alert" title="Alert" headers="calendario-segunda"><span>11</span></td><td class="alert" title="Alert" headers="calendario-terca"><span>12</span></td><td class="avaliacao avaliacao_conflito_leve alert" title="Avaliacao Avaliacao_Conflito_Leve Alert" headers="calendario-quarta"><span>13</span></td><td class="alert" title="Alert" headers="calendario-quinta"><span>14</span></td><td class="alert" title="Alert" headers="calendario-sexta"><span>15</span></td><td class="fds alert" title="Alert" headers="calendario-sabado"><span>16</span></td>
+</tr><tr>
+<td class="fds alert" title="Alert" headers="calendario-domingo"><span>17</span></td><td class="avaliacao avaliacao_conflito_leve alert" title="Avaliacao Avaliacao_Conflito_Leve Alert" headers="calendario-segunda"><span>18</span></td><td class="alert" title="Alert" headers="calendario-terca"><span>19</span></td><td class="error" title="Error" headers="calendario-quarta"><span>20</span></td><td class="error" title="Error" headers="calendario-quinta"><span>21</span></td><td class="error" title="Error" headers="calendario-sexta"><span>22</span></td><td class="fds error" title="Error" headers="calendario-sabado"><span>23</span></td>
+</tr><tr>
+<td class="hoje fds error" title="Error" headers="calendario-domingo"><span>24</span></td><td class="error" title="Error" headers="calendario-segunda"><span>25</span></td><td class="error" title="Error" headers="calendario-terca"><span>26</span></td><td class="error" title="Error" headers="calendario-quarta"><span>27</span></td><td class="error" title="Error" headers="calendario-quinta"><span>28</span></td><td class="error" title="Error" headers="calendario-sexta"><span>29</span></td><td class="fds error" title="Error" headers="calendario-sabado"><span>30</span></td>
+</tr><tr>
+<td class="fds error" title="Error" headers="calendario-domingo"><span>31</span></td><td class="" title="" headers="calendario-segunda"><span>&nbsp;</span></td><td class="" title="" headers="calendario-terca"><span>&nbsp;</span></td><td class="" title="" headers="calendario-quarta"><span>&nbsp;</span></td><td class="" title="" headers="calendario-quinta"><span>&nbsp;</span></td><td class="" title="" headers="calendario-sexta"><span>&nbsp;</span></td><td class="" title="" headers="calendario-sabado"><span>&nbsp;</span></td>
+</tr></tbody></table><ul class="calendario-referencia">
+<li class="alert">De 16/10 a 19/12: 3ª Etapa</li>
+<li class="avaliacao">Dia 4: Matemática III(90H) - Atividade Avaliativa Diagnóstica</li>
+<li class="avaliacao">Dia 8: Língua Portuguesa e Literatura III(90H) - Produção textual Individual: texto argumentativo</li>
+<li class="avaliacao">Dia 13: Arquitetura de redes de computadores e Tecnologia de Implementação de redes - VLAN e ACLS</li>
+<li class="avaliacao">Dia 13: Arquitetura de redes de computadores e Tecnologia de Implementação de redes - NAT e REDE PONTO A PONTO</li>
+<li class="avaliacao">Dia 18: Matemática III(90H) - Lista de Atividades</li>
+<li class="avaliacao">Dia 18: Matemática III(90H) - Atividade Avaliativa Diagnóstica</li>
+<li class="error">De 20/12 a 9/3: 4ª Etapa</li>
+</ul></div>
+                                            
+                                        
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/edu/calendarioacademico/370/" class="default"><i class="fa fa-link"></i> Acessar Calendário Completo</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="modulo modulo-info ">
+                                <h3 class="portlet-header"><span><i class="fa fa-list"></i> Central de Serviços</span></h3>
+                                <div class="wrapper">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <ul class="action-bar">
+                                            
+                                                <li><a href="/centralservicos/listar_area_servico/" class="success"><i class="fa fa-plus"></i> Abrir Chamado</a></li>
+                                            
+                                                <li><a href="/centralservicos/perguntasfrequentes/" class="default"><i class="fa fa-question"></i> Perguntas Frequentes</a></li>
+                                            
+                                        </ul>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        
+                    </div>
+                
+            </div>
+        
+
+        
+
+    </div>
+</div>
+
+
+        
+        <div class="action-links">
+            <ul>
+                <li class="float-right">
+                    <a href="#" id="topodapagina">Topo da página</a>
+                </li>
+                <li class="float-right action-print">
+                    <a href="#">Imprimir</a>
+                </li>
+                
+    <li class="float-right">Sistema atualizado em: 21/12/2017 17:18:40</li>
+
+            </ul>
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+    <ul>
+        <li>
+            Administração
+            <p><a href="mailto:digti@ifrn.edu.br">digti@ifrn.edu.br</a></p>
+        </li>
+        <li>
+            Desenvolvimento
+            <p><a href="http://portal.ifrn.edu.br">IFRN</a></p>
+        </li>
+        <li class="float-right">
+            <a href="http://www.djangoproject.com/"><img src="/static/comum/img/django.gif" alt="Feito com Django" /></a>
+        </li>
+    </ul>
+    
+</footer>
+
+<a href="#0" class="go-to-bottom">Ir para Rodapé</a>
+
+
+
+<script>
+    open_menu_item("ensino_agendadedefesasdetcc");
+    $(window).unload(function(){
+        $('input[type=submit]').removeAttr('disabled');
+    });
+
+    
+        input_submit_on_click();
+    
+
+    function input_submit_on_click() {
+        $("input[type=submit]").on("click", function() {
+            var elem = $(this);
+            var form = $(this.form);
+
+            //Se tiver a função checkValidity verificar se está tudo ok, nas validações html5, para não desabilitar o botão de submit
+            if(typeof form[0].checkValidity === 'function') {
+                if (form[0].checkValidity()) {
+                    elem.parent().find("input[type=submit]").attr("disabled", "disabled");
+                    elem.val("Aguarde...");
+                }
+            } else {
+                elem.parent().find("input[type=submit]").attr("disabled", "disabled");
+                elem.val("Aguarde...");
+            }
+
+            if (elem.attr("name")) {
+                elem.parent().append('<input type="hidden" name="'+elem.attr("name")+'" value="'+elem.val()+'" />');
+            }
+
+            form.find(".selector-chosen select[multiple] option").attr("selected", "selected");
+            form.submit();
+        });
+    }
+</script>
+</body>
+</html>
+

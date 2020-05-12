@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var contador = new Number();
+            var contador = 11;
+            function cronometrar() {
+            if((contador - 1) >= 0) {
+                contador--;
+                d1.innerText = contador;
+                setTimeout("cronometrar();", 1000);
+            }
+            }
+        </script>
+    </head>
+
+    <body onload="cronometrar();">
+        <h1 id="d1"> </h1>
+    </body>
+</html>

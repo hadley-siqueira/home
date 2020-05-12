@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <body>
+       <canvas id="area" width="800" height="600" style="border: 6px solid red">
+       </canvas>
+
+       <script>
+         var ctx = document.getElementById('area').getContext('2d');
+            function criarBola(x, y, cor) {
+            this.x = x;
+            this.y = y;
+            this.vx = Math.random() * 10; 
+            this.vy = Math.random() * 10;
+            this.raio = 30;
+            this.cor = cor;
+         }
+        
+         var bola1 = new criarBola(20, 50,"#9842f4");        
+         var bola2 = new criarBola(50, 500,"#ff4911");
+         var bola3 = new criarBola(100, 200, "purple");
+         var bola4 = new criarBola(120, 250,"#2615ea");
+         var bola5 = new criarBola(210, 290, "#cbff11");
+
+        function desenharBola(bola) {
+            ctx.beginPath();
+                ctx.fillStyle = bola.cor;
+            ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+            ctx.fill()
+        }   
+
+         function atualizarPosicaoBola(bola) {
+            bola.x = bola.x + bola.vx;
+            bola.y = bola.y + bola.vy;
+
+            if (bola.x < 0) {
+                bola.x = 0;
+                bola.vx = -bola.vx;
+               }
+            if (bola.x >= 800) {
+                bola.x = 799;
+                bola.vx = -bola.vx;
+               } 
+
+            if (bola.y < 0) {
+                bola.y = 0;
+                bola.vy = -bola.vy;
+                }
+
+            if (bola.y >= 600) {
+                bola.y = 599;
+                bola.vy = -bola.vy;
+                }
+       }
+
+
+        function atualizar() {
+            atualizarPosicaoBola(bola1);
+            atualizarPosicaoBola(bola2);
+            atualizarPosicaoBola(bola3);
+            atualizarPosicaoBola(bola4);
+            atualizarPosicaoBola(bola5);
+        }
+
+         function desenhar() {
+            ctx.clearRect(0, 0, 800, 600);
+            desenharBola(bola1);
+            desenharBola(bola2);
+            desenharBola(bola3);
+            desenharBola(bola4);
+            desenharBola(bola5);
+        }
+
+         function animar() {
+            desenhar();
+            atualizar();
+            window.requestAnimationFrame(animar);
+        }
+
+        animar();
+      </script>
+    </body>
+</html>

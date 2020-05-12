@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+            console.log("Lei de Ohms");
+            var opcao = (window.prompt("informe o que deseja calcular?"));
+
+            if (opcao == "resistencia") {
+                var voltagem1 = parseFloat(window.prompt("digite a voltagem: "));
+                var corrente1 = parseFloat(window.prompt("digite a corrente: "));
+                var totalres = voltagem/corrente1;
+                console.log("a resistencia total eh: " + totalres);
+            } else if (opcao == "voltagem") {
+                var corrente2 = parseFloat(window.prompt("digite a corrente: "));
+                var resistencia2 = parseFloat(window.prompt("digite a resistencia: "));
+                var totalvolt = corrente2*resistencia2;
+                console.log("a voltagem eh de: " + totalvolt);
+            } else if (opcao == "corrente") {
+                var voltagem3 = parseFloat(window.prompt("digite a voltagem: "));
+                var resistencia3 = parseFloat(window.prompt("digite a resistencia: "));
+                var totalcor = voltagem3/resistencia3;
+                console.log("a corrente total eh " + totalcor); 
+            }
+        </script>
+    </body>
+</html>

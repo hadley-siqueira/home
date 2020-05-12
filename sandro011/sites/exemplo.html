@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+         //   window.alert('Olá pessoal');
+         //   console.log('Olá de novo, pessoal');
+            var nome = window.prompt('Qual o seu nome?');
+            console.log('Olá ' + nome);
+            var nota1 = parseFloat(window.prompt('Digite a nota1'));
+            var nota2 = parseFloat(window.prompt('Digite a nota2'));
+            var nota3 = parseFloat(window.prompt('Digite a nota3'));
+            var nota4 = parseFloat(window.prompt('Digite a nota4'));
+
+            var media = (nota1+nota2+nota3+nota4) / 4.0;
+            console.log('A média das notas foi de ' + media);
+            
+            if(media > 60) {
+                console.log('Parabéns, você passouuu!');
+            } else {
+                console.log('Que pena, você reprovou ):');
+            }
+           
+        </script>
+    <body>
+</html>

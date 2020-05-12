@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="utf-8">
+<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "ajac_php2.php?q=" + str, true);
+        xmlhttp.send();
+ 
+    }
+}
+
+    function showHint2(str) {
+    if (str.length == 0) {
+        document.getElementById("txtHint2").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint2").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "atividade_ajax.php?q=" + str, true);
+        xmlhttp.send();
+
+    }
+}
+
+
+</script>
+</head>
+<body>
+
+<p><b>Comece a digitar um nome no campo de entrada abaixo:</b></p>
+<form> 
+Primeiro nome: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Sugestões: <span id="txtHint"></span></p>
+<form>
+Cidade: <input type="text" onkeyup="showHint2(this.value)">
+</form>
+<p>Sugestões: <span id="txtHint2"></span></p>
+</body>
+</html>

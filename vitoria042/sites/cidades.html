@@ -1,0 +1,56 @@
+<?php
+// Array with names
+$a[] = "São paulo";
+$a[] = "Rio de janeiro";
+$a[] = "são gonçalo";
+$a[] = "macau";
+$a[] = "bahia";
+$a[] = "juazeiro do norte";
+$a[] = "canide de sao francisco";
+$a[] = "recife";
+$a[] = "lages";
+$a[] = "juazeiro da bahia";
+$a[] = "petrolina";
+$a[] = "campina grande";
+$a[] = "pernambuco";
+$a[] = "joao pessoa";
+$a[] = "terezina";
+$a[] = "piaui";
+$a[] = "rosa branca";
+$a[] = "jundiai";
+$a[] = "caico";
+$a[] = "pedra grande";
+$a[] = "sao jose";
+$a[] = "jandaira";
+$a[] = "rio preto";
+$a[] = "assu";
+$a[] = "mossoro";
+$a[] = "natal";
+$a[] = "diogo lopes";
+$a[] = "martins";
+$a[] = "alto";
+$a[] = "pendencias";
+
+// get the q parameter from URL
+$q = $_REQUEST["q"];
+
+$hint = "";
+
+// lookup all hints from array if $q is different from "" 
+if ($q !== "") {
+    $q = strtolower($q);
+    $len=strlen($q);
+    foreach($a as $name) {
+        if (stristr($q, substr($name, 0, $len))) {
+            if ($hint === "") {
+                $hint = $name;
+            } else {
+                $hint .= ", $name";
+            }
+        }
+    }
+}
+
+// Output "no suggestion" if no hint was found or output correct values 
+echo $hint === "" ? "no suggestion" : $hint;
+?>

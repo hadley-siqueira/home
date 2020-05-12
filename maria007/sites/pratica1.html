@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+
+        function CalcularMedia(n1,n2,n3,n4) {
+        
+        var media = (n1 + n2 + n3 + n4)/ 4.0;
+            return media;
+        }
+        function lf(msg) {
+            return parseFloat(window.prompt(msg));
+        }
+        function lerNota(msg) {
+            return lf ('Digite a ' + msg + 'nota');
+        }
+        function calcularAluno() {
+            var n1 = lerNota(' primeira ');
+            var n2 = lerNota(' segunda ');
+            var n3 = lerNota(' terceira ');
+            var n4 = lerNota(' quarta ');  
+        
+            var media = CalcularMedia(n1,n2,n3,n4);
+        
+        console.log('Sua media foi de ' + media);
+        }
+            calcularAluno();
+         </script>
+    </body>
+</html>
+
+

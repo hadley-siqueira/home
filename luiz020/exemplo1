@@ -1,0 +1,5 @@
+a = 2 
+b = 3
+c = a * a + b
+R1 = not(not(c>10))
+R2 = a == b or (a > b and  

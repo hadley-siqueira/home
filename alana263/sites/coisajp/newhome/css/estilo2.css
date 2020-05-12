@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'SourceSansProLight';
+        src: url('fonts/source/SourceSansProLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+@font-face {
+    font-family: 'SourceSansProRegular';
+        src: url('fonts/source/SourceSansProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+        font-family: 'Open Sans';
+        src: url('css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('css/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('css/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+ul {
+                list-style-type: none;
+                margin: 1rem 4%;
+                padding: 0;
+                overflow: hidden;
+                background-image: linear-gradient(to bottom, #3397d7, #2c78c3);
+                float: left;
+                width:90%;
+                top: 0;
+                position:fixed;
+                box-shadow: 1px 1px 2px #111;
+                transition: all 0.5s ease-in-out;
+            }
+            .nvd{
+              transform: translateY(-130%);
+              transition: all 0.5s ease-in-out;
+            }
+
+            li {
+                float: left;
+                width: calc(90%/3.6);
+                border-bottom: 5px solid #2a65b1;
+            }
+
+            li a {
+                display: block;
+                color: #FFF;
+                text-align: center;
+                padding: 1rem;
+                text-decoration: none;
+                font-size: 20px;
+
+                font-family: "Source Sans Pro";
+                transition: all 0.5s;
+            }
+
+            li a:hover {
+
+                color: #030303;
+                transition: all 0.5s;
+                background-color: #eee;
+            }
+*{box-sizing:border-box;}
+
+body{
+  background-color: #222;
+  margin:0;
+  padding: 0;
+}
+.code{
+  margin: 2rem;
+  background-color: #313131;
+  font-family: monospace;
+  color: #ddd;
+  font-weight: bolder;
+  padding-left: 1rem;
+  border-left: 0.5rem solid #3397d7;
+  padding: 2rem;
+}
+
+.se{
+  color: #2E7D32;
+}
+.varstr{
+  font-weight: normal;
+  color: #bbb;
+}
+
+.destaque{
+  font-weight: bolder;
+  color: #ddd;
+  background-color: #444;
+}
+
+.varstr2{
+  font-weight: normal;
+  color: #C2185B;
+}
+h1, p{
+  font-family: 'SourceSansProRegular';
+  color: #222;
+}
+.titulo{
+  background-color: #ddd;
+  color: #222;
+  border: 0.2rem solid #3397d7;
+}
+
+.subtit{
+  font-size: 25px;
+  text-align: justify;
+}
+
+h1 {font-size: 40px;}
+.sectit{
+  box-shadow: inset -35rem 0 50px 20px #222;
+  background-image: url("img/visualg.png");
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: overlay;
+  width: 94%;
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 6rem;
+
+}
+.sectit > div{
+  margin-left: 64%;
+  width: 30vw;
+  text-align: center;
+  margin-top: 4rem;
+}
+.sectit > div > h1{
+
+  background: #3397d7;
+  color: #F2F2F2;
+  font-size: 60px;
+  margin: 0;
+}
+
+.sectit > div > p{
+  margin: 0;
+
+  background: #29648a;
+  color: #ddd;
+
+}
+.indicador{
+  background-color: #3397d7;
+  color: #ddd;
+  padding: 1px 1rem 1px 1rem;
+}
+
+.sec1{
+
+  background-color: #ddd;
+  box-shadow: 10px 10px 50px #000;
+  padding: 2rem 3.5rem 2rem 3.5rem;
+}

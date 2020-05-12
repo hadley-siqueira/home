@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Informe seu conhecimento em Informática</title>
+    </head>
+
+
+  <body>
+    
+      <h1>Marque seu turno:</h1>
+
+            <form method="post" action="cadastrar-dados.php">
+            <input type="checkbox" name="info[]" value="manha" />
+            Manhã
+            <br />
+            <input type="checkbox" name="info[]" value="tarde" />
+            Tarde
+            <br />
+            <input type="checkbox" name="info[]" value="noite" />
+            Noite
+            <br />
+            
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Cancelar" />
+            </form>
+
+            
+        <h1>Houve transporte hoje?</h1>
+<form method="post" action="cadastrar-dados.php">
+
+            <input type="checkbox" name="info[]" value="si" />
+            Sim
+            <br />
+            <input type="checkbox" name="info[]" value="no" />
+            Não
+            <br />
+
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Cancelar" />
+            </form>
+
+    <h1>Houve Justificativa da prefeitura?</h1>
+    <form method="post" action="cadastrar-dados.php">
+
+            <input type="checkbox" name="info[]" value="si" />
+            Sim
+            <br />
+            <input type="checkbox" name="info[]" value="no" />
+            Não
+            <br />
+            <input type="checkbox" name="info[]" value="quebrou" />
+            Ônibus Quebrou
+            <br />
+            <input type="checkbox" name="info[]" value="outros" />
+            Outros
+            <br />
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Cancelar" />
+            </form>
+
+  </body>
+
+  </html>

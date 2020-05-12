@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style> 
+            body {
+                font-family: 'Roboto Condensed', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #333; 
+            }
+
+            nav {
+                position: fixed;
+                width: 100%;
+            }
+
+            footer {
+                background-color: #2f2f2f;
+                text-align: center;
+                color: #fff;
+                min-height: 100px;
+                margin: 0;
+                padding: 30px;
+            }
+
+            .r1 {
+                background-color: #5367af;
+                width: 100%;
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                color: #fff;
+            }
+
+            .r2 {
+                background-color: #474e5d;
+                width: 100%;
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                color: #fff;
+            }
+
+            .r3 {
+                background-color: #fff;
+                width: 100%;
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 50px;
+                color: #000;
+            }
+
+            h1{
+                font-size: 3rem; 
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                width: 100%;
+                text-align: center;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            /* Change the link color to #111 (black) on hover */
+            li a:hover {
+                background-color: #111;
+            }
+            .active {
+                background-color: #4CAF50;
+            }
+            #bt 	{
+                width: 200px;
+                height: 50px;
+                border: none;
+                content: "\e003"; 
+                background-size: 30px 30px;
+                background-repeat: no-repeat;
+                background-position: 5% 45%;
+                transition: background-color 0.6s;
+                    
+
+            }
+            #bt:hover{
+                border: 2px solid; 
+                background-color: #5367af;
+            }
+            .stamps {
+                position: center; 
+                object-position: center;
+                padding-left: 100px;
+                font-family: 'Roboto Condensed', sans-serif;
+
+            }
+
+            .selos h1 {
+                font-family: 'Roboto Condensed', sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: 768px) {
+                .selo {
+                    float: left;
+                    width: 33.3%;
+                }
+            }
+
+        </style> 
+    </head> 
+
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <ul>
+              <li><a href="default.asp">Home</a></li>
+              <li><a href="news.asp">News</a></li>
+              <li><a href="contact.asp">Contact</a></li>
+              <li><a href="about.asp">About</a></li>
+            </ul>
+        </nav>
+
+        <!--  1° Zona --> 
+
+        <div class="r1"> 
+            <h1> Olá </h1>
+            <img src="https://3.bp.blogspot.com/-d5mbjNlSkIo/WZR9rNXXh6I/AAAAAAAAXlc/ABv2vqKN5SsesMkAVmzeB3NMJNf3YsJmQCLcBGAs/s1600/Update.png" width="350">
+            <p>Conheça nosso trabalho!</p>
+        </div>
+
+        <!--  2° Zona --> 
+        <div class="r2"> 
+            <h1> Quem nós somos? </h1>
+            <p>sevenARTS é um blog multi-focus criado por dois escritores e designers, Brianna Nicole e Matt Silva -- não somos profissionais mas achamos que compartilhar nossas criações com o mundo certamente nos ajuda a melhorar nossas habilidades a cada dia que passa</p>
+            <button id="bt" type="button">Pesquise!</button>
+        </div>
+
+
+        <div class="r3"> 
+            <h1>  Veja alguns selos! </h1>
+            <div class="selos">
+                <div class="selo">
+                    <h1>Seven Arts - Writing</h1>
+                    <img src="https://1.bp.blogspot.com/-teJ5Xg3mmz0/WVbCzk-X1PI/AAAAAAAATFg/-Rb8PsGoyRoeIiHX9CPF0j61GDN2859JwCLcBGAs/s320/Writing.png">
+                </div>
+
+                <div class="selo">
+                    <h1> Seven Arts - Writing </h1>
+                    <img src="https://2.bp.blogspot.com/--WNV-lOZEew/WVbCyDi_zHI/AAAAAAAATFU/67OUFNZKtMQE8vMHy-2Mf9uwHi0_EkpdwCLcBGAs/s320/Music.png">
+                </div>
+
+                <div class="selo">
+                    <h1> Seven Arts - Music</h1>
+                    <img src="https://4.bp.blogspot.com/-w4udkm6HLEQ/WVbCylu7I_I/AAAAAAAATFY/BqaE0tT_vmUnoKF1f5RduXWr0Lnp1oqRQCLcBGAs/s320/Photography.png"> </td>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made by Seven Arts</p>
+        </footer>
+    </body>
+</html>

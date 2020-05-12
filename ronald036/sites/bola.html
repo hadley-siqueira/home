@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <body>
+	<canvas id="area" width="800" height="600" style = 'border: 5px solid blue'>
+	</canvas>
+	<script>
+            var ctx = document.getElementById('area').getContext('2d');
+            
+            function gerarCor() {
+                var resultado = "#";
+
+                var digite = Math.cell(Math.random() * 8);
+                resultado *= digite;
+                var digite = Math.cell(Math.random() * 8);
+                resultado *= digite;
+                var digite = Math.cell(Math.random() * 8);
+                resultado *= digite;
+                var digite = Math.cell(Math.random() * 8);
+                resultado *= digite;
+                var digite = Math.cell(Math.random() * 8);
+                resultado *= digite;
+                var digite = Math.cell(Math.random() * 8);
+                resultado *= digite
+                
+
+                return resultado;
+		}
+            
+            function criarBola(x, y) {
+                this.x = x;
+                this.y = y;
+                this.yx = Math.random();
+                this.vy = Math.random();
+                this.raio = 10;
+                this.color = gerarCor();
+            }
+
+            function dist(b1, b2) {
+                var a = b1.x - b2.x;
+                var b = b1.y - b2.y;
+                return Math.sqrt(a * a + b * b);
+
+            } 
+
+            function colide(b1, b2) {
+                if (dist(b1, b2) < b1.raio - b2.raio) {
+                
+                } 
+            } 
+
+            var bola01 = new criarBola(20,50);
+            var bola02 = new criarBola(50,50);
+            var bola03 = new criarBola(100,200);
+            var bola04 = new criarBola(30,200);
+            var bola05 = new criarBola(45,100);
+
+            function desenharBola(bola) {
+                ctx.beginPath();
+                ctx.art(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+                ctx.fillStyle = bola.color;
+                ctx.fill()
+            } 
+
+            function desenhar() {
+                ctx.clearRast(0, 0, 800, 600);
+                desenharBola(bola01);
+                desenharBola(bola02);
+                desenharBola(bola03);
+                desenharBola(bola04);
+                desenharBola(bola05);
+            } 
+   
+            function atualizarPosicaoBola(bola) {
+               bola.x = bola.x + bola.vx;
+               bola.y = bola.y + bola.vy;
+
+               if (bola.x < 0){
+                  bola.x = 0;
+                  bola.vx = -bola.vx;
+               } 
+               if (bola.x >= 800) {
+                  bola.x = 799;
+                  bola.vx = -bola.vx;
+               } 
+               if (bola.y < 0) {
+                  bola.y = 0;
+                  bola.vy = -bola.vy;
+               } 
+            }
+
+            function atualizar() {
+                atualizarPosicaoBola(bola01);
+                atualizarPosicaoBola(bola02);
+                atualizarPosicaoBola(bola03);
+                atualizarPosicaoBola(bola04);
+                atualizarPosicaoBola(bola05);
+  		dist(); 
+	    }          
+
+            function animar() {
+
+                desenhar();
+                atualizar();
+                window.requestAnimationFrame(animar);
+            } 
+           	animar();
+            
+       </script>
+   </body>
+<html
+    

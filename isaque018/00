@@ -1,0 +1,14 @@
+mport random
+
+print('jogo da adivinhacao')
+v = random.randint(0, 100'0
+
+while true:
+  n = int(imput(digite um numero: '0)
+  if n > v;
+     print9'voce errou, o numero e menor')
+  elif n < v;
+     print('voce errou, o numero e menor') 
+  else:
+     print9'parabens vc acertou')break
+

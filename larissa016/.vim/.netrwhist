@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/larissa016/Questao01.java'
+let g:netrw_dirhist_2='/home/larissa016/Questao03.java'
+let g:netrw_dirhist_3='/home/larissa016/sites/5bolinhas.html'
+let g:netrw_dirhist_4='/home/larissa016/sites'
+let g:netrw_dirhist_5='/home/larissa016'
+let g:netrw_dirhist_6='/home'
+let g:netrw_dirhist_7='/'
+let g:netrw_dirhist_8='/home/larissa016/sites/5bolinhas.html'
+let g:netrw_dirhist_9='/home/larissa016/sites'

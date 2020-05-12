@@ -1,0 +1,105 @@
+ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #212121;
+                float: left;
+                width:100%;
+                top: 0;
+                position:fixed;
+                box-shadow: 5px 5px 10px #111;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: #BDBDBD;
+                text-align: center;
+                padding: 4px 56px;
+                text-decoration: none;
+                font-size: 20px;
+
+            }
+
+            li a:hover {
+ 
+                color: white;
+                transition: all 0.5s;
+            }
+.titulo {
+                text-align: center;  
+                
+            }
+.link-bonito {
+                color: #349dd4;
+                text-decoration: none;
+            }
+
+input[type=text], select, input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #006064;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+   background-color: #0277BD;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #B0BEC5;
+    padding:20px;
+    width: 40%;
+    margin:auto;
+    margin-top: 130px;
+    border-top: 8px solid #455A64;
+
+}
+body {
+                margin: 0;
+                padding:0;
+                background-image:url(http://lite.acad.univali.br/portugol/img/sea.jpg);
+                min-height: 100%;
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+ .secao-1 {
+                padding-top: 100px;
+                margin-bottom: 0px;
+                background-size: cover;
+                color: #fefefe;
+                height: 700px;
+                font-family: 'Indie Flower';
+                font-size: 60px;
+                text-align: center;
+            }
+
+ .secao-1_2 > p {
+                margin-top: 1px;
+                font-size: 40px;
+            }
+            .secao-1 > h1{
+                margin-bottom: 0px;
+            }
+

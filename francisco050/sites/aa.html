@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                width: 100px;
+                height: 100px;
+                margin-left: 47%;
+                margin-top: 200px;
+            }
+            button{
+                cursor: pointer;
+                margin-left: 200px;
+                margin-top: 200px;
+            }
+        </style> 
+    </head>
+<script>
+    function aumentar(){
+        var x = document.getElementById("a");
+        var contador = 100;
+        while(contador < 300){
+        
+
+        x.style.width=  contador + "px";
+        x.style.height= contador + "px";
+        contador ++;
+        delay(100);
+
+        }
+    }   
+</script>
+    <body> 
+        <img  id="a" src="//www.vectorico.com/download/emoticons/like-emoticon.png"/>
+        <button onclick="aumentar()"> Aperte aqui </button>
+    </body>
+</html>

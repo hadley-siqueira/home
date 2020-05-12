@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    </head>
+
+    <body>
+        <script>hljs.initHighlightingOnLoad();</script>
+<h1>Código</h1>
+<pre>
+<code class="python">
+import math
+
+def nova_imagem(largura, altura, r, g, b):
+    img = [largura, altura]
+
+    i = 0
+    while i < largura * altura:
+        img.append(r)
+        img.append(g)
+        img.append(b)
+        i = i + 1
+
+    return img
+
+
+def abrir(nome):
+    f = open(nome, 'r')
+    img = []
+
+    linhas  = f.readlines()
+    largura = int(linhas[1])
+    altura  = int(linhas[2])
+    
+    img.append(largura)
+    img.append(altura)
+
+    i = 0
+    while i < largura * altura * 3:
+        img.append(int(linhas[i + 4]))
+        i = i + 1
+
+    return img
+
+
+def salvar(nome, img):
+    f = open(nome, 'w')
+
+    largura = img[0]
+    altura = img[1]
+    f.write('P3\n{}\n{}\n255\n'.format(largura, altura))
+
+    i = 0
+    while i < largura * altura * 3:
+        f.write('{}\n'.format(img[i + 2]))
+        i = i + 1
+
+    f.close()
+
+
+def set_pixel(img, x, y, r, g, b):
+    if x >= 0 and x < img[0] and y >= 0 and y < img[1]:
+        idx = 2 + y * img[0] * 3 + x * 3
+        img[idx] = r
+        img[idx + 1] = g
+        img[idx + 2] = b
+
+
+def circulo(img, x0, y0, radius, r, g, b):
+    f = 1 - radius
+    ddf_x = 1
+    ddf_y = -2 * radius
+    x = 0
+    y = radius
+    set_pixel(img, x0, y0 + radius, r, g, b)
+    set_pixel(img, x0, y0 - radius, r, g, b)
+    set_pixel(img, x0 + radius, y0, r, g, b)
+    set_pixel(img, x0 - radius, y0, r, g, b)
+ 
+    while x < y:
+        if f >= 0: 
+            y -= 1
+            ddf_y += 2
+            f += ddf_y
+        x += 1
+        ddf_x += 2
+        f += ddf_x    
+        set_pixel(img, x0 + x, y0 + y, r, g, b)
+        set_pixel(img, x0 - x, y0 + y, r, g, b)
+        set_pixel(img, x0 + x, y0 - y, r, g, b)
+        set_pixel(img, x0 - x, y0 - y, r, g, b)
+        set_pixel(img, x0 + y, y0 + x, r, g, b)
+        set_pixel(img, x0 - y, y0 + x, r, g, b)
+        set_pixel(img, x0 + y, y0 - x, r, g, b)
+        set_pixel(img, x0 - y, y0 - x, r, g, b)
+
+        
+def linha(img, x0, y0, x1, y1, r, g, b):
+    "Bresenham's line algorithm"
+    dx = abs(x1 - x0)
+    dy = abs(y1 - y0)
+    x, y = x0, y0
+    sx = -1 if x0 > x1 else 1
+    sy = -1 if y0 > y1 else 1
+    if dx > dy:
+        err = dx / 2.0
+        while x != x1:
+            set_pixel(img, x, y, r, g, b)
+            err -= dy
+            if err < 0:
+                y += sy
+                err += dx
+            x += sx
+    else:
+        err = dy / 2.0
+        while y != y1:
+            set_pixel(img, x, y, r, g, b)
+            err -= dx
+            if err < 0:
+                x += sx
+                err += dy
+            y += sy        
+    set_pixel(img, x, y, r, g, b)
+
+# a dica é você implementar a função retângulo
+# chamando a função linha quatro vezes, onde cada
+# chamada irá desenhar um dos lados do retângulo
+def retangulo(img, x, y, largura, altura, r, g, b):
+    print("Retângulo: me implemente!")
+
+
+# Para fazer o negativo da imagem, basta você trocar
+# cada pixel da imagem pelo seu negativo. O cálculo do
+# negativo se dá da seguinte forma:
+# r = 255 - r
+# g = 255 - g
+# b = 255 - b
+def negativo(img):
+    print("Negativo: me implemente!")
+
+# para uma imagem ficar preto-e-branco, cada pixel da imagem
+# deve ser substituído pela média aritmética, ou seja
+# media = (r + g + b) // 3
+# r = media
+# g = media
+# b = media
+#
+# O operador // é usado para realizar divisão sem casas decimais
+def preto_branco(img):
+    print("Preto & Branco: me implemente!")
+
+
+# aqui a ideia também é usar a função linha
+# para desenhar os lados do triângulo
+def triangulo(img, x0, y0, x1, y1, x2, y2, r, g, b):
+    print("Triângulo: me implemente!")
+
+# se você conseguir fazer um retângulo, então
+# consegue fazer um quadrado, que é um retângulo
+# com lados iguais
+def quadrado(img, x, y, tamanho, r, g, b):
+    print("Quadrado: me implemente!")
+
+
+# Tabela de comandos:
+#   a: abrir
+#   s: salvar
+#   n: nova imagem
+#   i: negativo
+#   l: linha
+#   c: circulo
+#   q: quadrado
+#   r: retângulo
+#   p: preto-e-branco
+#   t: triângulo
+#
+
+def processar_comandos(nome):
+    f = open(nome, 'r')
+    
+    linhas = f.readlines()
+    i = 0
+    img = []
+    
+    while i < len(linhas):
+        cmd = linhas[i].split()
+        i = i + 1
+
+        if cmd[0] == 'a':
+            nome = cmd[1]
+            img = abrir(nome)
+        elif cmd[0] == 's':
+            nome = cmd[1]
+            salvar(nome, img)
+        elif cmd[0] == 'l':
+            x0 = int(cmd[1])
+            y0 = int(cmd[2])
+            x1 = int(cmd[3])
+            y1 = int(cmd[4])
+            r  = int(cmd[5])
+            g  = int(cmd[6])
+            b  = int(cmd[7])
+            linha(img, x0, y0, x1, y1, r, g, b)
+        elif cmd[0] == 'c':
+              x = int(cmd[1])
+              y = int(cmd[2])
+              raio = int(cmd[3])
+              r = int(cmd[4])
+              g = int(cmd[5])
+              b = int(cmd[6])
+              circulo(img, x, y, raio, r, g, b)
+        elif cmd[0] == 'n':
+            largura = int(cmd[1])
+            altura = int(cmd[2])
+            r = int(cmd[3])
+            g = int(cmd[4])
+            b = int(cmd[5])
+            img = nova_imagem(largura, altura, r, g, b)
+
+
+processar_comandos('comandos.txt')
+
+
+</code>
+</pre>
+<h1>Comandos</h1>
+<pre>
+<code>
+n 700 700 255 255 255
+l 0 0 70 70 255 0 0
+l 0 0 50 90 255 0 255
+s edicao1.ppm
+c 50 90 25 0 0 255
+c 350 350 100 0 0 0
+l 100 100 200 100 255 0 0
+l 200 100 200 200 255 0 0
+s edicao2.ppm
+a edicao2.ppm
+s copia_edicao2.ppm
+</code>
+</pre>
+    </body>
+</html>

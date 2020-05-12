@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'SourceSansProLight';
+        src: url('fonts/source/SourceSansProLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+@font-face {
+    font-family: 'SourceSansProRegular';
+        src: url('fonts/source/SourceSansProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+        font-family: 'Open Sans';
+        src: url('css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('css/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('css/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('css/fonts/Indie_Flower/IndieFlower.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 1rem 1rem 1rem 4rem;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #3397d7, #2c78c3);
+    float: left;
+    width:90%;
+    top: 0;
+    position:fixed;
+    box-shadow: 1px 1px 2px #111;
+    transition: all 0.5s;
+}
+.nvd{
+transform: translateY(-130%);
+transition: all 0.5s ease-in-out;
+}
+
+li {
+    float: left;
+    width: calc(90%/3.6);
+    border-bottom: 5px solid #2a65b1;
+}
+
+li a {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 20px;
+
+    font-family: "Source Sans Pro";
+    transition: all 0.5s;
+}
+
+li a:hover {
+
+    color: #030303;
+    transition: all 0.5s;
+    background-color: #eee;
+}
+
+.titulo {
+                text-align: center;
+
+            }
+.link-bonito {
+                color: #349dd4;
+                text-decoration: none;
+            }
+
+input[type=text], select, input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #006064;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+   background-color: #0277BD;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #B0BEC5;
+    padding:20px;
+    width: 40%;
+    margin:auto;
+    margin-top: 130px;
+    border-top: 8px solid #455A64;
+
+}
+body {
+                margin: 0;
+                padding:0;
+                background-image:url(http://lite.acad.univali.br/portugol/img/sea.jpg);
+                min-height: 100%;
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+ .secao-1 {
+                padding-top: 100px;
+                margin-bottom: 0px;
+                background-size: cover;
+                color: #fefefe;
+                height: 700px;
+                font-family: 'Indie Flower';
+                font-size: 60px;
+                text-align: center;
+            }
+
+ .secao-1_2 > p {
+                margin-top: 1px;
+                font-size: 40px;
+            }
+            .secao-1 > h1{
+                margin-bottom: 0px;
+            }

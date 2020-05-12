@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function Nome(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "nome.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+function Cidade(str) {
+    if (str.length == 0) {
+        document.getElementById("cidade").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("cidade").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "cidade.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+function Comida(str) {
+    if (str.length == 0) {
+        document.getElementById("comida").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("comida").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "comida.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+
+
+</script>
+</head>
+<body>
+
+<p><b>Exemplo</b></p>
+<form> 
+    Nome: <input type="text" onkeyup="Nome(this.value)">
+</form>
+<p>Suggestions:  <span id="txtHint"></span></p>
+
+<form>
+    Cidade: <input type="text" onkeyup="Cidade(this.value)">
+</form>
+<p>Suggestions: <span id="cidade"></span></p>
+
+<form>
+    Comida: <input type="text" onkeyup="Comida(this.value)">
+</form>
+<p>Suggestions: <span id="comida"></span></p>
+
+</body>
+</html>
+

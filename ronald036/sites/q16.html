@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+        window.alert("leitor de numeros somatórios");
+
+        var r1 = parseInt(window.prompt("digite o primeiro numero:"));
+        var r2 = parseInt(window.prompt("digite o segundo numero:"));
+        var r3 = parseInt(window.prompt("digite o terceiro numero:"));
+
+        if (r1 + r2 == r3) {
+            window.alert("os dois primeiros numeros somados resultam no terceiro numero");
+        } else if (r1 + r3 == r2) {
+            window.alert("o primeiro eo terceiro numero somados resultam no segundo numero");
+        } else if (r2 + r3 == r1) {
+            window.alert("os ultimos numeros somados resultam no primeiro numero");
+        } else {
+            window.alert("nenhum soma");
+        } 
+        </script>
+    </body>
+</html>

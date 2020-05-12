@@ -1,0 +1,5 @@
+n = input()
+n1 = float(input())
+n2 = float(input())
+s = n1 + (n2*0.15)
+print('TOTAL = R$ ' + str('{:.2f}'.format(s)))

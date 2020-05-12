@@ -1,0 +1,14 @@
+import math
+
+print('**raiz quadrada**')
+
+x = float(imput('digite um numero:'))
+raizx = math.sqrt(x)
+
+y = float(imput('digite um numero:'))
+raizx = math.sqrt(y)
+
+print('a raiz quadrada de {}'.format(x, raizx))
+
+print('a raiz quadrada de {}'.format(y, raizx))
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+        var r;
+        var cx;
+        var cy;
+        var px;
+        var py;
+
+        r = parseInt(window.prompt("Digite o raio do circulo:"));
+        cx = parseInt(window.prompt("Digite a coordenada cx:"));
+        cy = parseInt(window.prompt("Digite a coordenada cy:"));
+        px = parseInt(window.prompt("Digite a coordenada px:"));
+        py = parseInt(window.prompt("Digite a coordenada py:"));
+
+        dist = Math.sqrt(((cx - cy) * (cx - cy) + (px - py) * (px - py)));
+
+        if (dist > r) {
+            console.log("O ponto esta fora do circulo");
+        } else {
+            console.log("O ponto esta dentro do circulo") 
+        }
+
+        </script>
+    </body>
+</html>

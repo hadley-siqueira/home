@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>  
+        <h1>Um cabeçalho</h1>
+        <p>Um paragrafo</p>
+    <script>
+        var media, n1, n2, n3, n4 ;
+
+        var msg = 'Qual é a sua primeira nota?';
+        var n1 = window.prompt(msg);
+
+         var msg2 = 'Qual é a sua segunda nota?';
+         var n2 = window.prompt(msg2);
+
+         var msg3 = 'Qual é a sua terceira nota?';
+         var n3 = window.prompt(msg3);
+
+         var msg4 = 'Qual é a sua quarta nota?';
+         var n4 = window.prompt(msg4);
+
+
+        media = (n1 + n2 + n3+n4)/4 ; 
+        
+    if ( media >= 6 ) {
+        window.alert("Aprovado");
+
+    }else{ 
+    if ( media <= 5 ) {
+        window.alert("Reprovado");
+    }else{
+       window.alert("Recuperação");
+    }
+ }   
+        </script>
+    </body>
+
+</html>

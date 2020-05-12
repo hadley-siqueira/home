@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+        <p id="nota"></p>
+        <script>
+            var media, n1, n2, n3, n4 ;
+
+            var msg1 = "Informe a primeira nota: ";
+            var n1 =  window.prompt (msg1) ;
+
+            var msg2 = "Informe a segunda nota: ";
+            var n2 =  window.prompt (msg2) ;
+            
+            var msg3 = "Informe a terceira nota: ";
+            var n3 =  window.prompt (msg3) ;
+
+            var msg4 = "Informe a quarta nota: ";
+            var n4 =  window.prompt (msg4) ;
+
+            media = (n1 + n2 + n3 + n4)/4 ; 
+
+            if ( media >= 60 ) {           
+                window.alert ("Aprovado");
+
+            }else{ 
+                if ( media <= 50 ){
+                    window.alert("Reprovado");
+                }else {
+                    window.alert ("Recuperação");
+                }
+            }   
+        </script>
+    </body>
+</html>

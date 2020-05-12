@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "formulariophp.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+
+function showCid (str) {
+    if (str.length == 0) {
+        document.getElementById("txtCid").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtCid").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "outroformulariophp.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+<body>
+
+<p><b>Pessoa:</b></p>
+<form> 
+First name: <input type="text" onkeyup="showHint(this.value)">
+</form>
+<p>Suggestions: <span id="txtHint"></span></p>
+
+<p><b>Cidade:</b></p>
+<form>
+First name: <input type="text" onkeyup="showCid(this.value)">
+</form>
+<p>Suggestions: <span id="txtCid"></span></p>
+</body>
+</html
+

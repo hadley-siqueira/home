@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset=utf-8>
+        <style> 
+            h1{
+                text-align: center; 
+            }
+            #intro2 {
+               animation-name: minhaAnimacao2;
+               animation-duration: 3s;
+               margin-left: 400px;
+               background-color: #ff00ff;
+               color: black;  
+            }
+            div{
+                background-color: #ffffcc;
+                border: 2px solid red;
+            }
+            div h1{
+                text-align: center;
+            }
+            #intro{
+                animation-name: minhaAnimacao;
+                animation-duration: 3s;
+                margin-Right: 400px;
+                background-color: #ff00ff;
+                color:black;
+            } 
+            @keyframes minhaAnimacao {
+            from { 
+                color: blue;
+                margin-Right: 10px;
+                background-color: #222222; 
+            }
+            to { 
+                color: black; 
+                margin-Right: 400px;
+                background-color:#ff00ff;
+            }
+            } 
+            @keyframes minhaAnimacao2 {
+            from {
+                color: blue;
+                margin-left: 10px;
+                background-color: #222222;
+            }
+            to {
+                color: black;
+                margin-left: 400px;
+                background-color: #ff00ff;
+            } 
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1 id="intro">Cabeçalho</h1>
+            <p>Parágrafo</p>
+            <p>lalala</p>
+        </div>
+
+            <h1 id="intro2">Cabeçalho</h1>
+            <p>Parágrafo</p>
+    </body>
+</html>

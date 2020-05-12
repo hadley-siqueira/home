@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Um cabeçalho</h1>
+        <p>Um paragrafo</p>
+        <p id="notaUsuario"></P>
+   
+        <script>
+            var msg = 'Qual sua primeira nota?';
+            var nome = window.prompt(msg);
+ 
+            var i = 'notaUsuario';
+            var f = document.getElementById(i);
+
+            f.innerHTML = 'Ola, ' + nome;
+
+            i = 'nomeNovamente';
+            f = document.getElementById(i);
+
+            f.innerHTML = 'Ola outra vez, ' + nome;
+            
+            msg = 'Qual a sua idade?';
+            var idade = parseInt(window.prompt(msg));
+
+            if (idade >= 18) {
+                f.innerHTML += '. Vc e velho';
+            } else {
+                f.innerHTML += '. Vc ta quase velho';
+            }
+
+         
+        </script>
+    </body>
+</html>

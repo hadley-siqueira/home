@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+   
+    </head>
+
+    <body>
+        <h1 id="cabl">Um cabeçalho</h1>
+        <h2 id="cab2">Um cabeçalho</h2>
+      <script>
+          var tamanho = 10;
+          var pos_esquerda = 10;
+
+          function mudarTamanho() {
+            var e = document.getElementById('cabl');
+            e.style.fontSize = tamanho + 'px';
+            e.style.position = 'relative';
+            e.style.left = pos_esquerda + 'px';
+
+            e = document.getElementById('cab2');
+            e.style.fontSize = t2 + 'px';
+            e.style.position = 'relative';
+            e.style.left = p2 + 'px';
+          }
+   
+          function animar() {
+            if (tamanho < 50) {
+                mudarTamanho();
+                tamanho = tamanho + 1;
+                pos_esquerda = pos_esquerda + 5;
+
+
+
+                setTimeout(animar, 100);
+ 
+               
+            }
+         }
+  
+         animar();
+      </script>
+    </body>
+</html> 

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var rc = parseInt(window.prompt('Digite o raio do circulo:'));
+            var cx = parseInt(window.prompt('Digite a coordenada cx:'));
+            var cy = parseInt(window.prompt('Digite a coordenada cy:'));
+            var px = parseInt(window.prompt('Digite a coordenada px:'));
+            var py = parseInt(window.prompt('Digite a coordenada py:'));
+            dist = Math.sqrt((cx - cy) * (cx - cy) + (px - py) * (px - py));
+            if (dist>rc) {
+                window.alert('O ponto está fora do cieculo');
+            }
+            else {
+                window.alert('O ponto está fora do circulo');
+            }
+            
+        </script>
+    </body>
+</html>

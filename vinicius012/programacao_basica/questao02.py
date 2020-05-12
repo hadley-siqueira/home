@@ -1,0 +1,10 @@
+x = input("informe n1: ")
+y = input("informe n2: ")
+z = input("informe n3: ")
+a = int(x) * int(x)
+b = 3 * int(y)
+c = 4 * int(z)
+print("o quadrado de " + str(x) + (" he ") + str(a))
+print("o triplo de " + str(y) + (" he ") + str(b))
+print("o quadruplo de " + str(z) + (" he ") + str(c))
+

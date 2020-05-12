@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+        var x;
+        var y;
+        var c;
+
+        x = parseInt(window.prompt("Digite a coordenada x do robo:"));
+        y = parseInt(window.prompt("Digite a coordenada y do robo:"));
+        c = window.prompt("Digite o comando:");
+
+        if (c == "b") {
+            console.log("Nova coordenada do robo:" + "("+x+","+(y-10)+")");
+        } else if (c == "c") {
+            console.log("Nova coordenada do robo:" + "("+x+","+(y+10)+")");
+        } else if (c == "e") {
+            console.log("Nova coordenada do robo:" + "("+(x-10)+","+y+")");
+        }else if (c == "d") {
+            console.log("Nova coordenada do robo:" + "("+(x+10)+","+y+")");
+        }
+
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p id="nomeU"></p>
+    <script>
+        var msg = 'Nota 1 ';
+        var Nota = parseInt(window.prompt(msg));
+        var cont = 0;
+        cont = cont + Nota;
+        msg = 'Nota 2 ';
+        Nota = parseInt(window.prompt(msg));
+        cont = cont + Nota;
+        msg = 'Nota 3 ';
+        Nota = parseInt(window.prompt(msg));
+        cont = cont + Nota;
+        msg = 'Nota 4 ';
+        Nota = parseInt(window.prompt(msg));
+        cont = cont + Nota;
+        cont = cont / 4;
+        window.alert(cont);
+        var i = 'notaU';
+        var f = document.getElementById(i);
+        f.innerHTML = cont;
+
+    </script>
+</body>
+</html>

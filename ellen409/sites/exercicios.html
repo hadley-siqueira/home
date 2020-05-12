@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <title>Geometria Online</title>
+        <meta charset="utf-8" />
+        <style>
+            body {
+                background-color:#00558C;
+                padding: 0;
+                margin: 0;
+                font-family: 'Graduate', cursive;
+            }
+            .secao-inicio {
+                text-align: center;
+            }
+
+            .secao-inicio img {
+                margin: auto;
+                margin-bottom:35px; 
+                background-position:  center;
+                height:770px;
+                width:100%;
+                background-size:cover;
+                margin-top: 20px;;
+            }
+              nav {
+                float:left;
+                width:100%;
+                background-color:#F79C49;
+                height:;
+                position: fixed;
+            }
+            nav ul {
+                float:left;
+                width:100%;
+                height:100%;
+                padding:0px;
+                margin:0px;
+                list-style:none;
+            }
+            nav ul li {
+                float:left;
+                width:25%;
+                height:100%;
+                text-align:center;
+                font-weight:bold;
+                font-family: 'Graduate', cursive;
+                color:#ffffff;
+                font-size:20px;
+                padding-top:12px;
+                padding-bottom:12px;
+                cursor:pointer;
+            }
+            nav ul li:hover {
+                border-bottom:2px solid #00558C;
+                color:#00558C;
+            }
+            article {
+            
+                width: 50%; 
+                margin:auto; 
+                background-color: white;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-bottom:30px;
+                padding: 50px;
+                background-color: rgba(255,255,255,0.7);
+            }
+             article p {
+                color: black;
+                text-align: justify;
+                width:90%;
+                margin-left:5%;
+                line-height:25px;
+                margin-bottom: 5%;
+                font-family: Roboto, sans-serif;
+            }
+            article h1 {
+                color: black;
+                text-align: center;
+                font-size: 32px;
+            }
+            button {
+                border:none;
+                background-color:#F12A65;
+                font-family: Roboto, sans-serif;
+                font-size: 14px;                
+                margin-top: 5px;
+                padding:12px 20px;
+                border-bottom:3px solid #A80B39;
+                margin-left: 30px;
+            }
+            button:hover{
+                background-color: #D5175F;
+                transition: all 1;
+            }
+            div {
+                width: 500px;
+                height: 400px;
+                margin:auto; 
+                margin-top: 100px;
+                border: 1px solid #00558c;
+            }
+            div label {
+                float:left;
+                width:100%;
+                padding-top:10px;
+                padding-bottom:10px;
+                color:#fff;
+                font-family:'Graduate', cursive;
+                background-color:#00558c;
+                font-size:20px;
+            }
+            .respostas {
+                width: 500px;
+                height: 400px;
+                margin:auto;
+                margin-top: 100px;
+                border: 4px solid #E8EBF4;
+                background-color:white;
+            }
+            .respostas label {
+                float:left;
+                width:100%;
+                padding-top:10px;
+                padding-bottom:10px;
+                color:black;
+                font-family:'Graduate', cursive;
+                background-color:#E8EBF4;
+                font-size:20px;
+            }
+            .respostas button {
+                border:none;
+                background-color:#94949C;
+                font-family: Roboto, sans-serif;
+                font-size: 14px;
+                margin-top: 5px;
+                padding:12px 20px;
+                border-bottom:3px solid #6E717A;
+                margin-left: 30px;
+            }
+             .respostas button:hover{
+                background-color: #ABABB3;
+                transition: all 1;
+            }
+
+            article h2{
+                text-align: center;
+            }
+            div img {
+                margin: auto;
+                display: block;
+                width: 40%;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+          <ul>
+            <a href="http://207.154.230.103:7249/ellen409/projeto.html"><li>PÁGINA INICIAL</li></a>
+            <a href="http://207.154.230.103:7249/ellen409/historia.html"> <li>HISTÓRIA</li></a>
+            <a href="http://207.154.230.103:7249/ellen409/assunto.html"><li>ASSUNTOS</li></a>
+            <a href="http://207.154.230.103:7249/ellen409/exercicios.html"> <li>EXERCÍCIOS</li></a>
+          </ul>
+        </nav>
+        <section class="secao-inicio">
+            <img src="https://i.imgur.com/Fx8CZIK.png">
+       </section>
+       <article>
+            <h1>Exercícios</h1>
+            <h2>Pontos</h2>
+            <div id="q11">
+            <label>&nbsp;Questão 01:</label>
+            <p>(PUC) O ponto B = (3, b) é equidistante dos pontos A = (6, 0) e C = (0, 6). Logo, o ponto B é:</p>
+            <ul>a) (3, 1).</ul>
+            <ul>b) (3, 6).</ul>
+            <ul>c) (3, 3).</ul>
+            <ul>d) (3, 2).</ul>
+            <ul>e) (3, 0).</ul>
+            <a href="#q1"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q22" style="height:650px;">
+            <label>&nbsp;Questão 02:</label>
+            <p>Determine a área, em metros quadrados, do triângulo a seguir, sabendo que ele é retângulo em B.</p>
+            <img src="https://i.imgur.com/RFlBIHJ.jpg">
+            <p>Triângulo retângulo em B</p>
+            <ul>a) 2 m2.</ul>
+            <ul>b) 5,66 m2.</ul>
+            <ul>c) 2,83 m2.</ul>
+            <ul>d) 8 m2.</ul>
+            <ul>e) 9 m2.</ul>
+            <a href="#q2"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q33">
+            <label>&nbsp;Questão 03:</label>
+            <p>(PUC) O ponto B = (3, b) é equidistante dos pontos A = (6, 0) e C = (0, 6). Logo, o ponto B é:</p>
+            <ul>a) (3, 1).</ul>
+            <ul>b) (3, 6).</ul>
+            <ul>c) (3, 3).</ul>
+            <ul>d) (3, 2).</ul>
+            <ul>e) (3, 0).</ul>
+            <a href="#q3"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+            
+            <div id="q44"style="height: 200px;">
+            <label>&nbsp;Questão 04:</label>
+            <p>Verifique se os pontos A(0, 4), B(–6, 2) e C(8, 10) estão alinhados</p>
+            <a  href="#q4"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+
+            
+            <h2>Retas</h2>
+            <div id="q55"style="height: 200px; ">
+            <label>&nbsp;Questão 01:</label>
+            <p>Encontre a equação da reta s, perpendicular à reta t: 2x + 3y – 4 =0, sabendo que ela passa pelo ponto P(3,4).</p>
+             <a href="#q5"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+            
+            <div id="q66"style="height: 200px; ">
+            <label>&nbsp;Questão 02:</label>
+            <p>Considere no plano cartesiano uma reta r de equação 3x + 5y +1 =0 e um ponto Q de coordenadas (5,5). Determine a equação da resta s perpendicular a r passando por Q.</p>
+            <a  href="#q6"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+            
+            <div id="q77"style="height: 200px; ">
+            <label>&nbsp;Quetão 03:</label>
+            <p>Prove que as retas s: x + 2y – 1 = 0 e r: 4x – 2y +12 = 0 são perpendiculares.</p>
+            <a  href="#q7"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+            
+            <div id="q88"style="height: 200px; ">
+            <label>&nbsp;Questão 04:</label>
+            <p>Encontre a equação da reta t que passa pelo ponto X(-1,8) e é perpendicular à bissetriz dos quadrantes ímpares.</p>
+            <a  href="#q8"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <h2>Circunferência</h2>
+            <div id="q2121"style="height: 250px; ">
+            <label>&nbsp;Questão 01:</label>
+            <p>  Considere um quadrado com lado de 15 cm inscrito em uma circunferência. Considerando π = 3,14 e √2 = 1,41, determine a medida aproximada do comprimento da circunferência com arredondamento de uma casa decimal</p>
+            <a  href="#q21"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q2222"style="height: 280px; ">
+            <label>&nbsp;Questão 02:</label>
+            <p> Um ciclista deu 30 voltas em uma pista com formato de circunferência. Ao olhar seus equipamentos de medida, ele percebeu que a distância percorrida nessas 30 voltas foi de 90 km. Qual a medida aproximada do raio da pista em que se encontrava? (Considere π = 3,14).</p>
+            <a  href="#q222"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q2323"style="height: 200px; ">
+            <label>&nbsp;Questão 03:</label>
+            <p> As extremidades de um diâmetro de uma circunferência são (-3,1) e (5, -5). Determine a equação da circunferência.</p>
+            <a  href="#q23"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q2424"style="height:470px; ">
+            <label>&nbsp;Questão 04:</label>
+            <p> 4)  Um terreno tem formato retangular e seu dono resolveu colocar grama no setor circular cujo raio é igual a uma das laterais do terreno, conforme mostra a imagem. Sabendo que o perímetro do terreno é de 80 metros e que o lado menor é igual a 60% do lado maior, qual é a área do terreno que receberá grama?</p>
+            <img src="https://i.imgur.com/XML3SdL.jpg">
+            <a  href="#q24"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+
+
+       
+            <h2>Elipse</h2>
+            <div id="q99">
+            <label>&nbsp;Questão 01:</label>
+            <p>(IFB – 2017). Considerando uma elipse com centro na origem, focos num dos eixos coordenados e passando pelos pontos (5, 0) e (0, 13), determine os focos da elipse.</p>
+            <ul>a) (13, 0) e (– 13, 0).</ul>
+            <ul>b) (0, 13) e (0, – 13).</ul>
+            <ul>c) (12, 0) e (– 12, 0).</ul>
+            <ul>d) (0, 12) e (0, – 12).</ul>
+            <ul>e) (5, 0) e (– 5, 0).</ul>
+            <a  href="#q9"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+    
+            <div id="q1010"style="height: 200px; ">
+            <label>&nbsp;Quetão 02:</label>
+            <p>Determine a excentricidade da elipse de equação 16x2 + 25y2 – 400 = 0.</p>
+            <a  href="#q10"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q1111"style="height: 200px; ">
+            <label>&nbsp;Quetão 03:</label>
+            <p>CESCEA 1969 – Determine as coordenadas dos focos da elipse de equação 9x2 + 25y2 = 225.</p>
+            <a  href="#q111"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+ 
+            <div id="q1212"style="height: 200px; ">
+            <label>&nbsp;Quetão 04:</label>
+            <p>Determine a distancia focal da elipse 9x2 +25y2 – 225 =0.</p>
+            <a  href="#q12"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <h2>Hipérbole</h2>
+            <div id="q1313"style="height: 200px; ">
+            <label>&nbsp;Questão 01:</label>
+            <p>Determine a equação reduzida da hipérbole com eixo real 6, focos F1(-5, 0) e F2(5, 0).</p>
+            <a  href="#q13"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q1414"style="height: 200px; ">
+            <label>&nbsp;Questão 02:</label>
+            <p>Encontre a equação reduzida da hipérbole que possui dois focos com coordenadas F2 (0, 10) e eixo imaginário medindo 12.</p>
+            <a  href="#q14"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q1515"style="height: 250px;">
+            <label>&nbsp;Questão 03:</label>
+            <p>Determine a distância focal da hipérbole com equação.</p>
+            <img style="width: 20%;"src="https://i.imgur.com/6UC46B9.jpg">
+            <a  href="#q15"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <div id="q1616">
+            <label>&nbsp;Questão 04:</label>
+            <p>Determinar a equação da hipérbole de focos F1(-3,0) e F2(3,0), cujo o eixo real mede 4.</p>
+            <img src="https://i.imgur.com/QJOtgvb.jpg">
+            <a  href="#q16"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+       
+            <h2>Parábola</h2>
+            <div id="q1717"style="height: 650px;">
+            <label>&nbsp;Questão 01:</label>
+            <p>(FFC 2010) O gráfico cartesiano abaixo representa uma função g (x) = 2x2 + kx + m, em que k e m são números reais.</p>
+            <img src="https://i.imgur.com/eR5BCfm.png">
+            <p>O resultado de m + k é igual a: </p>
+            <ul>(A) −26.</ul>
+            <ul>(B) −14.</ul>
+            <ul>(C) −12.</ul>
+            <ul>(D) −8.</ul>
+            <ul>(E) −6.</ul>
+            <a  href="#q17"><button style="color:white;">Ver Resposta</button></a>            
+            </div>
+
+            <div id="q1818"style="height:200px;">
+            <label>&nbsp;Questão 02:</label>
+            <p>determine as coordenadas do vértice da parábola descrita pela função f (x) = 2x2 – 4x + 6..</p>
+            <a  href="#q18"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+            
+            <div id="q1919"style="height: 700px;">
+            <label>&nbsp;Questão 03:</label>
+            <p>(Vunesp 2010) A fotografia indica o lançamento e queda de uma bola de basquete, em um experimento feito no vácuo..</p>
+            <img src="https://i.imgur.com/R9qQYgA.png">
+            <p>O movimento da bola pode ser descrito pela função y = 2 kt2 – kt + 1, onde y é a altura (em metros) atingida pela bola no instante t (em segundos). Se a altura máxima atingida pela bola no experimento foi de 1,5 m, então, k é igual a:</p>
+            <ul>(A) –2.</ul>
+            <ul>(B) −3.</ul>
+            <ul>(C) −4.</ul>
+            <ul>(D) −5.</ul>
+            <ul>(E) −6.</ul>
+            <a  href="#q19"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+                
+            <div id="q2020">
+            <label>&nbsp;Questão 04:</label>
+            <p>(FFC 2010) sendo x e y números reais tais que y = − 6x2 +11x − 4, o valor mínimo de x para o qual o valor correspondente de y é máximo é:.</p>
+            <ul>(A) 2/3.</ul>
+            <ul>(B) 3/4.</ul>
+            <ul>(C) 5/6.</ul>
+            <ul>(D) 11/12.</ul>
+            <ul>(E) 1.</ul>
+            <a  href="#q20"><button style="color:white;">Ver Resposta</button></a>
+            </div>
+
+            <h2>Respostas - Exercícios sobre pontos:</h2>
+            <div id="q1" class="respostas">
+            <label>&nbsp; Resposta da questão 01:</label>
+            <p>Basta utilizar a fórmula para Distância entre dois pontos. Observe:</p>
+            <img src="https://i.imgur.com/wMkLIyf.jpg"> 
+            <p style="font-weight: bold;">Letra E.</p>
+            <a href="#q11"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div style="height:900px;"id="q2" class="respostas">
+            <label>&nbsp; Resposta da questão 02:</label>
+            <p>Calcule as distâncias entre B e C (dBC) e entre B e A (dBA), que são a base e a altura desse triângulo, uma vez que ele é retângulo em B.
+Primeiramente, calcularemos dBC:</p>
+            <img src="https://i.imgur.com/tSmq9Pw.jpg">
+            <p>Agora, calcularemos dBA:</p>
+            <img src="https://i.imgur.com/WLyFOgt.jpg">
+            <p>Para finalizar o exercício, basta calcular a área desse triângulo, lembrando que a área de um triângulo pode ser calculada multiplicando sua base por sua altura e dividindo o resultado por 2:</p>
+            <img style="width:20%;"src="https://i.imgur.com/uoOHwDK.jpg">
+            <p style="font-weight: bold;">Letra D.</p>
+            <a href="#q22"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div style="height:940px;"id="q3" class="respostas">
+            <label>&nbsp; Resposta da questão 03:</label>
+            <p>Para resolver esse exercício, basta resolver a equação dAB = dBC. Antes disso, porém, calcularemos dAB e dBC separadamente e elevaremos seus resultados ao quadrado. Primeiramente, a distância entre A e B:</p>
+            <img src="https://i.imgur.com/FXtvEMx.jpg">
+            <p>Agora, a distância entre B e C:</p>
+            <img src="https://i.imgur.com/5FToa2G.jpg">
+            <p>O resultado final é obtido resolvendo a equação gerada por (dAB)2 = (dBC)2. Observe:</p>
+            <img style="width:25%;"src="https://i.imgur.com/ioMPmSf.jpg">
+            <p style="font-weight: bold;">Letra C.</p>
+            <a href="#q33"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div style="height:780px;"id="q4" class="respostas">
+            <label>&nbsp; Resposta da questão 04:</label>
+            <p>Diagonal principal</p>
+            <p>0 * 2 * 1 = 0 <br>4 * 1 * 8 = 32<br> 1 * (–6) * 10 = –60 <br>32 + (– 60)<br>32 – 60<br> –28</p>
+            <p>Diagonal secundária</p>
+            <p>4 * (–6) * 1 = –24 <br>0 * 1 * 10 = 0 <br>1 * 2 * 8 = 16 <br>–24 + 16 <br>–8</p>
+            <p>Determinante</p>
+            <p>–28 – (–8)<br>–28 + 8<br>– 20</p>
+            <p>Temos que o determinante é diferente de zero. Dessa forma, os pontos não estão alinhados.</p>
+            <a href="#q44"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+            
+            <h2>Respostas dos exercícios sobre restas</h2>
+            <div id="q5" style="height:500px;"class="respostas">
+            <label>&nbsp; Resposta da questão 01:</label>
+            <img style="width:90%;"src="https://i.imgur.com/5BMIq93.gif">
+            <a href="#q55"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+            
+            <div id="q6" style="height:500px;"class="respostas">
+            <label>&nbsp; Resposta da questão 02:</label>
+            <img style="width:90%;"src="https://i.imgur.com/0KDv7GR.gif">
+            <a href="#q66"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q7"style="height:450px;" class="respostas">
+            <label>&nbsp; Resposta da questão 03:</label>
+            <img style="width:70%;"src="https://i.imgur.com/ZpdDzHm.gif">
+            <a href="#q77"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q8" style="height:450px;"class="respostas">
+            <label>&nbsp; Resposta da questão 04:</label>
+            <img style="width:95%;"src="https://i.imgur.com/TRnRlzQ.gif">
+            <a href="#q88"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <h2>Respostas dos exercícios sobre circunferência</h2>
+            <div id="q21" style="height:980px;"class="respostas">
+            <label>&nbsp; Resposta da questão 01:</label>
+            <p>Na figura a seguir há uma interpretação do quadrado inscrito na circunferência como proposto no enunciado:</p>
+            <img style="width:;"src="https://i.imgur.com/0VaTRVA.jpg">
+            <p>Por meio do teorema de Pitágoras, podemos determinar a medida da diagonal do quadrado, que corresponde exatamente ao diâmetro da circunferência (d):</p>
+            <p>d² = 15² + 15²<br>d² = 225 + 225<br>d² = 450<br>d = 15√2<br>d = 15 ∙ 1,41<br>d = 21,15 cm</p>
+            <p>Sabendo que o diâmetro mede 21,15 cm, podemos calcular o comprimento da circunferência pela seguinte fórmula:</p>
+            <p>C = π · d<br>C = 3,14 · 21,15<br>C = 66,411 cm</p>
+            <p>Arredondando o resultado para uma casa decimal, podemos concluir que o comprimento da circunferência é de, aproximadamente, 66,4 cm.</p>
+            <a href="#q2121"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q222" style="height:470px;"class="respostas">
+            <label>&nbsp; Resposta da questão 02:</label>
+            <p>Por meio da expressão usada para encontrar o comprimento da circunferência, é possível determinar seu raio. O comprimento dessa circunferência é:90/30 = 3km</p>
+            <p>Substituindo os valores na expressão usada para encontrar o comprimento da circunferência, temos:</p>
+            <p>C = 2πr<br>3 = 2·3,14·r<br>3 = 6,28r<br>6,28r = 3<br>r =3/6,28<br>r = 0,48 km, aproximadamente.</p>
+            <a href="#q2222"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q23" style="height:740px;"class="respostas">
+            <label>&nbsp; Resposta da questão 03:</label>
+            <p>Faz-se o ponto médio das coordenadas do diâmetro, onde se localiza o centro da circunferência:</p>
+            <p>Xm = (-3) + 5 / 2 = 1 <br> Ym = 1 + (-5) / 2 = -2 </p>
+            <p>Coordenadas do centro: (1,-2)</p>
+            <p>Sabendo que a metade do tamanho do diâmetro vai ser igual ao raio, vamos calcular a distância entre as extremidades do diâmetro.</p>
+            <p>dAB=√(((-3)-5)^2 )+(1-(-5))^2<br>dAB=√64+36<br>dAB=√100<br>dAB=10</p>
+            <p>Logo:</p>
+            <p>r = 10/2 <br> r = 5</p>
+            <p>A equação da circunferência ficaria assim: 25=(x-1)^2+(y+2)²</p>
+            <a href="#q2323"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+        
+            <div id="q24" style="height:930px;"class="respostas">
+            <label>&nbsp; Resposta da questão 04:</label>
+            <p>Primeiro, será necessário descobrir as dimensões do retângulo e, depois, calcular a área do setor circular. O lado maior mede x e o menor mede 60% de x. Fazendo os cálculos para encontrar o perímetro, temos:</p>
+            <p>x + 60% de x + x + 60% de x = 80<br> 2x + 60x/100 + 60x/100 = 80<br>2x + 120x/100 = 80<br>2x + 1,2x = 80<br>3,2x = 80<br>x = 80/3,2 <br> x = 25 metros</p>
+            <p>O lado menor mede 60% de x, ou seja:</p>
+            <p>60·25/100 = 1500/100 = 15 metros</p>
+            <p>O lado menor é o raio do setor circular. O ângulo dessa figura é também um dos ângulos internos do retângulo: 90°. Assim, a área do setor circular de 90° é dada por:</p>
+            <p>A = 90πr2/360<br>A = 90·3,14·152/360<br>A = 282,6·225/360<br>A = 36585/360<br>A = 176,6 m2 de grama, aproximadamente.</p>
+            <p>r = 10/2 <br> r = 5</p>
+            <p>A equação da circunferência ficaria assim: 25=(x-1)^2+(y+2)²</p>
+            <a href="#q2424"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+
+            <h2>Respostas dos exercícios sobre elipse</h2>
+            <div id="q9" style="height:580px;"class="respostas">
+            <label>&nbsp; Resposta da questão 01:</label>
+            <p>Como sabemos, em toda elipse vale a relação a² = b² + c², onde 2a é a distância do eixo maior, 2b é a distância do eixo menor e 2c é a distância entre os focos.</p>
+            <p>Pelas informações fornecidas pelo enunciado, temos que a = 13 e b = 5</p>
+            <p>a² = b² + c²<br>13² = 5² + c²<br>169 = 25 + c² <br>c² = 169 – 25 <br>c² = 144 <br>c = 12</p>
+            <p>Como c = 12, os focos da elipse são (0,12) e (0,-12).</p>
+            <p style="font-weight: bold;">Letra D.</p>
+            <a href="#q99"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+            
+            <div id="q10" style="height:500px;"class="respostas">
+            <label>&nbsp; Resposta da questão 02:</label>
+            <p>Temos: 16x2 + 25y2 = 400. Observe que a equação da elipse não está na forma reduzida. Vamos dividir ambos os membro por 400. Fica então:</p>
+            <img style="width:15%;"src="https://i.imgur.com/hxuHVQD.gif">
+            <p>Portanto, a2 = 25 e b2 = 16. Daí, vem: a = 5 e b = 4.</p>
+            <p>Como a2 = b2 + c2 , vem substituindo e efetuando,  que c = 3</p>
+            <p>Portanto a excentricidade e será igual a : e = c/a = 3/5 = 0,60</p>
+            <p style="font-weight: bold;">Respostas: 3/5 ou 0,60</p>
+            <a href="#q99"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q111"class="respostas">
+            <label>&nbsp; Resposta da questão 03:</label>
+            <p>dividindo ambos os membros por 225, vem:</p>
+            <img style="width:15%;"src="https://i.imgur.com/5n5xz2F.gif">
+            <p>Portanto, a2 = 25 e b2 = 16. Daí, vem: a = 5 e b = 4.</p>
+            <p>Daí, vem que: a2=25 e b2=9, de onde deduzimos: a = 5 e b = 3.</p>
+            <p>Portanto, as coordenadas dos focos são: F1(4,0) e F2(-4,0).</p>
+            <a href="#q1111"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q12" style="height:250px;"class="respostas">
+            <label>&nbsp; Resposta da questão 04:</label>
+            <p>A elipse é a do problema anterior. Portanto a distancia focal ou seja, a distancia entre os focos da elipse será:</p>
+            <p style="font-weight: bold;">D = 4 – (- 4) = 8 u.c (u.c. = unidades de comprimento).</p>
+            <a href="#q1212"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <h2>respostas sobre os exercícios de hipérbole</h2>
+            <div id="q13" style="height:480px;"class="respostas">
+            <label>&nbsp; Resposta da questão 01:</label>
+            <p>Temos que:</p>
+            <p>2a = 6 → a = 3<br>F1(-5, 0) e F2(5, 0) → c = 5</p>
+            <p>Da relação notável, obtemos: c2 = a2 + b2 → 52 = 32 + b2 → b2 =25 – 9 → b2 = 16 → b = 4</p>
+            <p style="font-weight: bold; text-align:center;">Assim, a equação reduzida será dada por:</p>
+            <img src="https://i.imgur.com/3SEqlTV.jpg">
+            <a href="#q1313"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q14" style="height:480px;"class="respostas">
+            <label>&nbsp; Resposta da questão 02:</label>
+            <p>Temos que:</p>
+            <p>F2(0, 10) → c = 10<br>2b = 12 → b = 6</p>
+            <p>Da relação notável, obtemos: 102 = a2 + 62 → 100 = a2 + 36 → a2 = 100 – 36 → a2 = 64 → a = 8.</p>
+            <p style="font-weight: bold; text-align:center;">Assim, a equação reduzida da hipérbole será dada por:</p>
+            <img src="https://i.imgur.com/WFmHHvV.jpg">
+            <a href="#q1414"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q15" style="height:350px;"class="respostas">
+            <label>&nbsp; Resposta da questão 03:</label>
+            <p>Como a equação da hipérbole é do tipo x²/a²-y²/b²=1 temos que a2 = 16 e b2 =9</p>
+            <p>Da relação notável obtemos: c2 = 16 + 9 → c2 = 25 → c = 5</p>
+            <p>A distância focal é dada por 2c. Assim:</p>
+            <p style="font-weight: bold; text-align:center;">2c = 2*5 =10, portanto, a distância focal é 10.</p>
+            <a href="#q1515"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q16" style="height:;"class="respostas">
+            <label>&nbsp; Resposta da questão 04:</label>
+            <p>Eixo real = 4 => 2a = 4 => a = 2</p>
+            <img style="width:30%;"src="https://i.imgur.com/Az5brtv.jpg">
+            <a href="#q1616"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+            
+
+            <h2>respostas sobre os exercícios de parábola</h2>
+            <div id="q17" style="height:350px;"class="respostas">
+            <label>&nbsp; Resposta da questão 01:</label>
+            <p>m = -14</p>
+            <p> xV = (x' + x'‘) /2 = - b/2a<br>(-1 + 7)/2 = - k/2.2 <br>3 = -k/4 <br>k = -12</p>
+            <p>m + k = -14 -12 = -26</p>
+            <a href="#q1717"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+            
+            <div id="q18" style="height:550px;"class="respostas">
+            <label>&nbsp; Resposta da questão 02:</label>
+            <p>Analisando a função f (x) = 2x2 – 4x + 6, obtemos:</p>
+            <p>A = 2, b = – 4 e c = 6</p>
+            <p>Segue que:</p>
+            <img style="width: 25%;"src="https://i.imgur.com/JyUbwME.jpg">
+            <a href="#q1818"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+
+            <div id="q19" style="height:;"class="respostas">
+            <label>&nbsp; Resposta da questão 03:</label>
+            <p>Δ = - (-k)2 - 4. 2k. 1 = k2 - 8k</p>
+            <p>ymax = - Δ/4a = 1,5<br>- (k2 - 8k) / (4. 2k) = 1,5<br>- (k2 - 8k) /8k = 1,5<br>- (k - 8) /8 = 1,5<br>-k + 8 = 1,5. 8<br>-K = 12 - 8<br>k = -4</p>
+            <a href="#q1919"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+            <div id="q20" style="height:200px;"class="respostas">
+            <label>&nbsp; Resposta da questão 04:</label>
+            <p>xV = - b/2.a = - 11/2. (-6) = 11/12</p>
+            <a href="#q2020"><button style="color:white;">Voltar a questão</button></a>
+            </div>
+
+
+            
+
+
+
+       </article>
+    </body>
+</html>
+

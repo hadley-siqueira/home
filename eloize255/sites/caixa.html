@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas {
+                border: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="area" width="800" height="600">
+        </canvas>
+
+        <script>
+          var v = document.getElementById('area');
+          var c = v.getContext('2d');
+          var ret = {
+            x: 20,
+            y: 20,
+            alt: 5,
+            comp: 10,
+            vx: 10,
+            vy: 10
+          };
+
+          function desenhar() {
+            c.clearRect(0, 0, 800, 600);
+            c.beginPath();  
+            c.rect(ret.x, ret.y, ret.comp, ret.alt);
+            c.fillStyle = "#0f0";
+            c.fill();
+
+            ret.x = ret.x + ret.vx;
+            ret.y = ret.y + ret.vy;
+            window.requestAnimationFrame(desenhar);
+          }
+
+          window.requestAnimationFrame(desenhar);
+        </script>
+    </body>
+</html>

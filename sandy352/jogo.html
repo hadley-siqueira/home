@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            canvas {
+                border: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="area" width="800" height="600">
+        </canvas>
+
+        <script>
+          var v = document.getElementById('area');
+          var c = v.getContext('2d');
+
+          c.beginPath();  
+          c.rect(100, 100, 100, 100);
+          c.strokeStyle = "#f00";
+          c.stroke();
+
+          c.beginPath();  
+          c.rect(300, 100, 100, 100);
+          c.fillStyle = "#0f0";
+          c.fill();
+        </script>
+    </body>
+</html>
+

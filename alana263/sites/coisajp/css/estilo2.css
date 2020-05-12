@@ -1,0 +1,133 @@
+*{
+  box-sizing: border-box;
+}
+
+ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #212121;
+                float: left;
+                width:100%;
+                top: 0;
+                position:fixed;
+                box-shadow: 5px 5px 10px #111;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: #BDBDBD;
+                text-align: center;
+                padding: 4px 56px;
+                text-decoration: none;
+                font-size: 20px;
+
+            }
+
+            li a:hover {
+
+                color: white;
+                transition: all 0.5s;
+            }
+
+body{
+  background-color: #222;
+  margin:0;
+  padding: 0;
+}
+.code{
+  margin: 2rem;
+  background-color: #313131;
+  font-family: monospace;
+  color: #ddd;
+  font-weight: bolder;
+  padding-left: 1rem;
+  border-left: 0.5rem solid #689F38;
+  padding: 2rem;
+}
+
+.se{
+  color: #2E7D32;
+}
+.varstr{
+  font-weight: normal;
+  color: #bbb;
+}
+
+.destaque{
+  font-weight: bolder;
+  color: #ddd;
+  background-color: #444;
+}
+
+.varstr2{
+  font-weight: normal;
+  color: #C2185B;
+}
+h1, p{
+  font-family: 'SourceSansProRegular';
+  color: #222;
+}
+.titulo{
+  background-color: #ddd;
+  color: #222;
+}
+
+.subtit{
+  font-size: 25px;
+  text-align: justify;
+}
+
+h1 {font-size: 40px;}
+.sectit{
+  margin:auto;
+  box-shadow: inset -35rem 0 50px 20px #222;
+  background-image: url("img/visualg.png");
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: overlay;
+  width: 95%;
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 6rem;
+
+}
+.sectit > div{
+  margin-left: 50rem;
+  width: 30vw;
+  text-align: center;
+}
+.sectit > div > h1{
+  border: 2px solid #ddd;
+  background: #ddd;
+  color: #222;
+  font-size: 60px;
+  margin: 0;
+}
+
+.sectit > div > p{
+  margin: 0;
+  border: 2px solid #222;
+  background: #222;
+  color: #ddd;
+
+}
+.indicador{
+  background-color: #222;
+  color: #ddd;
+  padding: 0px 1rem 0px 1rem;
+}
+
+.sec1{
+
+  background-color: #ddd;
+  box-shadow: 10px 10px 50px #000;
+  width: 100vw;
+  margin: auto;
+  padding: 2rem 3.5rem 2rem 3.5rem;
+}

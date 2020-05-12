@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/asciinema-player.css" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            #wrapper {
+                margin: auto;
+                width: 60%;
+                background-color: #fff;
+            }
+
+            #inner-wrapper {
+                padding: 3rem;
+            }
+
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            body {
+                background-color: #00334d;
+            }
+
+            header {
+                min-height: 120px;
+                background-color: #333;
+                padding: 40px;
+            }
+
+            header h1 {
+                text-align: center;
+                font-size: 4rem;
+                color: #fff;
+            }
+
+            h1 {
+                padding-top: 30px;
+            }
+
+            #introducao h1 {
+                font-size: 2rem;
+            }
+
+            pre {
+                border-left: #888 10px solid;
+                background-color: #f0f0f0;
+            }
+
+            pre code {
+                background-color: #f0f0f0;
+            }
+
+            .control {
+                margin: 10px;
+            }
+
+            .control input {
+                border-radius: 5px;
+                border: 2px solid #aaa;
+                padding: 5px;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+        <header>
+            <h1>Questões sobre fluxo de controle: if else</h1>
+        </header>
+
+        <div id="inner-wrapper">
+            <section id="introducao">
+            <div style="border-left: 7px solid red; background-color: #aaa; min-height: 300px; display: flex; align-items: center; padding: 20px">
+                <h1>As questões devem ser feitas dentro da pasta /home/{seuUsuario}/fluxo</h1>
+            </div>
+        <p>Q1. Escreva um programa que receba dois números e imprima o maior dos dois.</p>
+        <asciinema-player src="exemplos/maior2.json"></asciinema-player>
+
+        <p>Q2. Escreva um programa que receba dois números e imprima o menor dos dois.</p>
+        <asciinema-player src="exemplos/menor2.json"></asciinema-player>
+
+        <p>Q3. Escreva um programa que receba três números e imprima o maior dos três.</p>
+        <asciinema-player src="exemplos/maior3.json"></asciinema-player>
+
+        <p>Q4. Escreva um programa que receba três números e imprima o menor dos três.</p>
+
+<p>Q5. Escreva um programa que leia dois números e verifique se eles foram digitados em ordem crescente.</p>
+        <asciinema-player src="exemplos/crescente2.json"></asciinema-player>
+
+<p>Q6. Escreva um programa que leia dois números e verifique se eles foram digitados em ordem decrescente.</p>
+
+<p>Q7. Escreva um programa que leia três números e verifique se eles foram digitados em ordem crescente.</p>
+
+<p>Q8. Escreva um programa que leia três números e verifique se eles foram digitados em ordem decrescente.</p>
+
+<p>Q9. Escreva um programa que verifique se o usuário digitou um dos seguintes números: 3, 5, 7, 11, 200 ou 300. Se for algum desses números, apresentar a mensagem “CORRETO”, caso contrário mostrar a mensagem “ERRADO”.</p>
+
+<p>Q10. Escreva um programa que verifique se o usuário digitou uma das seguintes palavras: s, sim, y ou yes. Se tiver digitado, apresentar a mensagem “CORRETO”, caso contrário mostrar a mensagem “ERRADO”.</p>
+
+<p>Q11. Escreva um programa que calcule a lei de ohm. O usuário deve digitar o que deseja calcular e o programa pedir as informações.</p>
+        <asciinema-player src="exemplos/ohm.json"></asciinema-player>
+
+<p>Q12. Escreva um programa que pergunta o nome e o preço de dois produtos e identifica qual dos dois é o mais caro. Caso tenham o mesmo preço, também informar.</p>
+        <asciinema-player src="exemplos/produto.json"></asciinema-player>
+
+
+<p>Q13. Escreva um programa onde o usuário entre com um número entre 1 e 6 e imprima a respectiva hora de aula do IFRN. Por exemplo, se o usuário digitar 1, a saída deve ser 
+“13:00 - 13:45”. Já se o usuário digitar 3 a saída deve ser “14:50 - 15:35”. A tabela completa de correspondência encontra-se abaixo:</p>
+
+<table>
+    <tbody>
+        <tr>
+            <td>1</td><td>13:00 - 13:45</td>
+        </tr>
+        <tr>
+            <td>2</td><td>13:45 - 14:30</td>
+        </tr>
+        <tr>
+            <td>3</td><td>14:50 - 15:35</td>
+        </tr>
+        <tr>
+            <td>4</td><td>15:35 - 16:20</td>
+        </tr>
+        <tr>
+            <td>5</td><td>16:30 - 17:15</td>
+        <tr>
+        </tr>
+            <td>6</td><td>17:15 - 18:00</td>
+        </tr>
+    </tbody>
+</table>
+
+    <asciinema-player src="exemplos/horario.json" cols="80" rows="24"></asciinema-player>
+<p>Q14. Escreva um programa que lê três números e verifica se os dois primeiros somados resultam no terceiro.</p>
+
+<p>Q15. Escreva um programa que lê três números e verifica se os dois últimos somados resultam no terceiro.</p>
+
+<p>Q16. Escreva um programa que lê três números e verifica se algum deles é resultado da soma dos outros dois.</p>
+
+<p>Q17. Escreva um programa que leia 10 números e informe quantas vezes foram digitadas o número 42.</p>
+
+<p>Q18. Escreva um programa que leia: a coordenada (x, y) do centro de um círculo, seu raio e; uma outra coordenada representando um ponto. Seu programa deve informar se o ponto está dentro ou fora do círculo. O ponto estará fora quando a distância (euclidiana) entre ele o centro do circulo for maior do que o raio. Caso contrário estará dentro. Para entender melhor como funciona isso brinque com o exemplo interativo abaixo.</p>
+
+    <asciinema-player src="exemplos/circulo.json" cols="80" rows="24"></asciinema-player>
+    <br>
+    <br>
+<svg onclick="showCoords(event)" id="circle" viewBox="0 0 800 600" preserveAspectRatio="none" height="600" width="800" style="border: 1px solid black; position: relative; display: inline">
+  <circle id="circle0" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#fff" />
+  <circle id="circle0_center" cx="50" cy="50" r="2" stroke="black" fill="#000" />
+  <text id="circle0_text" x="25" y="65" fill="red">(50, 60)</text>  
+
+  <circle id="circle1" cx="150" cy="150" r="2" stroke="black" fill="#000" />
+  <circle id="circle1_center" cx="150" cy="150" r="2" stroke="black" fill="#000" />
+  <text id="circle1_text" x="25" y="65" fill="red">(50, 60)</text>  
+  <text x="400" y="570" fill="red">Clique dentro para mudar a coordenada do ponto</text>  
+</svg>
+
+<br>
+<div class="control">
+    <label>Raio:</label>
+    <input type="text" id="r" value="40" onkeyup="teste('r')">
+</div>
+<div class="control">
+    <label>CX:</label>
+    <input type="text" id="x" value="50" onkeyup="teste('x')">
+</div>
+
+<div class="control">
+    <label>CY:</label>
+    <input type="text" id="y" value="50" onkeyup="teste('y')">
+</div>
+<p id="status"></p>
+<script>
+    var circle = {
+        id: 'circle0',
+        x: 50,
+        y: 50,
+        r: 40
+    };
+
+    var mouse = {
+        id: 'circle1',
+        x: 150,
+        y: 150,
+        r: 2
+    };
+
+    function teste(attr) {
+        var vv = document.getElementById(attr).value;
+        circle[attr] = parseInt(vv);
+        drawCircle(circle);
+        dist(circle, mouse);
+    }
+
+    function drawCircle(circle) {
+        var c = document.getElementById(circle.id);
+
+        c.setAttribute("cx", circle.x);
+        c.setAttribute("cy", circle.y);
+        c.setAttribute("r", circle.r);
+
+        c = document.getElementById(circle.id + '_center');
+
+        c.setAttribute("cx", circle.x);
+        c.setAttribute("cy", circle.y);
+        c.setAttribute("r", "2");
+
+        c = document.getElementById(circle.id + '_text');
+        c.setAttribute("x", circle.x - 25);
+        c.setAttribute("y", circle.y + 15);
+        var coords = "(" + circle.x + ", " + circle.y + ")";
+        c.innerHTML = coords;
+    }
+
+    function dist(c1, c2) {
+        var x = c1.x - c2.x;
+        var y = c1.y - c2.y;
+        var d = Math.sqrt(x * x + y * y);
+        var s = "";
+
+        if (d > c1.r) {
+            s = "fora";
+        } else {
+            s = "dentro";
+        }
+
+        document.getElementById('status').innerHTML = s;
+    }
+
+    function showCoords(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        mouse.x = x;
+        mouse.y = y;
+        drawCircle(mouse);
+        dist(circle, mouse);
+    }
+</script>
+
+<p>Q19. Escreva um programa que leia: duas coordenadas (x, y) representando os vértices mais extremos de um retângulo e; uma outra coordenada (x, y) representando um ponto e indica se o ponto está fora ou dentro do retângulo.</p>
+        <asciinema-player src="exemplos/retangulo.json" cols="80" rows="24"></asciinema-player>
+
+<p>Q20. A posição de um robô no mapa é representado pelas suas coordenadas (x, y). O robô aceita quatro comandos de movimento: C, B, D, E representando, respectivamente, cima, baixo, direita e esquerda. Escreva um programa que leia as coordenadas do robô juntamente com um comando e atualize a posição das coordenadas do robô em 10 unidades. Por exemplo, se o robô estiver em (0, 0) e receber o comando C sua localização passa a ser (0, 10). </p>
+        <asciinema-player src="exemplos/robo.json" cols="80" rows="24"></asciinema-player>
+
+<p>Q21. Uma pequena loja de três cômodos possui um sistema de alarme composto de sensores de presença e uma buzina. Quando qualquer um dos sensores detecta presença a buzina é ativada. Implemente um programa que leia o valor dos três sensores e determina se a buzina deve ser ativada ou não. Considere que quando o sensor está ativado o usuário irá digitar 1 e 0 caso contrário. </p>
+        <asciinema-player src="exemplos/alarme.json" cols="80" rows="24"></asciinema-player>
+        </section>
+        </div>
+        </div>
+
+        <script src="js/asciinema-player.js"></script>
+    </body>
+</html>
+

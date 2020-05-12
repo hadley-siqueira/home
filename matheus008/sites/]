@@ -1,0 +1,83 @@
+<!DOCTYPE html!>
+<html>
+    <body>
+       <canvas id= "area" width="1000" height="600" style="border: 6px solid blue">
+       </canvas> 
+       <script>
+         var ctx = document.getElementById('area').getContext('2d');
+
+         function criarBola(x , y) {
+            this.cor = cor;
+            this.x = x;
+            this.y = y;
+            this.vx = Math.random();
+            this.vy = Math.random();
+            this.raio = 10;
+            
+        }
+
+            var  bola1 = new criarBola(20,90,'#0174DF');
+            var  bola2 = new criarBola(40,60);
+            var  bola3 = new criarBola(60,80);
+            var  bola4 = new criarBola(80,70);
+            var  bola5 = new criarBola(30,40);
+         function desenharBola(bola) {
+            ctx.beginPath();
+            ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+            ctx.stroke();
+            ctx.fillStyle = bola.cor;
+        }
+
+         function atualizarPosicaoBola(bola) {
+            bola.x = bola.x + bola.vx;
+            bola.y = bola.y + bola.vy;       
+             
+        if (bola.x < 0) {
+           bola.x = 0;
+           bola.vx = -bola.vx;
+        }     
+      
+        if (bola.x >= 1000) {
+           bola.x = 999;
+           bola.vx = -bola.vx;
+        }
+
+        if (bola.y < 0) {
+           bola.y = 0; 
+           bola.vy = -bola.vy; 
+        }
+       
+        if (bola.y >= 600) {
+           bola.y = 599;
+           bola.vy = -bola.vy
+        }
+ 
+        }
+         function atualizar() {
+            atualizarPosicaoBola(bola1);
+            atualizarPosicaoBola(bola2);
+            atualizarPosicaoBola(bola3);
+            atualizarPosicaoBola(bola4);
+            atualizarPosicaoBola(bola5);
+        }
+
+         function desenhar() {
+            ctx.clearRect(0, 0, 1000, 600);
+            desenharBola(bola1);
+            desenharBola(bola2);
+            desenharBola(bola3);
+            desenharBola(bola4);
+            desenharBola(bola5);
+            
+        }
+
+         function animar() {
+            desenhar();
+            atualizar();
+            window.requestAnimationFrame(animar);
+        }  
+
+         animar();
+       </script>
+    </body>
+</html>

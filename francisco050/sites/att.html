@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href="att.css" rel="stylesheet">
+
+        <style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid #F2F2F2;
+    padding: 4px;
+}
+
+th {text-align: center;
+    color: #f2f2f2;
+
+}
+img{
+    height: 100px;
+    width: 150px;
+    margin: center;
+    margin-top: 9px;
+}
+img:hover{
+    cursor: pointer;
+    margin: 12px; 
+    transition: 0.5s;
+}
+#img1{
+    margin-left: 30%;
+  }
+    </style>
+
+
+        <script>
+function funcao(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("POST", "att.php?q="+str, true);
+        
+        xmlhttp.send();
+    }
+}
+ 
+function mudaImagem1(){
+    var x = document.getElementById("ba");
+
+    x.style.backgroundImage= "url(https://www.sevenforums.com/attachments/tutorials/173429d1314981906-desktop-background-change-img0.jpg)";
+}
+function mudaImagem2(){
+    var y= document.getElementById("ba");
+    
+    y.style.backgroundImage= "url(http://eskipaper.com/images/windows-8-background-1.jpg)";
+}
+function mudaImagem3(){
+    var z= document.getElementById("ba");
+
+    z.style.backgroundImage= "url(http://cdn1.itpro.co.uk/sites/itpro/files/2015/07/windows_10_hero_wallpaper_primary_image_high_res.jpg)";
+}
+
+
+        </script>
+    </head>
+
+    <body id="ba">
+  
+    
+        <div>
+            <h1 id="log"></h1>
+            <form action="att.php" method="post">
+            <input type="text"  placeholder="Digite o nome do produto" onkeyup="funcao(this.value)"></br> 
+            <label><h3 style="color: #000FFF"> Resultado: <span id="txtHint"></span></h3> </label>
+        </div>
+     <img id="img1" onclick="mudaImagem1()" src="https://media.consumeraffairs.com/files/cache/news/windows7-logo_large.jpg"/>
+     <img id="img2" onclick="mudaImagem2()" src="https://www.stinkyinkshop.co.uk/blog/wp-content/uploads//2012/11/Windows-8-Logo-300x214.jpg"/> 
+
+    <img id="img3" onclick="mudaImagem3()" src="https://images-na.ssl-images-amazon.com/images/I/51NaGqQWZyL._SL1024_.jpg"/>       
+
+    <script>
+        //Digita teto automático      
+        var texto = 'Bem vindo a loja da windows!';
+
+        function escrever(str, ell) {
+          var el = document.getElementById(ell);
+          var char = str.split('').reverse();
+          var typer = setInterval(function() {
+            if (!char.length) return clearInterval(typer);
+            var next = char.pop();
+            el.innerHTML += next;
+          }, 50);
+        }
+        escrever(texto, 'log');
+        //Finaliza
+    </script>
+    </body>
+</html>

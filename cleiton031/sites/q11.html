@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <body>
+        
+        <script>
+            var p = window.prompt('O que voce quer calcular?');
+        
+            if (p == "voltagem") {
+                var r = parseFloat(window.prompt('Digite a resistencia'));
+                var i = parseFloat(window.prompt('Digite a corrente'));
+                var v = r * i;
+                console.log('A tenção eh ' + 'v');
+            }
+            else { 
+                if (p == 'resistencia') {
+                    v = parseFloat(window.prompt('Digite a tensão:'));
+                    i = parseFloat(window.prompt('Digite a corrente:'));
+                    r = v/i;
+                    console.log('A resistencia eh ' + r + ' ohm');
+                }
+                else {
+                    if(p == 'Corrente') {
+                        v = parseFloat(window.prompt('Digite a tensão:'));
+                        r = parseFloat(window.prompt('Digite a resistemcia:'));
+                        i = v/r
+                        console.log('A corrente eh ' + i + ' A ');
+                    }
+                }   
+            }
+        </script>
+    </body>
+</html>

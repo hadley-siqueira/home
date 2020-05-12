@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        var o = window.prompt("O que deseja calcular? ");
+        if (o == "tensao" || o == "Tensao"){
+        debugger;
+            var r = parseFloat(window.prompt("Informe a resistencia: "));
+            var i = parseFloat(window.prompt("Informe a corrente: "));
+            var v = r * i;
+            console.log("A tensao eh igual a " + (v))
+        } else if (o == "resistencia" || o == "Resistencia"){
+            var v = parseFloat(window.prompt("Informe a tensao: "));
+            var i = parseFloat(window.prompt("Informe a corrente: "));
+            var r = v/i;
+            console.log("A resistencia eh igual a " + (r))
+        } else if (o == "corrente" || o == "Corrente"){
+            var v = parseFloat(window.prompt("Informe a tensao: "));
+            var r = parseFloat(window.prompt("Informe a resistencia: "));
+            var i = v/r;
+            console.log("A corrente eh igual a " + (i))
+        } else {
+            console.log("As opçoes sao: tensao, resistencia e corrente.")
+            }
+            
+        </script>
+    </body>
+</html>

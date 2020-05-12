@@ -1,0 +1,3 @@
+print("programa para converter de celsius para fahrenheit ")
+
+temperatura_celsius = float(input("Digite a temperatura que deseja: "))

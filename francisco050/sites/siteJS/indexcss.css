@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+    
+}
+.section1 {
+    background-image: url("imagens/imgfundo1.jpg");
+    background-position: center-top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+
+.section2 {
+    background-color: #fff;  
+}
+
+.caixa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.caixa-elemento h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.caixa-imagem {
+    width: 300px;
+    height: 220px;
+    margin: 30px;
+    position: relative;
+}
+
+.caixa-imagem img {
+    width: 100%; 
+    height: 100%;
+    transition: 0.4s;
+}
+
+.caixa-imagem h2 {
+    text-align: center;
+    display: none;
+    color: red;
+    position: absolute;
+    top: 40%;
+    padding: 0;
+    margin: 0;
+} 
+
+.caixa-imagem:hover {
+    cursor: pointer;
+}
+
+.caixa-imagem:hover h2 {
+    display: block;
+}
+
+.caixa-imagem:hover img {
+    opacity: 0.2; 
+}
+
+
+.section3 {
+    background-image: url("imagens/imgfundo2.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    color: #fff;
+}
+.rodape {
+    background-color: #333333;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;    
+}
+
+
+
+
+
+
+
+

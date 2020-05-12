@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function lf(msg) {
+                return parseFloat(window.prompt(msg));
+                }
+            function calcularMedia() {              
+                var n1 = lf('Digite a primeira nota');
+                var n2 = lf('Digite a segunda nota');
+                var n3 = lf('Digite a terceira nota');
+                var n4 = lf('Digite a quarta nota');
+                var media = (n1+n2+n3+n4) / 4.0;
+            
+                console.log('a sua media foi de ' + media);
+            }
+
+            calcularMedia();
+        </script>
+    </body>
+</html>

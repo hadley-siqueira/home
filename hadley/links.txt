@@ -1,0 +1,3 @@
+https://askubuntu.com/questions/763534/cannot-reinstall-mysql-server-after-its-purge
+
+https://askubuntu.com/questions/187888/what-is-the-correct-way-to-completely-remove-an-application

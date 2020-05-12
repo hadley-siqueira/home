@@ -1,0 +1,97 @@
+<html>
+<head>    
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+     html, body {
+       
+        width:100%;
+        height:100%;
+        margin:0px;
+        padding:0px;
+        background:url("https://static.noticiasaominuto.com.br/stockimages/1920/naom_5887d36f5eace.jpg?1509535938") no-repeat;
+        background-size:cover;
+        background-position:center center;
+     }
+        
+   input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    height: 30px;
+}
+
+input[type=text]:focus {
+    width: 80%;
+}
+#main {
+    width: 500px;
+    height: 500px;
+    border: none;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px; 
+    
+   
+}
+#main div {
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;
+    border-radius: 10px;
+     
+}
+ 
+ 
+</style>
+<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","getuser3.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+
+</script>
+</head>
+<body>
+
+
+<div id="main">
+  <div style="background-color:rgba(255,255,255,0.7)">
+    <h2>Pesquise a mercadoria:</h2>
+    <form>
+        <input type="text" name="search" placeholder="Search.."onkeyup="showUser(this.value)">
+    </form>
+    <br>
+    <div id="txtHint"></div>
+  </div>
+
+</body>
+</html>

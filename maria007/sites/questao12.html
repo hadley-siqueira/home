@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+        
+        var n1 = window.prompt('Qual o nome do primeiro produto? ');
+        var n2 = parseFloat(window.prompt('Qual o preço do primeiro produto? '));
+        var n3 = window.prompt('Qual o nome do segundo produto? ');
+        var n4 = parseFloat(window.prompt('Qual o preço do segundo produto? '));
+
+        if (n2 > n4) {
+            console.log(' O produto mais caro eh: ' + n1);
+        }
+        else {
+            if(n4 > n2) {
+                console.log(' O produto mais caro eh: ' + n3);
+            }
+            else {
+                console.log(' Os dois produtos tem o mesmo valor');
+            }
+        }
+        </script>
+    </body>
+</html>
+

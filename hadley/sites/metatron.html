@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="area" width="800" height="800" style="border: 1px solid black">
+        </canvas>
+
+        <script>
+            function coord(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            var TIME = 200;
+            var WIDTH = 800;
+            var HEIGHT = 800;
+            var RAIO = 30;
+            var ctx = document.getElementById('area').getContext('2d');
+            var points = [];
+
+            function deg2rad(a) {
+                return (3.14159265359 * a) / 180.0;
+            }
+
+            function metatron(size) {
+                if (size > 1) {
+                    var sz = RAIO * 2 * (size - 1);
+                    for (var k = 30; k < 360; k += 60) {
+                        var x = sz * Math.cos(deg2rad(k));
+                        var y = sz * Math.sin(deg2rad(k));
+                        points.push(new coord(x, y));
+                    }
+
+                    metatron(size - 1);   
+                } else {
+                    points.push(new coord(0, 0));
+                }
+            }
+
+            function draw_metatron(size) {
+                points = [];
+                metatron(size);
+                ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+                for (var i = 0; i < points.length; ++i) {
+                    ctx.beginPath();
+                    ctx.arc(WIDTH / 2 + points[i].x, HEIGHT / 2 + points[i].y, RAIO, 0, 2 * 3.141592);
+                    ctx.stroke();
+
+                    for (var j = i + 1; j < points.length; ++j) {
+                        ctx.beginPath();
+                        ctx.moveTo(WIDTH / 2 + points[i].x, HEIGHT / 2 + points[i].y);
+                        ctx.lineTo(WIDTH / 2 + points[j].x, HEIGHT / 2 + points[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            function animar(size) {
+                draw_metatron(size);
+               if (size < 12) {
+                    window.setTimeout(function() { animar(size + 1) }, TIME); 
+               } else {
+                    window.setTimeout(function() { animar(1) }, TIME); 
+               }
+            }
+
+            animar(1);
+        </script>
+    </body>
+</html>

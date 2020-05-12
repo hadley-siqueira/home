@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'SourceSansProLight';
+        src: url('fonts/source/SourceSansProLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+@font-face {
+    font-family: 'SourceSansProRegular';
+        src: url('fonts/source/SourceSansProRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+@font-face {
+        font-family: 'Open Sans';
+        src: url('css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('css/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('css/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('css/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1rem 1rem 1rem 4rem;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #3397d7, #2c78c3);
+    float: left;
+    width:90%;
+    top: 0;
+    position:fixed;
+    box-shadow: 1px 1px 2px #111;
+    transition: all 0.5s;
+}
+.nvd{
+transform: translateY(-130%);
+transition: all 0.5s ease-in-out;
+}
+
+li {
+    float: left;
+    width: calc(90%/3.6);
+    border-bottom: 5px solid #2a65b1;
+}
+
+li a {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 20px;
+
+    font-family: "Source Sans Pro";
+    transition: all 0.5s;
+}
+
+li a:hover {
+
+    color: #030303;
+    transition: all 0.5s;
+    background-color: #eee;
+}
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom, #305872, #0f233e);
+}
+.code{
+  margin: 2rem;
+  background-color: #313131;
+  font-family: monospace;
+  color: #ddd;
+  font-weight: bolder;
+  padding-left: 1rem;
+  border-left: 0.5rem solid #3397d7;
+  padding: 2rem;
+}
+
+input{
+  padding: 0;
+  margin:0.2rem 0 0.4rem 0;
+  color: #eee;
+  font-weight: bolder;
+  border: 0;
+  height: 1.2rem;
+  background-color: transparent;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-family: monospace;
+}
+.secao-qsts {
+  padding: 3rem;
+  background-color: #eee;
+}
+.certo{ color: #30e930; border-bottom: 1px solid #30e93055;}
+
+.errado{color: #d44;border-bottom: 1px solid #da393955}
+
+}
+.varstr{
+  font-weight: normal;
+  color: #bbb;
+}
+
+.destaque{
+  font-weight: bolder;
+  color: #ddd;
+  background-color: #444;
+}
+
+.varstr2{
+  font-weight: normal;
+  color: #C2185B;
+}
+.sectit{
+
+
+}
+.titexe {
+  color: #eee;
+  box-shadow: inset 40rem 0 50px 20px #222;
+  background-image: url("img/visualg.png");
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: overlay;
+  width: 100%;
+  height: 50vh;
+  padding-top: 5rem;
+
+}
+.titexe > h1 {
+  font-size: 35px;
+  margin-left: 3rem;
+  background-color: #318dd0;
+  padding: 1rem;
+  width: 29rem;
+  font-family: "Roboto";
+}
+.titexe > p {
+	margin-left: 3rem;
+	width: 29rem;
+	background-color: #256595;
+	padding: 1rem;
+}
+
+
+.btn {
+	border: 0;
+	padding: 0.4rem 2rem;
+	border-bottom: 4px solid #3397d7;
+	background-color: #3f9cd8;
+	color: #e4e4e4;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.btn:hover {
+	background-color: #2eaeff;
+	color: #fff;
+	transition: all 0.5s;
+}
+
+.qst{
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px dotted #2eaeff;
+}

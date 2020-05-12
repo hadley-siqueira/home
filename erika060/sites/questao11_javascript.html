@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+    <body>
+        <script>
+             console.log('calculadora lei de ohm');
+             
+              var opcao = window.prompt('digite a opcao');
+              
+              if ( opcao == ' resistencia') {
+               var corrente = parseFloat(window.prompt('corrente'));
+               var tensao = parseFloat(window.prompt('tensao'));
+               var resistencia = tensao / corrente;
+
+               var msg = " a resistencia eh de ";
+               msg = msg + resistencia + 'ohms';
+              
+                console.log(msg);
+               } else if ( opcao == 'corrente') {
+                   var tensao = parseFloat(window.prompt('tensao'));
+                   var resis = parseFloat(window.prompt('resistencia')) 
+                   var corrente = tensao / resis;
+                   var msg = ' a corrente eh de' + corrente + ' amperes';
+                   console.log(msg);
+               } 
+                   
+               else if ( opcao == 'tensao') {
+                var resistencia = parseFloat(window.prompt('resistencia'))
+                var corrente = parseFloat(window.prompt('corrente'))
+                var msg = 'a tensao eh de' + tensao + 'volts';
+                }
+            </script>
+      </body>
+</html>

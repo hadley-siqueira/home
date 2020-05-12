@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            #wrapper {
+                margin: auto;
+                width: 95%;
+                background-color: #fff;
+            }
+
+            @media (min-width: 1024px) {
+                #wrapper {
+                    margin: auto;
+                    width: 60%;
+                    background-color: #fff;
+                }
+            }
+
+
+            #inner-wrapper {
+                padding: 3rem;
+            }
+
+            body, html {
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            body {
+                background-color: #00334d;
+            }
+
+            header {
+                min-height: 120px;
+                background-color: #333;
+                padding: 40px;
+            }
+
+            header h1 {
+                text-align: center;
+                font-size: 4rem;
+                color: #fff;
+            }
+
+            h1 {
+                padding-top: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            pre {
+                border-left: #888 10px solid;
+                background-color: #f0f0f0;
+            }
+
+            pre code {
+                background-color: #f0f0f0;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>Funções</h1>
+            </header>
+
+            <div id="inner-wrapper">
+                <h1>Introdução</h1>
+
+                <p>Até este momento você já viu variáveis, expressões e if else e criou alguns programas. Entretanto,
+                   para poder escrever programas mais complexos, você ainda precisa aprender os seguintes elementos:</p>
+
+                <ul>
+                    <li>Funções</li>
+                    <li>Laços de repetição</li>
+                    <li>Vetores</li>
+                    <li>Objetos</li>
+                </ul>
+
+                <p>Neste tutorial nós iremos aprender funções: o que são, para que servem e como utilizar.</p>
+
+                <h1>O que são funções?</h1>
+
+                <p>Você deve lembrar de ter visto algo assim em matemática:</p>
+
+                $$f(x) = x + 2$$
+
+                <p>Isso é uma <em>função</em>. Uma função é dividida nas seguintes partes:</p>
+                <ul>
+                    <li>Nome da função</li>
+                    <li>Parâmetros</li>
+                    <li>Corpo</li>
+                </ul>
+
+                <p>No exemplo acima, o nome da função é <em>f</em>. Os parâmetros são todas as variáveis dentro dos parenteses, no caso
+                só existe um parâmetro que é a variável <em>x</em> e o corpo da função é a expressão $x + 2$</p>
+
+
+                <p>Agora olhe o seguinte exemplo:</p>
+                $$calcular(nota, faltas) = nota \times 100 - faltas \times 0.1$$
+
+                <p>Nesse exemplo o nome da função é <em>calcular</em> e ela possui dois parâmetros: <em>nota</em> e <em>faltas</em> que são as
+                   variáveis que estão dentro dos parenteses. Por fim, o corpo da função é a expressão $nota \times 100 - faltas \times 0.1$.</p>
+
+                <p>Hey, mas aqui a gente está programando e não sendo um matemático, correto? Então vamos olhar como é uma função em programação. 
+                   Em javascript uma função é assim:</p>
+<pre>
+<code class="javascript">
+function nome(parametro1, parametro2, ..., parametroN) {
+    corpo
+}
+</code>
+</pre>
+
+            <p>Em javascript usamos a palavra especial <em>function</em> para indicar que estamos criando uma função. Em seguida vem o nome da função,
+               depois seus parâmetros e, por fim, o corpo da função que deve estar entre as chaves { }.</p>
+
+            <p>Se fossemos reescrever os exemplos de funções matemáticas em javascript, ficaria assim:</p>
+
+<pre>
+<code class="javascript">
+function f(x) {
+    return x + 2;
+}
+
+function calcular(nota, faltas) {
+    return nota * 100 - faltas * 0.1;
+}
+</code>
+</pre>
+
+        <p>Bem, apareceu uma nova palavra: <em>return</em>. Esse return serve para... retornar um valor! Que legal, mas você não sabe ainda
+           ao certo o porquê de retornar um valor, mas vai saber lá na frente. Só queria te mostrar como são as funções em javascript. Então lembra disso:
+           funções são compostas por: nome, parâmetros e corpo. ok?</p>
+
+        <p>Agora vamos esquecer a parte matemática por um instante porque as funções em programação vão começar a ser bem diferentes do que são em
+           matemática. Sabe tudo o que você aprendeu até agora (variáveis, expressões, if else)? Tudo o que você aprendeu até agora pode ser usado
+           como corpo de uma função em programação. Sabe todos aqueles exercícios que você resolveu até agora? Cada um deles poderia ser colocado
+           em uma função. A pergunta é: por que raios eu iria querer colocar dentro de uma função?</p>
+
+
+        <h1>Para que servem funções</h1>
+
+        <p>Você pode não saber ainda, mas funções são extremamente importantes e essenciais para escrever programas complexos e objetivo dessa seção
+           é tentar te explicar o porquê.</p>
+
+        <p>Primeiro vamos tentar ver a coisa de um ponto de vista prático. Abra aí o vim, escreva qualquer programa que te vier a mente e execute ele. Você vai
+           perceber que sempre, SEMPRE, ele começa executando a partir da primeira instrução e vai descendo até chegar a última.</p>
+
+        <p>Na verdade, nem todas as instruções são executadas caso exista if else. Se a condição do if for verdadeira, só o que estiver dentro do
+           if é que será executado. Caso contrário, só o que está dentro do else é que será executado, não é verdade? Mas em ambos os casos, a execução
+           vai vindo de cima para baixo.</p>
+
+        <p>E por que estou falando isso? Porque com funções você vai poder mudar essa ordem de execução! Um dos objetivos práticos de uma função é
+           <em>permitir que um trecho de código seja chamável</em>. Esse trecho de código é justamente o corpo da função (hey, você ainda lembra o que é
+           corpo da função, não é?)</p>
+
+        <p>E o que significa ser <em>chamável</em>? Significa que o código só vai ser executado <em>se e apenas se</em> você chamar ele.</p>
+
+        <p>Você pode não saber, mas já vem usando funções desde o começo e não sabia. Por acaso você já usou alguma das funções abaixo?</p>
+
+<pre>
+<code class="javascript">
+nome = prompt('Digite seu nome');
+log('Uma mensagem');
+alert('Mais uma mensagem');
+</code>
+</pre>
+
+       <p>Pois é, aí foram chamadas (chamável, sacou?) as funções prompt, log e alert, mais conhecidas por vocês como window.prompt, console.log e window.alert.</p>
+
+       <p>Funções são feitas para serem chamadas e você as chama quando é necessário. Por exemplo, quando é que você precisa chamar a função prompt? Quando você
+          precisa pedir algum dado pro usuário. E quando é que você chama o log ou alert? Quando você precisa mostrar uma mensagem pro usuário, não é mesmo?</p>
+
+        <p>O que você vai aprender daqui em diante é como criar as suas <span style="font-weight: bold">próprias funções</span>. </p>
+
+        <h1>Por que criar minhas próprias funções?</h1>
+
+        <p>Existem algumas razões para se criar funções. Em resumo, as principais são:</p>
+        <ul>
+            <li>Ajudar a concentração</li>
+            <li>Reutilizar código</li>
+        </ul>
+        
+        <p>O ser humano tem uma capacidade limitada de concentração, não sendo capaz de fazer várias coisas ao mesmo tempo. Nós, humanos, trabalhamos
+           melhor fazendo uma ou poucas tarefas de cada vez. Além disso, nós gostamos de ter um mńimo de organização em nossas vida. Olha só alguns exemplos:</p>
+
+        <ul>
+            <li>Livros são dividos em capítulos, seções, subseções etc</li>
+            <li>Casas são dividas em quartos, cozinha, sala etc</li>
+            <li>Cidades são dividas por bairros</li>
+            <li>Etc, etc etc</li>
+        </ul>
+
+        <p>Nós humanos precisamos desse tipo de organização, dessa divisão. Isso nos ajuda a pensar e raciocinar melhor sobre as coisas. Em programação, as funções
+           vão cumprir papel semelhante. Ao invés de vermos o código como uma coisa só, nós vamos poder dividir o código em funções de forma a fazer mais
+           sentido pra gente.</p>
+
+        <p>Então o primeiro ponto importante em usar funções é esse: <span style="font-weight: bold">vai nos ajudar na concentração, permitindo dividir o código
+           em partes que faça sentido para a gente</span>.</p>
+
+        
+
+        <p>O outro ponto é a <em>reutilização de código</em>. Você deve lembrar do bom e velho cálculo da média aritmética:</p>
+
+<pre>
+<code class="javascript">
+    var nome = window.prompt('Qual o seu nome?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+</code>
+</pre>
+
+        <p>Bom, se você quiser calcular a média de duas pessoas, você provavelmente vai fazer assim:</p>
+
+<pre>
+<code class="javascript">
+    var nome = window.prompt('Qual o nome do primeiro aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do segundo aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+</code>
+</pre>
+
+    <p>E se for de três alunos?</p>
+
+<pre>
+<code class="javascript">
+    var nome = window.prompt('Qual o nome do primeiro aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do segundo aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do terceiro aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+</code>
+</pre>
+
+    <p>E se ao invés de três você tiver 10 alunos? Ou 100? Ou 1000? Aí você provavelmente chuta o pau da barraca
+       e vai embora porque você não vai ficar que nem abestalhado repetindo a mesma lógica de novo e de novo.</p>
+
+    <p>Se tu parar pra prestar atenção, é a mesma lógica sempre: pede o nome, depois as notas, depois calcula a média
+       e mostra o resultado. É aí que entra as funções e sua capacidade de <em>reaproveitar código</em>. Se você não se lembrar,
+       volte e leia novamente, mas eu falei que funções são feitas para serem chamadas. A gente pode criar uma função
+       que calcula e mostra a média de um aluno e depois só ficar chamando a função para calcular a média
+       de quantos alunos forem necessários.</p>
+
+<pre>
+<code class="javascript">
+function calcularMedia() {
+    var nome = window.prompt('Qual o seu nome?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+}
+</code>
+</pre>
+
+    <p>Depois que a função estiver criada, eu só precisaria chamar ela quantas vezes eu quisesse. Por exemplo. se eu quisesse calcular a média
+       de 5 alunos, eu só teria que fazer isso aqui:</p>
+
+
+<pre>
+<code class="javascript">
+calcularMedia();
+calcularMedia();
+calcularMedia();
+calcularMedia();
+calcularMedia();
+</code>
+</pre>
+
+    <p>Ao invés de ter que fazer isso aqui:</p>
+
+<pre>
+<code class="javascript">
+    var nome = window.prompt('Qual o nome do primeiro aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do segundo aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do terceiro aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do quarto aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+
+    var nome = window.prompt('Qual o nome do quinto aluno?');
+    var n1 = parseFloat(window.prompt('Digite a primeira nota');
+    var n2 = parseFloat(window.prompt('Digite a segunda nota');
+    var n3 = parseFloat(window.prompt('Digite a terceira nota');
+
+    var media = (n1 + n2 + n3) / 3.0;
+
+    console.log(nome + ', sua media foi de ' + media);
+</code>
+</pre>
+
+    <p>Pois é, meus caros e caras: viva as funções. Essa é uma das formas que a gente usa funções na prática: a gente poderia
+       ficar repetindo o código que nem abestalhado, mas a gente pode <em>encapsular</em> a lógica dentro de uma função
+       e depois só ficar chamando ela :)</p>
+
+    <p>Agora vamos ver uma outra vantagem de usar função na prática. Olhe bem o código dos exemplos anteriores e você vai perceber
+       que está faltando um parentese... Sempre tem que ter um erro né?</p>
+
+    <p>Toda vez que eu pedi as notas, eu esqueci de um parentese... Mas não tem problema, porque usando função basta ajeitar a função uma ÚNICA vez
+       e pronto, problema resolvido. Agora se você repetiu o código, aí você vai ficar que nem abestalhado indo linha por linha fechando os parenteses... Boa
+       sorte (y).</p>
+
+    <p>Argh! Nada disso teria acontecido se eu não tivesse que digitar essa bixiga toda de parseFloat(window.prompt('Digite a nota')). Sem problemas, as funções
+       também podem te ajudar nesse caso.</p>
+
+    <p>Lembra que lá no inicio eu ia te explicar aquela palavra nova, a <em>return</em>? Pois bem, a gente vai começar a usar ela pra valer agora. Olha o código abaixo:</p>
+
+<pre>
+<code class="javascript">
+function lf(msg) {
+    return parseFloat(window.prompt(msg));
+}
+</code>
+</pre>
+
+    <p>Eu criei uma função, chamada lf (abreviação de Ler Float), que na prática vai funcionar como um apelido para parseFloat(window.prompt()). Isso significa que agora ao invés de eu
+       fazer assim:</p>
+<pre>
+<code class="javascript">
+var nome = window.prompt('Qual o nome do primeiro aluno?');
+var n1 = parseFloat(window.prompt('Digite a primeira nota');
+var n2 = parseFloat(window.prompt('Digite a segunda nota');
+var n3 = parseFloat(window.prompt('Digite a terceira nota');
+</code>
+</pre>
+
+    <p>Eu posso fazer assim:</p>
+
+<pre>
+<code class="javascript">
+var nome = window.prompt('Qual o nome do primeiro aluno?');
+var n1 = lf('Digite a primeira nota');
+var n2 = lf('Digite a segunda nota');
+var n3 = lf('Digite a terceira nota');
+</code>
+</pre>   
+
+    <p>Ha! Agora o meu código está mais compacto, mais legível. Agora eu não tenho mais que digitar bixiga de parseFloat(window.prompt()) quando quiser ler um float. E aí eu poderia criar
+       funções parecidas para ler inteiro, string etc:</p>
+
+<pre>
+<code class="javascript">
+function lf(msg) {
+    return parseFloat(window.prompt(msg));
+}
+
+function li(msg) {
+    return parseInt(window.prompt(msg));
+}
+
+function ls(msg) {
+    return window.prompt(msg);
+}
+</code>
+</pre>
+
+    <p>Bom, agora acho que seria uma boa hora de explicar essa palavra especial <em>return</em>. Não se preocupe que eu acredito
+       que será fácil de entender quando usar ou não ela. Basicamente, uma função pode ou não retornar um valor. Quando você quiser
+       que a função retorne um valor, você usa o return. E quando não quiser que ela não retorne valor... Bom, você já deve imaginar
+       que não é para usar return.</p>
+
+    <p>"Ok, mas como é que eu sei que minha função deve retornar um valor?", você deve estar se perguntando. E aí, meus caros, eu acho que
+        achei uma forma prática e sem enrolação de te ensinar isso. A regra é a seguinte:</p>
+
+        <ul>
+            <li>Você vai usar sua função como parte de uma expressão ou num if else? Então deve retornar</li>
+            <li>Você vai chamar a função sozinha? Então não é obrigatório ter return</li>
+        </ul>
+
+    <p>E para ficar mais claro, vamos para exemplos práticos. Eu vou usar funções ficticias chamadas de fun1, fun2, etc
+       e vou indicar se deve ou não ter retorno. O código do exemplo não tem lógica nenhuma, é só pra gente ver os casos
+       onde se deve ou não usar return.</p>
+
+<pre>
+<code class="javascript">
+var v1 = fun1();        // tem return porque eh usado em expressao
+var v2 = fun2() + 2;    // tem return porque tb esta em expressao
+
+if (fun3()) {           // deve ter return pq esta sendo usado em if else
+    v2 = v2 + 1;
+}
+
+fun4();     // nao precisa ter return pq esta sendo usado sozinho (mas pode ter)
+fun5();     // mesma coisa: nao precisa ter
+
+
+// fun6, fun7 e fun8 todos tem return pq estao sendo usados em if else
+if (fun6() && fun7() || fun8()) {  
+    v2 = v2 + 1;
+
+    if (v2 == 10) {
+        fun9();  // nao precisa ter return porque esta sendo usado sozinho
+        v2 = fun10() * 2; // tem que ter return pq esta sendo usado em expressao
+    }
+}
+</code>
+</pre>
+
+    <p>Então basicamente é isso: se você pretende criar uma função e essa função
+       vai ser usada em uma expressão ou num if else, então sua função <span style="font-weight: bold">
+       DEVE OBRIGATORIAMENTE USAR RETURN!</span>. Caso ela vá ser usada sozinha, então o return
+       não é obrigatório.</p>
+
+    <p>Se você esquece de colocar um return numa função que deve ter return, teu programa não vai rodar
+       direito. Você precisa entender que a função do return é retornar um valor para ser usado numa
+       expressão, num cálculo. Expressões trabalham com valores. Agora pensa o seguinte: se tua função
+       não retornar um valor, como é que a expressão vai ser calculada se tem valor faltando, justamente o valor
+       que sua função deveria ter retornado e não retornou porque você esqueceu de usar return? E a resposta é: não vai
+       rodar, simples assim.</p>
+
+    <p>Por isso, lembre: se vai usar a função numa expressão, ela deve ter return. É justamente por isso que as funções abaixo
+       tem return.</p>
+
+<pre>
+<code class="javascript">
+function lf(msg) {
+    return parseFloat(window.prompt(msg));
+}
+
+function li(msg) {
+    return parseInt(window.prompt(msg));
+}
+
+function ls(msg) {
+    return window.prompt(msg);
+}
+</code>
+</pre>
+
+    <p>Porque elas são usadas em expressões:</p>
+
+<pre>
+<code class="javascript">
+var nome = ls('Qual o seu nome?');
+var n1 = lf('Digite um float');
+var i1 = li('Digite um inteiro');
+
+if (li('Digite um outro inteiro') > 10) {
+    console.log('numero eh maior que 10');
+} else {
+    console.log('numero n eh maior que 10');
+}
+</code>
+</pre>   
+
+    <p>Bom, um outro detalhe tão importante quanto saber quando ou não usar return, é saber o 
+       <em>o que deve ser retornado</em>. No caso das funções lf, li e ls o que eu quero que seja
+       retornado é justamente o valor digitado pelo usuário. De tal forma que não faria sentido fazer
+       algo assim, por exemplo:</p>
+
+<pre>
+<code class="javascript">
+function lf(msg) {
+    parseFloat(window.prompt(msg));
+    return 'nada a ver';
+}
+
+function li(msg) {
+    var k = parseInt(window.prompt(msg));
+    return 2 + 2;
+}
+
+function ls(msg) {
+    window.prompt(msg);
+}
+</code>
+</pre>
+
+    <p>Entende? Além de saber quando retornar, você deve saber o que retornar. Se você coloca pra retornar qualquer maluquice, teu programa
+       vai rodar maluco também ou mesmo não funcionar, ok?</p>
+
+    <p>Então, o que sabemos que funções podem fazer por nós até agora:</p>
+     <ul>
+        <li>Reutilizar código</li>
+        <li>Quebrar o código em partes que faça sentido para a gente</li>
+        <li>Deixar o código mais compacto e legível</li>
+    </ul>
+
+    <h1>Parâmetros</h1>
+
+    <p>Talvez algo que você ainda esteja em dúvida sejam parâmetros: para que servem? quando usar? Bom, a primeira coisa para 
+       se entender os parâmetros é saber que não é obrigatório ter eles. Se uma função não tem parâmetros, a os parenteses da função
+       ficam vazios. Ou seja, ao invés de ter algo como func1(a, b, c), fica simplesmente func1(). Parâmetros não são obrigatórios.</p>
+
+    <p>Ok, se parâmetros não são obrigatórios, então por que usar? Você usa os parâmetros quando quer que uma chamada à uma função seja diferente
+       de outra chamada à mesma função. Para tentar entender melhor, vamos usar a seguinte função como exemplo:</p>
+
+<pre>
+<code class="javascript">
+function lf(msg) {
+    return parseFloat(window.prompt(msg));
+}
+</code>
+</pre>
+
+    <p>Como você já deve saber, eu criei essa função como uma abreviatura à parsefloat(window.prompt()). Essa função lf tem um parâmetro: msg, que é a mensagem
+       que será mostrada pro usuário. Na prática a gente usa ela assim:</p>
+
+<pre>
+<code class="javascript">
+var n1 = lf('Digite um float');
+var n2 = lf('Digite outro float');
+
+window.prompt('Voce digitou os numeros ' + n1 + ' e ' + n2);
+</code>
+</pre>   
+
+    <p>Ou seja, a cada chamada à lf(), quero que seja mostrado uma mensagem diferente. Essa diferença é conseguida justamente através do uso de
+       parâmetros.</p>
+
+     <p>Um outro exemplo: suponha uma função para indicar se um aluno está reprovado por faltas ou não. Se ele tiver mais de 10 faltas
+        ele está reprovado.</p>
+<pre>
+<code class="javascript">
+// funcao verificaReprovacao tem um parametro chamado faltas
+function verificaReprovacao(faltas) {
+    if (faltas > 10) {
+        return 'esta reprovado'; // tem return pq vai ser usado em expressao
+    } else {
+        return 'nao esta reprovado';
+    }
+}
+
+// uso da funcao li() ao inves de parseInt(window.prompt())
+var f1 = li('Digite a quantidade de faltas do primeiro aluno');
+var f2 = li('Digite a quantidade de faltas do segundo aluno');
+var f3 = li('Digite a quantidade de faltas do terceiro aluno');
+var f4 = li('Digite a quantidade de faltas do quarto aluno');
+var f5 = li('Digite a quantidade de faltas do quinto aluno');
+
+// verificaReprovacao sendo usado em expressao
+window.prompt('O primeiro aluno ' + verificaReprovacao(f1));
+window.prompt('O segundo aluno ' + verificaReprovacao(f2));
+window.prompt('O terceiro aluno ' + verificaReprovaca3(f2));
+window.prompt('O quarto aluno ' + verificaReprovacao(f4));
+window.prompt('O quinto aluno ' + verificaReprovacao(f5));
+</code>
+</pre>
+
+    <p>Veja que foi usado parâmetro faltas para diferenciar uma chamada da outra. Cada chamada calcula o 
+       status de reprovacao de um aluno diferente. A função verificaReprovacao, por sua vez, retorna uma string
+       indicando se o aluno está reprovado ou não. Essa string que é retornada é usada para construir as mensagens
+       no fim do programa. O mesmo código sem função ficaria assim: </p>
+
+<pre>
+<code class="javascript">
+
+var f1 = parseInt(window.prompt(('Digite a quantidade de faltas do primeiro aluno'));
+var f2 = parseInt(window.prompt(('Digite a quantidade de faltas do segundo aluno'));
+var f3 = parseInt(window.prompt(('Digite a quantidade de faltas do terceiro aluno'));
+var f4 = parseInt(window.prompt(('Digite a quantidade de faltas do quarto aluno'));
+var f5 = parseInt(window.prompt(('Digite a quantidade de faltas do quinto aluno'));
+
+if (f1 > 10) {
+    window.prompt('O primeiro aluno esta reprovado');
+} else {
+    window.prompt('O primeiro aluno esta reprovado');
+}
+
+if (f2 > 10) {
+    window.prompt('O segundo aluno esta reprovado');
+} else {
+    window.prompt('O segundo aluno esta reprovado');
+}
+
+if (f3 > 10) {
+    window.prompt('O terceiro aluno esta reprovado');
+} else {
+    window.prompt('O terceiro aluno esta reprovado');
+}
+
+if (f4 > 10) {
+    window.prompt('O quarto aluno esta reprovado');
+} else {
+    window.prompt('O quarto aluno esta reprovado');
+}
+
+if (f5 > 10) {
+    window.prompt('O quinto aluno esta reprovado');
+} else {
+    window.prompt('O quinto aluno esta reprovado');
+}
+
+</code>
+</pre>
+
+    <h1>Como funções são usadas em programas grandes?</h1>
+
+    <p>Uma coisa legal de funções é que você não precisa saber como é o corpo dela para poder usar. Só relembrando, uma função é dividida da seguinte forma:</p>
+
+<pre>
+<code class="javascript">
+// OBS.: nome(parametros) tambem eh conhecido como assinatura da funcao, ou seja, o nome da funcao
+//       e seus parametros
+
+function nome(parametros) {
+    corpo
+}
+</code>
+</pre>
+
+    <p>Quando você usa window.prompt ou console.log, você está usando funções, ou seja, está chamando essas funções. Você provavelmente não sabe qual é o corpo
+       das funções prompt e log. Mesmo assim é capaz de usar. Para usar uma função você precisa saber qual a assinatura dela (nome e os parametros), o que ela faz
+       e se retorna algum valor ou não. Então, por exemplo, você sabe que prompt recebe um parâmetro e retorna uma string, enquanto que log também tem um parâmetro mas
+       não retorna nada.</p>
+
+    <p>Programas grandes são dividos em várias e várias funções. Quando existe uma equipe envolvida, cada membro fica responsável por fazer parte das funções. Então, por exemplo,
+       você pode encontrar algo assim no desenvolvimento de software para um celular. Ou seja, as funções permitem programadores trabalhando num mesmo projeto dividir um programa
+       grande em partes menores e cada um cuidar de sua parte. Depois, basta combinar as funções para formar um programa maior.</p>
+
+    <div style="text-align: center">
+        <img style="width=70%" src="desenvolvimento.png">
+    </div>
+
+    <p>Você já faz isso desde o início: alguém criou as funções prompt, parseInt, parseFloat, log, etc e você está usando elas para criar os seus próprios programas.</p>
+
+        <p>Por fim, para completar essa seção: quando você tem várias funções trabalhando em conjunto para atingir um objetivo, você tem uma <em>biblioteca</em>. Existem
+           bibliotecas para auxiliar no desenvolvimento de jogos, de sites, de aplicativos para celular, etc. Uma biblioteca de jogo, por exemplo, vai te trazer uma série
+           de funções já prontas para você poder utilizar para controlar os gráficos, o teclado, mouse, controles, som, etc.</p>
+
+        <p>Também existem os <em>frameworks</em>. Os frameworks também são um conjunto de funções com um um objetivo em comum. A diferença deles para bibliotecas é que nas bibliotecas
+           você tem mais liberdade em decidir como usar e objetivo é menor. Já um framework tem regras mais rigidas de como deve ser usado, onde essas regras mais rigidas visam ter uma maior
+           padronização de código e os objetivos são mais altos. Por exemplo, enquanto que você pode ter uma biblioteca de jogo para tratar só da parte gráfica, um framework de jogos
+           pode vir com funções para a parte gráfica, som, rede, dados, etc etc etc. Ou seja, um framework geralmente é bem maior do que uma biblioteca. Mas no fim do dia tudo não passa
+           de funções :)</p>
+
+        <p>Então esses jogos e programas que vocês costumam usar não são feitos do zero. Geralmente se usam bibliotecas e frameworks que trazem funções prontas para serem usadas, agilizando
+           e auxiliando no desenvolvimento do software.</p>
+
+        <h1>Um pouco mais de funções na prática</h1>
+
+        <p>Uma coisa que você precisa ter bem em mente é a distinção entre a <em>declaração</em> de uma função
+           e a <em>chamada</em> da função. Isso é declarar uma função:</p>
+<pre>
+<code class="javascript">
+function nome(parametros) {
+    corpo
+}
+</code>
+</pre>
+
+        <p>E isso é chamar a função:</p>
+<pre>
+<code class="javascript">
+nome(parametros);
+var u = nome(parametros);
+
+if (nome(parametros)) {
+    ...
+} 
+</code>
+</pre>
+
+    <p>O que estou tentando dizer é que quando você declara uma função, ela não é automaticamente executada. Ela só irá
+       executar SE E APENAS SE você chamar ela. Isso, na prática, significa que não vai importar a ordem que a gente
+       declara as funções, mas sim que vai importar apenas a ordem em que a gente chama elas.</p>
+
+    <p>Considere as seguintes funções:</p>
+
+<pre>
+<code class="javascript">
+function calcularCarga(peso, altura) {
+    return peso * 7 + altura * 1.3;
+}
+
+function ehMaiorDeIdade(idade) {
+    if (idade >= 18) {
+        return 'eh maior de idade';
+    } else {
+        return 'nao eh maior de idade';
+    }
+}
+</code>
+</pre>
+
+    <p>Se você escrevesse como está abaixo, teria exatamente o mesmo efeito no fim das contas, porque essas são
+       as <em>declarações das funções</em> e não as chamadas às mesmas.</p>
+
+<pre>
+<code class="javascript">
+function ehMaiorDeIdade(idade) {
+    if (idade >= 18) {
+        return 'eh maior de idade';
+    } else {
+        return 'nao eh maior de idade';
+    }
+}
+
+function calcularCarga(peso, altura) {
+    return peso * 7 + altura * 1.3;
+}
+</code>
+</pre>
+
+    <p>Por outro lado, tem uma enorme diferença entre fazer assim:</p>
+
+<pre>
+<code class="javascript">
+window.prompt('A carga eh de ' + calcularCarga(70, 1.8));
+window.prompt('Fulano eh ' + ehMaiorDeIdade(20));
+</code>
+</pre>
+
+    <p>E fazer assim:</p>
+
+<pre>
+<code class="javascript">
+window.prompt('Fulano eh ' + ehMaiorDeIdade(20));
+window.prompt('A carga eh de ' + calcularCarga(70, 1.8));
+</code>
+</pre>
+
+
+    <p>No primeiro é executado calcularCarga() e depois ehMaiorDeIdade() e no outro é o inverso: primeiro
+       ehMaiorDeIdade() e depois calcularCarga(), o que vai gerar um resultado diferente entre as execuções. Novamente,
+       isso só vai fazer sentido se estiver claro para você a distinção entre declarar uma função e executar a mesma.</p>
+
+    <h2>Composição de funções</h2>
+
+    <p>Um outro ponto bastante útil das funções é que uma função pode chamar outras funções que por sua vez podem chamar
+       mais outras funções e assim por diante. Essa característica te permite fazer funções pequenas e depois ir combinando
+       elas, ou seja, ir chamando umas as outras, para resolver problemas maiores e mais complexos.</p>
+
+    <p>De fato, quando a gente cria uma função tão simples como essa:</p>
+
+<pre>
+<code class="javascript">
+function lf(msg) {
+    return parseFloat(window.prompt(msg));
+}
+</code>
+</pre>
+
+    <p>Nós já temos uma composição de função: prompt() é chamada por parseFloat() que por sua vez será chamada por lf() e onde lf() será chamada
+      em qualquer outra função onde seja necessário ler um float.</p>
+
+    <p>A propósito, quando se está lendo um texto e queremos nos referencia a uma função, é comum escrever a mesma com os () vazios, mesmo que ela
+       possua parâmetros. No parágrafo anterior, eu me referi à prompt(), parseFloat() e lf() mesmo as três recebendo parâmetros (observe a assinatura
+       da função lf(). Você ainda lembra o que é assinatura de uma função?)</p>
+
+    <p>Uma outra característica que é interessante você se atentar e procurar criar a cultura de usar, é compor funções nas chamadas. Por exemplo, 
+       considere o seguinte trecho de código:</p>
+    
+<pre>
+<code class="javascript">
+function dobrar(x) {
+    if (x > 100) {    
+        return 2 * x;  // se x for maior que 100, a gente retorna o dobro de x
+    } else {
+        return x;      // caso contrário retorna o x inalterado
+    } 
+}
+
+function quadruplicar_versao1(x) {
+    return dobrar(dobrar(x));
+}
+
+function quadruplicar_versao2(x) {
+    var p = dobrar(x);
+    var z = dobrar(p);
+    return z;
+}
+
+function quadruplicar_versao3(x) {
+    var p = dobrar(x);
+    return dobrar(p);
+}
+</code>
+</pre>
+
+    <p>As três versões de quadruplicar produzem exatamente o mesmo resultado. Porém perceba que na primeira versão, você pode jogar o resultado
+       de uma função diretamente para uma outra função, ou seja, composição na chamada. Você também pode usar variáveis auxiliares como na versão 2
+       da função quadruplicar ou um misto das duas estratégias, como na versão 3.</p>
+
+    <p>Humn... Mas porque não fazer sempre da primeira forma?. Porque pode acontecer algo como o trecho de código abaixo, que é feio de furar os olhos</p>
+
+<pre>
+<code class="javascript">
+return umaFuncaoDeNomeMuitoGrandeRuimDeLer(AiVemMaisOutraComNomeGrandeTambem(ComUmParametroGrandeTambem + 2, EseTiverMaisParametros(FicaMaisFeioAinda, AiMeusOlhos, AHH)));
+</code>
+</pre>
+    <p>Às vezes, você pode tentar compor funções que tenham nomes muito grandes e acabar ficando como uma coisa gigante e ruim de ler. Nesses casos, é preferível
+       usar variáveis auxiliares e trocar uma linha gigante por várias linhas menores. Assim, por exemplo:</p>
+
+<pre>
+<code class="javascript">
+var p1 = ComUmParametroGrandeTambem + 2
+var p2 = EseTiverMaisParametros(FicaMaisFeioAinda, AiMeusOlhos, AHH);
+var p3 = AiVemMaisOutraComNomeGrandeTambem(p1, p2);
+var p4 = umaFuncaoDeNomeMuitoGrandeRuimDeLer(p4);
+return p4;
+</code>
+</pre>
+    <p>Como você pode perceber, não existe um jeito certo de criar funções. O que existem são formas de deixar mais organizado e isso vai da questão de boa
+       estética e de bom gosto de cada um.</p>
+      </div>       
+    </div>       
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" 
+            content="width=device-width, intial -scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .titulo {
+                font-size: 50px;
+                margin-bottom:0;  
+            }
+            .descricao {
+                margin-top:0;
+                margin-bottom: 40px;
+                font-size: 20px;
+
+            }
+            .botao1 {
+                background-color: #1583CC;
+                font-size: 20px;
+                color: #fefefe;
+                padding:12px;
+                border:none; 
+                border-radius: 3px;
+                font-weight: bold;
+                margin-bottom:12px;
+                border-bottom: 2px solid #126fad;  
+            }  
+            .botao1:hover {
+                background-color: #126FAD;
+                transition: all 0.3s;
+            }
+            .info2 {
+                text-align: center;
+                width:70%;
+                margin:auto;
+                margin-top:70px;
+                border-bottom: 1px dashed #9C9C9C;
+            }
+            .info2 h1 {
+                font-size: 40px;
+            }
+            .info2 p {
+                color: #9C9C9C;
+                font-size: 20px;
+            }
+            .subinfo {
+                margin: 10px;
+                padding:0;
+                font-size:16px;
+            }
+            
+            .box3 {
+                 float: left;
+                 width: 50%;
+
+            }
+
+            .box3 p { 
+                 color: #313131;
+                 
+            }
+            
+            .box3 h1 {
+                   color: #333333;
+                  
+             }
+
+            .box3 h2 {
+                 color: #7f7f7f;
+                 font-size: 15px;
+                 text-transform: uppercase;
+            }
+
+            .box3:hover {
+                color: #126fad;
+                transition: 0.3s;
+
+            }
+            .alinhamento {
+                text-align: left;
+            }
+
+            .secao-inicio {
+                padding-top: 220px;
+                padding-left: 350px;
+                background-image: url("http://foundation.zurb.com/assets/img/home-bg-01.svg");
+                background-size: cover;
+                color: #FEFEFE;
+                height: 650px; 
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+            <h1 class="titulo">Foundation</h1>
+            <p class="descricao">The most advanced responsive front-end<br>framework in the world.</p>
+            <button class="botao1">Download Foundation 6</button>
+            <p class="subinfo">&#9733; 26.2k GitHub stars </p>
+            <p class="subinfo"> &#9733; @ZURBfoundation</p>
+        </section>
+
+        <section class="info2">
+            <h1>Responsive design gets a whole lot faster</h1>
+            <div class="alinhamento">
+                <p>A Framework for any device, medium, and accessibility. Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and code snippets, including these handy HTML templates to help get you started!</p>
+            </div>
+        </section>    
+
+        <section class="info2">
+            <div class="box3">
+                <img src="http://foundation.zurb.com/assets/img/mascots/responsive-through-and-through.svg" width="350">
+                <h2>Foundation for</h2>
+                <h1>Sites</h1>
+                <p>Foundation for Sites is jam-packed with features to help people rapidly build content-focused websites. Foundation for Sites provides you with HTML, CSS, &amp; JavaScript to help you quickly prototype. It's easy to customize &amp; extend to get your project polished &amp; shipped.</p>
+ <a href="#"> Learnmore about Foundation for sites</a>
+            </div>
+
+            <div class="box3">
+                <img src="http://foundation.zurb.com/assets/img/mascots/inky-template.svg" width="350">
+
+                <h2>Foundation for</h2>
+                <h1>Emails</h1>
+
+                <p>Our email framework helps you craft responsive HTML emails that can be read anywhere on any device. Foundation for Emails helps navigate the how different email clients handle HTML and provide tested patterns that work with Outlook as well as all the other major email clients.</p>
+                <a href="#"> Learnmore about Foundation for emails</a>
+            </div> 
+          </section>
+    </body> 
+</html>

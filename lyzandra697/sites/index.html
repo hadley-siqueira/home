@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div {
+               
+                background-color: #70DBDB;
+                border: 2px solid Blue;
+            }
+            
+            div h1 {
+                text-align: center
+            }
+            #intro{
+                animation-name: minhaAnimacao;
+                animation-duration: 4s;
+                margin-left: 400px;
+                background-color:#ffffff;
+                color: black;
+           }
+            @Keyframes minhaAnimacao {
+                from {
+                    margin-left: 10px;
+                    color:#EBC79E;
+                    background-color: #222222;
+                }
+                to {
+                    margin-left: 400px;
+                    background-color: #222222;
+                    color: black;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <h1 id="intro">O cabeçalho</h1>
+            <p>O parágrafo</p>
+        </div>
+        <h1>O cabeçalho</h1>
+        <p>O parágrafo</p>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1 id="cab1">Meu Cabeçalho</h1>
+
+        <script>
+            function grausPraRadianos(g) {
+                var y;
+
+                y = (g * 3.1415) / 180.0;
+                return y;
+            }   
+
+            function b(raio, angulo) {
+                var t = 200; // valor arbitrario
+                var ang = grausPraRadianos(angulo);
+                var pos = raio * Math.cos(ang) + t;
+                return Math.floor(pos);
+            }
+
+            function c(raio, angulo) {
+                var t = 200; // valor arbitrario
+                var ang = grausPraRadianos(angulo);
+                var pos = raio * Math.sin(ang) + t;
+                return Math.floor(pos);
+            }
+
+            var meu_angulo = 0;
+            var meu_raio = 150;
+
+            function animar() {
+                if (meu_angulo < 360) {
+                    var e = document.getElementById('cab1');
+
+                    e.style.position = 'relative';
+                    e.style.top = b(meu_raio, meu_angulo) + 'px';
+                    e.style.left = c(meu_raio, meu_angulo) + 'px';
+                    meu_angulo++;
+
+                    if (meu_angulo >= 360) {
+                        meu_angulo = 0;
+                    }
+
+                    if (meu_angulo > 0 && meu_angulo < 90) {
+                        e.style.color = "black";
+                    }
+
+                    if (meu_angulo > 90 && meu_angulo < 180) {
+                        e.style.color = "red";
+                    }
+            
+                    if (meu_angulo > 180 && meu_angulo < 270) {
+                        e.style.color = "orange";
+                    }
+                    
+                    if (meu_angulo > 270 && meu_angulo < 360) {
+                        e.style.color = "blue";
+                    }
+                  
+                    setTimeout(animar, 10);
+                }
+            }
+           animar();
+        </script>
+    </body>
+</html>
+

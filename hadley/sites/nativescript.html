@@ -1,0 +1,516 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <section>
+            <p>Abram o site do nativescript: <a href="https://play.nativescript.org">https://play.nativescript.org/</a></p>
+
+            <p>Depois cliquem em <code>New > NS + Javascript</code></p>
+
+            <p>Quem não instalou ainda os aplicativos no celular, instalem:</p>
+                <ul>
+                <li>nativescript preview</li>
+                <li>nativescript playground</li>
+            </ul>
+
+            <p>Peguem os celulares e leiam o QR Code</p>
+
+            <hr>
+        </section>
+
+        <section>
+<p>Vamos começar aprendendo a fazer umas interfaces simples.
+Vocês devem ter ai um arquivo chamado home-page.xml.
+Apaguem tudo o que estiver nele</p>
+
+<p>Depois que apagar, colem isso aqui:</p>
+
+<pre>
+<code>
+&lt;Page&gt;
+    &lt;Label text="Ola" /&gt;
+&lt;/Page&gt;
+</code>
+</pre>
+
+<p>E tentem rodar no celular para ver o que aparece.</p>
+
+<p>Essas palavras que ficam entre &lt;&gt; a gente chama de tags</p>
+
+<p>Existem tags que trabalham aos pares: abre e fecha</p>
+
+<p>Exemplo é a tag Page: &lt;Page&gt; (abriu) e &lt;/Page&gt; fechou</p>
+
+<p>Tags que abrem e fecham podem ter outras tags dentro delas, como a Label, por exemplo
+Label é um exemplo de tag que funciona sozinha, ou seja, não abre e fecha
+Tags que trabalham sozinhas como a Label, por exemplo, terminam em /&gt;
+Revisando:</p>
+
+<pre>
+<code>
+&lt;Page&gt;&lt;/Page&gt;
+&lt;Label /&gt;
+</code>
+</pre>
+
+<p>As tags podem ter atributos. No exemplo acima a tag Label tem um atributo chamado text
+Atributos são pares nome=valor. No exemplo nós temos nome sendo text e valor sendo "Ola"</p>
+
+<p>Rodem o exemplo abaixo, depois modifiquem ele para aparecer cinco Olás</p>
+
+<pre>
+<code>
+&lt;Page&gt;
+    &lt;Label text="Ola" /&gt;
+    &lt;Label text="Ola" /&gt;
+&lt;/Page&gt;
+</code>
+</pre>
+
+Quem não conseguir deixar os dois Olás, vá para o seguinte site:
+http://collabedit.com/3g5e3
+
+$$$$$
+
+Vocês não conseguiram botar os 5 olas porque faltou um layout
+
+A tag &lt;Page&gt;&lt;/Page&gt; representa a página que o usuário vai ver
+E uma página precisa de um layout.
+
+O layout mais simples que existe é o layout de pilha que é feito com a tag
+StackLayout. Tentem o seguinte código
+
+&lt;Page&gt;
+    &lt;StackLayout&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+    &lt;/StackLayout&gt;
+&lt;/Page&gt;
+
+O StackLayout vai empilhando um Label abaixo do outro
+Agora tentem colocar os 5 Olá
+
+Testem o código abaixo e vejam se vocês conseguem contar 55 olas no celular
+
+&lt;Page&gt;
+    &lt;StackLayout&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+        &lt;Label text="Ola" /&gt;
+    &lt;/StackLayout&gt;
+&lt;/Page&gt;
+
+Vocês não conseguiram rolar/descer a telam não foi?
+Abram o link
+http://collabedit.com/dhatp
+
+
+$$$$$$$$$$$44
+
+
+O StackLayout consegue empilhar elementos, mas não é capaz
+de rolar a página. Para isso se usa a tag ScrollView
+
+exemplo:
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;Label text="1 Ola" /&gt;
+            &lt;Label text="2 Ola" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt; 
+&lt;/Page&gt;
+
+Tentem entender o seguinte:
+    - Label vai dentro do StackLayout porque precisa aparecer um abaixo do outro
+        - Essa eh a funcao do StackLayout: empilhar coisas
+        
+    - O StackLayout vai dentro do ScrollView
+        - Para poder ver tudo o que esta dentro do StackLayout
+        
+Outro exemplo:
+
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;Label text="1 Ola" /&gt;
+            &lt;Label text="2 Ola" /&gt;
+            &lt;Label text="3 Ola" /&gt;
+            &lt;Label text="4 Ola" /&gt;
+            &lt;Label text="1 Ola" /&gt;
+            &lt;Label text="2 Ola" /&gt;
+            &lt;Label text="3 Ola" /&gt;
+            &lt;Label text="4 Ola" /&gt;
+            &lt;Label text="1 Ola" /&gt;
+            &lt;Label text="2 Ola" /&gt;
+            &lt;Label text="3 Ola" /&gt;
+            &lt;Label text="4 Ola" /&gt;
+            &lt;Label text="1 Ola" /&gt;
+            &lt;Label text="2 Ola" /&gt;
+            &lt;Label text="3 Ola" /&gt;
+            &lt;Label text="4 Ola" /&gt;
+            &lt;Label text="1 Ola" /&gt;
+            &lt;Label text="2 Ola" /&gt;
+            &lt;Label text="3 Ola" /&gt;
+            &lt;Label text="4 Ola" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt; 
+&lt;/Page&gt;
+
+Vamos tentar colocar uma caixa de texto agora.
+A caixa de texto é conseguida usando a tag TextField
+Exemplo
+
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;Label text="Programa P" /&gt;
+            &lt;TextField hint="Digite uma palavra" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt;        
+&lt;/Page&gt;
+
+Vamos estilizar o código acima usando CSS. 
+CSS são comandos de estilização para mudar a aparencia
+
+Lá nos arquivos deve ter um arquivo chamado app.css
+
+Abram ele
+Apaguem tudo o que estiver lá e cole isso aqui:
+
+@import 'nativescript-theme-core/css/core.light.css';
+
+O CSS trabalha da seguinte forma:
+
+.nomeDaClasse {
+    propriedade: valor;
+    propriedade: valor;
+    ...
+    propriedade: valor;
+}
+
+nomeDaClasse é um nome que a gente cria para poder ligar a interface ao CSS
+As propriedades são propriedades do elemento. Um texto, por exemplo, tem as
+seguintes propriedades: cor, fonte, tamanho, sublinhado, itálico etc
+
+Uma imagem teria o tamanho dela, se está espelhada, etc
+
+No arquivo app.css, digitem o seguinte:
+
+.entrada {
+    margin: 10px;
+}
+
+No arquivo home-page.xml, digitem o seguinte:
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;Label text="Programa P" /&gt;
+            &lt;TextField hint="Digite uma palavra" class="entrada" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;
+
+Atividade 1:
+No arquivo app.css, mudem 10px para 30px e vejam o efeito que isso causa
+
+Atividade 2:
+
+Testem o seguinte código
+
+.meuTexto {
+    color: #ff0000;
+}
+
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;Label class="meuTexto" text="Programa P" /&gt;
+            &lt;TextField hint="Digite uma palavra" class="entrada" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;
+
+Perguntas:
+- quantos atributos tem a tag Label do exemplo acima? E a tag TextField?
+    Label: 2
+    TextField: 2
+    
+Atividade 3:
+Adicionem duas labels com o texto da mesma cor
+
+Atividade 4:
+Agora modifique o código para cada label ter uma cor diferente
+
+
+Continua no link:
+http://collabedit.com/3swvr
+
+
+
+Testem o exemplo abaixo
+
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;TextField hint="Seu nome" class="entrada" /&gt;
+            &lt;TextField hint="Seu email" class="entrada" /&gt;
+            &lt;TextField hint="Sua senha" class="entrada" /&gt;
+            &lt;Button text="Entrar" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;
+
+
+@import 'nativescript-theme-core/css/core.light.css';
+
+.entrada {
+    margin: 30px;
+}
+
+.meuTexto {
+    color: #ff0000;
+}
+
+A tag Button serve para criar um botão. O atributo text é usado para indicar o texto
+que vai dentro do botão
+
+Modifique a linha do botão para a seguinte:
+
+&lt;Button text="Entrar" class="bt" /&gt;
+
+E adicione essa nova classe
+
+#################
+
+** Adicionando código **
+
+Até agora só trabalhamos com a interface. Vamos adicionar um pouco de lógica ao aplicativo
+
+No Button, adicione o seguinte atributo:
+
+tap="acao"
+
+No arquivo home-page.js, apague tudo o que estiver lá e adicione o seguinte:
+
+var frameModule = require("ui/frame");
+
+exports.acao = function () {
+  alert('Clicou');
+}
+
+Tentando entender o que está acontecendo acima:
+
+Quando você fez &lt;Button text="Entrar" class="bt" tap="acao" /&gt;, o atributo tap indica o que vai
+acontecer quando o botão for clicado. Veja que o valor de tap é acao
+
+No home-page.js, a gente fez exports.acao. Esse acao eh justamente para casar com o valor que foi colocado
+em tap no botão.
+
+Veja que o exports.acao é igual a uma função. Essa função por sua vez só tem um comando: dar um alert mostrando
+a mensagem 'Clicou'. Um alert é um popup que aparece para o usuario
+
+Testem no celular
+
+####
+
+Modifique o home-page.js para o seguinte. Em seguida teste no celular
+
+var frameModule = require("ui/frame");
+
+exports.acao = function () {
+  for (var i = 0; i &lt; 10; ++i) {
+    alert('Clicou');
+  }
+}
+
+
+Testem agora o seguinte código:
+
+
+
+http://collabedit.com/byqug
+
+
+$$$$$$$$$$$$$
+
+
+** Pegando o que foi digitado pelo usuario nos textfields **
+
+Uma das funções básicas de um aplicativo é conseguir manipular os valores digitados pelo
+usuário.
+
+Para isso, vamos começa com o seguinte
+
+&lt;Page&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;TextField hint="Seu nome" class="entrada" /&gt;
+            &lt;Button text="Mudar nome" class="bt" tap="acao" /&gt;
+            &lt;Label text="Seu nome é..." class="meuTexto" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;
+
+## 
+
+@import 'nativescript-theme-core/css/core.light.css';
+
+.entrada {
+    margin: 30px;
+}
+
+.meuTexto {
+    font-size: 20px;
+}
+
+.bt {
+    background-color: #51b554;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#####
+
+A primeira coisa para conseguir referenciar elementos da página é usar o atributo id. 
+Adicione o atributo id="nomeCampo" à tag TextField e id="nomeTexto" à tag Label. Também adicione
+o atributo loaded="carregado" à tag Page. Ficando assim:
+
+&lt;Page loaded="carregado"&gt;
+    &lt;ScrollView&gt;
+        &lt;StackLayout&gt;
+            &lt;TextField hint="Seu nome" class="entrada" id="nomeCampo" /&gt;
+            &lt;Button text="Mudar nome" class="bt" tap="acao" /&gt;
+            &lt;Label text="Seu nome é..." class="meuTexto" id="nomeTexto" /&gt;
+        &lt;/StackLayout&gt;
+    &lt;/ScrollView&gt;
+&lt;/Page&gt;
+
+Também modifique o arquivo home-page.js para o seguinte código:
+
+var frameModule = require("ui/frame");
+
+var pagina;
+
+exports.carregado = function (args) {
+  pagina = args.object;
+}
+
+exports.acao = function () {
+  var textoDigitado = pagina.getViewById('nomeCampo').text;
+  alert('O texto digitado foi ' + textoDigitado);
+}
+
+** Tentando explicar o que está acontecendo **
+
+var pagina; // essa é uma variável global. Variaveis globais podem ser usadas em qualquer parte do código
+
+exports.carregado = function (args) { // observe o atributo loaded="carregado" no xml acima
+  pagina = args.object; // o que essa linha faz é pegar todas as tags do xml e salvar em pagina
+}
+
+##
+
+// esse exports.acao eh a mesma coisa dos exemplos anteriores, mas a lógica de dentro da função muda
+exports.acao = function () {
+
+  // pagina, como explicado anteriormente, contém todas as tags do xml que a gente digitou
+  // getViewById é um método que procura a tag cujo id é nomeCampo, que no nosso caso é o textfield
+  // .text é para pegar o texto que foi digitado dentro do textfield pelo usuário
+  // esse texto é salvo na variavel textoDigitado
+  
+  var textoDigitado = pagina.getViewById('nomeCampo').text;
+  
+  // Depois aqui só é feito um alert mostrando o valor da variavel
+  alert('O texto digitado foi ' + textoDigitado);
+}
+
+
+## Agora teste o seguinte código e tente entender o que ele faz e como faz:
+
+var frameModule = require("ui/frame");
+
+var pagina;
+
+exports.carregado = function (args) {
+  pagina = args.object;
+}
+
+exports.acao = function () {
+  var textoDigitado = pagina.getViewById('nomeCampo').text;
+
+  if (textoDigitado == "") {
+    var msg = 'Seu nome é ...';
+    pagina.getViewById('nomeTexto').text = msg;
+  } else {
+    var msg = 'Seu nome é ' + textoDigitado;
+    pagina.getViewById('nomeTexto').text = msg;
+  }
+}
+
+Atividade:
+- Criar dois textfields: no primeiro o usuario vai digitar o nome e no segundo o sobrenome. Ao
+  clicar no botão deverá ser mostrado um alert com os dizeres: 'Seu nome é nome sobrenome'. Por exemplo,
+  se o usuario digitar no primeiro textfield 'Fulano' e no segundo textfield 'Silva', o alert será 'Seu nome é Fulano Silva'
+  
+- Se o usuário esquecer de digitar o nome ou sobrenome, mostrar um alert avisando.
+        </section>
+    </body>
+</html>

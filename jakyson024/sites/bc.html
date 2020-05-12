@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas id='area' width= '800' height='600' style='border:5px solid red'>
+    </canvas>
+    <script>
+        var ctx = document.getElementById('area').getContext('2d');
+        
+        function criarBola(x, y, cor) {
+            this.x = x;
+            this.y = y;
+            this.vx = Math.random() * 2;
+            this.vy = Math.random() * 5;
+            this.raio = 10;
+            this.cor = cor;
+        }
+
+        var labirinto = [];
+        var walls = [];
+
+        for (var i = 0; i < 600 / 10; ++i) {
+            var tmp = [];
+
+            for (var j = 0; j < 800 / 10; ++j) {
+                var v = [];
+                v.push(Math.random() > 0.5 ? 1 : 0);
+                v.push(Math.random() > 0.5 ? 1 : 0);
+                v.push(Math.random() > 0.5 ? 1 : 0);
+                v.push(Math.random() > 0.5 ? 1 : 0);
+                tmp.push(v);
+            }
+
+            labirinto.push(tmp);
+
+            for (var i = 0; i < labirinto.length; ++i) {
+                for (var j = 0; j < labirinto[i].length; ++j) {
+                    for (var k = 0; k < 4; ++k) {
+                        if (labirinto[i][j][0] == 1) {
+                            walls.push([j * 10, i * 10, j * 10 + 2, i * 11]);
+                        }
+
+                        if (labirinto[i][j][1] == 1) {
+                            walls.push([j * 10, i * 10, j * 11 + 2, j * 11]);
+                        }
+
+                        if (labirinto[i][j][2] == 1) {
+                            walls.push([j * 11, i * 10, j * 10 + 2, j * 11]);
+                        }
+
+                        if (labirinto[i][j][3] == 1) {
+                            walls.push([j * 10, i * 10, i * 10 + 2, j * 11]);
+                        }
+                    }
+                }
+            }
+        }
+
+        function desenharLabirinto() {
+            ctx.fillStyle = "#000";
+            for (var i = 0; i < walls.length; ++i) {
+                ctx.beginPath();
+                ctx.fillRect(walls[i][0], walls[i][1], walls[i][2], walls[i][3]);
+            }
+        }
+
+        var bola1 = new criarBola(40 , 10, '#ccff99');
+        var bola2 = new criarBola(200, 20, '#ccff99');
+        var bola3 = new criarBola(500, 50, '#003366');
+        var bola4 = new criarBola(560, 60, '#003366');
+        var bola5 = new criarBola(100, 100, '#cc66ff');
+        var jogador = new criarBola(200, 300, '#001144');
+        var jogador2 = new criarBola(600, 300, '#551144');
+
+        function desenharBola(bola) {
+            ctx.beginPath();
+            ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+            ctx.fillStyle = bola.cor;
+            ctx.fill();
+        }
+        
+        function atualizarPosicaoBola(bola) {
+            bola.x = bola.x + bola.vx;
+            bola.y = bola.y + bola.vy;
+        
+            if (bola.x < 0) {
+              bola.x = 0;
+              bola.vx = -bola.vx;
+            }
+
+            if (bola.x >= 800) {
+              bola.x = 799;
+              bola.vx = -bola.vx;
+            }
+        
+            if (bola.y < 0) {
+              bola.y = 0;
+              bola.vy = -bola.vy;
+            }
+            
+            if (bola.y >= 600) {
+              bola.y = 599;
+              bola.vy = -bola.vy;               
+              }
+       }
+       
+       function atualizar() {
+            atualizarPosicaoBola(bola1);
+            atualizarPosicaoBola(bola2);
+            atualizarPosicaoBola(bola3);
+            atualizarPosicaoBola(bola4);
+            atualizarPosicaoBola(bola5);
+ 
+       }
+ 
+       function desenhar() {
+            ctx.clearRect(0, 0, 800, 600);
+            desenharLabirinto();
+            desenharBola(bola1);
+            desenharBola(bola2);
+            desenharBola(bola3);
+            desenharBola(bola4);
+            desenharBola(bola5);
+            desenharBola(jogador);
+            desenharBola(jogador2);
+       }
+       function animar() {
+            desenhar();
+            atualizar();
+            window.requestAnimationFrame(animar);
+       }
+
+       animar();
+
+        window.addEventListener('keyup', function (ev) {
+            var keyCode = ev.keyCode;
+
+            if (keyCode == 39) {
+                jogador.x += 10;
+            } else if (keyCode == 37) {
+                jogador.x -= 10;
+            } else if (keyCode == 38) {
+                jogador.y -= 10;
+            } else if (keyCode == 40) {
+                jogador.y += 10;
+            } else if (keyCode == 65) {
+                jogador2.x -= 10;
+            } else if (keyCode == 68) {
+                jogador2.x += 10;
+            } else if (keyCode == 83) {
+                jogador2.y += 10;
+            } else if (keyCode == 87) {
+                jogador2.y -= 10;
+            }
+        });
+     </script>
+   </body>
+</html>
+

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div {
+                background-color: #ffffff;
+                border: 20px solid pink;
+                animation: mymove 5s infinite;
+               
+            }
+            #foo {
+                color: red;
+                margin-left: 0px;
+                animation: novaanimacao infinite 5s;
+            }
+            @keyframes exemplo {
+                0% { border: 1px solid blue; }
+                25% { border: 20px solid yellow; }
+                50% { border: 1px solid blue; }
+                75% { border: 20px solid yellow; }
+                100% { border: 1px solid blue; }
+            }
+            @keyframes novaanimacao {
+                0% { margin-left: 0px; color: pink; }
+                25% { 
+                    margin-left: 1000px; 
+                    color: blue; 
+                }
+                50% { 
+                    margin-left: 200px; 
+                    margin: 1px; 
+                    color: blue; 
+                }
+                100% { margin-left: 0px; color: red; }
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1 id="foo">O cabeçalho</h1>
+        </div>
+            <p> Vida bela! </p>
+    </body>
+</html>

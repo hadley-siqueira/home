@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "gethint.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+<script>
+    function atenta(str) {
+    if (str.length == 0) {
+        document.getElementById("apois").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("apois").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "getcidade.php?q=" + str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+</head>
+    <body>
+    <p><b>Nomes de pessoas aleatorias:</b></p>
+    <form>
+    Nome: <input type="text" onkeyup="showHint(this.value)">
+    </form>
+    <p>Suggestions: <span id="txtHint"></span></p>
+    </body>
+
+    <body>
+    <p><b>Cidades aleatorias:</b></p>
+    <form>
+    Cidade: <input type="text" onkeyup="atenta(this.value)">
+    </form>
+    <p>Suggestions: <span id="apois"></span></p>
+    </body>
+
+</html>

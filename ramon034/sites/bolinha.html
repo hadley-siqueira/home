@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 5px solid gray">
+        </canvas>
+
+        <script>
+        var ctx = document.getElementById('area').getContext('2d');
+        var mx = 0;
+        var my = 0;
+        var vx = 5;
+        var vy = 5;
+        var raio = 20;
+
+       function desenharCirculo() {
+        ctx.clearRect(0, 0, 800, 600);
+
+        ctx.beginPath();
+        ctx.arc(mx, my, raio, 0, 2 * 3.1415);
+        ctx.fill();
+
+        mx = mx + vx;
+        my = my + vy;
+
+        if (my >= 600) {
+            vy = -vy;
+   
+        }
+
+        if (mx >= 800) {
+            vx = -vx;
+        }
+        
+        if (my <= 0) {
+            vy = -vy;
+        }
+
+        if (mx <= 0) {
+            vx = -vx;
+        }
+        window.requestAnimationFrame(desenharCirculo);
+      }
+
+          desenharCirculo();
+        </script>
+    </body>
+</html>
+

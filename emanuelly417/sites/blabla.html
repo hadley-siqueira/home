@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1 id="cabecalho1">Tô vivo</h1>
+        <h1 id="cabecalho2">Eu também</h1>
+        <p id="paragrafo1">Eu sou texto</p>
+        <p id="paragrafo2">Eu também</p>
+        <p>Eeu não tenho id</p>
+
+        <script>
+            var e = document.getElementsByTagName('p');
+
+            for ( var i = 0; i < e.length; ++i){
+                e[i].style.color = '#00f';
+            }
+
+            var a = document.getElementsByTagName('h1');
+
+            for ( var i = 0; i < e.length; ++i){
+                a[i].style.color = '#f00';
+            }
+            var wgfdy = document.getElementById('paragrafo2');
+            wgfdy.style.color = '#f00';
+            var xuxu = document.getElementById('paragrafo1');
+            xuxu.style.color = '#ff5';
+            var bb = document.getElementById('cabecalho1');
+            bb.style.backgroundColor = '#0f0';
+            bb.style.color = '#f00';
+            bb.style.font = 'italic bold 50px arial, serif';
+            var nenem = document.getElementById('cabecalho2');
+            nenem.style.backgroundColor = '#0f0';
+            nenem.style.color = '#00f';
+        </script>
+    </body>
+</html>

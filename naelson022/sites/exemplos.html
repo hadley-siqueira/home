@@ -1,0 +1,63 @@
+<tml>
+    <body>
+        <h1> qualquer coisa</h1>
+        <canvas id="area" width="800" height="600" style="border: 1px solid #000">  
+        </canvas>
+        <script>
+        var c = document.getElementById("area");
+        var ctx = c.getContext("2d");
+
+        var triangulo = {
+            c0: {
+                x: 300,
+                y: 60,
+            },
+
+            c1: {
+                x: 200,
+                y: 200,
+            },
+
+            c2: {
+                x: 400,
+                y: 200
+            }
+        };
+
+        var pessoa = {
+            nome: 'naelson',
+            idade: 15,
+            altura: 1.67,
+            peso: 70.0,
+            endereco: {
+                logradouro: 'rua francisco',
+                numero: 16
+            },
+            cpf: '000.000.000-00'
+        };
+
+
+        function desenharTriangulo(tri) {
+            ctx.moveTo(tri.c0.x, tri.c0.y);
+            ctx.lineTo(tri.c1.x, tri.c1.y);
+            ctx.stroke();
+            
+            ctx.moveTo(tri.c0.x, tri.c0.y);
+            ctx.lineTo(tri.c2.x, tri.c2.y);
+            ctx.stroke();
+            
+            ctx.moveTo(tri.c1.x, tri.c1.y);
+            ctx.lineTo(tri.c2.x, tri.c2.y);
+            ctx.stroke();
+        }
+
+        desenharTriangulo(triangulo);
+        triangulo.c0.x = 200;
+
+        desenharTriangulo(triangulo);
+        triangulo.c0.x = 400;
+        desenharTriangulo(triangulo);
+        </script>
+
+    <body>
+<html>

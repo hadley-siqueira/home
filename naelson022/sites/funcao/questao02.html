@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function calculaIMC (p1, a1) {
+                IMC =( p1/ (a1 * a1))
+                return IMC;
+                
+            }   
+            function li(msg) {
+                return parseFloat(window.prompt(msg));
+
+            }
+                var p1  = parseFloat(window.prompt('digite o peso '));
+                var a1  = parseFloat(window.prompt('digite a altura '));
+          
+               var m = calculaIMC(p1,a1);
+                console.log(' o IMC eh ' + m);
+        </script>
+    </body>
+</html>

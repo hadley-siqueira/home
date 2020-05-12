@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id= "area" width= "800" height= "600" style= "border: 5px solid black">
+        </canvas> 
+
+    <script>
+        var ctx = document.getElementById('area').getContext('2d');
+
+        function criarBola(x, y) {
+            this.x = x;
+            this.y = y;
+            this.vx = 1;
+            this.vy = 1;
+            this.raio = 10;
+    }
+    
+    var bola1 = new criarBola(20, 50);
+    var bola2 = new criarBola (50, 50);
+    var bola3 = new criarBola (100, 200);
+
+    function desenhar(Bola) {
+        ctx.beginPath();
+        ctx.arc(bola.x, bola.y, bola.raio, 0, 2 * Math.PI);
+        ctx.strokela(bola3);
+}
+
+    function atualizarPosicaoBola(bola) {
+        // S = So + vt
+        meio_x = meio_x (Bola) 
+        meio_y
+     
+
+    function desenhar () { 
+        ctx.cleaRect(0, 0, 800, 600);
+        desenharBola(bola1); 
+        desenharBola(bola2);
+        desenharBola(bola3);
+    } 
+    function animar() {
+        desenhar()
+        window.requestAnimationFrame(animar);
+       } 
+
+        animar ();
+    
+
+     </script>
+    </body>
+</html>
+
+   

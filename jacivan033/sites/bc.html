@@ -1,0 +1,144 @@
+<html>
+    <body>
+     <canvas id="area" width="800" height="600" style="border : 6px solid gray">
+     </canvas>
+        <script>
+          var ctx = document.getElementById("area").getContext("2d");
+          var map_color = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+
+          function ctball(x, y){
+            this.x = x
+            this.y = y
+            this.vx = 5
+            this.vy = 7
+            this.raio = 30 * Math.random() + 11;
+            this.cor = [0, 0, 0, 0, 0, 0];
+            this.corAlvo = [10, 10, 10, 10, 10, 10];
+            this.inc = 0.5;
+          }
+
+          var bola1 = new ctball(140, 590);
+          var bola2 = new ctball(799, 56);
+          var bola3 = new ctball(10, 579);
+          var bola4 = new ctball(592, 322);
+          var bola5 = new ctball(243, 1);
+
+          function diff(v1, v2) {
+            for (var i = 0; i < 6; ++i) {
+                if (v1[i] != v2[i]) {
+                  return true;
+                }
+            }
+
+            return false;
+          }
+
+          function setColor(bola) {
+            var c = bola.cor;
+
+            if (diff(bola.cor, bola.corAlvo)) {
+              for (var i = 0; i < 6; ++i) {
+                if (bola.cor[i] > bola.corAlvo[i]) {
+                  bola.cor[i] = bola.cor[i] - 1;
+                } else if (bola.cor[i] < bola.corAlvo[i]) {
+                  bola.cor[i] = bola.cor[i] + 1;
+                }
+              } 
+            } else {
+              bola.corAlvo = genRandomColor();
+            }
+
+            if (bola.raio > 40 || bola.raio < 10) {
+              bola.inc = -bola.inc;
+            }
+
+            bola.raio += bola.inc;
+          }
+
+          function color2str(cor) {
+            var res = '#';
+
+            for (var i = 0; i < 6; ++i) {
+                res += map_color[cor[i]];
+            }
+
+            return res;
+          }
+
+          function genRandomColor() {
+            var res = []
+            
+            res.push(Math.floor(Math.random() * 100) % 16);
+            res.push(Math.floor(Math.random() * 100) % 16);
+            res.push(Math.floor(Math.random() * 100) % 16);
+            res.push(Math.floor(Math.random() * 100) % 16);
+            res.push(Math.floor(Math.random() * 100) % 16);
+            res.push(Math.floor(Math.random() * 100) % 16);
+
+            return res;
+          }
+
+          function formball(ball) {
+            ctx.beginPath();
+            ctx.arc(ball.x, ball.y, ball.raio, 0, 2 * 3.1415);
+            ctx.fillStyle = color2str(ball.cor);
+            ctx.fill();
+          }
+
+          function movimento(ball) {
+            ball.x = ball.x + ball.vx;
+            ball.y = ball.y + ball.vy;
+
+            if (ball.x >= 800) {
+              ball.x = 799;
+              ball.vx = -ball.vx;
+            }
+
+            if (ball.x < 0) {
+              ball.x = 0;
+              ball.vx = -ball.vx
+            }
+            
+            if (ball.y >= 600) {
+              ball.y = 599;
+              ball.vy = -ball.vy;
+            }
+            if (ball.y < 0) {
+              ball.y = 0;
+              ball.vy = -ball.vy;
+            }
+
+            setColor(ball);
+           }
+
+          function atualizar() {
+            movimento(bola1);
+            movimento(bola2);
+            movimento(bola3);
+            movimento(bola4);
+            movimento(bola5);
+          }
+
+          function desenhar() {
+            ctx.clearRect(0, 0, 800, 600);
+            formball(bola1);
+            formball(bola2);
+            formball(bola3);
+            formball(bola4);
+            formball(bola5);
+
+          }
+
+          function animar() {
+            atualizar();
+            desenhar();
+            window.requestAnimationFrame(animar);
+          }
+
+            animar();
+            
+
+
+        </script>
+    </body>
+</html>

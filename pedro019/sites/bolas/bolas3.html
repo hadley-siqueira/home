@@ -1,0 +1,85 @@
+<!DOCTYPE hmtl>
+<html>
+    <body>
+      <canvas id="area" width="800" height="600" style="border: 5px solid black">
+      </canvas>
+        <script>
+          var ctx = document.getElementById('area').getContext('2d');
+
+          function criarBola(x, y, cor) {
+              this.x = x
+              this.y = y
+              this.vx = 6
+              this.vy = 6
+              this.raio = 25;
+              this.cor = cor;     
+          }
+
+          var b1 = new criarBola(Math.random(), Math.random(), "#ff0000");
+          var b2 = new criarBola(Math.random(), Math.random(), "#42f445");
+          var b3 = new criarBola(Math.random(), Math.random(), "#0043ff");
+          var b4 = new criarBola(Math.random(), Math.random(), "#faff00");
+          var b5 = new criarBola(Math.random(), Math.random(), "#ff00ff");  
+
+          function desenharBola(b) {
+            ctx.beginPath();
+            ctx.fillStyle = b.cor;
+            ctx.arc(b.x, b.y, b.raio, 0, 2 * 3.1415);
+            ctx.fill(); 
+          }
+
+          function atualizarPosicaoDaBola(b) {
+            b.x = b.x + b.vx;
+            b.y = b.y + b.xy;
+
+            if (b.x < 0) {
+              b.x = 0;
+              b.vx = -b.vx;
+            }
+
+            if (b.x >= 800) {
+              b.x = 799;
+              b.vx = -b.vx;
+            }
+
+            if (b.y < 0) {
+              b.y = 0;
+              b.vy = -b.vy;
+            }
+            
+            if (b.y >= 600) {
+              b.y = 599;
+              b.vy = -b.vy;
+            }
+          }
+          
+          function atualizar() {
+            atualizarPosicaoDaBola(b1);
+            atualizarPosicaoDaBola(b2);
+            atualizarPosicaoDaBola(b3);
+            atualizarPosicaoDaBola(b4);
+            atualizarPosicaoDaBola(b5);
+
+          }
+
+          function desenhar() {
+            ctx.clearRect(0, 0, 800, 600);
+            desenharBola(b1);
+            desenharBola(b2);
+            desenharBola(b3);
+            desenharBola(b4);
+            desenharBola(b5);
+          }
+
+          function animar() {
+            desenhar();
+            atualizar();
+            window.requestAnimationFrame(animar);
+        
+          }
+          
+          animar();  
+        </script>
+    </body>
+</html>
+

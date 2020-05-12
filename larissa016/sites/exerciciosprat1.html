@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function calcular (n1,n2,n3,n4) {
+                var media = ( n1 + n2 + n3 + n4 / 4.0);
+                return media;
+            }
+
+            function li(msg) {
+                return parseInt(window.prompt(msg));
+            }
+
+            var nota1 = li('Digite a primeira nota');
+            var nota2 = li('Digite a primeira nota');
+            var nota3 = li('Digite a primeira nota');
+            var nota4 = li('Digite a primeira nota');
+
+            var m = calcular(nota1, nota2, nota3, nota4);
+
+            console.log('A media foi ' + m);
+        </script>
+    </body>
+</html>

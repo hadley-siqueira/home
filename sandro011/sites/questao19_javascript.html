@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+            var x = parseInt(window.prompt("informe o a coredenada de X: "));
+            var y = parseInt(window.prompt("informe o valor de Y: "));
+            var xi = parseInt(window.prompt("informe o inicio de X no retangulo: "));
+            var xf = parseInt(window.prompt("informe o final de x no retangulo: "));
+            var yi = parseInt(window.prompt("informe o inicio do Y no retangulo: "));
+            var yf = parseInt(window.prompt("informe o final de Y no ratangulo: "));
+
+            if ((xi < x) && (x < xf)) {
+                if ((yi < y) && (y < yf)) {
+                    console.log("esta dentro"); 
+                } else {
+                    console.log("esta fora ");
+                }
+            } else {
+                console.log(" esta fora");
+            }
+        </script>
+    </body>
+</html>

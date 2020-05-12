@@ -1,0 +1,11 @@
+x = input("digite um numero: ")
+dobro = 2 * int(x)
+y = 3 * int(x) 
+print("O dobro de x eh " + str(dobro))
+print("o triplo de x eh " + str(y))
+
+x = input("digite um numero: ")
+quatroplo = 4 * int(x)
+y = 5 * int(x)
+print("oquatroplo de x eh " + str(quatroplo))
+print("o quintoplo de x eh " + str(y))  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<p id="nomeUsuario"></p>
+		<p id="notaFinal"></p>
+
+		<script>
+			var msg = 'Qual seu nome?';
+			var nome = window.prompt(msg);
+			var i = 'nomeUsuario';
+			var f = document.getElementById(i);
+			f.innerHTML = 'E aí, ' + nome;
+
+			msg = 'Nota 1:';
+			var nota = parseInt(window.prompt(msg));
+			var contador = 0;
+			contador = contador + nota;
+			msg = 'Nota 2:';
+			nota = parseInt(window.prompt(msg));
+			contador = contador + nota;
+			msg = 'Nota 3:';
+			nota = parseInt(window.prompt(msg));
+			contador = contador + nota;
+			msg = 'Nota 4:';
+			nota = parseInt(window.prompt(msg));
+			contador = contador + nota;
+			contador = contador / 4;
+
+			var j = 'Nota final';
+			var m = document.getElementById(j);
+			m.innerHTML = 'Nota final: ' + contador;
+		</script>
+	</body>
+</html>

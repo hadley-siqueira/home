@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            console.log('Calculadora Lei de Ohm');
+            console.log('Digite a opcao');
+
+            var opcao = window.prompt('Digite a opcao');
+            
+            if(opcao == 'resistencia') {
+                var corrente = parseFloat(window.prompt('Corrente'));
+                var tensao = parseFloat(window.prompt('Tensao'));
+                var resistencia = tensao / corrente;
+        
+                console.log('A resistencia eh de ' + resistencia + ' ohms');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <h1 id="cab1">Cabeçalho</h1>
+
+    <script>
+      function grausPraRadianos(x) {
+        y = (3.1415 * x) / 180.0;
+        return y;
+      }
+
+      function b(raio, angulo) {
+        var ang = grausPraRadianos(angulo);
+        var u = raio * Math.cos(ang) + 200;
+        return Math.floor(u) + 'px';
+      }
+
+      function c(raio, angulo) {
+        var ang = grausPraRadianos(angulo);
+        var u = raio * Math.sin(ang) + 200;
+        return Math.floor(u) + 'px';
+      }
+
+      var meu_raio = 200;
+      var meu_angulo = 0;
+
+      function mudar() {
+        var e = document.getElementById('cab1');
+        e.style.position = 'relative';
+        e.style.top = b(meu_raio, meu_angulo);
+        e.style.left= c(meu_raio, meu_angulo);
+       
+       if (meu_angulo < 90) {
+        e.style.color = '#f00'
+     }
+       else if (meu_angulo < 180) {
+        e.style.color = '#9900CC';}
+        else if (meu_angulo < 235) {
+        e.style.color = '#FFFF00';}
+        else if (meu_angulo < 270) {
+        e.style.color = '#99FFFF';}
+       else if (meu_angulo < 315) {
+        e.style.color = '#00f';}
+       else if (meu_angulo < 360) {
+        e.style.color = '#000';}
+     }
+ 
+      function animar() {
+        if (meu_angulo < 360 * 20) {
+          mudar();
+          if (meu_angulo < 360) {
+              meu_angulo++;
+          } else {
+              meu_angulo = 0;
+          }
+         
+          setTimeout(animar, 10);
+        }
+      }
+
+      animar();
+    </script>
+  </body>
+</html>
+

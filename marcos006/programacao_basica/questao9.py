@@ -1,0 +1,7 @@
+x = float(input("Informe quanto o salgado custava: "))
+w = float(input("Informe quanto o salgado custa: "))
+v = float(input("Quanto dinheiro você tem: "))
+m = int(v / x)
+n = int(v / w)
+print("Com esse dinheiro você comprava " + str(m) + " salgados")
+print("Com esse dinheiro você compra " + str(n) + " salgados")

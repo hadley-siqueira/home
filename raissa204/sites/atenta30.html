@@ -1,0 +1,83 @@
+<html>
+<head>
+<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","att30.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
+<style>
+    body{
+      background-image:url(https://images.vexels.com/media/users/2243/68263/preview2/74b81c41fe164c794eb9ed072abf4a47-vector-media-technology-devices.jpg); 
+background-repeat:no-repeat;
+background-size:100vw 100vh;
+    }  
+    form{
+      text-align:center;
+      width:30%;
+      margin:auto;
+      margin-top:8rem;
+      padding:160px;
+      color:##000000;
+      background-color:rgba(255,255,255,0.7);
+    } 
+    input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+   }
+
+   input[type=text]:focus {
+      width: 100%;
+   }
+ 
+</style>
+<body>
+
+<form>
+<h1>Busca de Produto</h1>
+<!--
+<seilect name="users" onchange="showUser(this.value)">
+  <option value="">Selecione o produto</option>
+  <option value="notebook">notebook</option>
+  <option value="roteador">roteador</option>
+  <option value="mouse">mouse</option>
+  <option value="fones">fones</option>
+  </select>
+-->
+<input type="text" name="search" placeholder="Search.." onkeyup="showUser(this.value)">
+
+  <br>
+   <div id="txtHint"><b></b></div>
+</form>
+
+
+</body>
+</html>

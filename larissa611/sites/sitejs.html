@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1 id="cabeçalho1">Bomm dia!</h1>
+        <h1 id="cabeçalho2">O céu ficou azul.</h1>
+        <p id="paragrafo1"><font size:300%;>O sol brilhou</p>
+        <p id="paragrafo2">Eu também</p>
+        <p>Eu não tenho id</p>
+    <script>
+      var wgfdy = document.getElementById('paragrafo1');
+      wgfdy.style.color = '#ffffff';
+      var b = document.getElementById('paragrafo1');
+      wgfdy.style.background = '#cc0066';
+      var a = document.getElementById('cabeçalho1');
+      a.style.backgroundColor = '#cc0066';
+      
+      var e = document.getElementsByTagName('p');
+
+      for (var i=0; i < e.length; i++) {
+        e[i].style.color = '#00f';
+      }
+        
+    </script>
+    </body>
+</html>

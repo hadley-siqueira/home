@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+        <head>
+		<title>Diogo Lopes</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+                <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                <style>
+                        * {
+                                box-sizing: border-box;
+                        }
+                        body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: 'Montserrat', sans-serif;
+                        }
+
+			.descricao {
+                                margin-top: 0;
+                                margin-bottom: 40px;
+                                font-size: 20px;
+                        }
+
+                        .secao-generica {
+				margin: auto;
+				
+				padding: 0px;
+                        }
+
+                        .info2 {
+                                text-align: justify;
+                                width: 70%;
+                                margin: auto;
+                                margin-top:70px;
+                                padding-left:150px;
+                                padding-right: 150px;
+                                padding-bottom: 50px;
+                        }
+
+                        .info3 {
+                                text-align: center;
+                                width: 100%;
+                                margin: auto;
+                                margin-top:40px;
+                                padding-left:150px;
+                                padding-right: 150px;
+                        }
+
+			.info2 h1 {
+                                font-size: 30px;
+                        }
+
+                        .info p {
+                                color: #9C9C9C;
+                                font-size: 25px;
+                        }
+
+                        .alinhamento {
+                                text-align: left;
+                        }
+
+
+                        .secao-inicio {
+                                padding-top: 190px;
+                                padding-left: 350px;
+                                background-image: url("https://cronicasmacaenses.files.wordpress.com/2013/09/barco-em-macau-08.jpg");
+				background-size: cover;
+				background-position: center;
+                                height: 500px;
+                        }
+
+			.foto-center {
+				text-align: center;
+				margin: auto;
+				margin-top: 40px;
+				display:;
+				padding-left: 150px;
+				padding-right: 150px;
+			}
+
+			.w3-display-container {
+				
+			}
+			.mySlides {display:block; margin:auto;}
+				
+                </style>
+        </head>
+
+        <body>
+		<section class="secao-inicio">
+		</section>
+		<h2 class="foto-center">Diogo Lopes</h2>
+
+		<div class="w3-content w3-display-container">
+			<img class="mySlides" src="https://2.bp.blogspot.com/-cFvpbvxUxlY/WFbe6oi8j9I/AAAAAAAASLE/lijWTAHyM1w-Cm4Q5rlYKZGWQWEhils-QCLcB/s1600/DIOGO%2BLOPES%2B%2528Foto%2BGet%25C3%25BAlio%2BMoura%2529.bmp" style="width: 100%" >
+			<img class="mySlides" src="https://3.bp.blogspot.com/-VC4uqetLOog/WGMtyLHiKnI/AAAAAAABV0s/wcwXA-ATaFkSlKZgf9IdGP_cn0ZFadJ_gCLcB/s1600/13237588_1280572648638230_2813373289775954197_n.jpg" style="width:100%" >
+			<img class="mySlides" src="http://www.arafran.com.br/wp-content/uploads/2012/09/XI-Reg_DLopes_Eduardo-Kenddy-515x360.jpg" style="width: 100%" >
+
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			showDivs(slideIndex += n);
+			}			
+
+			function showDivs(n) {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				if (n > x.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = x.length}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";  
+				}
+				x[slideIndex-1].style.display = "block";  
+			}
+
+		</script>
+
+                <section class="info2 secao-generica">
+                        
+
+                        <div class="alinhamento">
+                        <p>Diogo Lopes é uma terra muito abençoada. Tão abençoada e bonita que quando sua beleza foi descoberta, foram varias pessoas importantes da época visita-la.</p>
+                        </div>
+                </section>
+
+                <section class="info3 secao-generica">
+                        <div class="box3">
+                                <img src="http://files.pousadacostadomar.webnode.com.br/system_preview_detail_200000016-4a7c34afb4-public/Diogo%20Lopes%206.jpg" widgth="350">
+                                <h1>A costa</h1>
+                                <div class="alinhamento">
+				<p>Alguns gringos, encantados com a beleza da pequena cominudade, achando que a terra não havia dono, tentaram tomar das pessoas esse pequeno pedaço de paraíso. Quiseram expulsar pessoas que moravam naquela região costeira, quimaram ranchos feitos pelos moradores da comunidade e "tomaram", por um certo instante, aquele pedaço de terra, porém valioso para todos os moradores, pois era ali que muitos pescavam para poder alimentar-se e também a sua família.</p>
+                                </div>
+			</div>
+                                
+                        <div class="box3">
+                                <img src="http://www.arafran.com.br/wp-content/uploads/2012/02/IMG_7961.jpg" width="350">
+                                <h1>A união</h1>
+                                <div class="alinhamento">
+                                <p>Quando os moradores ficaram sabendo dessa invasão, juntaram-se todos para tomar o que, de fato, era deles. Várias pessoas ficaram à frente do movimento, mas o principal agente do povo, digamos assim, era o senhor Luiz Ribeiro da Silva, conhecido por todos como Itá. Ele foi um dos que mais lutou até hoje pela reserva, e ainda luta. Com o crescimento do movimento e a revolta dos moradores, foi levada a questão até o tribunal de justiça de Natal, capital do rio Grande do Norte, onde a queridíssima Vilma de farias ficou comovida com a luta do povo, e resolveu ajuda-los em sua batalha, contratando um advogado para defender o povo diante do senhor juíz. O processo foi ganho e os gringos, que eram italianos, foram embora com as mãos abanando. Logo após essa batalha vencida, o colega Itá deu a ideia de transformar toda aquela área em uma reserva, assim ninguém poderia tomar ou desenvolver algo que prejudicasse o ambiente, pois ali é uma área onde há vários hectares e muitas espécies que necessitam de proteção. Hoje Diogo Lopes é uma reserva de desenvolvimento sustentavel, o qual o nome foi dado ponta do tubarão, em relação ao final da costa, onde sua ponta parece realmente a barbatana de um tubarão.</p>
+                                </div>
+			</div>
+
+			<div class="box3">
+				<img src="http://www.acordacidade.com.br/fotos/p/70075-3.jpg" width="350">
+				<h1>A salvação</h1>
+				<div class="alinhamento">
+				<p>Para os que não sabem, Diogo Lopes foi muito importante na história de Macau, pois como é uma comunidade rica em recursos naturais, era a única solução para que a cidade saísse de uma tremenda crise de água. Houve uma época em que o nível do mar havia subido bastante, e como Macau é uma área costeira, os lençóis freaticos, que é onde a água da chuva fica armazenada, ficaram extremamente saugadas, impossibilitando o seu consumo. Em Diogo Lopes há várias saídas de olheiros, que é onde a água dos lençóis freaticos vazam quando, por sua vez, se encontram muito cheios. Pois bem, esses olheiros serviam para o consumo dos moradores da comunidade e quando a cidade de Macau precisou, foram vários carros pipas em busca dessa água. O problema é que com tanta água saindo assim, a paisagem começou a se enfraquecer, perdendo suas cores vivas e seus animais que ali se encontravam. Logo a comunidade novamente se juntou para que não tirassem mais aquela água daquele local, pois isto estava acontecendo. Felizmente, a água já retirada foi suficiente para abastecer Macau por anos até o nível do mar baixar.</p>
+				</div>
+			</div>
+
+			<div class="box3">
+				<img src ="https://khms0.googleapis.com/kh?v=748&hl=pt&x=6532&y=8423&z=14" width="350">
+				<h1>A reserva</h1>
+				<div class="alinhamento">
+				<p>Com a criação da reserva, várias entidades apoiaram e ainda apoiam a proteção daquela área. Um dos principais é o IDEMA, que monitora toda a área para que tenhaum controle do não desmatamento das inumeras espécies de plantas e animais que existem. Essa entidade é certamente a entidade mais protetora que há na região, depois claro dos moradores, pois se não fosse por eles aquela bela paisagem não existiria. Hoje a reserva tem algumas comunidades que fazem parte dela, são as seguintes: Diogo Lopes, Barreiras, Sertãozinho, Mangue seco, Lagoa doce, Cacimba da baixa e Solidade.</p>
+				</div>
+			</div>
+
+				<p>Veja um vídeo para observar a comunidade:</p>
+				<div class="w3-text-blue">
+                                <a href="https://www.youtube.com/watch?v=f93bvHXh1H4">Video de Diogo Lopes</a>
+				</div>
+				<p>Caso queira ver muito mais perto, abaixo está o link do google maps:</p>
+				<div class="w3-text-blue">
+				<a href="https://www.google.com.br/maps/place/Diogo+Lopes,+Macau+-+RN,+59500-000/@-5.092844,-36.4664344,15z/data=!3m1!4b1!4m5!3m4!1s0x7b6d21ffbee6c45:0x4838328f4e9493a4!8m2!3d-5.0928442!4d-36.4576796">Visão Google Maps</a>
+				</div>
+
+				<p>Se você preferir ver ou ouvir a versão de outros sites, logo abaixo está um link de um dos sites mais indicados para você se aprofundar na história da comunidade </p>
+				<div class="w3-text-blue">
+				<a href="http://macauemdia.blogspot.com.br/2011/02/um-paraiso-chamado-diogo-lopes.html">Outros sites sobre Diogo Lopes</a>
+				</div>
+		
+			<div style="clear: both"></div>
+                </section>
+
+        </body>
+</html>
+

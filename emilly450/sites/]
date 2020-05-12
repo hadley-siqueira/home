@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+         <meta charsey="utf-8">
+         <meta name= "viewport"
+               content="width=device-width. inicial-scale=1.0">
+
+         <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+     
+             .titulo {
+                 font-size: 50px;
+             }
+             .descricao {
+                 font-size: 10px;
+             } 
+             .secao-inicio {
+                 padding-top: 300px;
+                 padding-left: 550px;
+                 background-image: url("http://foundation.zurb.com/assets/img/home-bg-01.svg");
+                 color: #FEFEFE;
+                 height: 700px;
+                 
+             }
+         </style>
+
+
+    <body>
+        <section class="secao-inicio">
+        <h1 class=">titulo">Foundation</h1>
+        <p class="descricao">The most advanced responsive front-end framework in the world</p>
+        <button>Dowload Foundation 6</button>
+        </section>
+    </body>
+</html>

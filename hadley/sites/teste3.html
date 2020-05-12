@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 1px solid #000">
+        </canvas>
+
+        <script src="pontos.js"></script>
+        <script>
+            var canvas = document.getElementById('area');
+            var ctx = canvas.getContext('2d');
+
+            var pontos = [];
+            var limite = 50;
+
+            function dists(p) {
+                return dist(p.x, p.y, p.xi, p.yi);
+            }
+
+            function dist(x1, y1, x2, y2) {
+                return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            }
+            var foo;
+
+            function Point(x, y) {
+                this.x = x;
+                this.y = y;
+                this.vx = Math.random() * 1.5;
+                this.vy = Math.random() * 1.5;
+                this.xi = x;
+                this.yi = y;
+                this.flag = true;
+                this.state = 0;
+                this.update = function() {
+                    if (this.state == 0) {
+                        this.x += this.vx;
+                        this.y += this.vy;
+
+                        if (dists(this) > limite) {
+                            this.state = 1;
+                        }
+                    } else if (this.state == 1) {
+                        this.x += this.vx;
+                        this.y += this.vy;
+
+                        if (dists(this) < 5) {
+                            this.state = 2;
+                            this.x = this.xi;
+                            this.y = this.yi;
+                            this.flag = true;
+                        } else {
+                            if (this.flag) {
+                                this.vx = -this.vx;
+                                this.vy = -this.vy;
+                                this.flag = false;
+                            }
+                        }
+                    }
+                }
+            }
+
+            function init() {
+                for (var i = 0; i < original_points.length; ++i) {
+                    pontos.push(new Point(original_points[i].x ,original_points[i].y));
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, 800, 600);
+
+                for (var i = 0; i < pontos.length; ++i) {
+                    ctx.beginPath();
+                    ctx.arc(pontos[i].x, pontos[i].y, 1, 0, 3.1415 * 2);
+                    ctx.fill();
+                }
+            }
+
+            function update() {
+                for (var i = 0; i < pontos.length; ++i) {
+                    pontos[i].update();
+                }
+            }
+
+            function animar() {
+                draw();
+                update();
+                window.requestAnimationFrame(animar);
+            }
+
+            init();
+            window.requestAnimationFrame(animar);
+        </script>
+    </body>
+</html>

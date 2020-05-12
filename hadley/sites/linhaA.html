@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 1px solid black">
+        </canvas>
+
+        <p id="pontos">Pontuação: 0 pontos</p>
+
+        <script>
+            var canvas = document.getElementById('area');
+            var ctx = canvas.getContext('2d');
+
+            var x1 = 300;
+            var y1 = 200;
+            var pontos = 0;
+            var cores = ['#f00', '#0f0', '#00f', '#ff0', '#0ff'];
+    
+            var x2 = 250;
+            var y2 = 400;
+
+            var x3 = 300;
+            var y3 = 600;
+            var vxb = 5;
+            var vyb = 5;
+
+            var state = false;
+            var TAM_BLOCO = 35;
+            var PARADA = 0;
+            var LANCADA = 1;
+            var VELOCIDADE = 15;    
+            var estadoBola = PARADA;
+            var blocos = [];
+
+            function Bloco(x, y) {
+                var c = cores[Math.floor(Math.random() * 6) % cores.length];
+                var r = Math.floor(Math.random() * 9);
+                var g = Math.floor(Math.random() * 9);
+                var b = Math.floor(Math.random() * 9);
+                this.x = x;
+                this.y = y;
+                this.color = c;
+            }
+
+            function colidiu(bloco) {
+                return (bloco.x < x3 && x3 < bloco.x + TAM_BLOCO && bloco.y < y3 && y3 < bloco.y + TAM_BLOCO)
+            }
+
+            function bateuBaixo(bloco) {
+                return (x3 > bloco.x && x3 < bloco.x + TAM_BLOCO && y3 < bloco.y + TAM_BLOCO && y3 < bloco.y);
+            }
+
+            function bateuCima(bloco) {
+                return (x3 > bloco.x && x3 < bloco.x + TAM_BLOCO && y3 > bloco.y && y3 < bloco.y + TAM_BLOCO);
+            }
+
+            function bateuDireita(bloco) {
+                return (y3 > bloco.y && y3 < bloco.y + TAM_BLOCO && x3 < bloco.x + TAM_BLOCO && x3 > bloco.x);
+            }
+
+            function bateuEsquerda(bloco) {
+                return (y3 > bloco.y && y3 < bloco.y + TAM_BLOCO && x3 < bloco.x + TAM_BLOCO && x3 > bloco.x);
+            }
+
+            function atualizarPontuacao() {
+                pontos++;
+                document.getElementById('pontos').innerHTML = 'Pontuação: ' + pontos + ' pontos';
+            }
+
+            function colidirComBlocos() {
+                var tmp = [];
+
+                for (var i = 0; i < blocos.length; ++i) {
+                    if (!colidiu(blocos[i])) {
+                        tmp.push(blocos[i]);
+                    } else {
+                        if (bateuCima(blocos[i]) || bateuBaixo(blocos[i])) {
+                            vyb = -vyb;
+                        } else if (bateuDireita(blocos[i]) || bateuEsquerda(blocos[i])) {
+                            vxb = -vxb;
+                        }
+                        atualizarPontuacao();
+                    }
+                }
+
+                blocos = tmp;
+            }
+
+            function checarDerrota() {
+                for (var i = 0; i < blocos.length; ++i) {
+                    if (blocos[i].y + TAM_BLOCO >= 600) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            function gerarBlocos() {
+                for (var i = TAM_BLOCO; i < 800 - TAM_BLOCO; i += TAM_BLOCO + 5) {
+                    var v = Math.random();
+                    console.log('AQ');
+                    if (v > 0.2) {
+                        blocos.push(new Bloco(i, 50));
+                    } else {
+                        console.log(v);
+                    }
+                }
+            }
+
+            function atualizarBlocos() {
+                for (var i = 0; i < blocos.length; ++i) {
+                    blocos[i].y += TAM_BLOCO + 5;
+                }
+            }
+
+            function desenharBlocos() {
+                for (var i = 0; i < blocos.length; ++i) {
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.fillStyle = blocos[i].color;
+                    ctx.rect(blocos[i].x, blocos[i].y, TAM_BLOCO, TAM_BLOCO);
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            function pararBola() {
+                estadoBola = PARADA;
+                atualizarBlocos();
+                gerarBlocos();
+            }
+
+            function atualizarBola() {
+                if (estadoBola == LANCADA) {
+                    x3 = x3 + vxb;
+                    y3 = y3 + vyb;
+
+                    if (x3 >= 800) {
+                        x3 = 800 - 1;
+                        vxb = -vxb;
+                    }
+
+                    if (x3 < 0) {
+                        x3 = 0;
+                        vxb = -vxb;
+                    }
+
+                    if (y3 >= 600) {
+                        y3 = 600 - 1;
+                        vyb = -vyb;
+                        vxb = 0;
+                        vyb = 0;
+                        pararBola();
+                    }
+
+                    if (y3 < 0) {
+                        y3 = 0;
+                        vyb = -vyb;
+                    }
+                }
+            }
+
+            function getMousePos(canvas, evt) {
+                var rect = canvas.getBoundingClientRect();
+                return {
+                    x: evt.clientX - rect.left,
+                    y: evt.clientY - rect.top
+                };
+            }
+
+            canvas.addEventListener('mousemove', function(evt) {
+                if (state) {
+                    var mousePos = getMousePos(canvas, evt);
+                    x2 = mousePos.x;
+                    y2 = mousePos.y;
+                }
+            }, false);
+
+            canvas.addEventListener('mousedown', function(evt) {
+                var mousePos = getMousePos(canvas, evt);
+                x1 = mousePos.x;
+                y1 = mousePos.y;
+
+                if (estadoBola == PARADA) {
+                    state = true;
+                }
+            }, false);
+
+            canvas.addEventListener('mouseup', function(evt) {
+                state = false;
+
+                if (estadoBola == PARADA) {
+                    lancarBola();
+                }
+            }, false);
+
+            function lancarBola() {
+                var m = getM(x1, y1, x2, y2);
+                var y = 0;
+                var x = getX(m, y, x3, y3);
+                var k = Math.sqrt(Math.pow(y - y3, 2) + Math.pow(x - x3, 2));
+                vxb = ((x - x3) / k) * VELOCIDADE;
+                vyb = ((y - y3) / k) * VELOCIDADE;
+
+                estadoBola = LANCADA;
+            }
+
+            function getM(x1, y1, x2, y2) {
+                return (y2 - y1) / (x2 - x1);
+            }
+
+            function getY(m, x, x0, y0) {
+                return m * (x - x0) + y0;
+            }
+
+            function getX(m, y, x0, y0) {
+                return x0 + (y - y0) / m;
+            }
+
+            function desenhar() {
+                ctx.clearRect(0, 0, 800, 600);
+                desenharBlocos();
+                ctx.beginPath();
+                ctx.arc(x3, y3, 5, 0, 2 * 3.1415);
+                ctx.fill();
+
+                if (state) {
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+
+                    var m = getM(x1, y1, x2, y2);
+                    var x = getX(m, 0, x3, y3);
+
+                    ctx.save();
+                    ctx.setLineDash([5, 3]);
+                    ctx.beginPath();
+                    ctx.moveTo(x3, y3);
+                    ctx.lineTo(x, 0);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+
+            }
+
+            function animar() {
+                atualizarBola();
+                colidirComBlocos();
+                desenhar();
+                if (!checarDerrota()) {
+                    window.requestAnimationFrame(animar);
+                } else {
+                    alert('Voce perdeu');
+                }
+            }
+
+            gerarBlocos();
+            animar();
+        </script>
+    </body>
+</html>

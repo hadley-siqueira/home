@@ -1,0 +1,5 @@
+[user]
+	email = hadley.siqueira@gmail.com
+	name = Hadley Siqueira
+[push]
+	default = simple

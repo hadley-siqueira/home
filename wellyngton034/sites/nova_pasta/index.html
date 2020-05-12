@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #home_top {
+            background: url("home-bg-01.svg");
+            background-size: cover;
+            background-position: center;
+            padding-top: 200px;
+            padding-bottom: 300px;
+            padding-left: 200px;
+        }
+        #home_top h1{
+            color: white;
+            margin-bottom: 0px;
+            font-size: 30pt;
+            margin-left: 
+        }
+        #home_top h2 {
+            color: white;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        
+        }
+        #home_top h3 {
+            color: white;
+            font-size: 10pt;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2C3840;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        #foo{
+            margin-left: 0px;
+        }
+        .active {
+            background-color: #333;
+        }
+
+       .nav-list a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+       }
+
+       .nav-list li {
+            border-left: 1px #3B4951 solid;
+       }
+
+
+       .nav-list li:hover{
+           background-color: #41525E;
+       }
+
+       .getting-started {
+            background-color: #1779BA;
+       }
+       .box3 {
+           float: left;
+           width: 50%;
+           padding: 20px;
+           padding-top: 70px;
+           margin: 0;
+       }
+       .box3 p {
+           color: #313131;
+           line-height: 1.2;
+       }
+       .box3 h1 {
+           color: #333333;  
+           margin-top: 10px; 
+       }
+       .box3 a {
+           color: #349DD4;
+           text-decoration: none;
+       }
+       .box3 h2 {
+           color: #7f7f7f;
+           font-size: 15px;
+           text-transform: uppercase;
+           margin-bottom: 0;
+       }
+       .box3:hover {
+           background-color: #f8f8f8;
+           border-radius: 5px;
+           transition: all 0.5s;
+       }
+       .secao-servicos {
+           width: 80%;
+           margin: auto;
+           text-align: center;
+           border-bottom: 1px dashed #9c9c9c;
+           padding-bottom: 30px;
+       }
+       .secao-servicos h1 {
+           font-size: 45px;
+           margin-bottom: 15px;
+       }
+       .secao-servicos h2 {
+           margin-top: 0;
+           margin-bottom: 50;
+           font-size: 27px;
+           color: #A1A1A1;
+       }
+       .box4 {
+           float: left;
+           width: 25%;
+           margin-bottom: 65px;
+       }
+       .box4 img {
+           width: 220px;
+       }
+       .box4 p {
+           line-height: 1.5;
+           font-size: 20px;
+       }
+       .box4 h1 {
+           font-size: 30px;
+           color: #232323;
+       }
+       .alinhamento {
+           text-align: left;
+       }
+       .link-bonito {
+           color: #349DD4;
+       }
+       .botao1 {
+           background-color: #1583CC;
+           font-size: 20px;
+           color: #FEFEFE;
+           padding: 16px;
+           border: none;
+           border-radius: 4px;
+           font-weight: bold;
+           margin-bottom: 10px;
+           border-bottom: 2px solid #126FAD;
+       } 
+       .botao1:hover {
+           background-color: #126FAD;
+           transition: all 0.4s;
+       }
+           .info2 {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            margin-top: 70px;
+            margin-left: 150px;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-bottom: 50px;
+            border-bottom: 1px dashed #9C9C9C;
+      }
+      .info3 {
+          text-align: center;
+          width: 80%;
+          margin: auto;
+          margin-top: 40px;
+          margin-left: 150px;
+          padding-left: 150px;
+          padding-right: 150px;
+          padding-bottom: 50px;
+          border-bottom: 1px dashed #9C9C9C;
+      }
+      .info2 h1 {
+          font-size: 35px;
+      }
+      .info2 p {
+          font-size: 20px;
+          color: #9C9C9C;
+          text-align: left;
+      }
+      .subinfo {
+          margin: 10px;
+          padding: 0;
+          font-size: 15px;
+      }
+    </style>
+</head>
+<body>
+    <ul class="nav-list">
+        <li  style="float:left"><a class="active" href="#about">ZURB foundation</a></li>
+        <li class="getting-started"><a href="">Showcase</a></li>
+        <li><a href="">Develop</a></li>
+        <li><a href="">Tutorials</a></li>
+        <li><a href="">Get Involved</a></li>
+        <li><a href="">Docs</a></li>
+        <li<a href="">Getting Started</a></li>
+    </ul>
+    <div id="home_top">
+        <div class="row">
+            <div id="foo" class="container">
+                <div class="col-sm-12">
+                   <h1>Foundation</h1>
+                   <h2>The most advanced responsive<br>front-end framework in the world.</h2>
+
+                      <button type="button" class="btn btn-primary">Download Foundation 6</button>   
+                   <h3><i class="fa fa-star" aria-hidden="true"></i> 26.2k GitHub stars</h3>
+                   <h3><i class="fa fa-twitter" aria-hidden="true"></i> 26.2k GitHub stars</h3>
+                </div>             
+           </div>
+       </div>
+       </div>
+    <section class="info2">
+       <h1>Responsive design gets a whole lot faster</h1>
+       <div class="alihttp://foundation.zurb.com/assets/img/mascots/inky-template.svgnhamento">
+           <p>A Framework for any device, medium, and accessibility. Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and code snippets, including these handy HTML templates to help get you started!</p>
+       </div>
+    </section>
+    <section class="info3">
+       <div class="box3">
+           <img src="http://foundation.zurb.com/assets/img/mascots/responsive-through-and-through.svg" width="350">
+           <h2>Foundation for</h2>
+           <h1>Sites</h1>
+           <div class="alinhamento">
+               <p>Foundation for Sites is jam-packed with features to help people rapidly build content-focused websites. Foundation for Sites provides you with HTML, CSS, &amp; JavaScript to help you quickly prototype. It's easy to customize &amp; extend to get your project polished &amp; shipped.</p>
+           </div> 
+           <a href="#">Learn more about Foundation for Sites</a>  
+       </div>                                                                                                                 
+       <div class="box3">
+          <img src="http://foundation.zurb.com/assets/img/mascots/inky-template.svg" width="350">
+          <h2>Foundation for</h2> 
+          <h1>Emais</h1> 
+          <div class="alinhamento">
+            <p>Our email framework helps you craft responsive HTML emails that can be read anywhere on any device. Foundation for Emails helps navigate the how different email clients handle HTML and provide tested patterns that work with Outlook as well as all the other major email clients.</p> 
+          </div>
+          <a href="#">Learn more about Foundation for Emais</a> 
+       </div>
+       <div style="clear: both"></div> 
+    </section>
+    <section class="secao-servicos">
+       <h1>Build products, apps and services</h1>
+       <h2>Foundation is the professional choice for designers, developers and teams.</h2>              
+       <div class="box4">
+          <img src="http://foundation.zurb.com/assets/img/learn/features/semantic-01.svg">
+          <h1>Semantic</h1>
+          <p>Everything is semantic. You can have the cleanest markup without sacrificing the utility and speed of Foundation.</p>
+       </div>
+       <div class="box4">
+           <img src="http://foundation.zurb.com/assets/img/learn/features/responsive-01.svg">
+           <h1>Mobile First</h1>
+           <p>You can build for small devices first. Then, as devices get larger and larger, layer in more complexity for a complete responsive design.</p> 
+       </div>
+       <div class="box4">
+           <img src="http://foundation.zurb.com/assets/img/learn/features/customizable.svg">
+           <h1>Customizable</h1>
+           <p>You can customize your build to include or remove certain elements, as well as define the size of columns, colors, font size and more.</p>
+       </div>
+       <div class="box4">
+           <img src="http://foundation.zurb.com/assets/img/learn/features/training-01.svg" >
+           <h1>Professional</h1>
+           <p>Millions of designers and developers depend on Foundation. We have business support, training and consulting to help grow your product or service.</p>
+       </div>
+       <a class="link-bonito" href= "#">Learn more about why Foundation fits in your company →</a>                                                                                                
+    </section>
+</body>
+</html> 

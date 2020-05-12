@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="area" width="800" height="600" style="border: 1px solid #000">
+        </canvas>
+
+        <script src="pontos.js"></script>
+        <script>
+            var canvas = document.getElementById('area');
+            var ctx = canvas.getContext('2d');
+
+            var pontos = [];
+
+            function dists(p) {
+                return dist(p.x, p.y, p.xi, p.yi);
+            }
+
+            function dist(x1, y1, x2, y2) {
+                return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            }
+
+
+            function Point(x, y) {
+                this.x = Math.random() * 800;
+                this.y = Math.random() * 600;
+                this.vx = Math.random() > 0.5 ? Math.random() * 3 : Math.random() * -3;
+                this.vy = Math.random() > 0.5 ? Math.random() * 4 : Math.random() * -4;
+                this.xi = x;
+                this.yi = y;
+                this.update = function() {
+                    if (dists(this) < 55) {
+                        this.x = this.xi;
+                        this.y = this.yi;
+                    } else {
+                        this.x += this.vx;
+                        this.y += this.vy;
+
+                        if (this.x > 800 || this.x < 0) this.vx = -this.vx;
+                        if (this.y > 800 || this.y < 0) this.vy = -this.vy;
+                    }
+                }
+            }
+
+            function init() {
+                for (var i = 0; i < original_points.length; ++i) {
+                    pontos.push(new Point(original_points[i].x ,original_points[i].y));
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, 800, 600);
+
+                ctx.beginPath();
+                ctx.rect(0, 0, 800, 600);
+                ctx.fillStyle = "#000";
+                ctx.fill();
+
+                for (var i = 0; i < pontos.length; ++i) {
+                    ctx.beginPath();
+                    ctx.arc(pontos[i].x, pontos[i].y, 1, 0, 3.1415 * 2);
+                    var op = 1.0 - dists(pontos[i]) / 480.0;
+
+                    if (op < 0) op = 0;
+                    if (op > 1) op = 1;
+
+                    ctx.fillStyle = "rgba(243, 105, 32, " + op + ")";
+                    ctx.fill();
+                }
+            }
+
+            function update() {
+                for (var i = 0; i < pontos.length; ++i) {
+                    pontos[i].update();
+                }
+            }
+
+            function animar() {
+                draw();
+                update();
+                window.requestAnimationFrame(animar);
+            }
+
+            init();
+            window.requestAnimationFrame(animar);
+        </script>
+    </body>
+</html>

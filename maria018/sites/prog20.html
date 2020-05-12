@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            window.alert('Escolha o movimento do robo');
+            var cx = parseInt(window.prompt('Digite a coordenada x do robo:'));
+            var cy = parseInt(window.prompt('Digite a coordenada y do ponto'));
+            var cr = window.prompt('Digite o comando');
+            if (cr=='c') { 
+                window.alert('Nova coordenada: (' + (cx) + ', ' + ((cy+10) + ')'));
+            }
+            else if (cr=='b') {
+                window.alert('Nova coordenada: (' + (cx) + ', ' + (cy +10) + ')');
+            }
+            else if  (cr=='d') { 
+                window.alert('Nova coordenada: )' + (cx+10) +', '+ (cy) + ')');
+            }
+            else if (cr =='e') {
+                window.alert('Nova coordenada: )' + (cx +10) + ', ' + (cy) + ')');
+            }
+
+        </script>
+    </body>
+</html>
+    

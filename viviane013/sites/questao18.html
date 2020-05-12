@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+            var esfera = parseInt(window.prompt('Digite  o raio:'));
+            var cx = parseInt(window.prompt('Digite a coordenada cx'));
+            var px = parseInt(window.prompt('Digite a coordenada px'));
+            var py = parseInt(window.prompt('Digite a coordenada py'));
+            var cy = parseInt(window.prompt('Digite a coordenada cy'));
+            var resultado =  Math.sqrt(Math.pow(px - cx , 2) + Math.pow (py - cy , 2));
+
+            if (resultado < esfera) {
+                console.log('O ponto esta dentro');
+            }
+            else {
+                conosle.log('O ponto esta fora do circulo');
+            }
+        </script>
+    </body>
+</html>

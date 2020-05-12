@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+         }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .titulo{
+           font-size: 50px;
+           margin-bottom: 0;
+        }
+        
+        .descricao {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 20;
+        }
+        .botao1{
+         background-color: #126FAD;
+            font-size: 20px;
+            color: #fefefe;
+            padding: 17px;
+            border: none;       
+            border-radius: 5px;
+            font-weight: bold; 
+            margin-bottom: 10px;
+            }
+         .info2 {
+            text-align: center;
+            width: 50%;
+            margin: auto;
+        }
+         .info2 h1 {
+            font-size: 40px;
+        }
+        .info2 p {
+            color: #9C9C9C;
+            font-size: 20px;
+        }
+        .subinfo{
+            margin: 10px;
+            padding: 10px;
+            font-size: 15px;
+           }
+        .secao-inicio{
+            padding-top: 180px;
+            padding-left: 550px;
+            background-image: url("https://foundation.zurb.com/assets/img/home-bg-01.svg");
+            background-size: cover;
+            color: #FEFEFE;
+            height: 700px;         
+        }   
+ </style>
+    </head>
+
+    <body>
+        <section class="secao-inicio">
+        <h1 class="titulo">Foundation</h1>
+        <p class="decricao">The most advanced responsive front-end<br>framework in the world.</p>
+        <button class="botao1">Download Foundation 6</button>
+        <p class="subinfo"> &#9733; 26.3k GitHub stars</p>
+        <p class="subinfo"> &#9733; @ZURBfoundation</p>
+        </section>
+    
+        <section class="info2">
+        <h1>Responsive design gets a whole lot fasterResponsive design gets a whole lot fasterResponsive design gets a whole lot faster</h>
+
+        <p>A Framework for any device, medium, and accessibility. Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and code snippets, including these handy HTML templates to help get you started!</p>
+        </section>
+     </body>
+</html>

@@ -1,0 +1,230 @@
+{
+  "width": 80,
+  "title": null,
+  "env": {
+    "SHELL": "/bin/bash",
+    "TERM": "xterm"
+  },
+  "command": null,
+  "height": 24,
+  "stdout": [
+    [
+      1.140622,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      0.984684,
+      "p"
+    ],
+    [
+      0.177958,
+      "y"
+    ],
+    [
+      0.092274,
+      "t"
+    ],
+    [
+      0.151488,
+      "h"
+    ],
+    [
+      0.08767,
+      "o"
+    ],
+    [
+      0.079648,
+      "n"
+    ],
+    [
+      0.675792,
+      "3"
+    ],
+    [
+      0.204167,
+      " "
+    ],
+    [
+      0.318451,
+      "c"
+    ],
+    [
+      0.169136,
+      "r"
+    ],
+    [
+      0.057922,
+      "e"
+    ],
+    [
+      0.368637,
+      "scente2.py "
+    ],
+    [
+      1.308801,
+      "\r\n"
+    ],
+    [
+      0.026116,
+      "Digite o primeiro numero: "
+    ],
+    [
+      3.136816,
+      "1"
+    ],
+    [
+      0.741107,
+      "\r\n"
+    ],
+    [
+      0.000648,
+      "Digite o segundo numero: "
+    ],
+    [
+      0.659319,
+      "1"
+    ],
+    [
+      0.748446,
+      "\r\n"
+    ],
+    [
+      0.000341,
+      "Os numeros estao em ordem crescente"
+    ],
+    [
+      8.4e-05,
+      "\r\n"
+    ],
+    [
+      0.009546,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      1.705542,
+      "\r\n"
+    ],
+    [
+      0.000292,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      0.206379,
+      "\r\n"
+    ],
+    [
+      0.000256,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      0.576761,
+      "python3 crescente2.py "
+    ],
+    [
+      0.575075,
+      "\r\n"
+    ],
+    [
+      0.027075,
+      "Digite o primeiro numero: "
+    ],
+    [
+      1.394423,
+      "1"
+    ],
+    [
+      1.120969,
+      "\r\n"
+    ],
+    [
+      0.000266,
+      "Digite o segundo numero: "
+    ],
+    [
+      0.739552,
+      "5"
+    ],
+    [
+      1.08234,
+      "\r\n"
+    ],
+    [
+      0.000175,
+      "Os numeros estao em ordem crescente"
+    ],
+    [
+      7.4e-05,
+      "\r\n"
+    ],
+    [
+      0.004776,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      1.991754,
+      "\r\n"
+    ],
+    [
+      0.000231,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      0.145599,
+      "\r\nhadley@linuxmc: $ "
+    ],
+    [
+      0.413408,
+      "python3 crescente2.py "
+    ],
+    [
+      0.785906,
+      "\r\n"
+    ],
+    [
+      0.025944,
+      "Digite o primeiro numero: "
+    ],
+    [
+      1.227307,
+      "5"
+    ],
+    [
+      0.394341,
+      "\r\n"
+    ],
+    [
+      0.000291,
+      "Digite o segundo numero: "
+    ],
+    [
+      0.858318,
+      "1"
+    ],
+    [
+      0.694658,
+      "\r\n"
+    ],
+    [
+      0.000185,
+      "Os numeros NAO estao em ordem crescente"
+    ],
+    [
+      7.9e-05,
+      "\r\n"
+    ],
+    [
+      0.004553,
+      "hadley@linuxmc: $ "
+    ],
+    [
+      3.77703,
+      "exit"
+    ],
+    [
+      0.002242,
+      "\r\n"
+    ]
+  ],
+  "version": 1,
+  "duration": 28.896065
+}

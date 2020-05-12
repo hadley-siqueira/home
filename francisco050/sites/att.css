@@ -1,0 +1,20 @@
+body {
+    background-image: url(https://www.ihdimages.com/wp-content/uploadsktz/2015/02/windows_10-wallpaper-hd-desktop-computer-windows-10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+div{
+     margin: auto;
+     width: 50%;
+     background-color: rgba(121, 179, 224, 0.7);
+     padding: 100px;
+     margin-top: 100px;
+     text-align:center;
+}
+div h1{
+    color: #E0FFFF;
+}
+
+

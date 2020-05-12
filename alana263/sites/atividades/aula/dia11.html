@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <p id="w">Texto</p>
+        <button onclick="mT('w', 30, 'asdasd')">Clique aqui</button>
+        <p id="a">Texto 2</p>
+        <button onclick="mT('a', 20,'mais um texto' )">Clique aqui</button>
+        <p id="i">Texto 3</p>
+        <button onclick="mT('i', 40, 'lalalal')">Clique aqui</button>
+    </body>
+
+    <script>
+        function mT(id, size, txt) {
+            var v = document.getElementById(id);
+            v.innerHTML = txt;
+            v.style.fontSize = size + 'px';
+        }
+
+        /*
+        function mudarTexto() {
+            var v = document.getElementById('w');
+            v.innerHTML = 'Texto mudou';
+            v.style.fontSize = '30px';
+            v = document.getElementById('a');
+            v.innerHTML = 'Novo texto';
+            v.style.fontSize = '20px';
+            v = document.getElementById('i');
+            v.innerHTML = 'Mais um';
+            v.style.fontSize = '10px';
+        }*/
+        
+    </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="p1">Esse texto vai mudar</p>
+    <button onclick="pastel()">Mudar texto</button>
+    <input type="text" id="txt" onkeyup="pastel()">
+
+    <script>
+      function pastel() {
+        var x = new XMLHttpRequest();
+
+        x.onreadystatechange = function() {
+          var f1 = this.readyState == 4;
+          var f2 = this.status == 200;
+
+          if (f1 && f2) {
+            var u = document.getElementById('p1');
+            u.innerHTML = this.responseText;
+          }
+        }
+
+        var k = document.getElementById('txt');
+        var t = k.value;
+
+        var url = 'coxinha.php?traidor=' + t;
+
+        x.open('GET', url, true);
+        x.send();
+      }
+    </script>
+  </body>
+</html>

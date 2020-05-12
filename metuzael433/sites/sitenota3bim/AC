@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AC Milan the Best</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+function slide1(){
+document.getElementById('id').src="http://18694-presscdn.pagely.netdna-cdn.com/wp-content/uploads/2016/11/514-1.jpg";
+setTimeout("slide2()", 1000)
+}
+ 
+function slide2(){
+document.getElementById('id').src="https://conteudo.imguol.com.br/c/esporte/2013/10/23/mosaico-do-milan-no-jogo-contra-o-barcelona-pela-liga-dos-campeoes-da-europa-1382535272884_599x337.jpg";
+setTimeout("slide3()", 1000)
+}
+ 
+function slide3(){
+document.getElementById('id').src="http://colgadosporelfutbol.com/wp-content/uploads/2013/01/Milan-campe%C3%B3n-de-Europa.jpg";
+setTimeout("slide4()", 1000)
+}
+
+function slide4(){
+document.getElementById('id').src="http://3.bp.blogspot.com/-E4bXieHxqDw/UMUc24aSk4I/AAAAAAAA4kQ/n9-KuzAP1qs/s1600/papel-de-parede-do-+milan-wallpaper+(12).jpg";
+setTimeout("slide1()", 1000)
+}
+ </script>
+
+  
+   
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Montserrat', sans-serif;
+             }
+
+        .inicio {
+            background-image: url("http://mdp-media.acmilan.com/upl/entities/eventnews/Vetrina-Supercoppa-Casa-Milan.jpg");
+            height: 700px;
+            padding-top: 150px;
+            padding-left: 90px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .titulo {
+      padding-top: 0px;
+            font-size: 50px;
+            color: white;
+      
+        }
+
+    .titulo img {
+      width: 100px;
+      padding-bottom: 0px;
+
+    }
+        .paragrafo1 {
+
+      padding-top: 20px;
+            font-size: 30px;
+            padding-left: 0px;
+            font-weight: bold;
+      color: white;
+        }
+
+    .resumo {
+      width: 90%;
+      text-align: center;
+      padding-left: 100px;
+      font-size: 20px;
+      color: white;
+      line-height: 1.5;
+    }
+
+    .slide {
+      text-align: center;
+      height: 400px;
+    }
+    .informacoes {
+      color: white;
+      font-size: 25px;
+      text-align: center;
+    }
+
+
+   .jogadores {
+      text-align: center;
+      }
+
+    .jogadores p {
+      font-size: 15px;
+    }  
+
+     .elenco {
+      float: left;
+      padding-left: 30px;
+      padding-bottom: 20px;
+     }
+
+     .titulos {
+      float: right;
+      width: 50%
+      padding-left: 50px;
+      font-size: 15px;
+      
+     }
+
+     .titulos h1 {
+      text-align: center;
+      font-size: 30px;
+     }
+
+     .titulos p {
+      width: 80%;
+      padding-left: 80px;
+      text-align: left;
+      padding-bottom: 20px;
+     }
+
+     .estadio {
+      color: white;
+    }
+
+    .estadio h1 {
+       font-size: 30px;
+       text-align: center;
+    }
+
+    .estadio img {
+        padding-left: 425px;
+    }
+
+    .estadio p {
+      padding-left: 80px;
+      text-align: left;
+      width: 80%;
+    }
+
+     .ultima-secao {
+               text-align: center;
+               margin: auto;
+               width: 90%;
+               padding-bottom: 70px;
+           }
+      
+    </style>
+  </head>
+
+  <body bgcolor="black">
+    <section class="inicio">
+     
+                <div class="titulo">
+                    <a href="https://www.acmilan.com/en"><img src="http://icons.iconarchive.com/icons/giannis-zographos/italian-football-club/256/AC-Milan-icon.png" alt= Pagina oficial/></a>
+                </div>
+    
+     <h1 class="titulo">AC Milan</h1>
+     <p class="paragrafo1"> O AC Milan é um dos clubes mais<br> bem-sucedidos da Itália, e o clube italiano<br> com mais conquistas internacionais</p>
+    </section>
+
+    <section>
+         <div class="resumo">
+        <p class="paragrafo2">A Associazione Calcio Milan, frequentemente abreviado em AC Milan ou Milan, é uma das principais e mais bem sucedidas equipes de futebol da Itália e do mundo. Atualmente, participa da Série A do campeonato italiano. Partilha com o seu maior rival, a Internazionale, o Estádio Giuseppe Meazza, que no passado tinha o nome de Estádio San Siro, como ainda preferem chamá-lo atualmente os torcedores Milanistas. Junto com a Internazionale, o Milan é a segunda equipe com mais conquistas no Campeonato Italiano, com 18 títulos, atrás apenas da Juventus, que tem 33 Scudetti. É o segundo clube da história com mais conquistas na Liga dos Campeões da UEFA, tendo sido campeão sete vezes, foi por 3 vezes campeão da Copa Intercontinental. Venceu ainda o Mundial de Clubes da FIFA 2007.</p>
+       </div>
+       <div class="slide">
+       <body onLoad="slide1()">
+       <img id="id">
+     </div>
+     <section class="informacoes">
+        <div class="jogadores">
+           <h1>Elenco profissional do Milan em 2017</h1>
+           <img src="http://18694-presscdn.pagely.netdna-cdn.com/wp-content/uploads/2016/11/514-1.jpg">
+
+      <div class="elenco">
+           <p class="paragrafo-jogadores">LD  Davide Calabria <br> Z  Cristián Zapata <br> A Patrick Cutrone<br>
+  V José Mauri <br>   V Riccardo Montolivo<br> LE  Ricardo Rodríguez<br>
+  M Giacomo Bonaventura<br>  Z Leonardo Bonucci Capitão<br>  G Alessandro Guarnone<br>
+  A Nikola Kalinić <br> LD Ignazio Abate <br> V Manuel Locatelli<br>
+  A Suso <br> V Lucas Biglia <p/>
+        </div>
+ 
+      <div class="elenco">
+  <p> V Franck Kessié<br>
+  A André Silva <br> Z Mateo Musacchio<br> G Antonio Donnarumma<br>
+  M Hakan Çalhanoğlu<br> Z Gabriel Paletta <br>G Gigi Donnarumma<br>
+  A Fabio Borini <br>G Marco Storari <br> 
+  LD Andrea Conti <br>LE Luca Antonelli <br>
+  Z Alessio Romagnoli <br> M Nicollò Zanellato <br> 
+  Z Gustavo Gómez<br> D Matteo Gabbia  <br>
+  Técnico: Gennaro Gattuso</p>
+         </div>
+         </div>
+       <div class="titulos">
+           <h1>Titulos conquistados</h1>
+           <img src="https://tmssl.akamaized.net//images/erfolge/medium/53.png?lm=1461847499" width="200">
+           <p>O Milan como um dos maiores clubes da itália, tem inumeros títulos conquistados entre eles estão: <br> 3X VENCEDOR DA LIGA DOS CAMPEÕES, 4X VENCEDOR DA TAÇA EUROPEIA, 18X CAMPEÃO DE ITÁLIA, 5X VENCEDOR DA TAÇA DE ITÁLIA (COPPA ITALIA), 7X VENCEDOR DA SUPER TAÇA DE ITÁLIA (SUPERCOPPA), 1X VENCEDOR DA TAÇA DO MUNDO DE CLUBES DA FIFA, 2X CAMPEÃO SEGUNDA LIGA ITÁLIA, 3X VENCEDOR DA TAÇA INTERCONTINENTAL, 2X VENCEDOR DA TAÇA DAS TAÇA, 1X MITROPACUP e 5X VENCEDOR DA SUPER TAÇA DA UEFA. </p>
+        </div>
+     </section>
+
+     <section class="estadio">
+        <h1>Estádio San Siro</h1>
+        <img src="https://xicomalta.files.wordpress.com/2012/09/granmilan.jpeg">    
+        <P>O estádio San siro, também conhecido como Giuseppe Meazza, situa-se na cidade de Milão, na Itália. Neste estádio jogam o Internazionale e o Milan, e durante alguns anos foi o maior estádio do mundo, com capacidade que chegou a 140 mil pessoas, números gradativamente minorados por questões de segurança. Ainda é o maior estádio italiano.
+           O estádio começou a ser construído em 1925, sendo inaugurado em 19 de Setembro de 1926 com um clássico entre Inter e Milan. Situa-se no distrito de San Siro, daí o nome popular do estádio. O custo da obra na época foi de cerca de 5 milhões de libras. Sua última grande reforma, originando o terceiro anel, foi realizada em função da Copa do Mundo FIFA de 1990, na qual o estádio recebeu o jogo de abertura. </P>
+     </section>
+  </body>
+</html>
